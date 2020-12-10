@@ -390,10 +390,26 @@ To se lahko zgodi iz več razlogov, najpogostejša pa sta naravna nesreča - vre
 Izpadi posameznih klastrov pa se toliko pogosteje dogajajo, če gre za manjše ponudnike ali pa so naši strežniki v bolj nestabilnih okoljih. 
 V splošnem se problem reši tako, da se namesti v vsak podatkovni center, skupino strežnikov en klaster.
 
-\subsection{Drag prenos podatkov}
-\subsection{Razdeljevanje dela po različnih lokacijah}
 \subsection{Izolacija aplikacije}
+Ko govorimo o izolaciji aplikacije se ponavadi nanašamo na varnost pri vdoru, ali pa na večjo dosegljivost.
+Glede izolacije spletnih aplikacij smo z uporabo kubernetesa naredili že kar nekaj korakov.
+Naprimer vsaka aplikacija lahko teče v svojem kontejnerju, tudi v imenskem prostoru.
+Lahko jo celo izoliramo samo na določera vozlišča.
+A vseeno se v kubernetesu dogajajo problemi, ki naredijo cel klaster nedosegljiv.
+Kaj takšnega se najpogosteje zgodi med posodabljanjem celega klastra.
+Z varnostnega vidika pa ponavadi mislimo na dejstvo, da če nekomu uspe serija napadov in se uspešno polasti enega samega vozlišča si začne lastiti cel klaster.
+Torej ima dostop tudi do vseh drugih aplikacij.
+Če imamo vsako od naših aplikacij v svojem klastru pa se temu izognemo.
+\subsection{Drag prenos podatkov}
+Če se spustimo iz jedra računalniškega oblaka na njegov rob pa tam srečamo cel kup zanimivih problemov. 
+Na robu oblaka smo takrat, ko govorimo o delu naše aplikaije, ki se izvaja stran od centralnih aplikacij, ki so vedno doseljive.
+Takšen primer so naprimer mikro podatkovni centri in klastri, na majhnih računalnikih kot naprimer raspberry pi.
+Če naša aplikacija uporablja takšne klastre je potrbno tudi njihovo sinhrono delovanje.
+Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi obsojeni, da s centralinimi strežniki komunicirajo samo minimalno, saj zelo pogosto za prenost podatkov uporabljajo draga mobilna omrežja.
 
+\subsection{Razdeljevanje dela po različnih lokacijah}
+Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
+Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
 
 \chapter{Osnovni gradniki \LaTeX{a}}
 \label{ch0}
