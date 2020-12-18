@@ -50,7 +50,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	DIPLOMA INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\ttitle}{Povezovanje Kubernetes gruč}
+\newcommand{\ttitle}{Povezovanje Kubernetes klastrov}
 \newcommand{\ttitleEn}{Connecting Kubernetes clusters}
 \newcommand{\tsubject}{\ttitle}
 \newcommand{\tsubjectEn}{\ttitleEn}
@@ -411,336 +411,69 @@ Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi 
 Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
 Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
 
-\chapter{Osnovni gradniki \LaTeX{a}}
+\chapter{Koncepti}
 \label{ch0}
+\section{Kubernetes}
+Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{whatiskubernetes}.
+Gre za program bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških klastrov v produkcijskih okoljih.
+A to vseeno niso pravi začetki Kubernetesa.
+Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
+Kasneje leta 2013 je google predstavil sistem Omega.
+Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga. Kasneje je upravljanje prevzela Cloud Native Computing Fundation.
 
-\LaTeX\ bi lahko najbolj preprosto opisali kot programski jezik namenjen oblikovanju besedil.
-Tako kot vsak visokonivojski programski jezik ima tudi \LaTeX\  številne ukaze za oblikovanje  besedila in okolja, ki omogočajo strukturiranje besedila.
-
-Vsi \LaTeX ovi ukazi se začnejo z levo poševnico  \verb=\=, okolja pa definiramo bodisi s parom zavitih oklepajev \{ in \} ali z ukazoma \verb=\begin{ }= in   \verb=\end{ }=.
-Ukazi imajo lahko tudi argumente, obvezni argumenti so podani v zavitih oklepajih, opcijski argumenti pa v oglatih oklepajih.
-
-Z ukazi torej definiramo naslov in imena avtorjev besedila, poglavja in podpoglavja in po potrebi bolj podrobno strukturiramo besedila na spiske, navedke itd.
-Posebna okolja so namenjena zapisu matematičnih izrazov, kratki primeri so v naslednjem poglavju.
-
-Vse besedilne konstrukte lahko poimenujemo in se s pomočjo teh imen nato  kjerkoli v besedilu na njih  tudi sklicujemo.
-
-\LaTeX\ sam razporeja besede v odstavke tako, da optimizira razmike med besedami v celotnem odstavku.
-Nov odstavek začnemo tako, da izpustimo v izvornem besedilu prazno vrstico. Da besedilo skoči v novo vrstico pa ukažemo z dvema levima poševnicama.
-Število presledkov med besedami v izvornem besedilo ni pomembno.
-
-
-\chapter{Matematično okolje in sklicevanje na besedilne konstrukte}
-\label{ch1}
-
-
-
-Matematična ali popolna indukcija je eno prvih orodij, ki jih spoznamo za dokazovanje trditev pri matematičnih predmetih.
-\begin{izrek}
-\label{iz:1}
-Za vsako naravno število $n$ velja
-\begin{equation}
-n < 2^n.
-\label{eq:1}
-\end{equation}
-\end{izrek}
-\begin{dokaz}
-Dokazovanje z indukcijo zahteva, da neenakost~\eqref{eq:1} najprej preverimo za najmanjše naravno število -- $0$. 
-Res, ker je $0 < 1 = 2^0$, je neenačba~\eqref{eq:1} za $n=0$ izpolnjena.
-
-Sledi indukcijski korak. S predpostavko, da je neenakost~\eqref{eq:1} veljavna pri nekem naravnem številu $n$, je potrebno pokazati, da je ista neenakost v veljavi tudi pri njegovem nasledniku -- naravnem številu $n+1$. 
-Računajmo.
-\begin{align}
-n+1 & < 2^n + 1       \label{eq:2}\\
-       & \le 2^n + 2^n \label{eq:3}\\
-       & = 2^{n+1}       \nonumber
-\end{align}
-Neenakost~\eqref{eq:2} je posledica indukcijske predpostavke, neenakost~\eqref{eq:3} pa enostavno dejstvo, da je za vsako naravno število $n$ izraz $2^n$ vsaj tako velik kot 1. 
-S tem je dokaz Izreka~\ref{iz:1} zaključen.
-\end{dokaz}
-
-Opazimo, da je \LaTeX\ številko izreka podredil številki poglavja.
-Na podoben način se lahko sklicujemo tudi na druge besedilne konstrukte, kot so med drugim poglavja, podpoglavja in plovke, ki jih bomo spoznali v naslednjem poglavju.
-
-
-\chapter{Plovke: slike in tabele}
-\label{ch2}
-
-Slike in daljše tabele praviloma vključujemo v dokument kot plovke. 
-Pozicija plovke v končnem izdelku ni pogojena s tekom besedila, temveč z izgledom strani. 
-\LaTeX\ bo skušal plovko postaviti samostojno, praviloma na mestu, kjer se pojavi v izvornem besedilu, sicer pa na 
-vrhu strani, na kateri se na takšno plovko prvič sklicujemo. 
-Pri tem pa bo na vsako stran končnega izdelka želel postaviti tudi sorazmerno velik del besedila. 
-V skrajnem primeru, če imamo res preveč plovk na enem mestu besedila, ali če je plovka previsoka, se bo \LaTeX\ odločil za stran popolnoma zapolnjeno s plovkami.
-
-Poleg tega, da na položaj plovke vplivamo s tem, kam jo umestimo v izvorno besedilo, lahko na položaj plovke na posamezni strani prevedenega besedila dodatno vplivamo z opcijami \texttt{here, top} in \texttt{bottom}.
-Zelo velike slike je najbolje postaviti na posebno stran z opcijo \texttt{page}.
-Skaliranje slik po njihovi širini lahko prilagodimo širini strani tako, da kot enoto za dolžino uporabimo kar širino strani, npr. \verb=0.5\textwidth= bo raztegnilo sliko na polovico širine strani.
-
-Na vse plovke se moramo v besedilu sklicevati, saj kot beseda pove, plovke plujejo po besedilu in se ne pojavijo točno tam, kjer nastopajo v izvornem besedilu.
-Sklic na plovko v besedilu in sama plovka naj bosta čimbližje skupaj, tako da bralcu ne bo potrebno listati po diplomi. 
-Upoštevajte pa, da se naloge tiska dvostransko in da se hkrati vidi dve strani v dokumentu!
-Na to, kje se bo slika ali druga plovka pojavila v postavljenem besedilu torej najbolj vplivamo tako, da v izvorni kodi plovko premikamo po besedilu nazaj ali naprej!
-
-Tabele ja najbolje oblikovati kar neposredno v \LaTeX u, saj za oblikovanje tabel obstaja zelo fleksibilno okolje \texttt{tabular} (glej tabelo~\ref{tbl:1}).
-Slike po drugi strani pa je bolje oblikovati oziroma izdelati z drugimi orodji in programi in se v \LaTeX u le sklicevati na ustrezno slikovno datoteko.
-
-
-\section{Formati slik}
-
-Bitne slike, vektorske slike, kakršnekoli slike, z \LaTeX{}om lahko vključimo vse.
-Slika~\ref{pic1} je v {\tt .pdf} formatu.
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{pic1.pdf}
-\end{center}
-\caption{Herschelov graf, vektorska grafika.}
-\label{pic1}
-\end{figure}
-Pa res lahko vključimo slike katerihkoli formatov? 
-Žal ne. 
-Programski paket \LaTeX\ lahko uporabljamo v več dialektih. 
-Ukaz {\tt latex} ne mara vključenih slik v formatu Portable Document Format {\tt .pdf}, ukaz {\tt pdflatex} pa ne prebavi slik v Encapsulated Postscript Formatu {\tt .eps}.
-Strnjeno je vključevanje različnih vrst slikovnih datotek prikazano v tabeli~\ref{tbl:1}.
+\section{Osnovni pojmi v kubernetesu}
+Kubernetes predstavi koncept poda, ki 
+\chapter{Priprava}
 
-\begin{table}
-\begin{center}
-\begin{tabular}{l|ccc}
-ukaz/format & {\tt .pdf} & {\tt .eps} & ostali formati \\ \hline
-{\tt pdflatex} & da & ne & da \\
-{\tt latex}   & ne & da  & da
-\end{tabular}
-\end{center}
-\caption{}
-\label{tbl:1}
-\end{table}
+\section{Raspberry PI 4}
+Za namene testiranja različnih načinov povezovanja kubernetes klastrov moramo najprej postaviti nekaj kubernetes klastrov.
+Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
+Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
 
-Nasvet? 
-Odločite se za uporabo ukaza {\tt pdflatex}. Vaš izdelek bo brez vmesnih stopenj na voljo v {.pdf} formatu in ga lahko odnesete v vsako tiskarno. 
-Če morate na vsak način vključiti sliko, ki jo imate v {\tt .eps} formatu, jo vnaprej pretvorite v alternativni format, denimo {\tt .pdf}.
+Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
+Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
+Na vsak Raspberry PI se bo namestil kubernetes klaster z enim samim vozliščem.
 
-Včasih se da v okolju za uporabo programskega paketa \LaTeX\ nastaviti na kakšen način bomo prebavljali vhodne dokumente. 
-Spustni meni na Sliki~\ref{pic2} odkriva uporabo \LaTeX{}a v njegovi pdf inkarnaciji --- {\tt pdflatex}.
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=10cm]{pic2.png}
-\end{center}
-\caption{Kateri dialekt uporabljati?}
-\label{pic2}
-\end{figure}
-Vključena slika~\ref{pic2} je seveda bitna.
+\section{K3S in K3OS}
+Obstaja več implementacij kubernetesa in mi bomo uproabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher. Hkrati so v podjetju Rancher pripravili že pripravljeno distribucijo operacijskega sistema linux K3OS, ki jo lahko namestimo na katerikoli računalnik. 
+Majhna težava se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
+A k sreči se je v ta namen začel odprtokodni projekt PiCl k3os image generator, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datorek zgradi novo sliko operaijskega sistema za naš Raspberry PI.
 
-Na vse tabele se moramo v besedilu, podobno kot na slike, tudi sklicevati, saj kot plovke v oblikovanem besedilo niso nujno na istem mestu kot v izvornem besedilu.
+Konfiguracijske datoteke, ki jih moramo priložiti so standardne YAML datoteke, ki jih podpira K3OS.
+Vanje zapišemo nastavitve kot so ssh javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo z kubernetes klastrom in način v katerem želimo zagnati K3S na sistemu.
+V našem primeru smo vse K3S programe zagnali v strežniškem načinu in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svoj klaster.
 
+\section{Demonstracijska spletna aplikacija}
+Za potrebe testiranja sem moral naredili novo testno aplikacijo.
+Ker se to delo želi posebej osredotočiti na realne probleme v industriji, sem nujno potreboval preprosto aplikacijo, ki premore tudi shranjevanje podatkov v podatkovno bazo.
+Aplikacija dostopna v javnem Docker repozitoriju je narejena v programskem jeziku Go, saj z njim lahko zgradimo res majhno Docker sliko, kar pa je pri testiranju pomembno, da ne izgubimo preveč časa na čakanju.
+Aplikacija deluje preprosto.
+Na podatnih mrežnih vratiih izpostavi vmesnik REST z dvema preprostima klicema.
+GET klic na pot /users nam bo vrnil vse uporabnike, ki so zapisani v tabeli v bazi, s klicem POST na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v bazo.
+Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
+Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omoča napredne sinhronizacije tudi med različnimi strežniki in klastri.
+K sreči pa CrateDB implementira PostgreSQL api in nam kode za prehod med bazami ni potrebon spreminjati.
 
-\subsection{Podnapisi k slikam in tabelam}
 
-Vsaki sliki ali tabeli moramo dodati podnapis, ki na kratko pojasnuje, kaj je na sliki ali tabeli. 
-Če nekdo le prelista diplomsko delo, naj bi že iz slik in njihovih podnapisov lahko na grobo razbral, kakšno temo naloga obravnava.
+\section{Namestitev kubefed}
+Kot ena izmed ključnih komponent složnega delovanja večih klastrov je njihovo upravljanje.
+V te namene bomo uporabili program kubefed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
+Namestimo ga v razdelek kube-federation-system.
+Ker je izdelek še v razvoju in še ni prišel iz alfa faze nimajo objavljene verzije za arm procesorje.
+Zato sem si moral sam zgraditi svojo Docker sliko in sem jo objavil na hub.docker.com.
+Lahko pa sem uporabil originalni Helm zapis strukture in sem samo spremenil Docker sliko iz originalne na mojo.
+Za delo z kubefed namestitvijo v klastru pa sem moral na svoj računalnik namestiti orodje za komandno vrstico kubefedcli.
+Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
+S tem smo uspešmo povezali več kubernetes klastrov.
 
-Če slike povzamemo iz drugih virov, potem se moramo v podnapisu k taki sliki sklicevati na ta vir!
 
 
-\chapter{Struktura strokovnih besedil}
-\label{stroka}
+\section{}
 
-Strokovna besedila imajo ustaljeno strukturo, da bi lahko hitreje in lažje brali in predvsem razumeli taka besedila, saj načeloma vemo vnaprej, 
-kje v besedilu se naj bi nahajale določene informacije.
 
-Najbolj osnovna struktura strokovnega besedila je:
-\begin{description}
-\item[naslov besedila,] ki naj bo sicer kratek, a kljub temu dovolj poveden o vsebini besedila,
-\item[imena avtorjev] so običajno navedena po teži prispevka, prvi avtor je tisti, ki je besedilo dejansko pisal, zadnji pa tisti, ki je raziskavo vodil,
-\item[kontaktni podatki] -- poleg imena in naslova institucije je potreben vsaj naslov elektronske pošte,
-\item[povzetek] je kratko besedilo, ki povsem samostojno povzame vsebino in izpostavi predvsem  glavne rezultate ali zaključke,
-\item[ključne besede] so tudi namenjene iskanju vsebin med množico člankov,
-\item[uvodno poglavje] uvede bralca v tematiko besedila, razloži kaj je namen besedila, predstavi področje o katerem besedilo piše 
-(če temu ni namenjeno v celoti posebno poglavje) ter na kratko predstavi strukturo celotnega besedila,
-\item[poglavja] tvorijo zaokrožene celote, ki se po potrebi še nadalje členijo na podpoglavja, namenjena so recimo opisu orodij, 
-ki smo jih uporabili pri delu, teoretičnim rezultatom ali predstavitvi rezultatov, ki smo jih dosegli,
-\item[zaključek] še enkrat izpostavi glavne rezultate ali ugotovitve, jih primerja z dosedanjimi in morebiti poda tudi ideje za nadaljne delo,
-\item[literatura] je seznam vseh virov, na katere smo se pri svojem delu opirali, oziroma smo se na njih sklicevali v svojem besedilu.
-\end{description}
 
-Strokovna besedila običajno pišemo v prvi osebi množine, v nevtralnem in umirjenem tonu. 
-Uporaba sopomenk ni zaželjena, saj želimo zaradi lažjega razumevanja za iste pojme vseskozi uporabljati iste besede.
-Najpomenbnejše ugotovitve je smiselno večkrat zapisati, na primer v povzetku, uvodu, glavnem delu in zaključku.
-Vse trditve naj bi temeljile bodisi na lastnih ugotovitvah (izpeljavah, preizkusih, testiranjih) ali pa z navajanjem ustreznih virov.
 
-Največ se lahko naučimo s skrbnim branjem dobrih zgledov takih besedil.
 
-
-\chapter{Pogoste napake pri pisanju v slovenščini}  % poglavje dodal Solina
-\label{slo}
-
-V slovenščini moramo paziti  pri uporabi pridevnikov, ki se ne sklanjajo kot so npr. kratice. 
-Pravilno pišemo model CAD in \textbf{ne} CAD model!
-
-Pri sklanjanju tujih imen ne uporabljamo vezajev, pravilno je Applov operacijski sistem in \textbf{ne} Apple-ov.
-
-Pika, klicaj in vprašaj so levostični: pred njimi ni presledka, za njimi pa. 
-Klicajev in vprašajev se v strokovnih besedilih načeloma izogibamo. Oklepaji so desnostični in zaklepaji levostični (takole).
-
-V slovenščini pišemo narekovaje drugače kot v angleščini!   
-Običajno uporabljamo dvojne spodnje-zgornje narekovaje:  \sn{slovenski narekovaji}.
-Za slovenske narekovaje je v tej LaTeXovi predlogi definiran nov ukaz \verb+ \sn{ ... }+.
-
-Vezaj  je levo in desno stičen: \verb=slovensko-angleški slovar= in ga pišemo z enim pomišljajem.
-
-V slovenščini je pred in po pomišljaju presledek, ki ga v LaTeXu pišemo z dvema pomišljajema: \verb=Pozor -- hud pes!=
-V angleščini pa je za razliko pomišljaj levo in desno stičen in se v LaTeXu piše s tremi  pomišljaji: \verb=---=.
-S stičnim pomišljajem pa lahko nadomeščamo predlog od \dots do, denimo pri navajanju strani, npr. preberite strani 7--11 (\verb=7--11=).
-
-
-
-\sn{Pred ki, ko, ker, da, če vejica skače}. To osnovnošolsko pravilo smo v življenju po potrebi uporabljali, dopolnili, morda celo pozabili. 
-Pravilo sicer drži, ampak samo če je izpolnjenih kar nekaj pogojev (npr. da so ti vezniki samostojni, enobesedni, ne gre za vrivek itd.).
-Povedki so med seboj ločeni z vejicami, razen če so zvezani z in, pa, ter, ne–ne, niti–niti, ali, bodisi, oziroma.
-Sicer pa je bolje pisati kratke stavke kot pretirano dolge.
-
-V računalništvu se stalno pojavljajo novi pojmi in nove besede, za katere pogosto še ne obstajajo uveljavljeni slovenski izrazi.
-Kadar smo v dvomih, kateri slovenski izraz je primeren, si lahko pomagamo z Računalniškim slovarčkom~\cite{slovarcek}.
-
-
-
-
-
-\chapter{Koristni nasveti pri pisanju v \LaTeX{u}}   % poglavje dodal Solina
-\label{latex}
-
-Programski paket \LaTeX\ je bil prvotno predstavljen v priročniku~\cite{lamport} in je v resnici nadgradnja sistema \TeX\ avtorja Donalda Knutha~\cite{knuth}, 
-znanega po svojih knjigah o umetnosti programiranja, 
-ter Knuth-Bendixovem algoritmu~\cite{knuth1983simple}.
-
-Različnih implementacij \LaTeX{}a je cela vrsta.
-Za OS X priporočamo TeXShop, za Windows PC pa MikTeX. Spletna verzija, ki poenostavi sodelovanje pri pisanju, je npr. ShareLaTeX.
-
-Včasih smo si pri pisanju v \LaTeX{}u  pomagali predvsem s tiskanimi pri\-ro\-čni\-ki, danes pa je enostavneje in hitreje, da ob vsakem problemu za pomoč enostavno povprašamo Google, 
-saj je na spletu cela vrsta forumov za pomoč pri \TeX{}iranju.
-
-\LaTeX\ včasih ne zna deliti slovenskih besed, ki vsebujejo črke s strešicami. 
-Če taka beseda štrli preko desnega roba,  \LaTeX{}u pokažemo, kje lahko tako besedo deli, takole: \verb=ra\-ču\-nal\-ni\-štvo=.
-Katere vrstice štrlijo preko desnega roba, se lahko prepričamo tako, da dokument prevedemo s vključeno opcijo \texttt{draft}: \verb=\documentclass[a4paper, 12pt, draft]{book}=.
-
-
-Predlagamo, da v izvornem besedilu začenjate vsak stavek v novi vrstici, saj \LaTeX\ sam razporeja besede po vrsticah postavljenega besedila. 
-Bo pa zato iskanje po izvornem besedilu in popravljanje veliko hitrejše. 
-Večina sistemov za \TeX{}iranje sicer omogoča s klikanjem enostavno prestopanje  iz prevedenega besedila na ustrezno mesto v izvornem besedilu in obratno.
-
-Boljšo preglednost dosežemo, tako kot pri pisanju programske kode, tudi z izpuščanjem praznih vrstic za boljšo preglednost strukture izvornega besedila.
-
-S pomočjo  okolja \verb=\begin{comment} ... \end{comment}= lahko  hkrati zakomentiramo več vrstic izvornega besedila.
-
-Pri spreminjanju in dodajanju izvornega besedila je najbolje pogosto prevajati, da se sproti prepričamo, če so naši nameni izpolnjeni pravilno.
-
-Kadar besedilo, ki je že bilo napisano z nekim vizualnim urejevalnikom (npr. z Wordom), želimo prenesti v \LaTeX, je tudi najbolje to delati postopoma s posameznimi bloki besedila, 
-tako da lahko morebitne napake hitro identificiramo in odpravimo.
-Za prevajanje Wordovih datotek v \LaTeX\ sicer obstajajo prevajalniki, ki pa običajno ne generirajo tako čisto logično strukturo besedila, kot jo  \LaTeX\ omogoča.
-Hiter in enostaven način prevedbe besedila, ki  zahteva sicer ročne dopolnitve, poteka tako, da besedilo urejeno z vizualnim urejevalnikom najprej shranimo v formatu pdf, 
-nato pa to besedilo uvozimo v urejevalnik, kjer urejamo izvorno besedilo v formatu \LaTeX.
-
-
-\section{Pisave v \LaTeX u}
-
-V  \LaTeX ovem okolju lahko načeloma uporabljamo poljubne pisave. 
-Izbira poljubne pisave pa ni tako enostavna kot v vizualnih urejevalnikih besedil.
-Posamezne oblikovno medseboj usklajene pisave so običajno združene v družine pisav.
-V \LaTeX u se privzeta družina pisav imenuje Computer Modern,
-kjer so poleg navadnih črk (roman v \LaTeX u) na voljo tudi kurzivne črke (\textit{italic} v \LaTeX u), 
-krepke (\textbf{bold} v \LaTeX u), kapitelke (\textsc{small caps} v \LaTeX u), linearne črke ({\textsf{san serif} v \LaTeX u)                                                                                                                                                                                                                                                                                                                         
-in druge pisave.
-V istem dokumentu zaradi skladnega izleda uporabljamo običajno le pisave ene družine. 
-
-Ko začenjamo uporabljati \LaTeX, je zato najbolj smiselno uporabljati kar privzete pisave, s katerimi je napisan tudi ta dokument.
-Z ustreznimi ukazi  lahko nato preklapljamo med navadnimi, kurzivnimi, krepkimi in drugimi pisavami. 
-Zelo enostavna je tudi izbira velikosti črk.
-\LaTeX\  odlično podpira večjezičnost, tudi v sklopu istega dokumenta, saj obstajajo pisave za praktično vse jezike, tudi take, ki ne uporabljajo latinskih črk.
-
-Za prikaz programske kode se pogosto uporablja pisava, kjer imajo vse črke enako širino, kot so  črke na mehanskem pisalnem stroju ({\texttt{typewriter} v \LaTeX u).
-
-Najbolj priročno okolje za pisanje kratkih izsekov programske kode je okolje \texttt{verbatim}, saj ta ohranja vizualno organizacijo izvornega besedila in ima privzeto pisavo pisalnega stroja.
-
-\begin{verbatim}
-for (i = 0; i < 100; i++)
-   for (j = i; j < 10; j++)
-      some_function(i, j);
-\end{verbatim}
-
-
-\chapter{Kaj pa literatura?}
-\label{lit}
-
-Kot smo omenili že v uvodu, je pravi način za citiranje literature uporaba \BibTeX{}a~\cite{bib}. 
-\BibTeX\ zagotovi, da nobene obvezne informacije pri določeni vrsti literature ne izpustimo in da vse informacije o določeni vrsti vira dosledno navajamo na enak način.
-
-Osnovna ideja \BibTeX{a} je, da vse informacije o literaturi zapisujemo v posebno datoteko, v našem primeru je to \texttt{literatura.bib}.
-Vsakemu viru v tej datoteki določimo simbolično ime.
-V  našem primeru je v tej datoteki nekaj najbolj značilnih zvrsti literature, kot so knjige~\cite{lamport}, 
-članki v revijah~\cite{leonardo} in zbornikih konferenc~\cite{poglavje_springer}, 
-spletni viri~\cite{bib,slovarcek,video}, 
-tehnično poročilo~\cite{andersen2012kinect}, 
-diplome~\cite{diploma} itd.
-Diploma~\cite{diploma} iz leta 1990 je bila prva diploma na Fakulteti za elektrotehniko in računalništvo, ki je bila oblikovana z \LaTeX om!
-
-Po vsaki spremembi pri sklicu na literaturo moramo najprej prevesti izvorno besedilo s prevajalnikom \LaTeX, nato s prevajalnikom  \BibTeX, ki ustvari datoteko  {\tt vzorec\_dip\_Seminar.bbl}, in nato še dvakrat s prevajalnikom  \LaTeX.
-
-Kako natančno se spisek literature nato izpiše (ali po vrstnem redu sklicevanja, ali po abecedi priimkov prvih avtorjev, ali se imena avtorjev pišejo pred priimki itd.) je odvisno od stilske datoteke.
-V diplomi bomo uporabili osnovno stilsko datoteko \texttt{plain}, ki vire razporedi po abecedi.
-Zato je potrebno pri določenih zvrsteh literature, ki nima avtorjev, dodati polje \texttt{key}, ki določi vrstni red vira po abecedi.
-
-Z uporabo \BibTeX{a} v slovenščini je še nekaj nedoslednosti, saj so pomožne besede, ki jih \BibTeX\ sam doda,  kot so \textit{editor},  \textit{pages} in besedica  \textit{and} pred zadnjim avtorjem, 
-če ima vir več avtorjev~\cite{andersen2012kinect}, zapisane v angleščini,
-čeprav smo izbrali opcijo \texttt{slovene} pri paketu \texttt{babel}.
-To nedoslednost je možno popraviti z ročnim urejanjem datoteke {\tt vzorec\_dip\_Seminar.bbl}, 
-kar pa je smiselno šele potem, ko bibliografije v datoteki \texttt{literatura.bib} ne bomo več spreminjali,
-oziroma ne bomo več dodajali novih sklicev na literaturo v izvornem besedilu.
-Vsebino datoteke {\tt vzorec\_dip\_Seminar.bbl} lahko na koncu urejanja tudi vključimo kar v izvorno besedilo diplome, tako da je vso besedilo, vključno z literaturo, zajeto le v eni datoteki.
-
-Ko začenjamo uporabljati \BibTeX\ je lažje, če za urejanje datoteke .bib uporabljamo kar isti urejevalnik kot za urejanje datotek .tex, 
-čeprav obstajajo tudi posebni urejevalniki oziroma programi za delo z \BibTeX om.
-
-Le če se bomo na določen vir v besedilu tudi sklicevali, se bo pojavil tudi v spisku literature.
-Tako je avtomatično zagotovljeno, da se na vsak vir v seznamu literature tudi sklicujemo v besedilu diplome.
-V datoteki \texttt{.bib} imamo sicer lahko veliko več virov za literaturo, kot jih bomo uporabili v diplomi.
-
-Vire v formatu \BibTeX\ lahko enostavno poiščemo in prekopiramo iz akademskih spletnih portalov za iskanje znanstvene literature v našo datoteko \texttt{.bib}, na primer v Google učenjaku.
-Izvoz v Google učenjaku še dodatno poenostavimo, če v nastavitvah izberemo \BibTeX\ kot želeni format za izvoz navedb.
-Navedbe, ki jih na tak način prekopiramo, pa moramo pred uporabo vseeno preveriti, saj so taki navedki običajno generirani povsem avtomatično.
-
-Pri sklicevanju na literaturo na koncu stavka moramo paziti, da je pika po ukazu \verb=\cite{ }=.
-Da \LaTeX\ ne bi delil vrstico ravno tako, da bi sklic na literaturo v oglatih oklepajih začel novo vrstico, lahko pred sklicem na literaturo dodamo nedeljiv presledek: \verb=~\cite{ }=.
-
-
-\section{Izbiranje virov za spisek literature}
-
-Dandanes  se skoraj  vsi pri iskanju informacij vedno najprej lotimo iskanja preko svetovnega spleta.
-Rezultati takega iskanja pa so pogosto spletne strani, ki danes obstajajo, jutri pa jih morda ne bo več, ali pa vsaj ne v taki obliki, kot smo jo prebrali.
-Smisel navajanja literature pa je, da tudi po dolgih letih nekdo, ki bo bral vašo diplomo, lahko poišče vire, ki jih navajate v diplomi.
-Taki viri pa so predvsem članki v znanstvenih revijah, ki se arhivirajo v knjižnicah, založniki teh revij pa večinoma omogočajo tudi elektronski dostop do arhiva vseh njihovih člankov.
-
-Znanstveni rezultati, ki so objavljeni v obliki recenziranih člankov, bodisi v konferenčnih zbornikih, še bolje pa v znanstvenih revijah, so veliko bolj izčiščen in zanesljiv vir informacij, saj
-so taki članki šli skozi recenzijski postopek.
-Zato na svetovnem spletu začenjamo iskati vire za strokovna besedila predvsem preko akademskih spletnih portalov, kot so npr. Google učenjak, Research Gate ali Academia, saj
-so na teh portalih rezultati iskanja le akademske publikacije.
-Če je za dostop do nekega članka potrebno plačati, se obrnemo za pomoč in dodatne informacije na  našo knjižnico.
-
-Če res ne gre drugače, pa je pomembno, da pri sklicevanju na spletni vir, vedno navedemo tudi datum, kdaj smo dostopali do tega vira.
-
-
-
-\chapter{Sistem STUDIS in PDF/A}
-\label{PDF}
-
-Elektronsko verzijo diplome moramo oddati preko sistema STUDIS v formatu PDF/A ~\cite{pdfa}.
-Natančneje v formatu PDF/A-1b. 
-
-\LaTeX\ in omenjeni format imata še nekaj težav s sobivanjem. 
-Paket \texttt{pdfx.sty}, ki naj bi \LaTeX{u} omogočal podporo formatu PDF/A ne deluje v skladu s pričakovanji. 
-Ta predloga delno ustreza formatu, vsekakor dovolj, da jo študentski informacijski sistem sprejme. 
-Znaten del rešitve je prispeval Damjan Cvetan.
-
-V predlogi, poleg izvornega  dokumenta \texttt{.tex} in vloženih slik \texttt{pic1.pdf} in \texttt{pic2.png}, 
-potrebujemo še predlogo datoteke z metapodatki \texttt{pdfa-1b.xmp} in datoteko z barvnim profilom \texttt{sRGBIEC1966-2.1.icm}.
 
 
 
