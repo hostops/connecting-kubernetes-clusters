@@ -498,13 +498,35 @@ Tu kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implement
 Rešitev za oba problema je identična.
 Postaviti moramo kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
 
-\subsection{Razporeditev uporabnikov glede na geolokacijo}
-Na primeru naše spletne aplikacije bi naše uporabnike lahko 
+\section{Razporeditev uporabnikov po klastrih}
+Ko imamo na vsakem klastrih javno izpostavljen Service preko z uporabo NodePort ali loadbalancerja in urejene ingress zapise moramo še vedno uporabnike preusmeriti na njim najbljižji klaster.
+
+Uporabnike lahko mi usmerimo avtomatsko z DNS zapisi, ki omogočajo usmerjanje na podlai geolokacije.
+Lahko uporabimo in namestimo zunanju dns skozi kubernetes ali pa kar ročno.
+
+Slika: Ustvarjanje geolakacijskega A recorda na ROUTE53
+V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
+
+Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo spletne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
+V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje našega programa.
+
+
+\section{Infrastruktura primera}
+V našem primeru spletne aplikacije bomo imeli v vsakem klastru en Deployment z rašim rest apijem - stateful rest sample in en pripadajoči service tipa LoadBalancer, da ga izpostavimo izven klastra.
+Za podatkovno bazo pa bomo uporabili StatefulSet s CrateDB, PVC diskom na lokalni sd kartici internim servicom za prepoznavo ostalih instanc CrateDB v klastru in service, ki izpostavi podatkovno bazo izven klastra za sinhronizacijo.
+
+Slika: infrastruktura aplikacije
+
+\section{Implementacija infrastrukture s kubefed}
+TODO: ENABLE STATEFULSET, \dots
 
 
 
+\section{Sinhronizacija podatkov}
 
 \chapter{Upravljanje izoliranih aplikacij}
+
+
 \chapter{Upravljanje klastrov na robu oblaka}
 \chapter{Sklepne ugotovitve}
 
