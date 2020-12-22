@@ -478,6 +478,34 @@ S tem smo uspešmo povezali več kubernetes klastrov.
 
 
 
+\chapter{Povezovanje med podatkovnimi centri}
+\section{Problem velike latence}
+Najbolj standarden industrijski primer aplikacije je spletna aplikacija, ki oranjati stranje. 
+Ko neko podjetje lastnik aplikacije poseže po globalnem trgu zelo hitro ugotovijo, da stranke, ki niso blizu podatkovnega centra precej dlje čakajo pred ekrani, da se naloži njihova spletna aplikacija in njihovi podatki.
+Takšen problem se v splošnem rešuje tako, da našo aplikacijo postavimo še na dodaten strežnik bližje uporabniku. 
+Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi v
+računalništvo. Najbolj očiten primer je sinhronizacija podatkov.
+V našem primeru bomo uporabili dokaj novo alternativo standardnim sql podatkovnim bazam CrateDB, ki ima veliko boljšo podporo za sinhornizacijo podatkov med vozlišči, hkrati pa nam kompatibilnost z apijem podatkovne baze postgres omogoča, da naših aplikacij ni potrebno konceptualno spreminjati.
+
+\section{Povečanje dosegljivosti aplikacije}
+Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
+Spomnimo, da je ena izmed zahtev, da kubernetes dela učinkovito to, da so strežniki blizu skupaj.
+In v primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center.
+Če uporabljamo oblak in gremo še korak dlje z zagotavljanjem dosegljivosti pa nam niti ni dovolj, da uporabimo različne podatkovne centre, ki jih ponujajo oblačni ponudniki ampak ne zaupamo niti temu, da bo ves čas dosegljiv ponudnik pa lahko postavimo naše klastre pri več različnih ponudnikih.
+Tu kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe kubernetesa.
+
+\section{Povezovanje kubernetes klastrov med podatkovnimi centri}
+Rešitev za oba problema je identična.
+Postaviti moramo kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
+
+\subsection{Razporeditev uporabnikov glede na geolokacijo}
+Na primeru naše spletne aplikacije bi naše uporabnike lahko 
+
+
+
+
+\chapter{Upravljanje izoliranih aplikacij}
+\chapter{Upravljanje klastrov na robu oblaka}
 \chapter{Sklepne ugotovitve}
 
 Uporaba \LaTeX{a} in \BibTeX{a} je v okviru Diplomskega seminarja \textbf{obvezna}!
