@@ -468,8 +468,11 @@ S tem smo uspešmo povezali več kubernetes klastrov.
 
 
 
-\section{}
+\section{Postavitev lokalnih klastrov}
 
+TODO: Ipiji so ipd\dots
+
+TODO: SHEMA lokalna INFRASTRUKRUa
 
 
 
@@ -517,12 +520,37 @@ Za podatkovno bazo pa bomo uporabili StatefulSet s CrateDB, PVC diskom na lokaln
 
 Slika: infrastruktura aplikacije
 
+Na strani https TODO je dostopna konfiguracija za kubernetes infrastrukturo aplikacije. Postavimo jo z ukazom.
+\begin{verbatim}
+kubectl apply -f diploma-demo-1
+\end{verbatim}
+Takoj preverimo, ce aplikacija deluje in lahko podatke zapisujemo v bazo, tako da prek demo aplikacije poizkusimo dodati uporabnika in izpisati vse uporabnike. To naredimo z curl komando.
+\begin{verbatim}
+curl -X POST TODO:8080/users --data '{"name": "John", "lastname": "Doe"}'
+curl localhost:8080/users
+\end{verbatim}
+
+
 \section{Implementacija infrastrukture s kubefed}
-TODO: ENABLE STATEFULSET, \dots
-
-
+Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje. V našem primeru gre za tipe service, deployment in statefulset. Vklopimo jih z naslenjim ukazom.
+\begin{verbatim}
+kubefedctl enable <ime tipa>
+\end{verbatim}
+Ko smo si vklopili federacijo na vseh potrebnih tipih pa moramo še vklopiti avtomatsko upravljanje na specifičnih objektih. V našem primeru želimo za to uporabiti ukaz kubefedctl federate.
+\begin{verbatim}
+kubefedctl federate deployment stateful-rest-sample
+kubefedctl federate statefulset crate
+kubefedctl federate service crate-internal TODO
+\end{verbatim}
+Po preizkusu delovanje z curl komando opazimo, da podatki niso sinhornizirani. Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
+Na tej točki se ustavij nekatere spletne igre in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
 
 \section{Sinhronizacija podatkov}
+Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja  uporabnike ključno, da se podatki sinhronizirajo med seboj.
+Sicer v našem primeru res uporabljamo zgolj eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
+Zopet se moramo spomniti, da so tudi klastri podatkovnih baz narejeni tako, da najbolje delujejo če so blizu skupaj.
+Zaradi tega mnoge baze, ki podpirajo sinhronizacijo podatkov znotraj klastra, podpirajo tudi sinhronizacijo med klastri.
+https://crate.io/docs/crate/howtos/en/latest/clustering/multi-zone-setup.html
 
 \chapter{Upravljanje izoliranih aplikacij}
 
