@@ -423,6 +423,11 @@ kubefedctl federate service crate-internal TODO
 \end{verbatim}
 Po preizkusu delovanje z curl komando opazimo, da podatki niso sinhornizirani. Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
 Na tej točki se ustavij nekatere spletne igre in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
+\begin{verbatim}
+curl -s -X POST 192.168.10.111/users|jq --data '{"name": "John", "lastname": "Doe"}'
+curl -s 192.168.10.112/users|jq
+[]
+\end{verbatim}
 \section{Sinhronizacija podatkov}
 Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja uporabnike ključno, da se podatki sinhronizirajo med seboj.
 Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
@@ -445,6 +450,13 @@ Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop pogosto naj
 V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo, kar z uporabo našega REST apija.
 To bomo storili v drugem ubuntu kontejnerju z uproabo komand curl za izvajanje rest api klicev in jq za razčlenjevanje podatkov.
 Podatki se sinhronizirajo vsakih 10 sekund.
+
+Primer še testiramo in dobimo spodnji izhod, kar potrdi, da so se podatki uspešno sinhronizirali.
+\begin{verbatim}
+curl -s -X POST 192.168.10.111/users|jq --data '{"name": "John", "lastname": "Doe"}'
+curl -s 192.168.10.112/users|jq
+[{"Name":"John","Lastname":"Doe"}]
+\end{verbatim}
 
 
 
