@@ -1,16 +1,26 @@
 \BOOKMARK [0][-]{chapter*.2}{Povzetek}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Uvod}{}% 3
-\BOOKMARK [0][-]{chapter.2}{Osnovni gradniki LaTeXa}{}% 4
-\BOOKMARK [0][-]{chapter.3}{Matematicno okolje in sklicevanje na besedilne konstrukte}{}% 5
-\BOOKMARK [0][-]{chapter.4}{Plovke: slike in tabele}{}% 6
-\BOOKMARK [1][-]{section.4.1}{Formati slik}{chapter.4}% 7
-\BOOKMARK [0][-]{chapter.5}{Struktura strokovnih besedil}{}% 8
-\BOOKMARK [0][-]{chapter.6}{Pogoste napake pri pisanju v sloven\235cini}{}% 9
-\BOOKMARK [0][-]{chapter.7}{Koristni nasveti pri pisanju v LaTeXu}{}% 10
-\BOOKMARK [1][-]{section.7.1}{Pisave v LaTeXu}{chapter.7}% 11
-\BOOKMARK [0][-]{chapter.8}{Kaj pa literatura?}{}% 12
-\BOOKMARK [1][-]{section.8.1}{Izbiranje virov za spisek literature}{chapter.8}% 13
-\BOOKMARK [0][-]{chapter.9}{Sistem STUDIS in PDF/A}{}% 14
-\BOOKMARK [0][-]{chapter.10}{Sklepne ugotovitve}{}% 15
-\BOOKMARK [0][-]{chapter.10}{Literatura}{}% 16
+\BOOKMARK [1][-]{section.1.1}{Motivacija}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Cilj in vsebina naloge}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Koncepti}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Kubernetes}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Osnovni pojmi v kubernetesu}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Priprava}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Raspberry PI 4}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{K3S in K3OS}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.3}{Demonstracijska spletna aplikacija}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.4}{Namestitev kubefed}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.5}{Postavitev lokalnih klastrov}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Povezovanje med podatkovnimi centri}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Problem velike latence}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Povecanje dosegljivosti aplikacije}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Povezovanje kubernetes klastrov med podatkovnimi centri}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Razporeditev uporabnikov po klastrih}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.5}{Infrastruktura primera}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.6}{Implementacija infrastrukture s kubefed}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.7}{Sinhronizacija podatkov}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Upravljanje izoliranih aplikacij}{}% 23
+\BOOKMARK [0][-]{chapter.6}{Upravljanje klastrov na robu oblaka}{}% 24
+\BOOKMARK [0][-]{chapter.7}{Sklepne ugotovitve}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Literatura}{}% 26

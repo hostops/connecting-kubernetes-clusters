@@ -5,17 +5,33 @@
 \contentsline {chapter}{Abstract}{}{chapter*.3}%
 \babel@toc {slovene}{}
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Osnovni gradniki \LaTeX {a}}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Matemati\IeC {\v c}no okolje in sklicevanje na besedilne konstrukte}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Plovke: slike in tabele}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Formati slik}{8}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Podnapisi k slikam in tabelam}{10}{subsection.4.1.1}%
-\contentsline {chapter}{\numberline {5}Struktura strokovnih besedil}{11}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Pogoste napake pri pisanju v sloven\IeC {\v s}\IeC {\v c}ini}{13}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Koristni nasveti pri pisanju v \LaTeX {u}}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Pisave v \LaTeX u}{16}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Kaj pa literatura?}{19}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Izbiranje virov za spisek literature}{21}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Sistem STUDIS in PDF/A}{23}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Sklepne ugotovitve}{25}{chapter.10}%
-\contentsline {chapter}{Literatura}{27}{chapter.10}%
+\contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a dosegljivost}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Izolacija aplikacije}{3}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{3}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{3}{subsection.1.2.5}%
+\contentsline {chapter}{\numberline {2}Koncepti}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Kubernetes}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Osnovni pojmi v kubernetesu}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Priprava}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Raspberry PI 4}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}K3S in K3OS}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Demonstracijska spletna aplikacija}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Namestitev kubefed}{9}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Postavitev lokalnih klastrov}{9}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Povezovanje med podatkovnimi centri}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Problem velike latence}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Povezovanje kubernetes klastrov med podatkovnimi centri}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Razporeditev uporabnikov po klastrih}{12}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Infrastruktura primera}{13}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Implementacija infrastrukture s kubefed}{13}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Sinhronizacija podatkov}{14}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Uporaba primerne podatkovne baze}{14}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Podatke sinhroniziramo sami}{15}{subsection.4.7.2}%
+\contentsline {chapter}{\numberline {5}Upravljanje izoliranih aplikacij}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Upravljanje klastrov na robu oblaka}{19}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Sklepne ugotovitve}{21}{chapter.7}%
+\contentsline {chapter}{Literatura}{23}{chapter.7}%
