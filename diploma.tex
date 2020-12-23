@@ -21,13 +21,8 @@
 % verzija 16. april 2016 (odstranjena izjava o avtorstvu)
 % verzija 5. junij 2016 (Franc Solina dodal vrstice, ki jih je označil s svojim imenom)
 % verzija junij 2018 (Polona Oblak, I?RM predloga)
-
-
 \documentclass[a4paper, 12pt]{book}
 %\documentclass[a4paper, 12pt, draft]{book}  Nalogo preverite tudi z opcijo draft, ki vam bo pokazala, katere vrstice so predolge!
-
-
-
 \usepackage[utf8x]{inputenc}   % omogoča uporabo slovenskih črk kodiranih v formatu UTF-8
 \usepackage[slovene,english]{babel}    % naloži, med drugim, slovenske delilne vzorce
 \usepackage[pdftex]{graphicx}  % omogoča vlaganje slik različnih formatov
@@ -37,16 +32,13 @@
 %\usepackage{hyperxmp}
 \usepackage[hyphens]{url}  % dodal Solina
 \usepackage{comment}       % dodal Solina
-
 \usepackage[pdftex, colorlinks=true,
 						citecolor=black, filecolor=black, 
 						linkcolor=black, urlcolor=black,
 						pagebackref=false, 
 						pdfproducer={LaTeX}, pdfcreator={LaTeX}, hidelinks]{hyperref}
-
 \usepackage{color}       % dodal Solina
 \usepackage{soul}       % dodal Solina
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	DIPLOMA INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,8 +49,6 @@
 \newcommand{\tauthor}{Jakob Hostnik}
 \newcommand{\tkeywords}{cluster, cloud, kubernetes, kubefed}
 \newcommand{\tkeywordsEn}{gruča, oblak, kubernetes, kubefed}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	HYPERREF SETUP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,19 +56,12 @@
 \hypersetup{pdfsubject=\ttitleEn}
 \hypersetup{pdfauthor={\tauthor, jakob@hostnik.si}}
 \hypersetup{pdfkeywords=\tkeywordsEn}
-
-
- 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % postavitev strani
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-
 \addtolength{\marginparwidth}{-20pt} % robovi za tisk
 \addtolength{\oddsidemargin}{40pt}
 \addtolength{\evensidemargin}{-40pt}
-
 \renewcommand{\baselinestretch}{1.3} % ustrezen razmik med vrsticami
 \setlength{\headheight}{15pt}        % potreben prostor na vrhu
 \renewcommand{\chaptermark}[1]%
@@ -89,32 +72,23 @@
 %\fancyhead[LO]{\sl \rightmark} \fancyhead[RE]{\sl \leftmark}
 \fancyhead[RE]{\sc \tauthor}              % dodal Solina
 \fancyhead[LO]{\sc Diplomska naloga}     % dodal Solina
-
-
 \newcommand{\BibTeX}{{\sc Bib}\TeX}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % naslovi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-
-
 \newcommand{\autfont}{\Large}
 \newcommand{\titfont}{\LARGE\bf}
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
 \setcounter{tocdepth}{1}	      % globina kazala
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % konstrukti
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \newtheorem{izrek}{Izrek}[chapter]
 \newtheorem{trditev}{Trditev}[izrek]
 \newenvironment{dokaz}{\emph{Dokaz.}\ }{\hspace{\fill}{$\Box$}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PDF-A
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % define medatata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -122,14 +96,12 @@
 \def\Author{\tauthor, matjaz.kralj@fri.uni-lj.si}
 \def\Subject{\ttitleEn}
 \def\Keywords{\tkeywordsEn}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % \convertDate converts D:20080419103507+02'00' to 2008-04-19T10:35:07+02:00
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \def\convertDate{%
     \getYear
 }
-
 {\catcode`\D=12
  \gdef\getYear D:#1#2#3#4{\edef\xYear{#1#2#3#4}\getMonth}
 }
@@ -143,9 +115,7 @@
     \edef\xTZm{#1#2}%
     \edef\convDate{\xYear-\xMonth-\xDay T\xHour:\xMin:\xSec+\xTZh:\xTZm}%
 }
-
 \expandafter\convertDate\pdfcreationdate 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % get pdftex version string
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -153,14 +123,11 @@
 \countA=\pdftexversion
 \advance \countA by -100
 \def\pdftexVersionStr{pdfTeX-1.\the\countA.\pdftexrevision}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % XMP data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \usepackage{xmpincl}
 \includexmp{pdfa-1b}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pdfInfo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
@@ -172,18 +139,14 @@
     /ModDate  (\pdfcreationdate)
     /Trapped  /False
 }
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 \selectlanguage{slovene}
 \frontmatter
 \setcounter{page}{1} %
 \renewcommand{\thepage}{}       % preprecimo težave s številkami strani v kazalu
 \newcommand{\sn}[1]{"`#1"'}                    % dodal Solina (slovenski narekovaji)
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %naslovnica
  \thispagestyle{empty}%
@@ -203,89 +166,62 @@
 \end{center}
 % prazna stran
 %\clearemptydoublepage      % dodal Solina (izjava o licencah itd. se izpiše na hrbtni strani naslovnice)
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %copyright stran
 \thispagestyle{empty}
 \vspace*{8cm}
-
 \noindent
 {\sc Copyright}. 
 Rezultati diplomske naloge so intelektualna lastnina avtorja in Fakultete za računalništvo in informatiko Univerze v Ljubljani.
 Za objavo in koriščenje rezultatov diplomske naloge je potrebno pisno privoljenje avtorja, Fakultete za računalništvo in informatiko ter mentorja.
-
 \begin{center}
 \mbox{}\vfill
 \emph{Besedilo je oblikovano z urejevalnikom besedil \LaTeX.}
 \end{center}
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % stran 3 med uvodnimi listi
 \thispagestyle{empty}
 \vspace*{4cm}
-
 \noindent
 Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
 \medskip
 \begin{tabbing}
 \hspace{32mm}\= \hspace{6cm} \= \kill
-
-
-
-
 Tematika naloge:
 \end{tabbing}
 %TODO:
 Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega sistema, kamor ga je vnesel mentor. V nekaj stavkih bo opisal, kaj pričakuje od kandidatovega diplomskega dela. Kaj so cilji, kakšne metode uporabiti, morda bo zapisal tudi ključno literaturo.
 \vspace{15mm}
-
-
-
-
-
-
 \vspace{2cm}
-
 % prazna stran
 \clearemptydoublepage
-
 % zahvala
 \thispagestyle{empty}\mbox{}\vfill\null\it%
 \noindent
 %TODO:
 Na tem mestu zapišite, komu se zahvaljujete za izdelavo diplomske naloge. Pazite, da ne boste koga pozabili. Utegnil vam bo zameriti. Temu se da izogniti tako, da celotno zahvalo izpustite.
 \rm\normalfont
-
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % posvetilo, če sama zahvala ne zadošča :-)
 \thispagestyle{empty}\mbox{}{\vskip0.20\textheight}\mbox{}\hfill\begin{minipage}{0.55\textwidth}%
 Mami Lučki.
 \normalfont\end{minipage}
-
 % prazna stran
 \clearemptydoublepage
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % kazalo
 \pagestyle{empty}
 \def\thepage{}% preprecimo tezave s stevilkami strani v kazalu
 \tableofcontents{}
-
-
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seznam kratic
-
 \chapter*{Seznam uporabljenih kratic}  % spremenil Solina, da predolge vrstice ne gredo preko desnega roba
-
 \begin{comment}
 \begin{tabular}{l|l|l}
   {\bf kratica} & {\bf angleško} & {\bf slovensko} \\ \hline
@@ -296,7 +232,6 @@ Mami Lučki.
   \dots & \dots & \dots \\
 \end{tabular}
 \end{comment}
-
 \noindent\begin{tabular}{p{0.1\textwidth}|p{.4\textwidth}|p{.4\textwidth}}    % po potrebi razširi prvo kolono tabele na račun drugih dveh!
   {\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
   {\bf CA}      & classification accuracy               & klasifikacijska točnost \\
@@ -304,59 +239,44 @@ Mami Lučki.
   {\bf SVM}   & support vector machine              & metoda podpornih vektorjev \\
 %  \dots & \dots & \dots \\
 \end{tabular}
-
-
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % povzetek
 \addcontentsline{toc}{chapter}{Povzetek}
 \chapter*{Povzetek}
-
 \noindent\textbf{Naslov:} \ttitle
 \bigskip
-
 \noindent\textbf{Avtor:} \tauthor
 \bigskip
-
 %\noindent\textbf{Povzetek:} 
 \noindent V vzorcu je predstavljen postopek priprave diplomskega dela z uporabo okolja \LaTeX. Vaš povzetek mora sicer vsebovati približno 100 besed, ta tukaj je odločno prekratek.
 Dober povzetek vključuje: (1) kratek opis obravnavanega problema, (2) kratek opis vašega pristopa za reševanje tega problema in (3) (najbolj uspešen) rezultat ali prispevek magistrske naloge.
-
 \bigskip
-
 \noindent\textbf{Ključne besede:} \tkeywords.
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % abstract
 \selectlanguage{english}
 \addcontentsline{toc}{chapter}{Abstract}
 \chapter*{Abstract}
-
 \noindent\textbf{Title:} \ttitleEn
 \bigskip
-
 \noindent\textbf{Author:} \tauthor
 \bigskip
-
 %\noindent\textbf{Abstract:} 
 \noindent This sample document presents an approach to typesetting your BSc thesis using \LaTeX. 
 A proper abstract should contain around 100 words which makes this one way too short.
 \bigskip
-
 \noindent\textbf{Keywords:} \tkeywordsEn.
 \selectlanguage{slovene}
 % prazna stran
 \clearemptydoublepage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 \setcounter{page}{1}
 \pagestyle{fancy}
-
 \chapter{Uvod}
 \section{Motivacija}
 Glede orkestracije kontainerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
@@ -368,28 +288,22 @@ Ta problem se je do sedaj reševalo na več različnih načinov.
 Je pa v zadnjem času tudi kubernetes začel bolj aktivno problem reševati celostno.
 Najprej s propadlim projektom kubefed 1 zdaj pa se zdi, kot da bo kubefed 2 uspešno prešel iz alfa verzije v beta.
 Skratka v računalništvi je na tem področju zelo veliko zanimanja in razvoja.
-
 \section{Cilj in vsebina naloge}
 V tem diplomskem delu bomo na problem gledali, kot da rešujemo realne probleme v industriji. 
 Pri reševanju pa se bomo posebej ozirani tudi na aplikacije, ki morajo sinhronizirati podatke.
 Pri vsakem problemu bomo ugotavljali kakšni so bili standardni pristopi brez orekstracije in kubernetesa in kako se ta problem rešuje v kubernetes okolju z uporabo kubefed.
-
-
 \subsection{Prevelika latenca}
 Ko spletne aplikacije postanejo bolj globalne zelo hitro opazimo, da uporabniki, ki so na drugi celini kot naši strežniki preživijo veliko več časa pred ikonami za nalaganje, saj podatki do njih potujejo dalj časa.
 Ta problem je rešljiv na način, da postavimo še en klaster bližje naših uporanbikov.
 Naprimer en klaster na celino. Tu pa zelo pogosto želimo, da se podatki sinhronizirajo.
 Zavedati se moramo, da strežniki v klastru zelo veliko komunicirajo zato morajo biti tudi fizično blizu skupaj. 
 To je tudi ena glavnih omejitev, da ne moremo vseh klastrov povezati v en večji klaster.
-
-
 \subsection{Viša dosegljivost}
 Vsakih nekaj let se zgodi da slišimo novico ko iz interneta izpade kakšen podatkovni center. 
 To se lahko zgodi iz več razlogov, najpogostejša pa sta naravna nesreča - vremenski pogoji in napaka na sistemu.
 Če gre v takšnem primeru za večjega oblačnega ponudnika se to pozna tako, da je nezanemarljiv del interneta nedosegljiv.
 Izpadi posameznih klastrov pa se toliko pogosteje dogajajo, če gre za manjše ponudnike ali pa so naši strežniki v bolj nestabilnih okoljih. 
 V splošnem se problem reši tako, da se namesti v vsak podatkovni center, skupino strežnikov en klaster.
-
 \subsection{Izolacija aplikacije}
 Ko govorimo o izolaciji aplikacije se ponavadi nanašamo na varnost pri vdoru, ali pa na večjo dosegljivost.
 Glede izolacije spletnih aplikacij smo z uporabo kubernetesa naredili že kar nekaj korakov.
@@ -406,11 +320,9 @@ Na robu oblaka smo takrat, ko govorimo o delu naše aplikaije, ki se izvaja stra
 Takšen primer so naprimer mikro podatkovni centri in klastri, na majhnih računalnikih kot naprimer raspberry pi.
 Če naša aplikacija uporablja takšne klastre je potrbno tudi njihovo sinhrono delovanje.
 Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi obsojeni, da s centralinimi strežniki komunicirajo samo minimalno, saj zelo pogosto za prenost podatkov uporabljajo draga mobilna omrežja.
-
 \subsection{Razdeljevanje dela po različnih lokacijah}
 Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
 Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
-
 \chapter{Koncepti}
 \label{ch0}
 \section{Kubernetes}
@@ -420,29 +332,23 @@ A to vseeno niso pravi začetki Kubernetesa.
 Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
 Kasneje leta 2013 je google predstavil sistem Omega.
 Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga. Kasneje je upravljanje prevzela Cloud Native Computing Fundation.
-
 \section{Osnovni pojmi v kubernetesu}
 Kubernetes predstavi koncept poda, ki 
 \chapter{Priprava}
-
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja kubernetes klastrov moramo najprej postaviti nekaj kubernetes klastrov.
 Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
 Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
-
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
 Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
 Na vsak Raspberry PI se bo namestil kubernetes klaster z enim samim vozliščem.
-
 \section{K3S in K3OS}
 Obstaja več implementacij kubernetesa in mi bomo uproabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher. Hkrati so v podjetju Rancher pripravili že pripravljeno distribucijo operacijskega sistema linux K3OS, ki jo lahko namestimo na katerikoli računalnik. 
 Majhna težava se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
 A k sreči se je v ta namen začel odprtokodni projekt PiCl k3os image generator, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datorek zgradi novo sliko operaijskega sistema za naš Raspberry PI.
-
 Konfiguracijske datoteke, ki jih moramo priložiti so standardne YAML datoteke, ki jih podpira K3OS.
 Vanje zapišemo nastavitve kot so ssh javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo z kubernetes klastrom in način v katerem želimo zagnati K3S na sistemu.
 V našem primeru smo vse K3S programe zagnali v strežniškem načinu in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svoj klaster.
-
 \section{Demonstracijska spletna aplikacija}
 Za potrebe testiranja sem moral naredili novo testno aplikacijo.
 Ker se to delo želi posebej osredotočiti na realne probleme v industriji, sem nujno potreboval preprosto aplikacijo, ki premore tudi shranjevanje podatkov v podatkovno bazo.
@@ -453,8 +359,6 @@ GET klic na pot /users nam bo vrnil vse uporabnike, ki so zapisani v tabeli v ba
 Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
 Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omoča napredne sinhronizacije tudi med različnimi strežniki in klastri.
 K sreči pa CrateDB implementira PostgreSQL api in nam kode za prehod med bazami ni potrebon spreminjati.
-
-
 \section{Namestitev kubefed}
 Kot ena izmed ključnih komponent složnega delovanja večih klastrov je njihovo upravljanje.
 V te namene bomo uporabili program kubefed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
@@ -465,22 +369,9 @@ Lahko pa sem uporabil originalni Helm zapis strukture in sem samo spremenil Dock
 Za delo z kubefed namestitvijo v klastru pa sem moral na svoj računalnik namestiti orodje za komandno vrstico kubefedcli.
 Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
 S tem smo uspešmo povezali več kubernetes klastrov.
-
-
-
 \section{Postavitev lokalnih klastrov}
-
 TODO: Ipiji so ipd\dots
-
 TODO: SHEMA lokalna INFRASTRUKRUa
-
-
-
-
-
-
-
-
 \chapter{Povezovanje med podatkovnimi centri}
 \section{Problem velike latence}
 Najbolj standarden industrijski primer aplikacije je spletna aplikacija, ki oranjati stranje. 
@@ -489,37 +380,27 @@ Takšen problem se v splošnem rešuje tako, da našo aplikacijo postavimo še n
 Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi v
 računalništvo. Najbolj očiten primer je sinhronizacija podatkov.
 V našem primeru bomo uporabili dokaj novo alternativo standardnim sql podatkovnim bazam CrateDB, ki ima veliko boljšo podporo za sinhornizacijo podatkov med vozlišči, hkrati pa nam kompatibilnost z apijem podatkovne baze postgres omogoča, da naših aplikacij ni potrebno konceptualno spreminjati.
-
 \section{Povečanje dosegljivosti aplikacije}
 Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
 Spomnimo, da je ena izmed zahtev, da kubernetes dela učinkovito to, da so strežniki blizu skupaj.
 In v primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center.
 Če uporabljamo oblak in gremo še korak dlje z zagotavljanjem dosegljivosti pa nam niti ni dovolj, da uporabimo različne podatkovne centre, ki jih ponujajo oblačni ponudniki ampak ne zaupamo niti temu, da bo ves čas dosegljiv ponudnik pa lahko postavimo naše klastre pri več različnih ponudnikih.
 Tu kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe kubernetesa.
-
 \section{Povezovanje kubernetes klastrov med podatkovnimi centri}
 Rešitev za oba problema je identična.
 Postaviti moramo kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
-
 \section{Razporeditev uporabnikov po klastrih}
 Ko imamo na vsakem klastrih javno izpostavljen Service preko z uporabo NodePort ali loadbalancerja in urejene ingress zapise moramo še vedno uporabnike preusmeriti na njim najbljižji klaster.
-
 Uporabnike lahko mi usmerimo avtomatsko z DNS zapisi, ki omogočajo usmerjanje na podlai geolokacije.
 Lahko uporabimo in namestimo zunanju dns skozi kubernetes ali pa kar ročno.
-
 Slika: Ustvarjanje geolakacijskega A recorda na ROUTE53
 V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
-
 Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo spletne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
 V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje našega programa.
-
-
 \section{Infrastruktura primera}
 V našem primeru spletne aplikacije bomo imeli v vsakem klastru en Deployment z rašim rest apijem - stateful rest sample in en pripadajoči service tipa LoadBalancer, da ga izpostavimo izven klastra.
 Za podatkovno bazo pa bomo uporabili StatefulSet s CrateDB, PVC diskom na lokalni sd kartici internim servicom za prepoznavo ostalih instanc CrateDB v klastru in service, ki izpostavi podatkovno bazo izven klastra za sinhronizacijo.
-
 Slika: infrastruktura aplikacije
-
 Na strani https TODO je dostopna konfiguracija za kubernetes infrastrukturo aplikacije. Postavimo jo z ukazom.
 \begin{verbatim}
 kubectl apply -f diploma-demo-1
@@ -529,8 +410,6 @@ Takoj preverimo, ce aplikacija deluje in lahko podatke zapisujemo v bazo, tako d
 curl -X POST TODO:8080/users --data '{"name": "John", "lastname": "Doe"}'
 curl localhost:8080/users
 \end{verbatim}
-
-
 \section{Implementacija infrastrukture s kubefed}
 Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje. V našem primeru gre za tipe service, deployment in statefulset. Vklopimo jih z naslenjim ukazom.
 \begin{verbatim}
@@ -544,35 +423,44 @@ kubefedctl federate service crate-internal TODO
 \end{verbatim}
 Po preizkusu delovanje z curl komando opazimo, da podatki niso sinhornizirani. Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
 Na tej točki se ustavij nekatere spletne igre in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
-
 \section{Sinhronizacija podatkov}
-Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja  uporabnike ključno, da se podatki sinhronizirajo med seboj.
-Sicer v našem primeru res uporabljamo zgolj eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
-Zopet se moramo spomniti, da so tudi klastri podatkovnih baz narejeni tako, da najbolje delujejo če so blizu skupaj.
-Zaradi tega mnoge baze, ki podpirajo sinhronizacijo podatkov znotraj klastra, podpirajo tudi sinhronizacijo med klastri.
+Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja uporabnike ključno, da se podatki sinhronizirajo med seboj.
+Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
+Zopet se moramo spomniti, da so tudi klastri podatkovnih baz ponavadi narejeni tako, da najbolje delujejo če so vozlišča blizu skupaj.
+Zaradi tega mnoge baze, ki podpirajo sinhronizacijo podatkov znotraj klastra, podpirajo tudi sinhronizacijo med različnimi podatkovnimi centri.
+\subsection{Uporaba primerne podatkovne baze}
+Vedno je najlepše, če uporabimo podatkovno bazo, ki ima takšno sinhronizacijo s čim manj dela že podprto, a takih baz ni veliko na trgu.
+Konkretno CrateDB podpira sinhronizacijo tudi preko dosegljivostnih con.
+Vseeno pa je mišljeno, da vsa vozlišla povežemo v enak podatkovni klaster.
+Kar pomeni, da morajo vsa vozlišča imeti dostop do vseh.
+Najlažje je, če si lahko privoščimo in izpostavimo vsako vozlišča s svojim javnim IPjem in jih ročno povežemo v klaster.
 https://crate.io/docs/crate/howtos/en/latest/clustering/multi-zone-setup.html
+Nastavimo še nastavitve, ki ki jih baza podpira za zmanjšanje prometa in zagotavljanje željenje dosegljivosti med klastri.
+Podobne načine sinhorinzaije podpira tudi naprimer podatkovna baza Cassandra.
+https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html
+\subsection{Podatke sinhroniziramo sami}
+Sinhronizacija podatkovne baze tažak problem in če ne uporabimo primerne podatkone baze ali pa želimo sinhronizirati samo določene stvari preko klastrov, bo za nas najverjetneje prišla v poštev sinhronizacija na roke. To pomeni, da bomo spisali novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
+Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop pogosto najbolj učinkovit.
+
+V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo, kar z uporabo našega REST apija.
+To bomo storili v drugem ubuntu kontejnerju z uproabo komand curl za izvajanje rest api klicev in jq za razčlenjevanje podatkov.
+Podatki se sinhronizirajo vsakih 10 sekund.
+
+
 
 \chapter{Upravljanje izoliranih aplikacij}
-
-
 \chapter{Upravljanje klastrov na robu oblaka}
-\chapter{Sklepne ugotovitve}
 
+\chapter{Sklepne ugotovitve}
 Uporaba \LaTeX{a} in \BibTeX{a} je v okviru Diplomskega seminarja \textbf{obvezna}!
 Izbira \LaTeX\ ali ne \LaTeX\ pri pisanju dejanske diplomske naloge pa je pre\-pu\-šče\-na dogovoru med vami in vašim mentorjem.
-
 Res je, da so prvi koraki v \LaTeX{}u težavni. 
 Ta dokument naj vam služi kot začetna opora pri hoji.
 Pri kakršnihkoli nadaljnih vprašanjih ali napakah pa svetujem uporabo Googla, saj je spletnih strani za pomoč pri odpravljanju težav pri uporabi \LaTeX{}a ogromno.
-
-
 \newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
 \ \\
 \clearpage
 \addcontentsline{toc}{chapter}{Literatura}
 \bibliographystyle{plain}
 \bibliography{literatura}
-
-
 \end{document}
-

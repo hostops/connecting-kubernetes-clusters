@@ -1,0 +1,42 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: crate-internal-service
+  labels:
+    app: crate
+  namespace: diploma-test
+spec:
+  # A static IP address is assigned to this service. This IP address is
+  # only reachable from within the Kubernetes cluster.
+  type: ClusterIP
+  ports:
+    # Port 4300 for inter-node communication.
+  - port: 4300
+    name: crate-internal
+  selector:
+    # Apply this to all nodes with the `app:crate` label.
+    app: crate
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: crate-external-service
+  labels:
+    app: crate
+  namespace: diploma-test
+spec:
+  # Create an externally reachable load balancer.
+  type: ClusterIP
+  ports:
+    # Port 4200 for HTTP clients.
+  - port: 4200
+    name: crate-web
+    # Port 5432 for PostgreSQL wire protocol clients.
+  - port: 5432
+    name: postgres
+  selector:
+    # Apply this to all nodes with the `app:crate` label.
+    app: crate
+

@@ -1,0 +1,61 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: stateful-rest-sample
+  labels:
+    app: stateful-rest-sample
+  namespace: diploma-test
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: stateful-rest-sample
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stateful-rest-sample
+  labels:
+    app: stateful-rest-sample
+  namespace: diploma-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stateful-rest-sample
+  template:
+    metadata:
+      labels:
+        app: stateful-rest-sample
+    spec:
+      containers:
+      - name: stateful-rest-sample
+        image: hostops/stateful-rest-sample:1.0.2-arm7
+        imagePullPolicy: Always
+        env:
+        - name: PORT
+          value: "8080"
+        - name: DATABASE_URL
+          value: postgres://crate@crate-external-service.diploma-test.svc:5432/restsample
+        ports:
+        - containerPort: 8080
+      - name: data-synchronizer
+        image: ubuntu:latest
+        command: 
+        - "/usr/bin/bash"
+        - "-c"
+        - |-
+          apt-get update;
+          apt-get install -y curl jq;
+          while [ true ]; do
+            sleep 10;
+            jq -cs '.[1] - .[0]' <(curl -s localhost:8080/users) <(curl -s 192.168.10.111:30857/users) | jq -c '.[]'|sed 's/"/\\"/g' | xargs -r -L1 -I {} curl -X POST localhost:8080/users --data '{}'
+            sleep 10;
+            jq -cs '.[1] - .[0]' <(curl -s localhost:8080/users) <(curl -s 192.168.10.112:31574/users) | jq -c '.[]'|sed 's/"/\\"/g' | xargs -r -L1 -I {} curl -X POST localhost:8080/users --data '{}'
+            sleep 10;
+            jq -cs '.[1] - .[0]' <(curl -s localhost:8080/users) <(curl -s 192.168.10.113:32179/users) | jq -c '.[]'|sed 's/"/\\"/g' | xargs -r -L1 -I {} curl -X POST localhost:8080/users --data '{}'
+          done;

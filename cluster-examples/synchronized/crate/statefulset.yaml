@@ -1,0 +1,99 @@
+kind: StatefulSet
+apiVersion: "apps/v1"
+metadata:
+  # This is the name used as a prefix for all pods in the set.
+  name: crate
+  namespace: diploma-test
+spec:
+  serviceName: "crate-set"
+  # Our cluster has three nodes.
+  replicas: 1
+  selector:
+    matchLabels:
+      # The pods in this cluster have the `app:crate` app label.
+      app: crate
+  template:
+    metadata:
+      labels:
+        app: crate
+    spec:
+      # InitContainers run before the main containers of a pod are
+      # started, and they must terminate before the primary containers
+      # are initialized. Here, we use one to set the correct memory
+      # map limit.
+      initContainers:
+      - name: init-sysctl
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        command: ["sysctl", "-w", "vm.max_map_count=262144"]
+        securityContext:
+          privileged: true
+      # This final section is the core of the StatefulSet configuration.
+      # It defines the container to run in each pod.
+      containers:
+      - name: crate
+        # Use the CrateDB 4.2.4 Docker image.
+        image: crate:4.3.2
+        # Pass in configuration to CrateDB via command-line options.
+        # We are setting the name of the node's explicitly, which is
+        # needed to determine the initial master nodes. These are set to
+        # the name of the pod.
+        # We are using the SRV records provided by Kubernetes to discover
+        # nodes within the cluster.
+        args:
+          - -Cnode.name=${POD_NAME}
+          - -Ccluster.name=${CLUSTER_NAME}
+          - -Ccluster.initial_master_nodes=crate-0
+          - -Cdiscovery.seed_providers=srv
+          - -Cdiscovery.srv.query=_crate-internal._tcp.crate-internal-service.${NAMESPACE}.svc.cluster.local
+          - -Cgateway.recover_after_nodes=1
+          - -Cgateway.expected_nodes=${EXPECTED_NODES}
+          - -Cpath.data=/data
+        volumeMounts:
+              # Mount the `/data` directory as a volume named `data`.
+            - mountPath: /data
+              name: data
+        resources:
+          limits:
+            # How much memory each pod gets.
+            memory: 512Mi
+        ports:
+          # Port 4300 for inter-node communication.
+        - containerPort: 4300
+          name: crate-internal
+          # Port 4200 for HTTP clients.
+        - containerPort: 4200
+          name: crate-web
+          # Port 5432 for PostgreSQL wire protocol clients.
+        - containerPort: 5432
+          name: postgres
+        # Environment variables passed through to the container.
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: CLUSTER_NAME
+          value: crate
+          # This is variable is detected by CrateDB.
+        - name: CRATE_HEAP_SIZE
+          value: "256m"
+          # The rest of these variables are used in the command-line
+          # options.
+        - name: EXPECTED_NODES
+          value: "1"
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+  volumeClaimTemplates:
+    # Use persistent storage.
+    - metadata:
+        name: data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        storageClassName: local-path
+        resources:
+          requests:
+            storage: 1Gi
