@@ -482,8 +482,31 @@ Ključna lastnost federiranih objektov je možnost izbire klastov na katerih se 
 S tega stališča je naš primer zelo preprost.
 Samo določimo da se naša aplikacija izvaja na klastru 3 namesto na vseh.
 Tokrat za federacijo ne moremo uporabiti ukaza kubefedctl federate, ampak moramo kot za vse ostale kubernetes objekte spisati konfiuracijo.
-Osredotočili se bomo na 
+Najprej bomo z ukazom kubectl tag označili naš izoliran klaster (ali več njih).
+Potem pa bomo lastnosti vsakega spec.placement.clusterSelector.matchLabels federiranega objekta, ki ga želimo izolirati dodali označbo vseh izoliranih klastrov.
+V takšnih primerih se nam ni potrebno posebej ukvarjati s sinhronizacijo podatkov, saj ali smo vse podatke obdržali v istem klastru ali pa sinhroniziramo na enak način kot če sinhroniziramo med različnimi podatkovnimi centri.
 \chapter{Upravljanje klastrov na robu oblaka}
+\section{Klaster na robu oblaka}
+Razlogov zakaj klastre postavljamo na rob oblaka oziroma fizično bližje končnemu uporabniku je več.
+Pogosto želimo na glavni strežnik pošiljati vseh podatkov ampak jih obdelovati že lokalno, da ne prenašamo po omrežju vseh podatkov.
+Smiselnost takšne postavitve pride še posebej do izraza, če podatke prenašamo bo dragem mobilnem omrežju
+A možnih postavitev in razlogov zanje je res veliko.
+Naprimer lahko gre za zahteve strank, da se podatki obdelujejo lokalno, lahko gre za zakonske omejitve lahko želimo operacije izvajati na napravah, ki si jih ne lastimo direktno itd.
+
+V našem primeru se bomo osredotočali na upravljanje takšnih klastrov.
+
+\section{Implementacija s kubefed}
+Ko enkrat povežemo vse klastre s kubefedctl join je njihovo upravljanje preprosto.
+Samo nastavimo v katerem klastru želimo katere objekte in naša naloga je končana.
+Zavedati se sicer moramo, da nekaj komunikacije porabi tudi kubefed za sinhronizacijo.
+
+Nam pa kubefed omogoča še eno lepo možnost s svojo strukturo, saj je vsak od federiranih objektov v svojem imenskem prostoru.
+Tako lahko s svojim kontrollerjem in kubefed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s kubernetes Jobi.
+
+Z zelo preprosto integracijo v kubernetes nam kubefed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+\section{Sinhronizacija podatkov}
+V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
+
 
 \chapter{Sklepne ugotovitve}
 Uporaba \LaTeX{a} in \BibTeX{a} je v okviru Diplomskega seminarja \textbf{obvezna}!
