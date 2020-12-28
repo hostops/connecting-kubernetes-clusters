@@ -1,0 +1,61 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedService
+metadata:
+  finalizers:
+  - kubefed.io/sync-controller
+  name: stateful-rest-sample
+  namespace: diploma-isolated-example
+spec:
+  placement:
+    clusterSelector:
+      matchLabels: {}
+  template:
+    metadata:
+      name: crate-internal-service
+      labels:
+        app: crate
+      namespace: diploma-isolated-example
+    spec:
+      # A static IP address is assigned to this service. This IP address is
+      # only reachable from within the Kubernetes cluster.
+      type: ClusterIP
+      ports:
+        # Port 4300 for inter-node communication.
+      - port: 4300
+        name: crate-internal
+      selector:
+        # Apply this to all nodes with the `app:crate` label.
+        app: crate
+
+---
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedService
+metadata:
+  finalizers:
+  - kubefed.io/sync-controller
+  name: stateful-rest-sample
+  namespace: diploma-isolated-example
+spec:
+  placement:
+    clusterSelector:
+      matchLabels: {}
+  template:
+    metadata:
+      name: crate-external-service
+      labels:
+        app: crate
+      namespace: diploma-isolated-example
+    spec:
+      # Create an externally reachable load balancer.
+      type: ClusterIP
+      ports:
+        # Port 4200 for HTTP clients.
+      - port: 4200
+        name: crate-web
+        # Port 5432 for PostgreSQL wire protocol clients.
+      - port: 5432
+        name: postgres
+      selector:
+        # Apply this to all nodes with the `app:crate` label.
+        app: crate
+    

@@ -1,0 +1,14 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedDeployment
+metadata:
+  finalizers:
+  - kubefed.io/sync-controller
+  name: stateful-rest-sample
+  namespace: diploma-test
+spec:
+  placement:
+    clusterSelector:
+      matchLabels: {}
+  template:
+    metadata:
+    spec:

@@ -461,6 +461,28 @@ curl -s 192.168.10.112/users|jq
 
 
 \chapter{Upravljanje izoliranih aplikacij}
+\section{Zmanjševanje posledic vdorov in izpadov}
+Računalniška stroka si je že nekaj časa nazaj priznala, da popolnega sistema ne more ustvariti.
+Sistema, ki se ne more sesuti, sistema, ki bo ves čas dosegljiv in sistema v katerega ne bo mogoče vdreti.
+To vsake toliko časa potrdijo največji igralci z izpadi ali vdori na njihovih storitvah. 
+Vsake nekaj časa pa se vseeno pojavi podjetje, ki trdi da vdor k njim ni mogoč in so vsakič znova prepričani v nasprotno.
+Vseeno pa kljub temu, da so vdori in napake, zaradi katerih postanejo nedosegljivi naši klastri vedno lahko poizkusimo zmanjšati posledice ob morebitnem vdoru ali napadu. 
+\subsection{Izpadi aplikacije}
+Kljub temu, da smo naše aplikacije namestili na različne klastre in je s tem aplikacija odporna na izpad enega klastra pa ob hujših nepravilnostih delovanja aplikaije in nastavitev klastra lahko zaradi napake na eni aplikaciji izpadejo vsi klastri na katerih imamo aplikacijo nameščeno.
+Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire na klastru hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam kubernetes.
+V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
+Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v klaster, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
+A vseeno se moramo zaveati, da je ta korak smiselen šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerjizacija, izolacija na posamezno kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in še mnoge druge.
+\subsection{Vdori}
+Podobno kot pri izpadih aplikacije pa je pri preprečevanjih posledic vdorov.
+Najprej moramo poskrbeti za primerno zaščito kubernetes vozlišč, naše aplikacije, enkripcija komunikacije med mikrostoritvami, uporaba nepriviligiranih kontejnerjev.
+Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v klastru manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem je smiselno kritične aplikacije izolirati v svoj klaster.
+\section{Implementacija s Kubefed}
+Ključna lastnost federiranih objektov je možnost izbire klastov na katerih se bo določen objekt ustvaril. 
+S tega stališča je naš primer zelo preprost.
+Samo določimo da se naša aplikacija izvaja na klastru 3 namesto na vseh.
+Tokrat za federacijo ne moremo uporabiti ukaza kubefedctl federate, ampak moramo kot za vse ostale kubernetes objekte spisati konfiuracijo.
+Osredotočili se bomo na 
 \chapter{Upravljanje klastrov na robu oblaka}
 
 \chapter{Sklepne ugotovitve}
