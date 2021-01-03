@@ -93,7 +93,7 @@
 % define medatata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \def\Title{\ttitle}
-\def\Author{\tauthor, matjaz.kralj@fri.uni-lj.si}
+\def\Author{\tauthor, jakob@hostnik.si}
 \def\Subject{\ttitleEn}
 \def\Keywords{\tkeywordsEn}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -133,7 +133,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \pdfinfo{%
     /Title    (\ttitle)
-    /Author   (\tauthor, damjan@cvetan.si)
+    /Author   (\tauthor, jakob@hostnik.si)
     /Subject  (\ttitleEn)
     /Keywords (\tkeywordsEn)
     /ModDate  (\pdfcreationdate)
@@ -162,7 +162,7 @@
     \vfill\null%
     {\large \textsc{Mentor}: izr. prof. dr. Mojca Ciglarič \par}%
    {\large \textsc{Somentor}:  asist. dr. Matjaž Pančur \par}%
-    {\vskip 2em \large Ljubljana, 2018 \par}%
+    {\vskip 2em \large Ljubljana, 2021 \par}%
 \end{center}
 % prazna stran
 %\clearemptydoublepage      % dodal Solina (izjava o licencah itd. se izpiše na hrbtni strani naslovnice)
@@ -201,7 +201,9 @@ Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega
 \thispagestyle{empty}\mbox{}\vfill\null\it%
 \noindent
 %TODO:
-Na tem mestu zapišite, komu se zahvaljujete za izdelavo diplomske naloge. Pazite, da ne boste koga pozabili. Utegnil vam bo zameriti. Temu se da izogniti tako, da celotno zahvalo izpustite.
+Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojca Ciglarič za pripravljenost in mentorstvo.
+Zahvalil bi se tudi somentorju asist. dr. Matjažu Pančurju za vse nasvete in pomoč pri pisanju diplomske naloge.
+Zahvalil bi se tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
 \rm\normalfont
 % prazna stran
 \clearemptydoublepage
@@ -250,7 +252,8 @@ Mami Lučki.
 \noindent\textbf{Avtor:} \tauthor
 \bigskip
 %\noindent\textbf{Povzetek:} 
-\noindent V vzorcu je predstavljen postopek priprave diplomskega dela z uporabo okolja \LaTeX. Vaš povzetek mora sicer vsebovati približno 100 besed, ta tukaj je odločno prekratek.
+\noindent 
+V vzorcu je predstavljen postopek priprave diplomskega dela z uporabo okolja \LaTeX. Vaš povzetek mora sicer vsebovati približno 100 besed, ta tukaj je odločno prekratek.
 Dober povzetek vključuje: (1) kratek opis obravnavanega problema, (2) kratek opis vašega pristopa za reševanje tega problema in (3) (najbolj uspešen) rezultat ali prispevek magistrske naloge.
 \bigskip
 \noindent\textbf{Ključne besede:} \tkeywords.
@@ -266,7 +269,8 @@ Dober povzetek vključuje: (1) kratek opis obravnavanega problema, (2) kratek op
 \noindent\textbf{Author:} \tauthor
 \bigskip
 %\noindent\textbf{Abstract:} 
-\noindent This sample document presents an approach to typesetting your BSc thesis using \LaTeX. 
+\noindent 
+This sample document presents an approach to typesetting your BSc thesis using \LaTeX. 
 A proper abstract should contain around 100 words which makes this one way too short.
 \bigskip
 \noindent\textbf{Keywords:} \tkeywordsEn.
@@ -278,6 +282,7 @@ A proper abstract should contain around 100 words which makes this one way too s
 \setcounter{page}{1}
 \pagestyle{fancy}
 \chapter{Uvod}
+\label{uvod}
 \section{Motivacija}
 Glede orkestracije kontainerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
 V postopku tega preboja se je razvil tudi kuberentes api, ki je na tem področu rešil marsikatero težavo.
@@ -323,18 +328,36 @@ Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi 
 \subsection{Razdeljevanje dela po različnih lokacijah}
 Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
 Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
-\chapter{Koncepti}
-\label{ch0}
-\section{Kubernetes}
-Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{whatiskubernetes}.
-Gre za program bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških klastrov v produkcijskih okoljih.
-A to vseeno niso pravi začetki Kubernetesa.
-Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
-Kasneje leta 2013 je google predstavil sistem Omega.
-Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga. Kasneje je upravljanje prevzela Cloud Native Computing Fundation.
-\section{Osnovni pojmi v kubernetesu}
-Kubernetes predstavi koncept poda, ki 
-\chapter{Priprava}
+\chapter{Problem povezovanje klastrov}
+\label{povezovanjeklastrov}
+Problem povezovanja večih računalniških klastrov je v svetu prisoten že kar nekaj časa.
+Ko postavimo klaster želimo, da več računalnikov deluje, kot eno.
+Ampak z veliko večjo zanesljivostjo, stabilnostjo in zmogljivostjo.
+Obstajajo primeri, ko bi radi med seboj povezali računalnike, a jih zaradi razdalje ali kakšnih ovir ne moremo povezati v tesno povezan klaster.
+V takšnih primerih ponavadi lahko računalnike povežemo v več tesno povezanih klastrov. In te klastre med seboj povežemo bolj na rahlo.
+
+Ko govorimo o tesni povezanosti znotraj klastra ponavadi pričakujemo, da vsako vozlišče vidi vsako drugo, da vsak pod lahko komunicira z vsakim podom, da so vozlišča v istem omrežju, da je povezava med vozlišči hitra, poceni in zanesljiva. 
+Pričakujemo, da sistem, ki ga uporabljamo za klaster omogoča, razporejanje zaželenih storitev med vozlišči in v primeru izpada vozlišča to vozlišča odstrani iz sistema in storitve s tega vozlišča prerazporedi na preostala vozlišča.
+
+Ko pa govorimo o šibki povezanosti med različnimi klastri pa zaradi omejitev redko pričakujemo komunikacijo vsakega vozlišča z vsakim zelo pogosto je povezava med vozlišči počasna, nezanesljiva in draga. Ponavadi je vsak klaster v svojem omrežju, ki je pogosto nedosegljivo ostalim klastrom.
+Priakujemo, da vsak klaster skrbi za svoja vozlišča in da ohranja svoje storitve v delovanju.
+Od sistema za povezovanje klastrov pa si želimo, da nam omogoča centralni nadzor nad storitvami, ki delujejo v nekem klastru, omogoča prerazporejanje teh storitev med klastri, dinamično odkrivanje drugih klastrov in njihovih storitev, izločanje nedosegljivih klastrov, povezljivost med vsemi vozlišči in podi, četudi so vozlišča v različnih omrežjih.
+
+TODO: SLIKA delovanja večih klastrov
+
+\chapter{Kubernetes}
+\label{kubernetes}
+Kubernetes je REST API in trenutno obstaja že več kot 72 implementacij tega API-ja. Ko se bomo sklicevali na kubernetes v tem dokumentu bomo imeli v mislih implementacijo Kubernetesa.
+\subsection{StatefulSet}
+Objekt zelo podoben Deploymentu, a ključna razlika med objektoma Deployment in StatefulSet je v polju volumeClaimTemplate. StatefulSet omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
+StatefulSet se najpogosteje uporablja za podatkovne baze in podobne storitve.
+\chapter{Povezovanje klastrov v kubernetesu}
+TODO
+\section{Argocd}
+\section{Kubefed 1}
+\section{Kubefed 2}
+\section{Ostalo}
+\chapter{Priprava sistema}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja kubernetes klastrov moramo najprej postaviti nekaj kubernetes klastrov.
 Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
