@@ -396,13 +396,16 @@ Argo CD podpira več različnih formatov konfiguracije klastra.
 Najpreprostejše je, če uporabimo kar YAML datoteke z definicijami objektov, ki jih želimo namestiti v vsak klaster.
 Za deployanje te konfiguracije na več kot en klaster imamo na voljo dva pristopa.
 Prvi način je, da v vsak klaster namestimo Argo CD in uporabimo enak repozitorij Git v vseh.
-Drugi način, ki pa ga ponuja Argo CD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene klastre.
+Drugi način, ki pa ga ponuja Argo CD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene klastre. To pomeni, da moramo imeti samo v enem klastru nameščen Argo CD kontroler.
 Pogosto ne želimo, da imajo vsi klastri popolnoma enako infrastruktruro.
 Zelo pogosto želimo vsaj malo prilagoditi konfiguracijo posameznega klastra.
 V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
 Argo CD pa nam ponuja možnost, da ročno določimo spremenljivke predlogam.
 Tako lahko uporabimo predloge HELM in ArgoCD nam bo omogočil, da vsakemu klastru izberemo svojo datoteko s spremenljivkami.
+Glede na preprostost delovanja takšnega sistema se moramo zavedati da od njega ne moremo pričakovati nikakeršnih naprednih funkcionalnosti kot sta dinamično odkirvanje storitev ali komunikacija Podov med klastri.
+Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 TODO image
+
 
 \section{KubeFed}
 https://github.com/kubernetes-sigs/kubefed
@@ -421,7 +424,9 @@ Federated objekte je treba najprej vklopiti s komando kubefedctl enable. Orodje 
 Takšen Federated objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v klastre in prepis lastnosti originalnega objekta za posamezne klastre.
 Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo objektov po meri definiranih objektov (CRD).
 
-TODO image, commands samples.
+Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkiravnje storitev v drugih klastrih prek DNS zapisov. Ampak se omenja možnost odstranitve te funkcionalnosti (TODO vir), ki je že sedaj privzeto izklopljena.
+
+TODO images, commands, samples.
 \section{Cilium}
 TODO
 \chapter{Priprava sistema}
