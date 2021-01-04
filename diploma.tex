@@ -384,10 +384,14 @@ Da lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril tudi
 Zaželjene storitve pa so tudi, da nam omogoča odkrivanje storitev (service discovery), komunikacijo med Servici v različnih klastrih, odkrivanje Pod-ov med klastri in komunikacijo med podi.
 Je pa seveda odvisno od našega primera katere funkionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo pogledali različne sisteme za povezovanje klastrov Kubernetes, njihove glavne prednosti in značilnosti.
-\section{}
-\section{Argocd}
-\section{Kubefed 1}
-\section{Kubefed 2}
+\section{Argo CD in drugi GitOps}
+GitOps pristop pri postavljanju strukture aplikacij v klastrih Kubernetes se je izkazal za dober pristop za upravljanje klastrov.
+Osnovna ideja GitOps-a je to, da imamo našo strukturo aplikacij v klastru napisano v repozitoriju Git in potem je kontroler GitOps, ki teče v klastru tisti, ki iz teh definici postavi svojo strukturo.
+Če uporabljamo kakšnega od sistemov GitOps lahko potem iz enakega repozitorija postavimo več klastrov.
+V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikaija med podi v različnih klastrih ali pa odkrivanje storitev ali Podov.
+V nadaljevanju si bomo izbrali sistem Argo CD in si pogledali kako bi si postavili zgoraj opisano infrastrukturo.
+
+\section{Kubefed 1 in Kubefed 2}
 \section{Cilium}
 \chapter{Priprava sistema}
 \section{Raspberry PI 4}
