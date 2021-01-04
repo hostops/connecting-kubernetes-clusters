@@ -42,7 +42,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	DIPLOMA INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\ttitle}{Povezovanje Kubernetes klastrov}
+\newcommand{\ttitle}{Povezovanje klastrov Kubernetes}
 \newcommand{\ttitleEn}{Connecting Kubernetes clusters}
 \newcommand{\tsubject}{\ttitle}
 \newcommand{\tsubjectEn}{\ttitleEn}
@@ -328,6 +328,7 @@ Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi 
 Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
 Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
 \chapter{Problem povezovanje klastrov}
+https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/
 \label{povezovanjeklastrov}
 Problem povezovanja večih računalniških klastrov je v svetu prisoten že kar nekaj časa.
 Ko postavimo klaster želimo, da več računalnikov deluje, kot eno.
@@ -375,12 +376,19 @@ Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozliš
 \subsection{StatefulSet}
 Objekt zelo podoben Deploymentu, a ključna razlika med objektoma Deployment in StatefulSet je v polju volumeClaimTemplate. StatefulSet omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
 StatefulSet se najpogosteje uporablja za podatkovne baze in podobne storitve.
-\chapter{Povezovanje klastrov v kubernetesu}
-TODO
+\chapter{Povezovanje klastrov Kubernetes }
+Ko postavimo več različnih klastrov imamo vedno možnost, da upravljamo vsakega posebej.
+A takšen pristop zelo kmalu odpove, če imamo takšnih klastrov res veliko.
+Ko govorimo o sistemu, ki ga uporabljamo za upravljanje večih klastrov je najpomembnejša funkcija, ki jo pričakujemo prenašanje objektov med klastri.
+Da lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril tudi v drugih klastrih.
+Zaželjene storitve pa so tudi, da nam omogoča odkrivanje storitev (service discovery), komunikacijo med Servici v različnih klastrih, odkrivanje Pod-ov med klastri in komunikacijo med podi.
+Je pa seveda odvisno od našega primera katere funkionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
+V nadaljevanju si bomo pogledali različne sisteme za povezovanje klastrov Kubernetes, njihove glavne prednosti in značilnosti.
+\section{}
 \section{Argocd}
 \section{Kubefed 1}
 \section{Kubefed 2}
-\section{Ostalo}
+\section{Cilium}
 \chapter{Priprava sistema}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja kubernetes klastrov moramo najprej postaviti nekaj kubernetes klastrov.
@@ -552,7 +560,7 @@ Tako lahko s svojim kontrollerjem in kubefed apijem implementiramo še dodatne f
 
 Z zelo preprosto integracijo v kubernetes nam kubefed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
-V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
+asdf V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
 
 
 \chapter{Sklepne ugotovitve}
