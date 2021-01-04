@@ -392,9 +392,19 @@ Osnovna ideja GitOps-a je to, da imamo našo strukturo aplikacij v klastru napis
 V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikaija med podi v različnih klastrih ali pa odkrivanje storitev ali Podov.
 V nadaljevanju si bomo izbrali sistem Argo CD in si pogledali kako bi si postavili zgoraj opisano infrastrukturo.
 \subsection{Postavljanje sinhronizacija objektov z Argo CD}
-TODO
+Argo CD podpira več različnih formatov konfiguracije klastra.
+Najpreprostejše je, če uporabimo kar YAML datoteke z definicijami objektov, ki jih želimo namestiti v vsak klaster.
+Za deployanje te konfiguracije na več kot en klaster imamo na voljo dva pristopa.
+Prvi način je, da v vsak klaster namestimo Argo CD in uporabimo enak repozitorij Git v vseh.
+Drugi način, ki pa ga ponuja Argo CD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene klastre.
+Pogosto ne želimo, da imajo vsi klastri popolnoma enako infrastruktruro.
+Zelo pogosto želimo vsaj malo prilagoditi konfiguracijo posameznega klastra.
+V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
+Argo CD pa nam ponuja možnost, da ročno določimo spremenljivke predlogam.
+Tako lahko uporabimo predloge HELM in ArgoCD nam bo omogočil, da vsakemu klastru izberemo svojo datoteko s spremenljivkami.
+TODO image
 
-\section{Kubefed 1 in Kubefed 2}
+\section{Kubefed}
 TODO
 \section{Cilium}
 TODO
