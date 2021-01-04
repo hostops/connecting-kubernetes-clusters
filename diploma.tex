@@ -200,7 +200,6 @@ Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega
 % zahvala
 \thispagestyle{empty}\mbox{}\vfill\null\it%
 \noindent
-%TODO:
 Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojca Ciglarič za pripravljenost in mentorstvo.
 Zahvalil bi se tudi somentorju asist. dr. Matjažu Pančurju za vse nasvete in pomoč pri pisanju diplomske naloge.
 Zahvalil bi se tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
@@ -348,6 +347,31 @@ TODO: SLIKA delovanja večih klastrov
 \chapter{Kubernetes}
 \label{kubernetes}
 Kubernetes je REST API in trenutno obstaja že več kot 72 implementacij tega API-ja. Ko se bomo sklicevali na kubernetes v tem dokumentu bomo imeli v mislih implementacijo Kubernetesa.
+\section{Zgodovina}
+Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{whatiskubernetes}.
+Gre za program bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških klastrov v produkcijskih okoljih.
+A to vseeno niso pravi začetki Kubernetesa.
+Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
+Kasneje leta 2013 je google predstavil sistem Omega.
+Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga.
+Kasneje je upravljanje prevzela Cloud Native Computing Fundation.
+\section{Osnoovni pojmi}
+Kubernetes API nam omogoča, da v kubernetes shranjujemo najrazličnejše objekte.
+Takšne, ki so v naprej definirani ali pa smo jih definirali sami (CRD).
+Najpogostejši v naprej definirani objekti, ki se pojavijo v kubernetesu so Pod, Service, Deployment, StatefulSet in objekti za delo z diski.
+\subsection{Pod}
+Kubernetes predstavi koncept poda, ki ponavadi predstavlja neko instanco mikrostoritve.
+Je sestavljen iz enega ali več kontejnerjev ki si delijo diske in predvsem omrežni vmesnik.
+To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
+\subsection{Service}
+Objekt Service ponavadi označuje vse pode ene mikrostoritve.
+Za nas ustvari DNS zapis za mikrostoritev v kubernetesu in dinamično razvršča promet med našimi podi.
+Service uporabljamo tako, da namesto, da delamo klice direktno na IP poda delamo klice na domeno, ki se ustvari ob kreiranju objekta tipa Service.
+Takšen klic potem dobi ena izme mikrostoritev.
+\subsection{Deployment}
+Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo.
+Potem pa interne storitve kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v deploymentu.
+Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
 \subsection{StatefulSet}
 Objekt zelo podoben Deploymentu, a ključna razlika med objektoma Deployment in StatefulSet je v polju volumeClaimTemplate. StatefulSet omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
 StatefulSet se najpogosteje uporablja za podatkovne baze in podobne storitve.
