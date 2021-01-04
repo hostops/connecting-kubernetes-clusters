@@ -404,8 +404,24 @@ Argo CD pa nam ponuja možnost, da ročno določimo spremenljivke predlogam.
 Tako lahko uporabimo predloge HELM in ArgoCD nam bo omogočil, da vsakemu klastru izberemo svojo datoteko s spremenljivkami.
 TODO image
 
-\section{Kubefed}
-TODO
+\section{KubeFed}
+https://github.com/kubernetes-sigs/kubefed
+9. 1. 2018 je bil po propadlem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed.
+Oba projekta sta želela poenostaviti upravljanje večih klastrov, njihovo upravljanje in razporejanje kubernetes objektov.
+V projektu Federation V1 je bil ubran pristop, ki je skupino klastrov ali federacijo uporabniku predstavil kar kot nov klaster.
+Uproabljal je svoj API in api kontroler, ki pa je bil kompatibilen s kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl.
+Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti.
+Takšne objekte je potem Federation V1 ustvaril tudi v ostalih klastrih.
+Zanimiv pristop, ki pa zaradi mnogih pomankljivosti in pomankanjem naprednejših konfiguracij ni uspel pridobiti statusa GA (general availability).
+
+Tako se je kasneje rodil projekt Federation V2.
+Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne uporabljamo novega API-ja ampak obstoječi kubernetesov API. 
+Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih kot naprimer FederatedDeployment.
+Federated objekte je treba najprej vklopiti s komando kubefedctl enable. Orodje kubefedctl si moramo namestiti na naš računalnik.
+Takšen Federated objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v klastre in prepis lastnosti originalnega objekta za posamezne klastre.
+Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo objektov po meri definiranih objektov (CRD).
+
+TODO image, commands samples.
 \section{Cilium}
 TODO
 \chapter{Priprava sistema}
