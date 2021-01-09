@@ -202,7 +202,7 @@ Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega
 \noindent
 Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojca Ciglarič za pripravljenost in mentorstvo.
 Zahvalil bi se tudi somentorju asist. dr. Matjažu Pančurju za vse nasvete in pomoč pri pisanju diplomske naloge.
-Zahvalil bi se tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
+Zahvala pa gre tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
 \rm\normalfont
 % prazna stran
 \clearemptydoublepage
@@ -430,10 +430,27 @@ Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja
 
 TODO images, commands, samples.
 \section{Cilium}
-TODO
+Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v našem klastru.
+Program deluje na tretji in četrti omrežni plasti, kjer nam zagotavlja osnovne principe varnosti in zaščite.
+Tu govorimo o zapiranju portov in omejevanju prometa.
+Cilium pa nam zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča naprimer omejevanje in filtriranje HTTP requestov in podobne varnostne funkcije na popularnih protokolih aplikacijskega nivoja.
+
+Ker Cilium implementira precejšni del mreženja in povezovanja v kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih klastrov Kubernetes.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih klastrih.
+Hkrati s tem nam omogoča uporabo globalnih objektov Service, ki so sposobni delati razporejanje prometa med različnimi klastri.
+Takšne objekte definiramo z anotacijo io.cilium/global-service.
+Omogoča nam tudi omejevanje povezovanja med klastri z njihovim objektom CiliumNetworkPolicy.
+Ko postavljamo mrežo klastrov pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naši klastri skriti v različnih privatnih omrežjih.
+Ključno pri uporabi Ciliuma za povezovanje klastrov pa je, da so vsa naša vozlišča dosegljiva med seboj.
+A četudi so naši klastri v med seboj nedosegljivih privatnih omrežjih, pa je problem z lahkoto rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno virtualno omrežje.
+
+Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da se Cilim ukvarja samo s povezovanjem klastrov na omrežnem nivoju.
+Ne omogoča enotnega upravljanja in sinhroniziranja objektov med klastri zato moramo objekte sinhronizirati sami.
+Zavedati pa se moramo, da so zaradi dovolj široke zasnove Kubernetes vmesnika rešitve med seboj kompatibilne.
+Torej lahko uporabimo napredno mreženje Ciliuma in sinhronizaciramo objekte s KubeFed in GitOps pristopom.
 \chapter{Priprava sistema}
 \section{Raspberry PI 4}
-Za namene testiranja različnih načinov povezovanja kubernetes klastrov moramo najprej postaviti nekaj kubernetes klastrov.
+Za namene testiranja različnih načinov povezovanja klastrov kubernetes moramo najprej postaviti nekaj klastrov kubernetes.
 Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
 Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
@@ -465,7 +482,7 @@ Zato sem si moral sam zgraditi svojo Docker sliko in sem jo objavil na hub.docke
 Lahko pa sem uporabil originalni Helm zapis strukture in sem samo spremenil Docker sliko iz originalne na mojo.
 Za delo z kubefed namestitvijo v klastru pa sem moral na svoj računalnik namestiti orodje za komandno vrstico kubefedcli.
 Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
-S tem smo uspešmo povezali več kubernetes klastrov.
+S tem smo uspešmo povezali več klastrov kubernetes.
 \section{Postavitev lokalnih klastrov}
 TODO: Ipiji so ipd\dots
 TODO: SHEMA lokalna INFRASTRUKRUa
@@ -483,7 +500,7 @@ Spomnimo, da je ena izmed zahtev, da kubernetes dela učinkovito to, da so stre�
 In v primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center.
 Če uporabljamo oblak in gremo še korak dlje z zagotavljanjem dosegljivosti pa nam niti ni dovolj, da uporabimo različne podatkovne centre, ki jih ponujajo oblačni ponudniki ampak ne zaupamo niti temu, da bo ves čas dosegljiv ponudnik pa lahko postavimo naše klastre pri več različnih ponudnikih.
 Tu kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe kubernetesa.
-\section{Povezovanje kubernetes klastrov med podatkovnimi centri}
+\section{Povezovanje klastrov kubernetes med podatkovnimi centri}
 Rešitev za oba problema je identična.
 Postaviti moramo kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
 \section{Razporeditev uporabnikov po klastrih}
