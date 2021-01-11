@@ -615,12 +615,12 @@ Lahko uporabimo in namestimo zunanju DNS skozi Kubernetes ali pa kar ročno.
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/geolokacijski-dns.png}
 \end{center}
-\caption{Ustvarjanje geolakacijskega zapisa na ROUTE53.}
+\caption{Ustvarjanje geolakacijskega zapisa v storitvi ROUTE53.}
 \label{primer-uporabe-helm-predloge-argo-cd}
 \end{figure}
 V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
-Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo spletne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
-V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje našega programa.
+Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo internetne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
+V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje naših klastrov.
 \section{Infrastruktura primera}
 V našem primeru spletne aplikacije bomo imeli v vsakem klastru en deployment z rašim rest apijem - stateful rest sample in en pripadajoči service tipa LoadBalancer, da ga izpostavimo izven klastra.
 Za podatkovno bazo pa bomo uporabili statefulset s CrateDB, PVC diskom na lokalni sd kartici internim servicom za prepoznavo ostalih instanc CrateDB v klastru in service, ki izpostavi podatkovno bazo izven klastra za sinhronizacijo.

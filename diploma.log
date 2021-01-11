@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 23:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 23:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,6 +349,9 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `problem-povezanih-klastrov' multiply defined.
 
+
+LaTeX Warning: Label `primer-uporabe-helm-predloge-argo-cd' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -628,54 +631,68 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
 ]
-Overfull \hbox (3.19576pt too wide) in paragraph at lines 604--604
+Overfull \hbox (3.19576pt too wide) in paragraph at lines 605--605
 []\OT1/cmr/bx/n/17.28 Povezovanje kla-strov Ku-ber-ne-tes med po-
  []
 
-[24]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 627--627
+
+Overfull \hbox (2.39825pt too wide) in paragraph at lines 606--610
+\OT1/cmr/m/n/12 Re^^Tsitev za oba pro-blema je identi^^Tcna. Po-sta-viti mo-ram
+o kla-stre v ve^^Tc razli^^Tcnih
+ []
+
+<images/geolokacijski-dns.png, id=449, 819.06pt x 437.38406pt>
+File: images/geolokacijski-dns.png Graphic file (type png)
+<use images/geolokacijski-dns.png>
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 616.
+(pdftex.def)             Requested size: 390.0pt x 208.2668pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24] [25 <./images/geolokacijski-dns.png (PNG copy)>]
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 636--636
 []\OT1/cmtt/m/n/12 curl -X POST TODO:8080/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
 
-[25]
-Overfull \hbox (128.70026pt too wide) in paragraph at lines 645--645
+
+Overfull \hbox (128.70026pt too wide) in paragraph at lines 654--654
 []\OT1/cmtt/m/n/12 curl -s -X POST 192.168.10.111/users|jq --data '{"name": "Jo
 hn", "lastname": "Doe"}'[] 
  []
 
-
-Overfull \hbox (38.17426pt too wide) in paragraph at lines 652--661
+[26]
+Overfull \hbox (38.17426pt too wide) in paragraph at lines 661--670
 \OT1/cmr/m/n/12 pove^^Tzemo v kla-ster. https://crate.io/docs/crate/howtos/en/l
 atest/clustering/multi-
  []
 
 
-Overfull \hbox (1.26677pt too wide) in paragraph at lines 652--661
+Overfull \hbox (1.26677pt too wide) in paragraph at lines 661--670
 \OT1/cmr/m/n/12 zone-setup.html Na-sta-vimo ^^Tse na-sta-vi-tve, ki ki jih baza
  pod-pira za zmanj^^Tsanje
  []
 
 
-Overfull \hbox (154.49805pt too wide) in paragraph at lines 652--661
+Overfull \hbox (154.49805pt too wide) in paragraph at lines 661--670
 \OT1/cmr/m/n/12 sin-ho-rin-za-ije pod-pira tudi na-pri-mer po-dat-kovna baza Ca
 s-san-dra. https://docs.datastax.com/en/cassandra-
  []
 
-[26]
-Overfull \hbox (128.70026pt too wide) in paragraph at lines 674--674
+[27]
+Overfull \hbox (128.70026pt too wide) in paragraph at lines 683--683
 []\OT1/cmtt/m/n/12 curl -s -X POST 192.168.10.111/users|jq --data '{"name": "Jo
 hn", "lastname": "Doe"}'[] 
  []
 
-[27] [28
-
-]
+[28]
 Poglavje 7.
-[29] [30]
+[29
+
+] [30]
 Poglavje 8.
 
-Overfull \hbox (19.57909pt too wide) in paragraph at lines 705--710
+Overfull \hbox (19.57909pt too wide) in paragraph at lines 714--719
 \OT1/cmr/m/n/12 Razlogov za-kaj kla-stre po-sta-vljamo na rob oblaka ozi-roma f
 izi^^Tcno bli^^Tzje kon^^Tcnemu
  []
@@ -687,7 +704,7 @@ Poglavje 9.
 [33
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
 
  []
 
@@ -754,10 +771,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8645 strings out of 479383
- 124070 string characters out of 5875829
- 454658 words of memory out of 5000000
- 25449 multiletter control sequences out of 15000+600000
+ 8652 strings out of 479383
+ 124260 string characters out of 5875829
+ 454674 words of memory out of 5000000
+ 25454 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -769,10 +786,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (53 pages, 2640745 bytes).
+Output written on diploma.pdf (53 pages, 2695365 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 119 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 618 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
