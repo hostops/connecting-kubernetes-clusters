@@ -4,8 +4,7 @@
 Lukasz Guminski.
 \newblock Cluster federation in kubernetes 1.5.
 \newblock Dosegljivo:
-  \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/},
-  2016.
+  \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{kubernetes-federation-evolution}
@@ -18,7 +17,7 @@ Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
 
 \bibitem{difference-multi-cluster}
 Platform9.
-\newblock Difference between multi-cluster, multi-master, multi-tenant and
+\newblock Difference between multi-cluster, multi-master, multi-tenant \&
   federated kubernetes.
 \newblock Dosegljivo:
   \url{https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/}.
@@ -40,6 +39,12 @@ ArgoCD skupnost.
 \newblock Declarative setup.
 \newblock Dosegljivo:
   \url{https://argoproj.github.io/argo-cd/operator-manual/declarative-setup}.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cilium-intro}
+Cilium skupnost.
+\newblock Introduction to cilium \& hubble.
+\newblock Dosegljivo: \url{https://docs.cilium.io/en/latest/intro/}.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{remove-service-discovery}
