@@ -9,10 +9,10 @@ xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/">
 </rdf:Description> 
 <rdf:Description rdf:about="" 
 xmlns:xap="http://ns.adobe.com/xap/1.0/"> 
-<xap:CreateDate>2021-01-11T15:43:18+01:00</xap:CreateDate> 
+<xap:CreateDate>2021-01-11T19:01:46+01:00</xap:CreateDate> 
 <xap:CreatorTool>TeX</xap:CreatorTool> 
-<xap:ModifyDate>2021-01-11T15:43:18+01:00</xap:ModifyDate> 
-<xap:MetadataDate>2021-01-11T15:43:18+01:00</xap:MetadataDate> 
+<xap:ModifyDate>2021-01-11T19:01:46+01:00</xap:ModifyDate> 
+<xap:MetadataDate>2021-01-11T19:01:46+01:00</xap:MetadataDate> 
 </rdf:Description> 
 <rdf:Description rdf:about="" 
 xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"> 
@@ -22,7 +22,7 @@ xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/">
 xmlns:pdf="http://ns.adobe.com/pdf/1.3/"> 
 <pdf:Producer>pdfTeX-1.40.21</pdf:Producer> 
 <pdf:Trapped>False</pdf:Trapped> 
-<pdf:Keywords>cluster, cloud, Kubernetes, computer cluster, connecting clusters, cluster mesh, KubeFed, Cilium, GitOps, Argo CD</pdf:Keywords> 
+<pdf:Keywords>cluster, cloud, Kubernetes, computer cluster, connecting clusters, cluster mesh, KubeFed, Cilium, GitOps, ArgoCD</pdf:Keywords> 
 </rdf:Description> 
 <rdf:Description rdf:about="" 
 xmlns:dc="http://purl.org/dc/elements/1.1/"> 
