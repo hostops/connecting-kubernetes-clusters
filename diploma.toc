@@ -18,8 +18,8 @@
 \contentsline {section}{\numberline {3.2}Osnoovni pojmi}{9}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pod~\cite {pod}}{10}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Service~\cite {service}}{10}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Deployment~\cite {deployment}}{10}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}StatefulSet~\cite {statefulset}}{10}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.3}Deployment~\cite {deployment}}{11}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}StatefulSet~\cite {statefulset}}{11}{subsection.3.2.4}%
 \contentsline {chapter}{\numberline {4}Povezovanje klastrov Kubernetes }{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Argo CD in drugi GitOps}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Sinhronizacija objektov z uporabo GitOps sistemov}{14}{subsection.4.1.1}%
