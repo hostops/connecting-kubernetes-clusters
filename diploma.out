@@ -16,21 +16,20 @@
 \BOOKMARK [1][-]{section.5.2}{K3S in K3OS}{chapter.5}% 16
 \BOOKMARK [1][-]{section.5.3}{Demonstracijska spletna aplikacija}{chapter.5}% 17
 \BOOKMARK [1][-]{section.5.4}{Namestitev kubefed}{chapter.5}% 18
-\BOOKMARK [1][-]{section.5.5}{Postavitev lokalnih klastrov}{chapter.5}% 19
-\BOOKMARK [0][-]{chapter.6}{Povezovanje med podatkovnimi centri}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Problem velike latence}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Povecanje dosegljivosti aplikacije}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Povezovanje klastrov Kubernetes med podatkovnimi centri}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po klastrih}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.5}{Infrastruktura primera}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.6}{Implementacija infrastrukture s kubefed}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.7}{Sinhronizacija podatkov}{chapter.6}% 27
-\BOOKMARK [0][-]{chapter.7}{Upravljanje izoliranih aplikacij}{}% 28
-\BOOKMARK [1][-]{section.7.1}{Zmanj\235evanje posledic vdorov in izpadov}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.2}{Implementacija s Kubefed}{chapter.7}% 30
-\BOOKMARK [0][-]{chapter.8}{Upravljanje klastrov na robu oblaka}{}% 31
-\BOOKMARK [1][-]{section.8.1}{Klaster na robu oblaka}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.2}{Implementacija s kubefed}{chapter.8}% 33
-\BOOKMARK [1][-]{section.8.3}{Sinhronizacija podatkov}{chapter.8}% 34
-\BOOKMARK [0][-]{chapter.9}{Sklepne ugotovitve}{}% 35
-\BOOKMARK [0][-]{chapter.9}{Literatura}{}% 36
+\BOOKMARK [0][-]{chapter.6}{Povezovanje med podatkovnimi centri}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Problem velike latence}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.2}{Povecanje dosegljivosti aplikacije}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.3}{Povezovanje klastrov Kubernetes med podatkovnimi centri}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po klastrih}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.5}{Infrastruktura primera}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.6}{Implementacija infrastrukture s kubefed}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.7}{Sinhronizacija podatkov}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Upravljanje izoliranih aplikacij}{}% 27
+\BOOKMARK [1][-]{section.7.1}{Zmanj\235evanje posledic vdorov in izpadov}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{Implementacija s Kubefed}{chapter.7}% 29
+\BOOKMARK [0][-]{chapter.8}{Upravljanje klastrov na robu oblaka}{}% 30
+\BOOKMARK [1][-]{section.8.1}{Klaster na robu oblaka}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.2}{Implementacija s kubefed}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.3}{Sinhronizacija podatkov}{chapter.8}% 33
+\BOOKMARK [0][-]{chapter.9}{Sklepne ugotovitve}{}% 34
+\BOOKMARK [0][-]{chapter.9}{Literatura}{}% 35

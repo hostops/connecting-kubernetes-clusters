@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,7 +473,7 @@ l.215 \clearemptydoublepage
 me{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 ...je med podatkovnimi centri}{23}{chapter.6}
+l.34 ...je med podatkovnimi centri}{23}{chapter.6}
                                                   % [9
 
 ])
@@ -540,7 +540,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<images/problem-prevelike-latence.pdf, id=252, 471.68219pt x 275.10779pt>
+<images/problem-prevelike-latence.pdf, id=247, 471.68219pt x 275.10779pt>
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
@@ -555,7 +555,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
  [5
 
 ]
-<images/primer-povezanih-klastrov.pdf, id=284, 478.66827pt x 485.89528pt>
+<images/primer-povezanih-klastrov.pdf, id=279, 478.66827pt x 485.89528pt>
 File: images/primer-povezanih-klastrov.pdf Graphic file (type pdf)
 <use images/primer-povezanih-klastrov.pdf>
 Package pdftex.def Info: images/primer-povezanih-klastrov.pdf  used on input li
@@ -569,7 +569,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Poglavje 3.
-<images/Kubernetes-simple-schema.pdf, id=310, 436.5108pt x 327.14218pt>
+<images/Kubernetes-simple-schema.pdf, id=305, 436.5108pt x 327.14218pt>
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
@@ -584,7 +584,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
 [14]
-<images/primer-uporabe-helm-predloge-argo-cd.png, id=376, 791.95876pt x 668.497
+<images/primer-uporabe-helm-predloge-argo-cd.png, id=371, 791.95876pt x 668.497
 5pt>
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
@@ -594,7 +594,7 @@ on input line 443.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16] [17] [18]
 Poglavje 5.
-<images/postavitev-raspberry.jpg, id=417, 4223.78pt x 3131.7pt>
+<images/postavitev-raspberry.jpg, id=412, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
@@ -611,12 +611,16 @@ Overfull \hbox (91.65024pt too wide) in paragraph at lines 569--569
 lastname": "Doe"}'[] 
  []
 
+
+LaTeX Warning: Citation `https://hub.docker.com/r/hostops/kubefed' on page 22 u
+ndefined on input line 578.
+
 [22]
 Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 595.
+(hyperref)                removing `\textasciicaron' on input line 598.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -624,42 +628,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
 ]
-Overfull \hbox (3.19576pt too wide) in paragraph at lines 601--601
+Overfull \hbox (3.19576pt too wide) in paragraph at lines 604--604
 []\OT1/cmr/bx/n/17.28 Povezovanje kla-strov Ku-ber-ne-tes med po-
  []
 
 [24]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 624--624
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 627--627
 []\OT1/cmtt/m/n/12 curl -X POST TODO:8080/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
 
 [25]
-Overfull \hbox (128.70026pt too wide) in paragraph at lines 642--642
+Overfull \hbox (128.70026pt too wide) in paragraph at lines 645--645
 []\OT1/cmtt/m/n/12 curl -s -X POST 192.168.10.111/users|jq --data '{"name": "Jo
 hn", "lastname": "Doe"}'[] 
  []
 
 
-Overfull \hbox (38.17426pt too wide) in paragraph at lines 649--658
+Overfull \hbox (38.17426pt too wide) in paragraph at lines 652--661
 \OT1/cmr/m/n/12 pove^^Tzemo v kla-ster. https://crate.io/docs/crate/howtos/en/l
 atest/clustering/multi-
  []
 
 
-Overfull \hbox (1.26677pt too wide) in paragraph at lines 649--658
+Overfull \hbox (1.26677pt too wide) in paragraph at lines 652--661
 \OT1/cmr/m/n/12 zone-setup.html Na-sta-vimo ^^Tse na-sta-vi-tve, ki ki jih baza
  pod-pira za zmanj^^Tsanje
  []
 
 
-Overfull \hbox (154.49805pt too wide) in paragraph at lines 649--658
+Overfull \hbox (154.49805pt too wide) in paragraph at lines 652--661
 \OT1/cmr/m/n/12 sin-ho-rin-za-ije pod-pira tudi na-pri-mer po-dat-kovna baza Ca
 s-san-dra. https://docs.datastax.com/en/cassandra-
  []
 
 [26]
-Overfull \hbox (128.70026pt too wide) in paragraph at lines 671--671
+Overfull \hbox (128.70026pt too wide) in paragraph at lines 674--674
 []\OT1/cmtt/m/n/12 curl -s -X POST 192.168.10.111/users|jq --data '{"name": "Jo
 hn", "lastname": "Doe"}'[] 
  []
@@ -671,7 +675,7 @@ Poglavje 7.
 [29] [30]
 Poglavje 8.
 
-Overfull \hbox (19.57909pt too wide) in paragraph at lines 702--707
+Overfull \hbox (19.57909pt too wide) in paragraph at lines 705--710
 \OT1/cmr/m/n/12 Razlogov za-kaj kla-stre po-sta-vljamo na rob oblaka ozi-roma f
 izi^^Tcno bli^^Tzje kon^^Tcnemu
  []
@@ -683,74 +687,77 @@ Poglavje 9.
 [33
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 730--731
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 
  []
 
 [34] (./diploma.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
+Underfull \hbox (badness 10000) in paragraph at lines 16--21
 []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / blog / 2016 / 12 / cluster -[
 ] federation -[] in -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
-[]\OT1/cmr/m/n/12 Platform9.  Di-ffe-rence be-tween multi-cluster, multi-master
-,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
-\OT1/cmr/m/n/12 multi-tenant & fe-de-ra-ted ku-ber-ne-tes.  Do-se-gljivo: []$\O
-T1/cmtt/m/n/12 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--58
-\OT1/cmtt/m/n/12 / / platform9 . com / blog / difference -[] between -[] multi 
--[] cluster -[]
  []
 
 [35
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
+Underfull \hbox (badness 10000) in paragraph at lines 57--63
+[]\OT1/cmr/m/n/12 Platform9.  Di-ffe-rence be-tween multi-cluster, multi-master
+,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--63
+\OT1/cmr/m/n/12 multi-tenant & fe-de-ra-ted ku-ber-ne-tes.  Do-se-gljivo: []$\O
+T1/cmtt/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--63
+\OT1/cmtt/m/n/12 / / platform9 . com / blog / difference -[] between -[] multi 
+-[] cluster -[]
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 117--122
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
  []
 
-[36]
-Underfull \hbox (badness 4739) in paragraph at lines 133--138
+
+Underfull \hbox (badness 4739) in paragraph at lines 138--143
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
 be-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 133--138
+Underfull \hbox (badness 2150) in paragraph at lines 138--143
 \OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--152
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
 
 ) [37] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: F3332D29D33ABCE3ED0A6AF7C7BD6FD9;2373.
+(rerunfilecheck)             Checksum: 0C4BD4C8B62751E1218DF145327D4FA0;2298.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8646 strings out of 479383
- 124089 string characters out of 5875829
- 454628 words of memory out of 5000000
- 25450 multiletter control sequences out of 15000+600000
+ 8645 strings out of 479383
+ 124070 string characters out of 5875829
+ 454658 words of memory out of 5000000
+ 25449 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -762,10 +769,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (53 pages, 2640544 bytes).
+Output written on diploma.pdf (53 pages, 2640745 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 534 compressed objects within 6 object streams
+ 616 PDF objects out of 1000 (max. 8388607)
+ 532 compressed objects within 6 object streams
  119 named destinations out of 1000 (max. 500000)
- 318 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

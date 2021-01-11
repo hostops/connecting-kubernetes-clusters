@@ -31,7 +31,6 @@
 \contentsline {section}{\numberline {5.2}K3S in K3OS}{19}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{21}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Namestitev kubefed}{22}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Postavitev lokalnih klastrov}{22}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Problem velike latence}{23}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{24}{section.6.2}%

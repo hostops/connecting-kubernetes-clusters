@@ -585,17 +585,16 @@ kubefedctl join klaster-2
 kubefedctl join klaster-3
 \end{verbatim}
 S tem smo uspešmo povezali več klastrov Kubernetes v sistem KubeFed.
-\section{Postavitev lokalnih klastrov}
-TODO: Ipiji so ipd\dots
-TODO: SHEMA lokalna INFRASTRUKRUa
 \chapter{Povezovanje med podatkovnimi centri}
 \section{Problem velike latence}
-Najbolj standarden industrijski primer aplikacije je spletna aplikacija, ki oranjati stranje. 
-Ko neko podjetje lastnik aplikacije poseže po globalnem trgu zelo hitro ugotovijo, da stranke, ki niso blizu podatkovnega centra precej dlje čakajo pred ekrani, da se naloži njihova spletna aplikacija in njihovi podatki.
+V industriji je zelo malo primerov spletna aplikacije, ki jim ni potrebno hraniti stanja. 
+Ko neko podjetje, lastnik aplikacije poseže po globalnem trgu zelo hitro ugotovi, da stranke, ki niso blizu podatkovnega centra precej dlje čakajo pred ekrani, da se naloži njihova spletna aplikacija in njihovi podatki.
 Takšen problem se v splošnem rešuje tako, da našo aplikacijo postavimo še na dodaten strežnik bližje uporabniku. 
-Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi v
-računalništvo. Najbolj očiten primer je sinhronizacija podatkov.
-V našem primeru bomo uporabili dokaj novo alternativo standardnim sql podatkovnim bazam CrateDB, ki ima veliko boljšo podporo za sinhornizacijo podatkov med vozlišči, hkrati pa nam kompatibilnost z apijem podatkovne baze postgres omogoča, da naših aplikacij ni potrebno konceptualno spreminjati.
+Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi v računalništvo.
+Najbolj očiten primer je sinhronizacija podatkov.
+V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšjo alternativo standardnim SQL podatkovnim bazam.
+CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami, boljšo podporo za sinhornizacijo podatkov med vozlišči.
+Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik od base PostgreSQL.
 \section{Povečanje dosegljivosti aplikacije}
 Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem Kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
 Spomnimo, da je ena izmed zahtev, da Kubernetes dela učinkovito to, da so strežniki blizu skupaj.
