@@ -448,25 +448,48 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
 \section{KubeFed}
 9. 1. 2018 je bil po propadlem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{kubernetes-federation-evolution}.
-Oba projekta sta želela poenostaviti upravljanje večih klastrov, njihovo upravljanje in razporejanje kubernetes objektov.
+Oba projekta sta želela poenostaviti upravljanje večih klastrov in razporejanje kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino klastrov ali federacijo uporabniku predstavil kar kot nov klaster~\cite{setup-cluster-federation-kubefed-v1}.
-Uproabljal je svoj API in api kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-kubernetes-1.5}.
+Uporabljal je svoj API in api kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-kubernetes-1.5}.
 Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
 Takšne objekte je potem Federation V1 ustvaril tudi v ostalih klastrih.
-Zanimiv pristop, ki pa zaradi mnogih pomankljivosti in pomankanjem naprednejših konfiguracij ni uspel pridobiti statusa GA.
+Zanimiv pristop, ki pa zaradi mnogih pomankljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
 
 Tako se je kasneje rodil projekt Federation V2~\cite{kubernetes-federation-evolution}.
-Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati API od Kubernetesa, ampak uporablja obstoječi Kubernetesov API. 
-Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih kot naprimer federateddeployment.
-Federated objekte je treba najprej vklopiti s komando kubefedctl enable. Orodje kubefedctl si moramo namestiti na naš računalnik.
+Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API, ampak uporablja obstoječi Kubernetesov API. 
+Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot naprimer federateddeployment.
+Federated objekte je treba najprej vklopiti s komando kubefedctl enable.
+\begin{verbatim}
+kubefedctl enable deployment
+\end{verbatim}
+Orodje kubefedctl si moramo namestiti na naš računalnik.
 Takšen Federated objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v klastre in prepis lastnosti originalnega objekta za posamezne klastre.
-Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo CRD objektov.
-
-Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkiravnje storitev v drugih klastrih prek DNS zapisov.
-Ampak se omenja možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery} , ki je že sedaj privzeto izklopljena.
+  Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo CRD objektov.
+\begin{verbatim}
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedDeployment
+spec:
+  placement:
+    clusterSelector:
+      # izbira klastrov
+      matchLabels: {}
+      ... 
+  template:
+    # specifikacije deployment objekta
+    spec:
+    ... 
+  overrides:
+    # prepis konfiguracije za posamezne klastre
+    - clusterName: klaster1
+      clusterOverrides:
+          # nastavi polje replicas na vrednost 5
+        - path: "/spec/replicas"
+          value: 3
+  ... 
+\end{verbatim}
+  Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkiravnje storitev v drugih klastrih prek DNS zapisov.
+Ampak se omenja možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery}, ki je že sedaj privzeto izklopljena.
   Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko mine še nekaj časa preden bo na voljo splošni javnosti(GA), če slučano ne bo šel po stopinjah svojega predhodnika.
-
-TODO images, commands, samples.
 \section{Cilium}
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v našem klastru.
 Program deluje na tretji in četrti omrežni plasti, kjer nam zagotavlja osnovne principe varnosti in zaščite.
@@ -490,7 +513,7 @@ Torej lahko uporabimo napredno mreženje Ciliuma in sinhronizaciramo objekte s K
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja klastrov kubernetes moramo najprej postaviti nekaj klastrov kubernetes.
 Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
-Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
+  Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
 Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
 Na vsak Raspberry PI se bo namestil kubernetes klaster z enim samim vozliščem.

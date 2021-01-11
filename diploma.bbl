@@ -77,6 +77,13 @@ Kubernetes skupnost.
   \url{https://kubernetes.io/docs/concepts/services-networking/service/}.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{setup-cluster-federation-kubefed-v1}
+Kubernetes skupnost.
+\newblock Set up cluster federation with kubefed.
+\newblock Dosegljivo:
+  \url{https://v1-16.docs.kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/}.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{statefulset}
 Kubernetes skupnost.
 \newblock Statefulsets.
