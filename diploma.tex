@@ -538,38 +538,53 @@ ssh_authorized_keys:
 hostname: klaster-1
 k3os:
   ntp_servers:
-  - \dots
-  k3s_args:
-    password: ...
+  - ...
+  password: ...
   token: ...
   dns_nameservers:
   - ... 
   wifi:
   - name: ...
-  passphrase: ...
- - server
+    passphrase: ...
+  k3s_args:
+  - server
 \end{verbatim}
 V našem primeru smo vse K3S programe zagnali v strežniškem načinu in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svoj klaster.
 \section{Demonstracijska spletna aplikacija}
-Za potrebe testiranja sem moral naredili novo testno aplikacijo.
-Ker se to delo želi posebej osredotočiti na realne probleme v industriji, sem nujno potreboval preprosto aplikacijo, ki premore tudi shranjevanje podatkov v Podatkovno bazo.
-Aplikacija dostopna v javnem Docker repozitoriju je narejena v programskem jeziku Go, saj z njim lahko zgradimo res majhno Docker sliko, kar pa je pri testiranju pomembno, da ne izgubimo preveč časa na čakanju.
+Za potrebe testiranja je bilo potrebno naredili novo testno mikrostoritev.
+Ker se v tem diplomskem delu želimo osredotočiti na resnične probleme v industriji, mora ta aplikacija omogočati tudi shranjevanje podatkov v podatkovno bazo.
+
+Koda, ki je javno objvaljena v Git repozitoriju~\cite{git-stateful-rest-sample}, je napisana v programskem jeziku Go.
+Iz kode je bil zgeneriran kontejner, ki je objavljen v javnem Docker repozitoriju~\cite{docker-stateful-rest-sample}.
+Ob tem velja opozoriti, da Raspberry PI uporablja ARM arhitekturo procesorja, kar je zahtevalo posebno pozornost.
+
 Aplikacija deluje preprosto.
-Na podatnih mrežnih vratiih izpostavi vmesnik REST z dvema preprostima klicema.
+Na mrežnih vratih podanih z okoljsko spremenljivko izpostavi vmesnik REST z dvema preprostima HTTP klicema.
 GET klic na pot /users nam bo vrnil vse uporabnike, ki so zapisani v tabeli v bazi, s klicem POST na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v bazo.
+\begin{verbatim}
+# ukaz za dodajanje uporabnika
+curl -X POST localhost:8080/users --data '{"name": "John", "lastname": "Doe"}'
+# ukaz za prikaz vseh uporabnikov
+curl localhost:8080/users
+\end{verbatim}
+
 Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
 Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omoča napredne sinhronizacije tudi med različnimi strežniki in klastri.
-K sreči pa CrateDB implementira PostgreSQL api in nam kode za prehod med bazami ni potrebon spreminjati.
+K sreči pa CrateDB implementira PostgreSQL vmesnik in nam kode za prehod med bazami ni potrebon spreminjati.
 \section{Namestitev kubefed}
 Kot ena izmed ključnih komponent složnega delovanja večih klastrov je njihovo upravljanje.
 V te namene bomo uporabili program kubefed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
-Namestimo ga v razdelek kube-federation-system.
-Ker je izdelek še v razvoju in še ni prišel iz alfa faze nimajo objavljene verzije za arm procesorje.
-Zato sem si moral sam zgraditi svojo Docker sliko in sem jo objavil na hub.docker.com.
-Lahko pa sem uporabil originalni Helm zapis strukture in sem samo spremenil Docker sliko iz originalne na mojo.
-Za delo z kubefed namestitvijo v klastru pa sem moral na svoj računalnik namestiti orodje za komandno vrstico kubefedcli.
+Ker je izdelek še v razvoju in še ni prišel iz alfa faze nimajo objavljene verzije za procesorje ARM.
+Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{https://hub.docker.com/r/hostops/kubefed}.
+Potem pa smo uporabili originalno Helm predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
+Za delo s KubeKed pa moramo na svoj računalnik namestiti orodje kubefedcli.
 Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
-S tem smo uspešmo povezali več klastrov Kubernetes.
+\begin{verbatim}
+kubefedctl join klaster-1
+kubefedctl join klaster-2
+kubefedctl join klaster-3
+\end{verbatim}
+S tem smo uspešmo povezali več klastrov Kubernetes v sistem KubeFed.
 \section{Postavitev lokalnih klastrov}
 TODO: Ipiji so ipd\dots
 TODO: SHEMA lokalna INFRASTRUKRUa

@@ -14,6 +14,20 @@ Lukasz Guminski.
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{git-stateful-rest-sample}
+Jakob Hostnik.
+\newblock Stateful rest sample.
+\newblock Dosegljivo: \url{https://github.com/hostops/stateful-rest-sample},
+  2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{docker-stateful-rest-sample}
+Jakob Hostnik.
+\newblock Stateful rest sample.
+\newblock Dosegljivo:
+  \url{https://hub.docker.com/r/hostops/stateful-rest-sample}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{Kubernetes-federation-evolution}
 Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
 \newblock Kubernetes federation evolution.
