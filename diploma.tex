@@ -596,19 +596,28 @@ V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšj
 CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami, boljšo podporo za sinhornizacijo podatkov med vozlišči.
 Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik od base PostgreSQL.
 \section{Povečanje dosegljivosti aplikacije}
-Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem Kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
-Spomnimo, da je ena izmed zahtev, da Kubernetes dela učinkovito to, da so strežniki blizu skupaj.
-In v primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center.
-Če uporabljamo oblak in gremo še korak dlje z zagotavljanjem dosegljivosti pa nam niti ni dovolj, da uporabimo različne podatkovne centre, ki jih ponujajo oblačni ponudniki ampak ne zaupamo niti temu, da bo ves čas dosegljiv ponudnik pa lahko postavimo naše klastre pri več različnih ponudnikih.
-Tu Kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe Kubernetesa.
+Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost (HA) aplikacije v našem klastru, še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
+Spomnimo, da je ena izmed zahtev, za učinkovito delovanje Kubernetesa, postavitev strežnikov blizu skupaj.
+V primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center in s tem klaster v njem.
+Če uporabljamo oblak, pa gremo lahko še korak dlje z zagotavljanjem dosegljivosti.
+Če nam ni dovolj niti, da uporabimo različne dosegljivostne cone in podatkovne centre oblačnih ponudnikov, lahko postavimo naše klastre pri več različnih ponudnikih.
+Tu Kubernetes pride zelo do izraza, saj kljub nekaj neenakostim skozi implementacije ohranja enak vmesnik in je zato takšna postavitev precej lažja, kot bi bila brez uporabe Kubernetesa.
 \section{Povezovanje klastrov Kubernetes med podatkovnimi centri}
 Rešitev za oba problema je identična.
-Postaviti moramo Kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
+Postaviti moramo klastre v več različnih podatkovnih centrov in jih nastaviti, da bodo delovali sinhrono.
+Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje.
+Ampak princip ostaja enak.
 \section{Razporeditev uporabnikov po klastrih}
-Ko imamo na vsakem klastrih javno izpostavljen service preko z uporabo NodePort ali loadbalancerja in urejene ingress zapise moramo še vedno uporabnike preusmeriti na njim najbljižji klaster.
+Ko imamo na vsakem klastrih javno izpostavljen service in urejene ingress zapise moramo še vedno uporabnike preusmeriti na njim najbljižji klaster.
 Uporabnike lahko mi usmerimo avtomatsko z DNS zapisi, ki omogočajo usmerjanje na podlai geolokacije.
-Lahko uporabimo in namestimo zunanju dns skozi Kubernetes ali pa kar ročno.
-Slika: Ustvarjanje geolakacijskega A recorda na ROUTE53
+Lahko uporabimo in namestimo zunanju DNS skozi Kubernetes ali pa kar ročno.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{images/geolokacijski-dns.png}
+\end{center}
+\caption{Ustvarjanje geolakacijskega zapisa na ROUTE53.}
+\label{primer-uporabe-helm-predloge-argo-cd}
+\end{figure}
 V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
 Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo spletne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
 V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje našega programa.
