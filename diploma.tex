@@ -292,15 +292,15 @@ A proper abstract should contain around 100 words which makes this one way too s
 Glede orkestracije kontainerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
 V postopku tega preboja se je razvil tudi Kubernetes API, ki je na tem področu rešil marsikatero težavo.
 Kubernetes  je univerzalni način, ki nam omogoča, da več račualnikov povežemo v klaster, ki deluje kot ena samostojna enota. 
-To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko dosegljivost (HA) naših storitev ~\cite{mastering-kubernetes} in sinhrono delovanje večih računalnikov.
+To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko dosegljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje večih računalnikov.
 A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota ampak bi želeli med seboj povezujemo tudi te skupine.
 Ta problem se je do sedaj reševalo na več različnih načinov.
-Je pa v zadnjem času tudi kubernetes začel bolj aktivno problem reševati celostno.
+Je pa v zadnjem času tudi Kubernetes začel bolj aktivno problem reševati celostno.
 Začel je s propadlim projektom Federation 1, zdaj pa se zdi, kot da bo Federation 2 ali KubeFed uspešno prešel iz alfa verzije v beta.
 Skratka v računalništvi je na tem področju zelo veliko zanimanja in razvoja.
 \section{Cilj in vsebina naloge}
 V tem diplomskem delu si bomo pogledali nekaj o reševanju tega problema, Kubernetesu in reševanju resničnih problemov v industriji. 
-Za vsakega od primerov si bomo pogledali kako se ta problem rešuje v kubernetes okolju z uporabo orodja KubeFed in kako bi sinhronizirali tudi podatke.
+Za vsakega od primerov si bomo pogledali kako se ta problem rešuje v Kubernetes okolju z uporabo orodja KubeFed in kako bi sinhronizirali tudi podatke.
 \subsection{Prevelika latenca}
 Ko spletne aplikacije postanejo bolj globalne zelo hitro opazimo, da uporabniki, ki so na drugi celini kot naši strežniki preživijo veliko več časa pred ikonami za nalaganje, saj podatki do njih potujejo dalj časa.
 Ta problem je rešljiv na način, da postavimo še en klaster bližje naših uporanbikov.
@@ -323,10 +323,10 @@ Izpadi posameznih klastrov pa se toliko pogosteje dogajajo, če gre za manjše p
 V splošnem se problem reši tako, da se namesti v vsak podatkovni center, skupino strežnikov en klaster.
 \subsection{Izolacija aplikacije}
 Ko govorimo o izolaciji aplikacije se ponavadi nanašamo na varnost pri vdoru, ali pa na večjo dosegljivost.
-Glede izolacije spletnih aplikacij smo z uporabo kubernetesa naredili že kar nekaj korakov.
+Glede izolacije spletnih aplikacij smo z uporabo Kubernetesa naredili že kar nekaj korakov.
 Naprimer vsaka aplikacija lahko teče v svojem kontejnerju, tudi v imenskem prostoru.
 Lahko jo celo izoliramo samo na določera vozlišča.
-A vseeno se v kubernetesu dogajajo problemi, ki naredijo cel klaster nedosegljiv.
+A vseeno se v Kubernetesu dogajajo problemi, ki naredijo cel klaster nedosegljiv.
 Kaj takšnega se najpogosteje zgodi med posodabljanjem celega klastra.
 Z varnostnega vidika pa ponavadi mislimo na dejstvo, da če nekomu uspe serija napadov in se uspešno polasti enega samega vozlišča si začne lastiti cel klaster.
 Torej ima dostop tudi do vseh drugih aplikacij.
@@ -367,10 +367,10 @@ Od sistema za povezovanje klastrov pa si želimo, da nam omogoča centralni nadz
 \end{figure}
 
 \chapter{Kubernetes}
-\label{kubernetes}
-Kubernetes je REST API in trenutno obstaja že več kot 72 implementacij tega API-ja. Ko se bomo sklicevali na kubernetes v tem dokumentu bomo imeli v mislih implementacijo Kubernetesa.
+\label{Kubernetes}
+Kubernetes je REST API in trenutno obstaja že več kot 72 implementacij tega API-ja. Ko se bomo sklicevali na Kubernetes v tem dokumentu bomo imeli v mislih implementacijo Kubernetesa.
 \section{Zgodovina}
-Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{what-is-kubernetes}.
+Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{what-is-Kubernetes}.
 Gre za program bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških klastrov v produkcijskih okoljih.
 A to vseeno niso pravi začetki Kubernetesa.
 Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
@@ -378,19 +378,19 @@ Kasneje leta 2013 je google predstavil sistem Omega.
 Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga.
 Kasneje je upravljanje prevzela organizacija Cloud Native Computing Fundation.
 \section{Osnoovni pojmi}
-Kubernetes API nam omogoča, da v kubernetes shranjujemo najrazličnejše objekte.
+Kubernetes API nam omogoča, da v Kubernetes shranjujemo najrazličnejše objekte.
 Takšne, ki so v naprej definirani ali pa smo jih definirali sami (CRD).
-Najpogostejši v naprej definirani objekti, ki se pojavijo v kubernetesu so pod, service, deployment, statefulset in objekti za delo z diski.
+Najpogostejši v naprej definirani objekti, ki se pojavijo v Kubernetesu so pod, service, deployment, statefulset in objekti za delo z diski.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=1.0\textwidth]{images/kubernetes-simple-schema.pdf}
+\includegraphics[width=1.0\textwidth]{images/Kubernetes-simple-schema.pdf}
 \end{center}
-\caption{Primer delovanja kubernetes objektov.}
+\caption{Primer delovanja Kubernetes objektov.}
 \label{problem-povezanih-klastrov}
 \end{figure}
 \subsection{Pod~\cite{pod}}
 Objekt pod ponavadi predstavlja neko instanco mikrostoritve.
-Gre za najmanjšo enoto v kubernetesu, ki lahko teče v klastru.
+Gre za najmanjšo enoto v Kubernetesu, ki lahko teče v klastru.
 Je sestavljen iz enega ali več kontejnerjev ki si delijo diske in omrežni vmesnik.
 To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
 \subsection{Service~\cite{service}}
@@ -400,7 +400,7 @@ service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov
 Takšen zahtevek potem dobi en izmed označenih podov v objektu service.
 \subsection{Deployment~\cite{deployment}}
 deployment je objekt, ki mu podamo število željenih objektov pod in predlogo za njihovo izdelavo.
-Potem pa interne storitve kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa pod kot smo navedli v deploymentu.
+Potem pa interne storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa pod kot smo navedli v deploymentu.
 Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
 \subsection{StatefulSet~\cite{statefulset}}
 Objekt zelo podoben deploymentu, le da statefulset vsaki replikaciji poda dodeli unikatno številno. 
@@ -414,7 +414,7 @@ A takšen pristop zelo kmalu odpove, če imamo takšnih klastrov res veliko.
 Ko govorimo o sistemu, ki ga uporabljamo za upravljanje večih klastrov, najpogosteje pričakujemo možnost prenašanje objektov med klastri.
 Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v klastrih, kjer to želimo.
 Odvisno od naših potreb pa si lahko želimo tudi, da nam sistem omogoča dinamično odkrivanje servicov z enako definicijo v različnih klastrih, komunikacijo med servici v različnih klastrih, dinamično odkrivanje podov med klastri in komunikacijo med podi v različnih klastrih.
-Te funkcijonalnosti znotraj enega klastra nudi že kubernetes sam.
+Te funkcijonalnosti znotraj enega klastra nudi že Kubernetes sam.
 Je pa seveda odvisno od našega primera katere funkionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo pogledali različne sisteme za povezovanje klastrov Kubernetes, njihove glavne prednosti in značilnosti.
   \section{ArgoCD in drugi GitOps}
@@ -448,15 +448,15 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
 
 \section{KubeFed}
-9. 1. 2018 je bil po propadlem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{kubernetes-federation-evolution}.
-Oba projekta sta želela poenostaviti upravljanje večih klastrov in razporejanje kubernetes objektov.
+9. 1. 2018 je bil po propadlem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{Kubernetes-federation-evolution}.
+Oba projekta sta želela poenostaviti upravljanje večih klastrov in razporejanje Kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino klastrov ali federacijo uporabniku predstavil kar kot nov klaster~\cite{setup-cluster-federation-kubefed-v1}.
-Uporabljal je svoj API in api kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-kubernetes-1.5}.
+Uporabljal je svoj API in api kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
 Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
 Takšne objekte je potem Federation V1 ustvaril tudi v ostalih klastrih.
 Zanimiv pristop, ki pa zaradi mnogih pomankljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
 
-Tako se je kasneje rodil projekt Federation V2~\cite{kubernetes-federation-evolution}.
+Tako se je kasneje rodil projekt Federation V2~\cite{Kubernetes-federation-evolution}.
 Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API, ampak uporablja obstoječi Kubernetesov API. 
 Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot naprimer federateddeployment.
 Federated objekte je treba najprej vklopiti s komando kubefedctl enable.
@@ -497,7 +497,7 @@ Program deluje na tretji in četrti omrežni plasti, kjer nam zagotavlja osnovne
 Tu govorimo o zapiranju portov in omejevanju prometa.
 Cilium pa nam zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča naprimer omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcije na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
 
-Ker Cilium implementira precejšni del mreženja in povezovanja v kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih klastrov Kubernetes.
+Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih klastrov Kubernetes.
 Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih klastrih~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki so sposobni delati razporejanje prometa med različnimi klastri.
 Takšne objekte definiramo z anotacijo io.cilium/global-service~\cite{setup-cilium-cluster-mesh}.
 Omogoča nam tudi omejevanje povezovanja med klastri z njihovim objektom CiliumNetworkPolicy~\cite{setup-cilium-cluster-mesh}.
@@ -509,20 +509,46 @@ Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da s
 Ne omogoča enotnega upravljanja in sinhroniziranja objektov med klastri zato moramo objekte sinhronizirati sami.
 Ampak zaradi dovolj široke zasnove Kubernetesovega vmesnika so rešitve med seboj kompatibilne.
 Torej lahko uporabimo napredno mreženje Ciliuma in sinhronizaciramo objekte s KubeFed in GitOps pristopom.
-\chapter{Priprava sistema}
+\chapter{Priprava sistema klastrov za testiranje}
 \section{Raspberry PI 4}
-Za namene testiranja različnih načinov povezovanja klastrov kubernetes moramo najprej postaviti nekaj klastrov kubernetes.
-Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša kubernetes vozlišča uporabili raspberry pi 4.
+Za namene testiranja različnih načinov povezovanja klastrov Kubernetes moramo najprej postaviti nekaj klastrov Kubernetes.
+Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša Kubernetes vozlišča uporabili raspberry pi 4.
   Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
 Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
-Na vsak Raspberry PI se bo namestil kubernetes klaster z enim samim vozliščem.
+Na vsak Raspberry PI se bo namestil Kubernetes klaster z enim samim vozliščem.
+Fizična postavitev klastrov je prikazana na sliki \ref{rpi-klastri}.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{images/postavitev-raspberry.jpg}
+\end{center}
+\caption{Postavitev raspberry klastrov.}
+\label{rpi-klastri}
+\end{figure}
 \section{K3S in K3OS}
-Obstaja več implementacij kubernetesa in mi bomo uproabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher. Hkrati so v podjetju Rancher pripravili že pripravljeno distribucijo operacijskega sistema linux K3OS, ki jo lahko namestimo na katerikoli računalnik. 
+Obstaja več implementacij Kubernetesa in mi bomo uproabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher~\cite{k3s}.
+Hkrati so v podjetju Rancher pripravili distribucijo operacijskega sistema linux K3OS, ki jo lahko namestimo na katerikoli računalnik~\cite{k3os-git}. 
 Majhna težava se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
-A k sreči se je v ta namen začel odprtokodni projekt PiCl k3os image generator, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datorek zgradi novo sliko operaijskega sistema za naš Raspberry PI.
+A k sreči se je v ta namen začel odprtokodni projekt PiCl k3os image generator, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datorek zgradi novo sliko operaijskega sistema za naš Raspberry PI ~\cite{k3os-rpi-image-generator}.
 Konfiguracijske datoteke, ki jih moramo priložiti so standardne YAML datoteke, ki jih podpira K3OS.
-Vanje zapišemo nastavitve kot so ssh javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo z kubernetes klastrom in način v katerem želimo zagnati K3S na sistemu.
+Vanje zapišemo nastavitve kot so ssh javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo z Kubernetes klastrom in način v katerem želimo zagnati K3S na sistemu~\cite{k3os-git}.
+\begin{verbatim}
+ssh_authorized_keys:
+- ssh-rsa ...
+hostname: klaster-1
+k3os:
+  ntp_servers:
+  - \dots
+  k3s_args:
+    password: ...
+  token: ...
+  dns_nameservers:
+  - ... 
+  wifi:
+  - name: ...
+  passphrase: ...
+ - server
+\end{verbatim}
 V našem primeru smo vse K3S programe zagnali v strežniškem načinu in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svoj klaster.
 \section{Demonstracijska spletna aplikacija}
 Za potrebe testiranja sem moral naredili novo testno aplikacijo.
@@ -543,7 +569,7 @@ Zato sem si moral sam zgraditi svojo Docker sliko in sem jo objavil na hub.docke
 Lahko pa sem uporabil originalni Helm zapis strukture in sem samo spremenil Docker sliko iz originalne na mojo.
 Za delo z kubefed namestitvijo v klastru pa sem moral na svoj računalnik namestiti orodje za komandno vrstico kubefedcli.
 Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
-S tem smo uspešmo povezali več klastrov kubernetes.
+S tem smo uspešmo povezali več klastrov Kubernetes.
 \section{Postavitev lokalnih klastrov}
 TODO: Ipiji so ipd\dots
 TODO: SHEMA lokalna INFRASTRUKRUa
@@ -556,18 +582,18 @@ Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi
 računalništvo. Najbolj očiten primer je sinhronizacija podatkov.
 V našem primeru bomo uporabili dokaj novo alternativo standardnim sql podatkovnim bazam CrateDB, ki ima veliko boljšo podporo za sinhornizacijo podatkov med vozlišči, hkrati pa nam kompatibilnost z apijem podatkovne baze postgres omogoča, da naših aplikacij ni potrebno konceptualno spreminjati.
 \section{Povečanje dosegljivosti aplikacije}
-Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
-Spomnimo, da je ena izmed zahtev, da kubernetes dela učinkovito to, da so strežniki blizu skupaj.
+Če je čim višja dosegljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko dosegljivost aplikaije v našem Kubernetes klastru še vedo lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
+Spomnimo, da je ena izmed zahtev, da Kubernetes dela učinkovito to, da so strežniki blizu skupaj.
 In v primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovi center.
 Če uporabljamo oblak in gremo še korak dlje z zagotavljanjem dosegljivosti pa nam niti ni dovolj, da uporabimo različne podatkovne centre, ki jih ponujajo oblačni ponudniki ampak ne zaupamo niti temu, da bo ves čas dosegljiv ponudnik pa lahko postavimo naše klastre pri več različnih ponudnikih.
-Tu kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe kubernetesa.
-\section{Povezovanje klastrov kubernetes med podatkovnimi centri}
+Tu Kubernetes pride zelo do izraza, saj kljub nekaj ne enakostim skozi implementacije ohranja enak api in je zato takšna postavitev precej lažja, kot bi bila brez uporabe Kubernetesa.
+\section{Povezovanje klastrov Kubernetes med podatkovnimi centri}
 Rešitev za oba problema je identična.
-Postaviti moramo kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
+Postaviti moramo Kubernetes klastre v več različnih podatkovnih centrov in jih nastaviti da bodo delovali sinhrono. Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje. Ampak princip ostaja enak.
 \section{Razporeditev uporabnikov po klastrih}
 Ko imamo na vsakem klastrih javno izpostavljen service preko z uporabo NodePort ali loadbalancerja in urejene ingress zapise moramo še vedno uporabnike preusmeriti na njim najbljižji klaster.
 Uporabnike lahko mi usmerimo avtomatsko z DNS zapisi, ki omogočajo usmerjanje na podlai geolokacije.
-Lahko uporabimo in namestimo zunanju dns skozi kubernetes ali pa kar ročno.
+Lahko uporabimo in namestimo zunanju dns skozi Kubernetes ali pa kar ročno.
 Slika: Ustvarjanje geolakacijskega A recorda na ROUTE53
 V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
 Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo spletne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
@@ -576,7 +602,7 @@ V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov 
 V našem primeru spletne aplikacije bomo imeli v vsakem klastru en deployment z rašim rest apijem - stateful rest sample in en pripadajoči service tipa LoadBalancer, da ga izpostavimo izven klastra.
 Za podatkovno bazo pa bomo uporabili statefulset s CrateDB, PVC diskom na lokalni sd kartici internim servicom za prepoznavo ostalih instanc CrateDB v klastru in service, ki izpostavi podatkovno bazo izven klastra za sinhronizacijo.
 Slika: infrastruktura aplikacije
-Na strani https TODO je dostopna konfiguracija za kubernetes infrastrukturo aplikacije. Postavimo jo z ukazom.
+Na strani https TODO je dostopna konfiguracija za Kubernetes infrastrukturo aplikacije. Postavimo jo z ukazom.
 \begin{verbatim}
 kubectl apply -f diploma-demo-1
 \end{verbatim}
@@ -644,19 +670,19 @@ Vsake nekaj časa pa se vseeno pojavi podjetje, ki trdi da vdor k njim ni mogoč
 Vseeno pa kljub temu, da so vdori in napake, zaradi katerih postanejo nedosegljivi naši klastri vedno lahko poizkusimo zmanjšati posledice ob morebitnem vdoru ali napadu. 
 \subsection{Izpadi aplikacije}
 Kljub temu, da smo naše aplikacije namestili na različne klastre in je s tem aplikacija odporna na izpad enega klastra pa ob hujših nepravilnostih delovanja aplikaije in nastavitev klastra lahko zaradi napake na eni aplikaciji izpadejo vsi klastri na katerih imamo aplikacijo nameščeno.
-Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire na klastru hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam kubernetes.
+Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire na klastru hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
 V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v klaster, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
-A vseeno se moramo zaveati, da je ta korak smiselen šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerjizacija, izolacija na posamezno kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in še mnoge druge.
+A vseeno se moramo zaveati, da je ta korak smiselen šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerjizacija, izolacija na posamezno Kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in še mnoge druge.
 \subsection{Vdori}
 Podobno kot pri izpadih aplikacije pa je pri preprečevanjih posledic vdorov.
-Najprej moramo poskrbeti za primerno zaščito kubernetes vozlišč, naše aplikacije, enkripcija komunikacije med mikrostoritvami, uporaba nepriviligiranih kontejnerjev.
+Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, enkripcija komunikacije med mikrostoritvami, uporaba nepriviligiranih kontejnerjev.
 Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v klastru manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem je smiselno kritične aplikacije izolirati v svoj klaster.
 \section{Implementacija s Kubefed}
 Ključna lastnost federiranih objektov je možnost izbire klastov na katerih se bo določen objekt ustvaril. 
 S tega stališča je naš primer zelo preprost.
 Samo določimo da se naša aplikacija izvaja na klastru 3 namesto na vseh.
-Tokrat za federacijo ne moremo uporabiti ukaza kubefedctl federate, ampak moramo kot za vse ostale kubernetes objekte spisati konfiuracijo.
+Tokrat za federacijo ne moremo uporabiti ukaza kubefedctl federate, ampak moramo kot za vse ostale Kubernetes objekte spisati konfiuracijo.
 Najprej bomo z ukazom kubectl tag označili naš izoliran klaster (ali več njih).
 Potem pa bomo lastnosti vsakega spec.placement.clusterSelector.matchLabels federiranega objekta, ki ga želimo izolirati dodali označbo vseh izoliranih klastrov.
 V takšnih primerih se nam ni potrebno posebej ukvarjati s sinhronizacijo podatkov, saj ali smo vse podatke obdržali v istem klastru ali pa sinhroniziramo na enak način kot če sinhroniziramo med različnimi podatkovnimi centri.
@@ -676,9 +702,9 @@ Samo nastavimo v katerem klastru želimo katere objekte in naša naloga je konč
 Zavedati se sicer moramo, da nekaj komunikacije porabi tudi kubefed za sinhronizacijo.
 
 Nam pa kubefed omogoča še eno lepo možnost s svojo strukturo, saj je vsak od federiranih objektov v svojem imenskem prostoru.
-Tako lahko s svojim kontrollerjem in kubefed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s kubernetes Jobi.
+Tako lahko s svojim kontrollerjem in kubefed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s Kubernetes Jobi.
 
-Z zelo preprosto integracijo v kubernetes nam kubefed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+Z zelo preprosto integracijo v Kubernetes nam kubefed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
 asdf V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
 

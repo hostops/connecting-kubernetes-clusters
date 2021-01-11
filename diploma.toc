@@ -26,16 +26,16 @@
 \contentsline {subsection}{\numberline {4.1.2}Postavljanje sinhronizacija objektov z ArgoCD}{14}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}KubeFed}{15}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Cilium}{17}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Priprava sistema}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Priprava sistema klastrov za testiranje}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Raspberry PI 4}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}K3S in K3OS}{19}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Namestitev kubefed}{21}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Postavitev lokalnih klastrov}{21}{section.5.5}%
+\contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Namestitev kubefed}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Postavitev lokalnih klastrov}{22}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Problem velike latence}{23}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Povezovanje klastrov kubernetes med podatkovnimi centri}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Povezovanje klastrov Kubernetes med podatkovnimi centri}{24}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po klastrih}{24}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Infrastruktura primera}{25}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Implementacija infrastrukture s kubefed}{25}{section.6.6}%

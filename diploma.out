@@ -11,7 +11,7 @@
 \BOOKMARK [1][-]{section.4.1}{ArgoCD in drugi GitOps}{chapter.4}% 11
 \BOOKMARK [1][-]{section.4.2}{KubeFed}{chapter.4}% 12
 \BOOKMARK [1][-]{section.4.3}{Cilium}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter.5}{Priprava sistema}{}% 14
+\BOOKMARK [0][-]{chapter.5}{Priprava sistema klastrov za testiranje}{}% 14
 \BOOKMARK [1][-]{section.5.1}{Raspberry PI 4}{chapter.5}% 15
 \BOOKMARK [1][-]{section.5.2}{K3S in K3OS}{chapter.5}% 16
 \BOOKMARK [1][-]{section.5.3}{Demonstracijska spletna aplikacija}{chapter.5}% 17
@@ -20,7 +20,7 @@
 \BOOKMARK [0][-]{chapter.6}{Povezovanje med podatkovnimi centri}{}% 20
 \BOOKMARK [1][-]{section.6.1}{Problem velike latence}{chapter.6}% 21
 \BOOKMARK [1][-]{section.6.2}{Povecanje dosegljivosti aplikacije}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Povezovanje klastrov kubernetes med podatkovnimi centri}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.3}{Povezovanje klastrov Kubernetes med podatkovnimi centri}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po klastrih}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.5}{Infrastruktura primera}{chapter.6}% 25
 \BOOKMARK [1][-]{section.6.6}{Implementacija infrastrukture s kubefed}{chapter.6}% 26

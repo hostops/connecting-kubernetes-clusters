@@ -1,18 +1,31 @@
 \begin{thebibliography}{10}
 
-\bibitem{cluster-federation-in-kubernetes-1.5}
+\bibitem{k3os-rpi-image-generator}
+odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
+\newblock Picl k3os image generator.
+\newblock Dosegljivo:
+  \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cluster-federation-in-Kubernetes-1.5}
 Lukasz Guminski.
 \newblock Cluster federation in kubernetes 1.5.
 \newblock Dosegljivo:
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{kubernetes-federation-evolution}
+\bibitem{Kubernetes-federation-evolution}
 Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
 \newblock Kubernetes federation evolution.
 \newblock Dosegljivo:
   \url{https://kubernetes.io/blog/2018/12/12/kubernetes-federation-evolution/},
   2018.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{k3os-git}
+Rancher Labs.
+\newblock K3os.
+\newblock Dosegljivo: \url{https://github.com/rancher/k3os}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{difference-multi-cluster}
@@ -23,7 +36,7 @@ Platform9.
   \url{https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/}.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{mastering-kubernetes}
+\bibitem{mastering-Kubernetes}
 Gigi Sayfan.
 \newblock {\em Mastering Kubernetes}.
 \newblock Packt Publishing Ltd,, 2017.
@@ -110,7 +123,7 @@ Kubernetes skupnost.
   \url{https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/}.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{what-is-kubernetes}
+\bibitem{what-is-Kubernetes}
 Kubernetes skupnost.
 \newblock What is kubernetes?
 \newblock Dosegljivo:
