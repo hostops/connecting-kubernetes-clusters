@@ -1,5 +1,6 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
+\providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
 \catcode `"\active 
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
@@ -24,64 +25,93 @@
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {chapter}{Abstract}{}{chapter*.3}\protected@file@percent }
 \babel@aux{slovene}{}
+\citation{mastering-kubernetes}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{uvod}{{1}{1}{Uvod}{chapter.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{2}{section.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a dosegljivost}{2}{subsection.1.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Problem prevelike latence.}}{2}{figure.1.1}\protected@file@percent }
+\newlabel{problem-prevelike-latence}{{1.1}{2}{Problem prevelike latence}{figure.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a dosegljivost}{3}{subsection.1.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Izolacija aplikacije}{3}{subsection.1.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{3}{subsection.1.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{3}{subsection.1.2.5}\protected@file@percent }
-\citation{whatiskubernetes}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Koncepti}{5}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{4}{subsection.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Problem povezovanje klastrov}{5}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch0}{{2}{5}{Koncepti}{chapter.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Kubernetes}{5}{section.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Osnovni pojmi v kubernetesu}{5}{section.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Priprava}{7}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Primer povezanih ve\IeC {\v c}ih klastrov.}}{7}{figure.2.1}\protected@file@percent }
+\newlabel{problem-povezanih-klastrov}{{2.1}{7}{Primer povezanih večih klastrov}{figure.2.1}{}}
+\citation{what-is-kubernetes}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Kubernetes}{9}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Raspberry PI 4}{7}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}K3S in K3OS}{7}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Demonstracijska spletna aplikacija}{8}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Namestitev kubefed}{9}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Postavitev lokalnih klastrov}{9}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Povezovanje med podatkovnimi centri}{11}{chapter.4}\protected@file@percent }
+\newlabel{kubernetes}{{3}{9}{Kubernetes}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Zgodovina}{9}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Osnoovni pojmi}{9}{section.3.2}\protected@file@percent }
+\citation{pod}
+\citation{service}
+\citation{deployment}
+\citation{statefulset}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Pod~\cite  {pod}}{10}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Service~\cite  {service}}{10}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Deployment~\cite  {deployment}}{10}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}StatefulSet~\cite  {statefulset}}{10}{subsection.3.2.4}\protected@file@percent }
+\citation{difference-multi-cluster}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Povezovanje klastrov Kubernetes }{13}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Problem velike latence}{11}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{12}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Povezovanje kubernetes klastrov med podatkovnimi centri}{12}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Razporeditev uporabnikov po klastrih}{12}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Infrastruktura primera}{13}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Implementacija infrastrukture s kubefed}{13}{section.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Sinhronizacija podatkov}{14}{section.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Uporaba primerne podatkovne baze}{14}{subsection.4.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Podatke sinhroniziramo sami}{15}{subsection.4.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Upravljanje izoliranih aplikacij}{17}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Argo CD in drugi GitOps}{14}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Sinhronizacija objektov z uporabo GitOps sistemov}{14}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Postavljanje sinhronizacija objektov z Argo CD}{14}{subsection.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}KubeFed}{15}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Cilium}{16}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Priprava sistema}{19}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Upravljanje klastrov na robu oblaka}{19}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Raspberry PI 4}{19}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}K3S in K3OS}{19}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{20}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Namestitev kubefed}{21}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Postavitev lokalnih klastrov}{21}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{23}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Sklepne ugotovitve}{21}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Problem velike latence}{23}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{24}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Povezovanje klastrov kubernetes med podatkovnimi centri}{24}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po klastrih}{24}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Infrastruktura primera}{25}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Implementacija infrastrukture s kubefed}{25}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{26}{section.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Uporaba primerne podatkovne baze}{26}{subsection.6.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Podatke sinhroniziramo sami}{27}{subsection.6.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Upravljanje izoliranih aplikacij}{29}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Zmanj\IeC {\v s}evanje posledic vdorov in izpadov}{29}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Izpadi aplikacije}{29}{subsection.7.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Vdori}{30}{subsection.7.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Implementacija s Kubefed}{30}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Upravljanje klastrov na robu oblaka}{31}{chapter.8}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Klaster na robu oblaka}{31}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Implementacija s kubefed}{31}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Sinhronizacija podatkov}{32}{section.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Sklepne ugotovitve}{33}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibstyle{plain}
 \bibdata{literatura}
-\bibcite{andersen2012kinect}{1}
-\bibcite{diploma}{2}
-\bibcite{knuth}{3}
-\bibcite{knuth1983simple}{4}
-\bibcite{lamport}{5}
-\bibcite{nenajkrajsi}{6}
-\bibcite{bib}{7}
-\bibcite{pdfa}{8}
-\@writefile{toc}{\contentsline {chapter}{Literatura}{23}{chapter.7}\protected@file@percent }
-\bibcite{poglavje_springer}{9}
-\bibcite{leonardo}{10}
-\bibcite{video}{11}
-\bibcite{slovarcek}{12}
+\bibcite{difference-multi-cluster}{1}
+\bibcite{mastering-kubernetes}{2}
+\bibcite{deployment}{3}
+\bibcite{pod}{4}
+\bibcite{service}{5}
+\bibcite{statefulset}{6}
+\bibcite{what-is-kubernetes}{7}
+\@writefile{toc}{\contentsline {chapter}{Literatura}{35}{chapter.9}\protected@file@percent }
+\gdef \@abspage@last{51}

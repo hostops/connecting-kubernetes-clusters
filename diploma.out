@@ -3,24 +3,34 @@
 \BOOKMARK [0][-]{chapter.1}{Uvod}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Motivacija}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Cilj in vsebina naloge}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Koncepti}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Kubernetes}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Osnovni pojmi v kubernetesu}{chapter.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Priprava}{}% 9
-\BOOKMARK [1][-]{section.3.1}{Raspberry PI 4}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{K3S in K3OS}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{Demonstracijska spletna aplikacija}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.4}{Namestitev kubefed}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.5}{Postavitev lokalnih klastrov}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Povezovanje med podatkovnimi centri}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Problem velike latence}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Povecanje dosegljivosti aplikacije}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Povezovanje kubernetes klastrov med podatkovnimi centri}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Razporeditev uporabnikov po klastrih}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Infrastruktura primera}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.6}{Implementacija infrastrukture s kubefed}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{Sinhronizacija podatkov}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Upravljanje izoliranih aplikacij}{}% 23
-\BOOKMARK [0][-]{chapter.6}{Upravljanje klastrov na robu oblaka}{}% 24
-\BOOKMARK [0][-]{chapter.7}{Sklepne ugotovitve}{}% 25
-\BOOKMARK [0][-]{chapter.7}{Literatura}{}% 26
+\BOOKMARK [0][-]{chapter.2}{Problem povezovanje klastrov}{}% 6
+\BOOKMARK [0][-]{chapter.3}{Kubernetes}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Zgodovina}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Osnoovni pojmi}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.4}{Povezovanje klastrov Kubernetes }{}% 10
+\BOOKMARK [1][-]{section.4.1}{Argo CD in drugi GitOps}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{KubeFed}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Cilium}{chapter.4}% 13
+\BOOKMARK [0][-]{chapter.5}{Priprava sistema}{}% 14
+\BOOKMARK [1][-]{section.5.1}{Raspberry PI 4}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.2}{K3S in K3OS}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.3}{Demonstracijska spletna aplikacija}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.4}{Namestitev kubefed}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.5}{Postavitev lokalnih klastrov}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Povezovanje med podatkovnimi centri}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Problem velike latence}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Povecanje dosegljivosti aplikacije}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{Povezovanje klastrov kubernetes med podatkovnimi centri}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po klastrih}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.5}{Infrastruktura primera}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.6}{Implementacija infrastrukture s kubefed}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.7}{Sinhronizacija podatkov}{chapter.6}% 27
+\BOOKMARK [0][-]{chapter.7}{Upravljanje izoliranih aplikacij}{}% 28
+\BOOKMARK [1][-]{section.7.1}{Zmanj\235evanje posledic vdorov in izpadov}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.2}{Implementacija s Kubefed}{chapter.7}% 30
+\BOOKMARK [0][-]{chapter.8}{Upravljanje klastrov na robu oblaka}{}% 31
+\BOOKMARK [1][-]{section.8.1}{Klaster na robu oblaka}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.2}{Implementacija s kubefed}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.3}{Sinhronizacija podatkov}{chapter.8}% 34
+\BOOKMARK [0][-]{chapter.9}{Sklepne ugotovitve}{}% 35
+\BOOKMARK [0][-]{chapter.9}{Literatura}{}% 36

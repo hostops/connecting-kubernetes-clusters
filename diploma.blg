@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: vzorec_dipl_delo_ISRM.aux
+This is BibTeX, Version 0.99d (TeX Live 2020/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: diploma.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-You've used 12 entries,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            565 strings with 5783 characters,
-and the built_in function-call counts, 3391 in all, are:
-= -- 340
-> -- 139
-< -- 2
-+ -- 56
-- -- 44
-* -- 171
-:= -- 558
-add.period$ -- 42
-call.type$ -- 12
-change.case$ -- 60
+            524 strings with 4875 characters,
+and the built_in function-call counts, 1517 in all, are:
+= -- 146
+> -- 49
+< -- 0
++ -- 21
+- -- 14
+* -- 41
+:= -- 264
+add.period$ -- 27
+call.type$ -- 7
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 129
-empty$ -- 297
-format.name$ -- 44
-if$ -- 740
+cite$ -- 7
+duplicate$ -- 54
+empty$ -- 155
+format.name$ -- 14
+if$ -- 330
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 5
-newline$ -- 67
-num.names$ -- 22
-pop$ -- 91
+int.to.str$ -- 7
+missing$ -- 2
+newline$ -- 44
+num.names$ -- 14
+pop$ -- 66
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 21
 quote$ -- 0
-skip$ -- 97
+skip$ -- 37
 stack$ -- 0
-substring$ -- 149
-swap$ -- 28
-text.length$ -- 2
+substring$ -- 35
+swap$ -- 7
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
+type$ -- 26
 warning$ -- 0
-while$ -- 29
-width$ -- 14
-write$ -- 135
+while$ -- 14
+width$ -- 8
+write$ -- 79

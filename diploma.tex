@@ -223,19 +223,12 @@ Mami Lučki.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seznam kratic
 \chapter*{Seznam uporabljenih kratic}  % spremenil Solina, da predolge vrstice ne gredo preko desnega roba
-\begin{comment}
-\begin{tabular}{l|l|l}
-  {\bf kratica} & {\bf angleško} & {\bf slovensko} \\ \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  {\bf CA} & classification accuracy & klasifikacijska točnost \\
-  {\bf DBMS} & database management system & sistem za upravljanje podatkovnih baz \\
-  {\bf SVM} & support vector machine & metoda podpornih vektorjev \\
-  \dots & \dots & \dots \\
-\end{tabular}
-\end{comment}
 \noindent\begin{tabular}{p{0.1\textwidth}|p{.4\textwidth}|p{.4\textwidth}}    % po potrebi razširi prvo kolono tabele na račun drugih dveh!
   {\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
-  {\bf Test}      & test               & test \\
+  {\bf CRD} & custom resource definition & definicija tipov po meri \\
+  {\bf DNS} & domain name system & sistem za upravljanje domen \\
+  {\bf IP} & internet protocol & internetni protokol \\
+  {\bf HA} & high availability & visoka dosegljivost \\
 \end{tabular}
 % prazna stran
 \clearemptydoublepage
@@ -297,7 +290,7 @@ A proper abstract should contain around 100 words which makes this one way too s
 Glede orkestracije kontainerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
 V postopku tega preboja se je razvil tudi Kubernetes API, ki je na tem področu rešil marsikatero težavo.
 Kubernetes  je univerzalni način, ki nam omogoča, da več račualnikov povežemo v klaster, ki deluje kot ena samostojna enota. 
-To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko dosegljivost naših storitev ~\cite{mastering-kubernetes} in sinhrono delovanje večih računalnikov.
+To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko dosegljivost (HA) naših storitev ~\cite{mastering-kubernetes} in sinhrono delovanje večih računalnikov.
 A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota ampak bi želeli med seboj povezujemo tudi te skupine.
 Ta problem se je do sedaj reševalo na več različnih načinov.
 Je pa v zadnjem času tudi kubernetes začel bolj aktivno problem reševati celostno.
@@ -315,7 +308,7 @@ Zavedati se moramo, da strežniki v klastru zelo veliko komunicirajo zato morajo
 To je tudi ena glavnih omejitev, da ne moremo vseh klastrov povezati v en večji klaster.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{images/problem-prevelike-latence.png}
+  \includegraphics[width=1.0\textwidth]{images/problem-prevelike-latence.pdf}
 \end{center}
 \caption{Problem prevelike latence.}
 \label{problem-prevelike-latence}
@@ -346,60 +339,73 @@ Takšni majhni klastri so poleg ze znanega problema prevelike razdalje ponavadi 
 Na robu oblaka pa se ponaavdi srečamo ne samo z omejenim komuniiranjem s centralnim strežnikom ampak tudi zmanjšano dosegljivostjo in tudi zmogljivostjo naprav.
 Torej če ima en klaster manj dela kot drugi lahko delež tega prenese na druge klastre.
 \chapter{Problem povezovanje klastrov}
-https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/
-\label{povezovanjeklastrov}
+Računalniški klaster je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
+Zaradi praktičnosti, pa so te storitve ponavadi napisane tako, da vsako storitev sestavlja več programov, ki tečejo v kontejnerjih.
+
 Problem povezovanja večih računalniških klastrov je v svetu prisoten že kar nekaj časa.
-Ko postavimo klaster želimo, da več računalnikov deluje, kot eno.
-Ampak z veliko večjo zanesljivostjo, stabilnostjo in zmogljivostjo.
-Obstajajo primeri, ko bi radi med seboj povezali računalnike, a jih zaradi razdalje ali kakšnih ovir ne moremo povezati v tesno povezan klaster.
-V takšnih primerih ponavadi lahko računalnike povežemo v več tesno povezanih klastrov. In te klastre med seboj povežemo bolj na rahlo.
+Ko postavimo klaster, želimo da več računalnikov deluje kot eno, a z veliko večjo zanesljivostjo, stabilnostjo in zmogljivostjo.
+Obstajajo primeri, ko bi radi med seboj povezali računalnike, a jih zaradi razdalje ali druačnih ovir ne moremo povezati v en tesno povezan klaster.
+V takšnih primerih ponavadi lahko računalnike povežemo v več tesno povezanih klastrov, te pa potem na različne načine povežemo šibkeje.
 
-Ko govorimo o tesni povezanosti znotraj klastra ponavadi pričakujemo, da vsako vozlišče vidi vsako drugo, da vsak pod lahko komunicira z vsakim podom, da so vozlišča v istem omrežju, da je povezava med vozlišči hitra, poceni in zanesljiva. 
-Pričakujemo, da sistem, ki ga uporabljamo za klaster omogoča, razporejanje zaželenih storitev med vozlišči in v primeru izpada vozlišča to vozlišča odstrani iz sistema in storitve s tega vozlišča prerazporedi na preostala vozlišča.
+Ko govorimo o tesni povezanosti znotraj klastra ponavadi pričakujemo, da vsako vozlišče vidi vsako drugo, da vsak kontejner lahko komunicira z vsakim kontejnerjem, da so vozlišča v istem omrežju, da je povezava med vozlišči hitra, poceni in zanesljiva. 
+Pričakujemo, da sistem, ki ga uporabljamo za klaster omogoča, razporejanje zaželenih storitev in kontejnerjev med vozlišči in v primeru izpada vozlišča to vozlišča odstrani iz sistema in storitve s tega vozlišča prerazporedi na preostala vozlišča.
 
-Ko pa govorimo o šibki povezanosti med različnimi klastri pa zaradi omejitev redko pričakujemo komunikacijo vsakega vozlišča z vsakim zelo pogosto je povezava med vozlišči počasna, nezanesljiva in draga. Ponavadi je vsak klaster v svojem omrežju, ki je pogosto nedosegljivo ostalim klastrom.
-Priakujemo, da vsak klaster skrbi za svoja vozlišča in da ohranja svoje storitve v delovanju.
-Od sistema za povezovanje klastrov pa si želimo, da nam omogoča centralni nadzor nad storitvami, ki delujejo v nekem klastru, omogoča prerazporejanje teh storitev med klastri, dinamično odkrivanje drugih klastrov in njihovih storitev, izločanje nedosegljivih klastrov, povezljivost med vsemi vozlišči in podi, četudi so vozlišča v različnih omrežjih.
+Ko pa govorimo o šibki povezanosti med različnimi klastri pa zaradi omejitev redko pričakujemo komunikacijo vsakega vozlišča z vsakim.
+Zelo pogosto je povezava med vozlišči počasna, nezanesljiva in draga.
+Ponavadi je vsak klaster v svojem omrežju in je nedosegljiv ostalim klastrom.
+Pričakujemo, da vsak klaster skrbi za svoja vozlišča in da ohranja svoje storitve in kntejnerje v delovanju.
+Od sistema za povezovanje klastrov pa si želimo, da nam omogoča centralni nadzor nad storitvami v klastrih, prerazporejanje teh storitev med klastri, dinamično odkrivanje drugih klastrov in njihovih storitev, izločanje nedosegljivih klastrov, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
 
-TODO: SLIKA delovanja večih klastrov
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{images/primer-povezanih-klastrov.pdf}
+\end{center}
+\caption{Primer povezanih večih klastrov.}
+\label{problem-povezanih-klastrov}
+\end{figure}
 
 \chapter{Kubernetes}
 \label{kubernetes}
 Kubernetes je REST API in trenutno obstaja že več kot 72 implementacij tega API-ja. Ko se bomo sklicevali na kubernetes v tem dokumentu bomo imeli v mislih implementacijo Kubernetesa.
 \section{Zgodovina}
-Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{whatiskubernetes}.
+Leta 2014 je Google objavil in odprl kodo od projekta Kubernetes~\cite{what-is-kubernetes}.
 Gre za program bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških klastrov v produkcijskih okoljih.
 A to vseeno niso pravi začetki Kubernetesa.
 Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih internih klastrov Borg.
 Kasneje leta 2013 je google predstavil sistem Omega.
 Leta 2014 pa je google objavil projekt Kubernetes, kot odprtokodno verzijo borga.
-Kasneje je upravljanje prevzela Cloud Native Computing Fundation.
+Kasneje je upravljanje prevzela organizacija Cloud Native Computing Fundation.
 \section{Osnoovni pojmi}
 Kubernetes API nam omogoča, da v kubernetes shranjujemo najrazličnejše objekte.
 Takšne, ki so v naprej definirani ali pa smo jih definirali sami (CRD).
 Najpogostejši v naprej definirani objekti, ki se pojavijo v kubernetesu so Pod, Service, Deployment, StatefulSet in objekti za delo z diski.
-\subsection{Pod}
-Kubernetes predstavi koncept poda, ki ponavadi predstavlja neko instanco mikrostoritve.
-Je sestavljen iz enega ali več kontejnerjev ki si delijo diske in predvsem omrežni vmesnik.
+\subsection{Pod~\cite{pod}}
+Objekt Pod ponavadi predstavlja neko instanco mikrostoritve.
+Gre za najmanjšo enoto v kubernetesu, ki lahko teče v klastru.
+Je sestavljen iz enega ali več kontejnerjev ki si delijo diske in omrežni vmesnik.
 To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
-\subsection{Service}
+\subsection{Service~\cite{service}}
 Objekt Service ponavadi označuje vse pode ene mikrostoritve.
-Za nas ustvari DNS zapis za mikrostoritev v kubernetesu in dinamično razvršča promet med našimi podi.
-Service uporabljamo tako, da namesto, da delamo klice direktno na IP poda delamo klice na domeno, ki se ustvari ob kreiranju objekta tipa Service.
-Takšen klic potem dobi ena izme mikrostoritev.
-\subsection{Deployment}
+Kubernetes iz objekta v internem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi Podi.
+Service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov Poda, delamo klice na ustvarjeno domeno.
+Takšen zahtevek potem dobi en izmed označenih podov v objektu Service.
+\subsection{Deployment~\cite{deployment}}
 Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo.
-Potem pa interne storitve kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v deploymentu.
+Potem pa interne storitve kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v Deploymentu.
 Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
-\subsection{StatefulSet}
-Objekt zelo podoben Deploymentu, a ključna razlika med objektoma Deployment in StatefulSet je v polju volumeClaimTemplate. StatefulSet omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
-StatefulSet se najpogosteje uporablja za podatkovne baze in podobne storitve.
+\subsection{StatefulSet~\cite{statefulset}}
+Objekt zelo podoben Deploymentu, le da StatefulSet vsaki replikaciji Poda dodeli unikatno številno. 
+Pod, ki se ustvari s to številko ohranja diske in IP naslov in domeno.
+Pomembna razlika med objektoma Deployment in StatefulSet pa je tudi v polju volumeClaimTemplate.
+StatefulSet omogoča vsakemu Podu, da si ustvari in uporablja svoj disk.
+StatefulSet se najpogosteje uporablja za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
 \chapter{Povezovanje klastrov Kubernetes }
-Ko postavimo več različnih klastrov imamo vedno možnost, da upravljamo vsakega posebej.
+Ko postavimo več različnih klastrov imamo vedno možnost, da upravljamo vsakega posebej~\cite{difference-multi-cluster}.
 A takšen pristop zelo kmalu odpove, če imamo takšnih klastrov res veliko.
-Ko govorimo o sistemu, ki ga uporabljamo za upravljanje večih klastrov je najpomembnejša funkcija, ki jo pričakujemo prenašanje objektov med klastri.
-Da lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril tudi v drugih klastrih.
-Zaželjene storitve pa so tudi, da nam omogoča odkrivanje storitev (service discovery), komunikacijo med Servici v različnih klastrih, odkrivanje Pod-ov med klastri in komunikacijo med podi.
+Ko govorimo o sistemu, ki ga uporabljamo za upravljanje večih klastrov, najpogosteje pričakujemo možnost prenašanje objektov med klastri.
+Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v klastrih, kjer to želimo.
+Odvisno od naših potreb pa si lahko želimo tudi, da nam sistem omogoča dinamično odkrivanje Servicov z enako definicijo v različnih klastrih, komunikacijo med Servici v različnih klastrih, dinamično odkrivanje Podov med klastri in komunikacijo med Podi v različnih klastrih.
+Te funkcijonalnosti znotraj enega klastra nudi že kubernetes sam.
 Je pa seveda odvisno od našega primera katere funkionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo pogledali različne sisteme za povezovanje klastrov Kubernetes, njihove glavne prednosti in značilnosti.
 \section{Argo CD in drugi GitOps}
@@ -407,7 +413,7 @@ V nadaljevanju si bomo pogledali različne sisteme za povezovanje klastrov Kuber
 GitOps pristop pri postavljanju strukture aplikacij v klastrih Kubernetes se je izkazal za dober pristop za upravljanje klastrov.
 Osnovna ideja GitOps-a je to, da imamo našo strukturo aplikacij v klastru napisano v repozitoriju Git in potem je kontroler GitOps, ki teče v klastru tisti, ki iz teh definici postavi svojo strukturo.
 Če uporabljamo kakšnega od sistemov GitOps lahko potem iz enakega repozitorija postavimo več klastrov.
-V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikaija med podi v različnih klastrih ali pa odkrivanje storitev ali Podov.
+V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikaija med Podi v različnih klastrih ali pa odkrivanje storitev ali Podov.
 V nadaljevanju si bomo izbrali sistem Argo CD in si pogledali kako bi si postavili zgoraj opisano infrastrukturo.
 \subsection{Postavljanje sinhronizacija objektov z Argo CD}
 Argo CD podpira več različnih formatov konfiguracije klastra.
@@ -454,7 +460,7 @@ Tu govorimo o zapiranju portov in omejevanju prometa.
 Cilium pa nam zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča naprimer omejevanje in filtriranje HTTP requestov in podobne varnostne funkcije na popularnih protokolih aplikacijskega nivoja.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih klastrov Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih klastrih.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med Podi v različnih klastrih.
 Hkrati s tem nam omogoča uporabo globalnih objektov Service, ki so sposobni delati razporejanje prometa med različnimi klastri.
 Takšne objekte definiramo z anotacijo io.cilium/global-service.
 Omogoča nam tudi omejevanje povezovanja med klastri z njihovim objektom CiliumNetworkPolicy.
@@ -483,7 +489,7 @@ Vanje zapišemo nastavitve kot so ssh javni ključi za dostop, podatki od WiFi o
 V našem primeru smo vse K3S programe zagnali v strežniškem načinu in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svoj klaster.
 \section{Demonstracijska spletna aplikacija}
 Za potrebe testiranja sem moral naredili novo testno aplikacijo.
-Ker se to delo želi posebej osredotočiti na realne probleme v industriji, sem nujno potreboval preprosto aplikacijo, ki premore tudi shranjevanje podatkov v podatkovno bazo.
+Ker se to delo želi posebej osredotočiti na realne probleme v industriji, sem nujno potreboval preprosto aplikacijo, ki premore tudi shranjevanje podatkov v Podatkovno bazo.
 Aplikacija dostopna v javnem Docker repozitoriju je narejena v programskem jeziku Go, saj z njim lahko zgradimo res majhno Docker sliko, kar pa je pri testiranju pomembno, da ne izgubimo preveč časa na čakanju.
 Aplikacija deluje preprosto.
 Na podatnih mrežnih vratiih izpostavi vmesnik REST z dvema preprostima klicema.
