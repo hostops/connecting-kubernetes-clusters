@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,9 +603,6 @@ Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `k3s' on page 19 undefined on input line 529.
-
 [19
 
 ] [20 <./images/postavitev-raspberry.jpg>] [21] [22]
@@ -691,19 +688,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--38
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
 []\OT1/cmr/m/n/12 Platform9.  Di-ffe-rence be-tween multi-cluster, multi-master
 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--38
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
 \OT1/cmr/m/n/12 multi-tenant & fe-de-ra-ted ku-ber-ne-tes.  Do-se-gljivo: []$\O
 T1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--38
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
 \OT1/cmtt/m/n/12 / / platform9 . com / blog / difference -[] between -[] multi 
 -[] cluster -[]
  []
@@ -712,25 +709,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--38
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 92--97
+Underfull \hbox (badness 10000) in paragraph at lines 98--103
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
  []
 
-
-Underfull \hbox (badness 4739) in paragraph at lines 113--118
+[36]
+Underfull \hbox (badness 4739) in paragraph at lines 119--124
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
 be-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 113--118
+Underfull \hbox (badness 2150) in paragraph at lines 119--124
 \OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 127--132
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--138
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
@@ -740,17 +737,14 @@ Package rerunfilecheck Info: File `diploma.out' has not changed.
 (rerunfilecheck)             Checksum: F3332D29D33ABCE3ED0A6AF7C7BD6FD9;2373.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8640 strings out of 479383
- 123950 string characters out of 5875829
- 454500 words of memory out of 5000000
- 25447 multiletter control sequences out of 15000+600000
+ 8642 strings out of 479383
+ 123973 string characters out of 5875829
+ 454531 words of memory out of 5000000
+ 25448 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -762,10 +756,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (53 pages, 2640069 bytes).
+Output written on diploma.pdf (53 pages, 2639921 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 524 compressed objects within 6 object streams
- 116 named destinations out of 1000 (max. 500000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 117 named destinations out of 1000 (max. 500000)
  318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

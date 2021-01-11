@@ -28,6 +28,12 @@ Rancher Labs.
 \newblock Dosegljivo: \url{https://github.com/rancher/k3os}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{k3s-info}
+Rancher Labs.
+\newblock K3s: Lightweight kubernetes.
+\newblock Dosegljivo: \url{https://k3s.io/}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{difference-multi-cluster}
 Platform9.
 \newblock Difference between multi-cluster, multi-master, multi-tenant \&

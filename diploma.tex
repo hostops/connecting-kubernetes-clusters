@@ -512,7 +512,7 @@ Torej lahko uporabimo napredno mreženje Ciliuma in sinhronizaciramo objekte s K
 \chapter{Priprava sistema klastrov za testiranje}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja klastrov Kubernetes moramo najprej postaviti nekaj klastrov Kubernetes.
-Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša Kubernetes vozlišča uporabili raspberry pi 4.
+Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša Kubernetes vozlišča uporabili Raspberry PI 4.
   Na višjem nivoju je neglede na vse naš klaster in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v klastru v oblaku ali pa lokalni klaster z enim vozliščem.
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
 Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
@@ -526,7 +526,7 @@ Fizična postavitev klastrov je prikazana na sliki \ref{rpi-klastri}.
 \label{rpi-klastri}
 \end{figure}
 \section{K3S in K3OS}
-Obstaja več implementacij Kubernetesa in mi bomo uproabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher~\cite{k3s}.
+Obstaja več implementacij Kubernetesa in mi bomo uporabili z viri varčno odprotokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}.
 Hkrati so v podjetju Rancher pripravili distribucijo operacijskega sistema linux K3OS, ki jo lahko namestimo na katerikoli računalnik~\cite{k3os-git}. 
 Majhna težava se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
 A k sreči se je v ta namen začel odprtokodni projekt PiCl k3os image generator, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datorek zgradi novo sliko operaijskega sistema za naš Raspberry PI ~\cite{k3os-rpi-image-generator}.

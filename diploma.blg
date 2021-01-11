@@ -3,46 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: diploma.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-Warning--I didn't find a database entry for "k3s"
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            573 strings with 6693 characters,
-and the built_in function-call counts, 4091 in all, are:
-= -- 402
-> -- 133
+            575 strings with 6758 characters,
+and the built_in function-call counts, 4308 in all, are:
+= -- 424
+> -- 140
 < -- 0
-+ -- 57
-- -- 38
-* -- 105
-:= -- 702
-add.period$ -- 75
-call.type$ -- 19
-change.case$ -- 75
++ -- 60
+- -- 40
+* -- 111
+:= -- 739
+add.period$ -- 79
+call.type$ -- 20
+change.case$ -- 79
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 138
-empty$ -- 419
-format.name$ -- 38
-if$ -- 898
+cite$ -- 20
+duplicate$ -- 145
+empty$ -- 441
+format.name$ -- 40
+if$ -- 946
 int.to.chr$ -- 0
-int.to.str$ -- 19
+int.to.str$ -- 20
 missing$ -- 2
-newline$ -- 116
-num.names$ -- 38
-pop$ -- 178
+newline$ -- 122
+num.names$ -- 40
+pop$ -- 186
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 60
 quote$ -- 0
-skip$ -- 100
+skip$ -- 106
 stack$ -- 0
-substring$ -- 95
-swap$ -- 19
+substring$ -- 100
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
+type$ -- 78
 warning$ -- 0
-while$ -- 38
-width$ -- 21
-write$ -- 215
-(There was 1 warning)
+while$ -- 40
+width$ -- 22
+write$ -- 227
