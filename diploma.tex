@@ -230,6 +230,7 @@ Mami Lučki.
   {\bf IP} & internet protocol & internetni protokol \\
   {\bf HA} & high availability & visoka dosegljivost \\
   {\bf GA} & general availability & splošna dostopnost \\
+  {\bf VPN} & virtual private network & virtualno privatno omrežje \\
 \end{tabular}
 % prazna stran
 \clearemptydoublepage
@@ -494,15 +495,14 @@ Ampak se omenja možnost odstranitve te funkcionalnosti~\cite{remove-service-dis
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v našem klastru~\cite{cilium-intro}.
 Program deluje na tretji in četrti omrežni plasti, kjer nam zagotavlja osnovne principe varnosti in zaščite.
 Tu govorimo o zapiranju portov in omejevanju prometa.
-Cilium pa nam zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča naprimer omejevanje in filtriranje HTTP requestov in podobne varnostne funkcije na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
+Cilium pa nam zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča naprimer omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcije na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih klastrov Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih klastrih~\cite{cilium-cluster-mesh}.
-Hkrati s tem nam omogoča uporabo globalnih objektov service, ki so sposobni delati razporejanje prometa med različnimi klastri.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih klastrih~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki so sposobni delati razporejanje prometa med različnimi klastri.
 Takšne objekte definiramo z anotacijo io.cilium/global-service~\cite{setup-cilium-cluster-mesh}.
 Omogoča nam tudi omejevanje povezovanja med klastri z njihovim objektom CiliumNetworkPolicy~\cite{setup-cilium-cluster-mesh}.
-Ko postavljamo mrežo klastrov pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naši klastri skriti v različnih privatnih omrežjih.
-Ključno pri uporabi Ciliuma za povezovanje klastrov pa je, da so vsa naša vozlišča dosegljiva med seboj.
+Ko postavljamo mrežo klastrov, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naši klastri skriti v različnih privatnih omrežjih.
+Ključno pri uporabi Ciliuma za povezovanje klastrov je, da so vsa naša vozlišča dosegljiva med seboj.
 A četudi so naši klastri v med seboj nedosegljivih privatnih omrežjih, pa je problem z lahkoto rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno virtualno omrežje~\cite{setup-cilium-cluster-mesh}.
 
 Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da se Cilim ukvarja samo s povezovanjem klastrov na omrežnem nivoju.

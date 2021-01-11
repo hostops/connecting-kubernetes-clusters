@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  11 JAN 2021 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,7 +492,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 \clearemptydoublepage
+l.236 \clearemptydoublepage
                             [11
 
 
@@ -500,35 +500,35 @@ l.235 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 \clearemptydoublepage
+l.236 \clearemptydoublepage
                             [12
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 \clearemptydoublepage
+l.263 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 \clearemptydoublepage
+l.263 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 \clearemptydoublepage
+l.284 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 \clearemptydoublepage
+l.284 \clearemptydoublepage
                             [16
 
 ]
@@ -544,7 +544,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 312.
+ne 313.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 
 [2 <./images/problem-prevelike-latence.pdf>] [3] [4]
@@ -559,7 +559,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 File: images/primer-povezanih-klastrov.pdf Graphic file (type pdf)
 <use images/primer-povezanih-klastrov.pdf>
 Package pdftex.def Info: images/primer-povezanih-klastrov.pdf  used on input li
-ne 362.
+ne 363.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 
@@ -573,7 +573,7 @@ Poglavje 3.
 File: images/kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/kubernetes-simple-schema.pdf  used on input lin
-e 385.
+e 386.
 (pdftex.def)             Requested size: 390.0pt x 292.28874pt.
 [9] [10 <./images/kubernetes-simple-schema.pdf>] [11] [12
 
@@ -589,27 +589,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 442.
+on input line 443.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
-[16]
-
-LaTeX Warning: Citation `cilium-cluster-mesh' on page 17 undefined on input lin
-e 500.
-
-
-LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 17 undefined on inp
-ut line 502.
-
-
-LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 17 undefined on inp
-ut line 503.
-
-
-LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 17 undefined on inp
-ut line 506.
-
-[17] [18]
+[16] [17] [18]
 Poglavje 5.
 [19
 
@@ -717,45 +700,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--25
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 65--70
+Underfull \hbox (badness 10000) in paragraph at lines 79--84
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
  []
 
 
-Underfull \hbox (badness 4739) in paragraph at lines 86--91
+Underfull \hbox (badness 4739) in paragraph at lines 100--105
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
 be-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 86--91
+Underfull \hbox (badness 2150) in paragraph at lines 100--105
 \OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--105
+Underfull \hbox (badness 10000) in paragraph at lines 114--119
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
 
-) [36] (./diploma.aux)
+[36]) [37] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
 (rerunfilecheck)             Checksum: 1E18FC083A0AC60B7915F5F48BC14E12;2350.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8622 strings out of 479383
- 123538 string characters out of 5875829
- 453276 words of memory out of 5000000
- 25437 multiletter control sequences out of 15000+600000
+ 8627 strings out of 479383
+ 123647 string characters out of 5875829
+ 454366 words of memory out of 5000000
+ 25439 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -767,10 +747,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (52 pages, 1119873 bytes).
+Output written on diploma.pdf (53 pages, 1121028 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
+ 594 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 113 named destinations out of 1000 (max. 500000)
  313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

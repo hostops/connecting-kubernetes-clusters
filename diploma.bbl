@@ -47,6 +47,20 @@ Cilium skupnost.
 \newblock Dosegljivo: \url{https://docs.cilium.io/en/latest/intro/}.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{cilium-cluster-mesh}
+Cilium skupnost.
+\newblock Multi-cluster (cluster mesh).
+\newblock Dosegljivo:
+  \url{https://docs.cilium.io/en/latest/concepts/clustermesh/}.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{setup-cilium-cluster-mesh}
+Cilium skupnost.
+\newblock Set up cluster mesh.
+\newblock Dosegljivo:
+  \url{https://docs.cilium.io/en/latest/gettingstarted/clustermesh/}.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{remove-service-discovery}
 KubeFed skupnost.
 \newblock kubefed: remove crossclusterservicediscovery feature.
