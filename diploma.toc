@@ -15,7 +15,7 @@
 \contentsline {chapter}{\numberline {2}Problem povezovanje klastrov}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Kubernetes}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Zgodovina}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Osnoovni pojmi}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Osnovni pojmi}{9}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pod~\cite {pod}}{10}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Service~\cite {service}}{10}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Deployment~\cite {deployment}}{11}{subsection.3.2.3}%

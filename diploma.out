@@ -6,7 +6,7 @@
 \BOOKMARK [0][-]{chapter.2}{Problem povezovanje klastrov}{}% 6
 \BOOKMARK [0][-]{chapter.3}{Kubernetes}{}% 7
 \BOOKMARK [1][-]{section.3.1}{Zgodovina}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{Osnoovni pojmi}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Osnovni pojmi}{chapter.3}% 9
 \BOOKMARK [0][-]{chapter.4}{Povezovanje klastrov Kubernetes }{}% 10
 \BOOKMARK [1][-]{section.4.1}{ArgoCD in drugi GitOps}{chapter.4}% 11
 \BOOKMARK [1][-]{section.4.2}{KubeFed}{chapter.4}% 12

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -592,6 +592,11 @@ Poglavje 4.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
+Overfull \hbox (6.37387pt too wide) in paragraph at lines 420--426
+\OT1/cmr/m/n/12 Tako lahko upo-ra-bimo na pri-mer pre-dloge HELM in Ar-goCD nam
+ bo omogo^^Tcil,
+ []
+
 [14]
 <images/primer-uporabe-helm-predloge-argo-cd.png, id=370, 791.95876pt x 668.497
 5pt>
@@ -674,6 +679,12 @@ Overfull \hbox (0.6158pt too wide) in paragraph at lines 631--631
  []
 
 [26 <./images/infrastructure-example.pdf>] [27]
+Overfull \hbox (7.89449pt too wide) in paragraph at lines 665--667
+[]\OT1/cmr/m/n/12 Potem pa mo-ramo na-sta-viti ^^Tse na-sta-vi-tve, ki jih baza
+ pod-pira za zmanj^^Tsanje
+ []
+
+
 Overfull \hbox (97.82524pt too wide) in paragraph at lines 681--681
 []\OT1/cmtt/m/n/12 curl -s -X POST klaster-1/users|jq --data '{"name": "John", 
 "lastname": "Doe"}'[] 
@@ -774,7 +785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
 [41]) [42] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 279EA56C4A28296E314897E2F80976AC;2298.
+(rerunfilecheck)             Checksum: A0B11354FE4F4762339023B16C503012;2297.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -783,7 +794,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8688 strings out of 479383
  125284 string characters out of 5875829
- 455977 words of memory out of 5000000
+ 455980 words of memory out of 5000000
  25475 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -795,7 +806,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (58 pages, 2848270 bytes).
+Output written on diploma.pdf (58 pages, 2848275 bytes).
 PDF statistics:
  699 PDF objects out of 1000 (max. 8388607)
  599 compressed objects within 6 object streams
