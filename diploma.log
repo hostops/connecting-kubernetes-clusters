@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -666,6 +666,11 @@ Overfull \hbox (91.65024pt too wide) in paragraph at lines 643--643
 lastname": "Doe"}'[] 
  []
 
+
+Overfull \hbox (0.6158pt too wide) in paragraph at lines 644--644
+[]\OT1/cmr/bx/n/17.28 Implementacija in-fra-struk-ture s Ku-be-Fed 
+ []
+
 [26 <./images/infrastructure-example.pdf>]
 Overfull \hbox (38.17426pt too wide) in paragraph at lines 671--680
 \OT1/cmr/m/n/12 pove^^Tzemo v kla-ster. https://crate.io/docs/crate/howtos/en/l
@@ -704,7 +709,13 @@ izi^^Tcno bli^^Tzje kon^^Tcnemu
 
 [31
 
-] [32]
+]
+Overfull \hbox (3.64185pt too wide) in paragraph at lines 740--741
+[]\OT1/cmr/m/n/12 Z zelo pre-pro-sto in-te-gra-cijo v Ku-ber-ne-tes nam Ku-be-F
+ed api tu res omogo^^Tca
+ []
+
+[32]
 Poglavje 9.
 [33
 
@@ -765,9 +776,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--164
  []
 
 ) [37] (./diploma.aux)
-Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 0C4BD4C8B62751E1218DF145327D4FA0;2298.
 
+Package rerunfilecheck Warning: File `diploma.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `diploma.out':
+(rerunfilecheck)             Before: 0C4BD4C8B62751E1218DF145327D4FA0;2298
+(rerunfilecheck)             After:  279EA56C4A28296E314897E2F80976AC;2298.
 
 LaTeX Warning: There were undefined references.
 
@@ -791,7 +807,7 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (53 pages, 2767957 bytes).
+Output written on diploma.pdf (53 pages, 2767979 bytes).
 PDF statistics:
  644 PDF objects out of 1000 (max. 8388607)
  554 compressed objects within 6 object streams

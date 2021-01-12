@@ -30,14 +30,14 @@
 \contentsline {section}{\numberline {5.1}Raspberry PI 4}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}K3S in K3OS}{19}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Namestitev kubefed}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Namestitev KubeFed}{22}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Problem velike latence}{23}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{24}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Povezovanje klastrov Kubernetes med podatkovnimi centri}{24}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po klastrih}{24}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Infrastruktura primera}{25}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Implementacija infrastrukture s kubefed}{26}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Implementacija infrastrukture s KubeFed}{26}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{27}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Uporaba primerne podatkovne baze}{28}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Podatke sinhroniziramo sami}{28}{subsection.6.7.2}%
@@ -48,7 +48,7 @@
 \contentsline {section}{\numberline {7.2}Implementacija s Kubefed}{30}{section.7.2}%
 \contentsline {chapter}{\numberline {8}Upravljanje klastrov na robu oblaka}{31}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Klaster na robu oblaka}{31}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Implementacija s kubefed}{31}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Implementacija s KubeFed}{31}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Sinhronizacija podatkov}{32}{section.8.3}%
 \contentsline {chapter}{\numberline {9}Sklepne ugotovitve}{33}{chapter.9}%
 \contentsline {chapter}{Literatura}{35}{chapter.9}%

@@ -571,9 +571,9 @@ curl localhost:8080/users
 Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
 Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omoča napredne sinhronizacije tudi med različnimi strežniki in klastri.
 K sreči pa CrateDB implementira PostgreSQL vmesnik in nam kode za prehod med bazami ni potrebon spreminjati.
-\section{Namestitev kubefed}
+\section{Namestitev KubeFed}
 Kot ena izmed ključnih komponent složnega delovanja večih klastrov je njihovo upravljanje.
-V te namene bomo uporabili program kubefed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
+V te namene bomo uporabili program KubeFed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
 Ker je izdelek še v razvoju in še ni prišel iz alfa faze nimajo objavljene verzije za procesorje ARM.
 Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{https://hub.docker.com/r/hostops/kubefed}.
 Potem pa smo uporabili originalno Helm predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
@@ -641,7 +641,7 @@ Takoj preverimo, ce aplikacija deluje in če lahko podatke zapisujemo v bazo, ta
 curl -X POST klaster-1:8080/users --data '{"name": "John", "lastname": "Doe"}'
 curl klaster-1:8080/users
 \end{verbatim}
-\section{Implementacija infrastrukture s kubefed}
+\section{Implementacija infrastrukture s KubeFed}
 Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
 V našem primeru gre za service, deployment in statefulset. Vklopimo jih z naslenjim ukazom, ki za nas ustvari nove federated tipe objektov na izbranih tipih.
 \begin{verbatim}
@@ -729,15 +729,15 @@ Naprimer lahko gre za zahteve strank, da se podatki obdelujejo lokalno, lahko gr
 
 V našem primeru se bomo osredotočali na upravljanje takšnih klastrov.
 
-\section{Implementacija s kubefed}
+\section{Implementacija s KubeFed}
 Ko enkrat povežemo vse klastre s kubefedctl join je njihovo upravljanje preprosto.
 Samo nastavimo v katerem klastru želimo katere objekte in naša naloga je končana.
-Zavedati se sicer moramo, da nekaj komunikacije porabi tudi kubefed za sinhronizacijo.
+Zavedati se sicer moramo, da nekaj komunikacije porabi tudi KubeFed za sinhronizacijo.
 
-Nam pa kubefed omogoča še eno lepo možnost s svojo strukturo, saj je vsak od federiranih objektov v svojem imenskem prostoru.
-Tako lahko s svojim kontrollerjem in kubefed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s Kubernetes Jobi.
+Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo, saj je vsak od federiranih objektov v svojem imenskem prostoru.
+Tako lahko s svojim kontrollerjem in KubeFed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s Kubernetes Jobi.
 
-Z zelo preprosto integracijo v Kubernetes nam kubefed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+Z zelo preprosto integracijo v Kubernetes nam KubeFed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
 asdf V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
 
