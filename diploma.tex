@@ -563,9 +563,9 @@ Na mrežnih vratih podanih z okoljsko spremenljivko izpostavi vmesnik REST z dve
 GET klic na pot /users nam bo vrnil vse uporabnike, ki so zapisani v tabeli v bazi, s klicem POST na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v bazo.
 \begin{verbatim}
 # ukaz za dodajanje uporabnika
-curl -X POST localhost:8080/users --data '{"name": "John", "lastname": "Doe"}'
+curl -X POST localhost/users --data '{"name": "John", "lastname": "Doe"}'
 # ukaz za prikaz vseh uporabnikov
-curl localhost:8080/users
+curl localhost/users
 \end{verbatim}
 
 Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
@@ -575,7 +575,7 @@ K sreči pa CrateDB implementira PostgreSQL vmesnik in nam kode za prehod med ba
 Kot ena izmed ključnih komponent složnega delovanja večih klastrov je njihovo upravljanje.
 V te namene bomo uporabili program KubeFed, ki ga moramo namestiti na enega izmed klastrov, ki jih želimo povezati skupaj.
 Ker je izdelek še v razvoju in še ni prišel iz alfa faze nimajo objavljene verzije za procesorje ARM.
-Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{https://hub.docker.com/r/hostops/kubefed}.
+Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{docker-kubefed}.
 Potem pa smo uporabili originalno Helm predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
 Za delo s KubeKed pa moramo na svoj računalnik namestiti orodje kubefedcli.
 Z uporabo ukaza kubefedctl join povežemo vse tri klastre v kubefed sistem.
@@ -638,8 +638,8 @@ kubectl apply -f diploma-demo-1
 \end{verbatim}
 Takoj preverimo, ce aplikacija deluje in če lahko podatke zapisujemo v bazo, tako da prek demo aplikacije poizkusimo dodati uporabnika in izpisati vse uporabnike. To naredimo z curl komando.
 \begin{verbatim}
-curl -X POST klaster-1:8080/users --data '{"name": "John", "lastname": "Doe"}'
-curl klaster-1:8080/users
+curl -X POST klaster-1/users --data '{"name": "John", "lastname": "Doe"}'
+curl klaster-1/users
 \end{verbatim}
 \section{Implementacija infrastrukture s KubeFed}
 Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
@@ -659,41 +659,41 @@ kubefedctl federate service crate-external
 Izvršeni ukazi ustvarijo federated objekte, ki uporabijo postavitev vse klastre in za predlogo kar podane objekte.
 Tako je za nas rezultat izvršenih ukazov kreiranje federated objektov in posledično kopiranje objektov v vse naše povezane klastre.
 
-Po preizkusu delovanje z curl komando opazimo, da podatki med klastri še vedno niso sinhornizirani.
+Po preizkusu delovanje s curl komando opazimo, da podatki med klastri še vedno niso sinhornizirani.
 Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
 Na tej točki se ustavijo nekatere spletne aplikacije in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
 \section{Sinhronizacija podatkov}
-Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja uporabnike ključno, da se podatki sinhronizirajo med seboj.
-Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
-Zopet se moramo spomniti, da so tudi klastri podatkovnih baz ponavadi narejeni tako, da najbolje delujejo če so vozlišča blizu skupaj.
+Če želimo pred uporabnikom skriti, da uporabljamo več klastrov, moramo poleg geolokacijskih DNS zapisov, urediti tudi avtomatsko sinhronizacijo podatkov.
+Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze na klaster a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 
+Zopet se moramo spomniti, da so tudi klastri podatkovnih baz ponavadi narejeni tako, da najbolje delujejo, če so vozlišča blizu skupaj.
 Zaradi tega mnoge baze, ki podpirajo sinhronizacijo podatkov znotraj klastra, podpirajo tudi sinhronizacijo med različnimi podatkovnimi centri.
 \subsection{Uporaba primerne podatkovne baze}
-Vedno je najlepše, če uporabimo podatkovno bazo, ki ima takšno sinhronizacijo s čim manj dela že podprto, a takih baz ni veliko na trgu.
-Konkretno CrateDB podpira sinhronizacijo tudi preko dosegljivostnih con.
+Najlažje je sinhronizirati podatke, če uporabimo podatkovno bazo, ki ima sinhronizacijo med različnimi klastri s čim manj dela že podprto.
+CrateDB podpira sinhronizacijo tudi preko dosegljivostnih con.
 Vseeno pa je mišljeno, da vsa vozlišla povežemo v enak podatkovni klaster.
-Kar pomeni, da morajo vsa vozlišča imeti dostop do vseh.
-Najlažje je, če si lahko privoščimo in izpostavimo vsako vozlišča s svojim javnim IPjem in jih ročno povežemo v klaster.
-https://crate.io/docs/crate/howtos/en/latest/clustering/multi-zone-setup.html
-Nastavimo še nastavitve, ki ki jih baza podpira za zmanjšanje prometa in zagotavljanje željenje dosegljivosti med klastri.
-Podobne načine sinhorinzaije podpira tudi naprimer podatkovna baza Cassandra.
-https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html
+To pomeni, da morajo vsa vozlišča imeti dostop do vseh.
+Zelo elegantna rešitev bi bila uporaba sistema Cilio in uporaba globalnih servicov, saj nam Cilio že omogoča komunikacijo vsakega poda z vsakim.
+Druga možnost pa je, da izpostavimo vsak pod s svojim javnim IPjem in jih ročno povežemo v klaster.
+
+Potem pa moramo nastaviti še nastavitve, ki ki jih baza podpira za zmanjšanje prometa in zagotavljanje željenje dosegljivosti med klastri~\cite{cratedb-zone}.
+Podobne načine sinhorinzaije podpira tudi naprimer podatkovna baza Cassandra~\cite{cassandra-zone}.
 \subsection{Podatke sinhroniziramo sami}
-Sinhronizacija podatkovne baze tažak problem in če ne uporabimo primerne podatkone baze ali pa želimo sinhronizirati samo določene stvari preko klastrov, bo za nas najverjetneje prišla v poštev sinhronizacija na roke. To pomeni, da bomo spisali novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
-Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop pogosto najbolj učinkovit.
+Sinhronizacija podatkovne baze je tažak problem.
+Če ne uporabimo primerne podatkone baze ali pa želimo sinhronizirati samo določene stvari preko klastrov bomo sinhronizacijo podatkov verjetno morali napisati sami.
+To pomeni, da bomo ustvarili novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
+Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop pogosto najbolj učinkovit s stališča prenosa podatkov.
 
 V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo, kar z uporabo našega REST apija.
 To bomo storili v drugem ubuntu kontejnerju z uproabo komand curl za izvajanje rest api klicev in jq za razčlenjevanje podatkov.
 Podatki se sinhronizirajo vsakih 10 sekund.
+Ker naša aplikacija ne omogoča brisanja podatkov je takšen pristop učinkovit.
 
 Primer še testiramo in dobimo spodnji izhod, kar potrdi, da so se podatki uspešno sinhronizirali.
 \begin{verbatim}
-curl -s -X POST 192.168.10.111/users|jq --data '{"name": "John", "lastname": "Doe"}'
-curl -s 192.168.10.112/users|jq
+curl -s -X POST klaster-1/users|jq --data '{"name": "John", "lastname": "Doe"}'
+curl -s klaster-2/users|jq
 [{"Name":"John","Lastname":"Doe"}]
 \end{verbatim}
-
-
-
 \chapter{Upravljanje izoliranih aplikacij}
 \section{Zmanjševanje posledic vdorov in izpadov}
 Računalniška stroka si je že nekaj časa nazaj priznala, da popolnega sistema ne more ustvariti.

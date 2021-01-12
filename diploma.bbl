@@ -1,7 +1,22 @@
 \begin{thebibliography}{10}
 
+\bibitem{cassandra-zone}
+Apache Cassandra.
+\newblock Initializing a multiple node cluster (multiple datacenters).
+\newblock Dosegljivo:
+  \url{https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html},
+  2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{cratedb}
-Cratedb: the distributed sql database for iot and time-series data.
+CrateDB.
+\newblock Cratedb: the distributed sql database for iot and time-series data.
+\newblock Dosegljivo: \url{https://crate.io/}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cratedb-zone}
+CrateDB.
+\newblock Cratedb: the distributed sql database for iot and time-series data.
 \newblock Dosegljivo: \url{https://crate.io/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
@@ -104,6 +119,12 @@ Cilium skupnost.
 \newblock Set up cluster mesh.
 \newblock Dosegljivo:
   \url{https://docs.cilium.io/en/latest/gettingstarted/clustermesh/}.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{docker-kubefed}
+Kubefed skupnost.
+\newblock Kubefed.
+\newblock Dosegljivo: \url{https://hub.docker.com/r/hostops/kubefed}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{remove-service-discovery}

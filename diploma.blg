@@ -3,47 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: diploma.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-Warning--I didn't find a database entry for "https://hub.docker.com/r/hostops/kubefed"
-Warning--to sort, need author or key in cratedb
-You've used 24 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            588 strings with 7242 characters,
-and the built_in function-call counts, 5131 in all, are:
-= -- 508
-> -- 162
+            597 strings with 7510 characters,
+and the built_in function-call counts, 5827 in all, are:
+= -- 578
+> -- 189
 < -- 0
-+ -- 70
-- -- 46
-* -- 135
-:= -- 870
-add.period$ -- 94
-call.type$ -- 24
-change.case$ -- 94
++ -- 81
+- -- 54
+* -- 153
+:= -- 998
+add.period$ -- 107
+call.type$ -- 27
+change.case$ -- 107
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 173
-empty$ -- 530
-format.name$ -- 46
-if$ -- 1133
+cite$ -- 27
+duplicate$ -- 194
+empty$ -- 595
+format.name$ -- 54
+if$ -- 1282
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 27
 missing$ -- 2
-newline$ -- 145
-num.names$ -- 46
-pop$ -- 218
+newline$ -- 164
+num.names$ -- 54
+pop$ -- 242
 preamble$ -- 1
-purify$ -- 71
+purify$ -- 81
 quote$ -- 0
-skip$ -- 130
+skip$ -- 148
 stack$ -- 0
-substring$ -- 120
-swap$ -- 24
+substring$ -- 135
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 94
-warning$ -- 1
-while$ -- 46
-width$ -- 26
-write$ -- 273
-(There were 2 warnings)
+type$ -- 106
+warning$ -- 0
+while$ -- 54
+width$ -- 29
+write$ -- 311
