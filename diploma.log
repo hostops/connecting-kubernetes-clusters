@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,28 +516,28 @@ l.213 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \clearemptydoublepage
+l.241 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \clearemptydoublepage
+l.241 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \clearemptydoublepage
+l.269 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \clearemptydoublepage
+l.269 \clearemptydoublepage
                             [16
 
 ]
@@ -549,11 +549,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<images/problem-prevelike-latence.pdf, id=247, 471.68219pt x 275.10779pt>
+<images/problem-prevelike-latence.pdf, id=246, 471.68219pt x 275.10779pt>
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 290.
+ne 298.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 
 [2 <./images/problem-prevelike-latence.pdf>] [3] [4]
@@ -564,11 +564,11 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
  [5
 
 ]
-<images/primer-povezanih-klastrov.pdf, id=279, 478.66827pt x 485.89528pt>
+<images/primer-povezanih-klastrov.pdf, id=278, 478.66827pt x 485.89528pt>
 File: images/primer-povezanih-klastrov.pdf Graphic file (type pdf)
 <use images/primer-povezanih-klastrov.pdf>
 Package pdftex.def Info: images/primer-povezanih-klastrov.pdf  used on input li
-ne 340.
+ne 348.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 
@@ -578,11 +578,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Poglavje 3.
-<images/Kubernetes-simple-schema.pdf, id=305, 436.5108pt x 327.14218pt>
+<images/Kubernetes-simple-schema.pdf, id=304, 436.5108pt x 327.14218pt>
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
-e 363.
+e 371.
 (pdftex.def)             Requested size: 390.0pt x 292.28874pt.
 [9] [10 <./images/kubernetes-simple-schema.pdf>] [11] [12
 
@@ -593,21 +593,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
 [14]
-<images/primer-uporabe-helm-predloge-argo-cd.png, id=371, 791.95876pt x 668.497
+<images/primer-uporabe-helm-predloge-argo-cd.png, id=370, 791.95876pt x 668.497
 5pt>
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 420.
+on input line 428.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16] [17] [18]
 Poglavje 5.
-<images/postavitev-raspberry.jpg, id=412, 4223.78pt x 3131.7pt>
+<images/postavitev-raspberry.jpg, id=411, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 50
-0.
+8.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -615,7 +615,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [19
 
 ] [20 <./images/postavitev-raspberry.jpg>] [21]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 546--546
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 554--554
 []\OT1/cmtt/m/n/12 curl -X POST localhost/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
@@ -625,7 +625,7 @@ Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 576.
+(hyperref)                removing `\textasciicaron' on input line 584.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -633,48 +633,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
 ]
-Overfull \hbox (3.19576pt too wide) in paragraph at lines 583--583
+Overfull \hbox (3.19576pt too wide) in paragraph at lines 591--591
 []\OT1/cmr/bx/n/17.28 Povezovanje kla-strov Ku-ber-ne-tes med po-
  []
 
 
-Overfull \hbox (2.39825pt too wide) in paragraph at lines 584--588
+Overfull \hbox (2.39825pt too wide) in paragraph at lines 592--596
 \OT1/cmr/m/n/12 Re^^Tsitev za oba pro-blema je identi^^Tcna. Po-sta-viti mo-ram
 o kla-stre v ve^^Tc razli^^Tcnih
  []
 
-<images/geolokacijski-dns.png, id=451, 819.06pt x 437.38406pt>
+<images/geolokacijski-dns.png, id=450, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 594.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 602.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24]
-<images/infrastructure-example.pdf, id=456, 547.08388pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=455, 547.08388pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-608.
+616.
 (pdftex.def)             Requested size: 390.0pt x 294.86885pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./images/geolokacijski-dns.png (PNG copy)>]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 621--621
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 629--629
 []\OT1/cmtt/m/n/12 curl -X POST klaster-1/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
 
 
-Overfull \hbox (0.6158pt too wide) in paragraph at lines 622--622
+Overfull \hbox (0.6158pt too wide) in paragraph at lines 630--630
 []\OT1/cmr/bx/n/17.28 Implementacija in-fra-struk-ture s Ku-be-Fed 
  []
 
 [26 <./images/infrastructure-example.pdf>] [27]
-Overfull \hbox (97.82524pt too wide) in paragraph at lines 672--672
+Overfull \hbox (97.82524pt too wide) in paragraph at lines 680--680
 []\OT1/cmtt/m/n/12 curl -s -X POST klaster-1/users|jq --data '{"name": "John", 
 "lastname": "Doe"}'[] 
  []
@@ -684,27 +684,27 @@ Poglavje 7.
 [29
 
 ]
-<images/primer-izolirane-aplikacije.pdf, id=508, 406.3983pt x 160.6803pt>
+<images/primer-izolirane-aplikacije.pdf, id=507, 406.3983pt x 160.6803pt>
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 693.
+line 701.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [30 <./images/primer-izolirane-aplikacije.pdf>] [31] [32
 
 ]
 Poglavje 8.
 
-Overfull \hbox (19.57909pt too wide) in paragraph at lines 707--712
+Overfull \hbox (19.57909pt too wide) in paragraph at lines 715--720
 \OT1/cmr/m/n/12 Razlogov za-kaj kla-stre po-sta-vljamo na rob oblaka ozi-roma f
 izi^^Tcno bli^^Tzje kon^^Tcnemu
  []
 
-<images/upravljanje-robnih-klastrov.pdf, id=534, 565.15138pt x 493.845pt>
+<images/upravljanje-robnih-klastrov.pdf, id=533, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-klastrov.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-klastrov.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-klastrov.pdf  used on input 
-line 720.
+line 728.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -717,7 +717,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Poglavje 9.
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 744--745
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
@@ -792,14 +792,13 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (58 pages, 2854779 bytes).
+msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on diploma.pdf (58 pages, 2848267 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 602 compressed objects within 7 object streams
+ 699 PDF objects out of 1000 (max. 8388607)
+ 599 compressed objects within 6 object streams
  132 named destinations out of 1000 (max. 500000)
  330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
