@@ -19,6 +19,13 @@ Lukasz Guminski.
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{git-diploma}
+Jakob Hostnik.
+\newblock Connecting kubernetes clusters.
+\newblock Dosegljivo:
+  \url{https://github.com/hostops/connecting-kubernetes-clusters}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{git-stateful-rest-sample}
 Jakob Hostnik.
 \newblock Stateful rest sample.

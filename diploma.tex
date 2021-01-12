@@ -615,43 +615,53 @@ Lahko uporabimo in namestimo zunanju DNS skozi Kubernetes ali pa kar ročno.
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/geolokacijski-dns.png}
 \end{center}
-\caption{Ustvarjanje geolakacijskega zapisa v storitvi ROUTE53.}
-\label{primer-uporabe-helm-predloge-argo-cd}
+\caption{Ustvarjanje geolokacijskega DNS zapisa v storitvi ROUTE53.}
+\label{primer-ustvarjanje-geolokacijskega-zapisa}
 \end{figure}
 V naših lokalnih testnih klastrih bomo ta korak preskočili in jih ne bomo usmerjali preko javnih dns strežnikov, saj v lokalnem okolju to ni smiselno.
-Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo internetne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru želi igrati.
+
+Naslednja možnost pa je rešitev, ki se jo zelo pogosto poslužujejo internetne računalniške igre, da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na katerem klastru ali strežniku želi igrati.
 V takšnih primerih se ponavadi tudi izognemmo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje naših klastrov.
 \section{Infrastruktura primera}
-V našem primeru spletne aplikacije bomo imeli v vsakem klastru en deployment z rašim rest apijem - stateful rest sample in en pripadajoči service tipa LoadBalancer, da ga izpostavimo izven klastra.
-Za podatkovno bazo pa bomo uporabili statefulset s CrateDB, PVC diskom na lokalni sd kartici internim servicom za prepoznavo ostalih instanc CrateDB v klastru in service, ki izpostavi podatkovno bazo izven klastra za sinhronizacijo.
-Slika: infrastruktura aplikacije
-Na strani https TODO je dostopna konfiguracija za Kubernetes infrastrukturo aplikacije. Postavimo jo z ukazom.
+V našem primeru spletne aplikacije bomo imeli v vsakem klastru en deployment z našo aplikacijo Stateful rest sample in en pripadajoči service, da aplikacijo izpostavimo izven klastra.
+Za podatkovno bazo pa bomo uporabili statefulset s CrateDB, diskom na lokalni SD kartici, internim servicom za prepoznavo ostalih instanc CrateDB v klastru in eksterni service, ki ga uporabimo za povezovanje na podatkovno bazo.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{images/infrastructure-example.pdf}
+\end{center}
+\caption{Infrastruktura vsakega klastra v primeru demonstracijske aplikacije}
+\label{primer-uporabe-helm-predloge-argo-cd}
+\end{figure}
+Vsa konfiguracija je javno objavljena na Git repozitoriju\cite{git-diploma}. Postavimo jo z ukazom.
 \begin{verbatim}
 kubectl apply -f diploma-demo-1
 \end{verbatim}
-Takoj preverimo, ce aplikacija deluje in lahko podatke zapisujemo v bazo, tako da prek demo aplikacije poizkusimo dodati uporabnika in izpisati vse uporabnike. To naredimo z curl komando.
+Takoj preverimo, ce aplikacija deluje in če lahko podatke zapisujemo v bazo, tako da prek demo aplikacije poizkusimo dodati uporabnika in izpisati vse uporabnike. To naredimo z curl komando.
 \begin{verbatim}
-curl -X POST TODO:8080/users --data '{"name": "John", "lastname": "Doe"}'
-curl localhost:8080/users
+curl -X POST klaster-1:8080/users --data '{"name": "John", "lastname": "Doe"}'
+curl klaster-1:8080/users
 \end{verbatim}
 \section{Implementacija infrastrukture s kubefed}
-Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje. V našem primeru gre za tipe service, deployment in statefulset. Vklopimo jih z naslenjim ukazom.
+Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
+V našem primeru gre za service, deployment in statefulset. Vklopimo jih z naslenjim ukazom, ki za nas ustvari nove federated tipe objektov na izbranih tipih.
 \begin{verbatim}
 kubefedctl enable <ime tipa>
 \end{verbatim}
-Ko smo si vklopili federacijo na vseh potrebnih tipih pa moramo še vklopiti avtomatsko upravljanje na specifičnih objektih. V našem primeru želimo za to uporabiti ukaz kubefedctl federate.
+Ko smo si vklopili federacijo na vseh potrebnih tipih pa moramo še vklopiti avtomatsko upravljanje na specifičnih objektih.
+V našem primeru želimo za to uporabiti ukaz kubefedctl federate.
 \begin{verbatim}
 kubefedctl federate deployment stateful-rest-sample
+kubefedctl federate service stateful-rest-sample
 kubefedctl federate statefulset crate
-kubefedctl federate service crate-internal TODO
+kubefedctl federate service crate-internal
+kubefedctl federate service crate-external
 \end{verbatim}
-Po preizkusu delovanje z curl komando opazimo, da podatki niso sinhornizirani. Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
-Na tej točki se ustavij nekatere spletne igre in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
-\begin{verbatim}
-curl -s -X POST 192.168.10.111/users|jq --data '{"name": "John", "lastname": "Doe"}'
-curl -s 192.168.10.112/users|jq
-[]
-\end{verbatim}
+Izvršeni ukazi ustvarijo federated objekte, ki uporabijo postavitev vse klastre in za predlogo kar podane objekte.
+Tako je za nas rezultat izvršenih ukazov kreiranje federated objektov in posledično kopiranje objektov v vse naše povezane klastre.
+
+Po preizkusu delovanje z curl komando opazimo, da podatki med klastri še vedno niso sinhornizirani.
+Uporabniki, ki jih vnesemo v en klaster se še ne sinhronizirajo v ozadnju.
+Na tej točki se ustavijo nekatere spletne aplikacije in prepustijo izbiro strežnika oziroma klastra kar uporabniku.
 \section{Sinhronizacija podatkov}
 Če želimo pred uporabnikom skriti, da uporabljamo več strežnikov je poleg dns strežnika, ki razporeja uporabnike ključno, da se podatki sinhronizirajo med seboj.
 Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze a vseeno smo na nivoju sinhronizacije znotraj klastra to stvar že uredili. 

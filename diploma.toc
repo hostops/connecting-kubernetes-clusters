@@ -38,9 +38,9 @@
 \contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po klastrih}{24}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Infrastruktura primera}{25}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Implementacija infrastrukture s kubefed}{26}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{26}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Uporaba primerne podatkovne baze}{27}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Podatke sinhroniziramo sami}{27}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{27}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Uporaba primerne podatkovne baze}{28}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Podatke sinhroniziramo sami}{28}{subsection.6.7.2}%
 \contentsline {chapter}{\numberline {7}Upravljanje izoliranih aplikacij}{29}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Zmanj\IeC {\v s}evanje posledic vdorov in izpadov}{29}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Izpadi aplikacije}{29}{subsection.7.1.1}%

@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: literatura.bib
 Warning--I didn't find a database entry for "https://hub.docker.com/r/hostops/kubefed"
 Warning--to sort, need author or key in cratedb
-You've used 23 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            585 strings with 7126 characters,
-and the built_in function-call counts, 4914 in all, are:
-= -- 486
-> -- 155
+            588 strings with 7242 characters,
+and the built_in function-call counts, 5131 in all, are:
+= -- 508
+> -- 162
 < -- 0
-+ -- 67
-- -- 44
-* -- 129
-:= -- 833
-add.period$ -- 90
-call.type$ -- 23
-change.case$ -- 90
++ -- 70
+- -- 46
+* -- 135
+:= -- 870
+add.period$ -- 94
+call.type$ -- 24
+change.case$ -- 94
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 166
-empty$ -- 508
-format.name$ -- 44
-if$ -- 1085
+cite$ -- 25
+duplicate$ -- 173
+empty$ -- 530
+format.name$ -- 46
+if$ -- 1133
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 24
 missing$ -- 2
-newline$ -- 139
-num.names$ -- 44
-pop$ -- 210
+newline$ -- 145
+num.names$ -- 46
+pop$ -- 218
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 71
 quote$ -- 0
-skip$ -- 124
+skip$ -- 130
 stack$ -- 0
-substring$ -- 115
-swap$ -- 23
+substring$ -- 120
+swap$ -- 24
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
+type$ -- 94
 warning$ -- 1
-while$ -- 44
-width$ -- 25
-write$ -- 261
+while$ -- 46
+width$ -- 26
+write$ -- 273
 (There were 2 warnings)
