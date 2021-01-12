@@ -1,26 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% datoteka diploma.tex
-%
-% vzorčna datoteka za pisanje diplomskega dela v formatu LaTeX
-% na UL Fakulteti za računalništvo in informatiko
-%
-% vkup spravil Gašper Fijavž, december 2010
-% 
-%
-%
-% verzija 12. februar 2014 (besedilo teme, seznam kratic, popravki Gašper Fijavž)
-% verzija 10. marec 2014 (redakcijski popravki Zoran Bosnić)
-% verzija 11. marec 2014 (redakcijski popravki Gašper Fijavž)
-% verzija 15. april 2014 (pdf/a 1b compliance, not really - just claiming, Damjan Cvetan, Gašper Fijavž)
-% verzija 23. april 2014 (privzeto cc licenca)
-% verzija 16. september 2014 (odmiki strain od roba)
-% verzija 28. oktober 2014 (odstranil vpisno številko)
-% verija 5. februar 2015 (Literatura v kazalu, online literatura)
-% verzija 25. september 2015 (angl. naslov v izjavi o avtorstvu)
-% verzija 26. februar 2016 (UL izjava o avtorstvu)
-% verzija 16. april 2016 (odstranjena izjava o avtorstvu)
-% verzija 5. junij 2016 (Franc Solina dodal vrstice, ki jih je označil s svojim imenom)
-% verzija junij 2018 (Polona Oblak, I?RM predloga)
 \documentclass[a4paper, 12pt]{book}
 %\documentclass[a4paper, 12pt, draft]{book}  Nalogo preverite tudi z opcijo draft, ki vam bo pokazala, katere vrstice so predolge!
 \usepackage[utf8x]{inputenc}   % omogoča uporabo slovenskih črk kodiranih v formatu UTF-8
@@ -586,6 +563,7 @@ kubefedctl join klaster-3
 \end{verbatim}
 S tem smo uspešmo povezali več klastrov Kubernetes v sistem KubeFed.
 \chapter{Povezovanje med podatkovnimi centri}
+\label{povezovanje-med-centri}
 \section{Problem velike latence}
 V industriji je zelo malo primerov spletna aplikacije, ki jim ni potrebno hraniti stanja. 
 Ko neko podjetje, lastnik aplikacije poseže po globalnem trgu zelo hitro ugotovi, da stranke, ki niso blizu podatkovnega centra precej dlje čakajo pred ekrani, da se naloži njihova spletna aplikacija in njihovi podatki.
@@ -668,7 +646,7 @@ Sicer v našem primeru res uporabljamo samo eno instanco CrateDB baze na klaster
 Zopet se moramo spomniti, da so tudi klastri podatkovnih baz ponavadi narejeni tako, da najbolje delujejo, če so vozlišča blizu skupaj.
 Zaradi tega mnoge baze, ki podpirajo sinhronizacijo podatkov znotraj klastra, podpirajo tudi sinhronizacijo med različnimi podatkovnimi centri.
 \subsection{Uporaba primerne podatkovne baze}
-Najlažje je sinhronizirati podatke, če uporabimo podatkovno bazo, ki ima sinhronizacijo med različnimi klastri s čim manj dela že podprto.
+Najlažje je sinhronizirati podatke, če uporabimo podatkovno bazo, ki ima sinhronizacijo med različnimi klastri že podprto.
 CrateDB podpira sinhronizacijo tudi preko dosegljivostnih con.
 Vseeno pa je mišljeno, da vsa vozlišla povežemo v enak podatkovni klaster.
 To pomeni, da morajo vsa vozlišča imeti dostop do vseh.
@@ -681,13 +659,11 @@ Podobne načine sinhorinzaije podpira tudi naprimer podatkovna baza Cassandra~\c
 Sinhronizacija podatkovne baze je tažak problem.
 Če ne uporabimo primerne podatkone baze ali pa želimo sinhronizirati samo določene stvari preko klastrov bomo sinhronizacijo podatkov verjetno morali napisati sami.
 To pomeni, da bomo ustvarili novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
-Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop pogosto najbolj učinkovit s stališča prenosa podatkov.
+Ker samo mi poznamo naš konkreten primer uprabe, je takšen pristop lahko najbolj.
 
-V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo, kar z uporabo našega REST apija.
+V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo našega REST apija.
 To bomo storili v drugem ubuntu kontejnerju z uproabo komand curl za izvajanje rest api klicev in jq za razčlenjevanje podatkov.
 Podatki se sinhronizirajo vsakih 10 sekund.
-Ker naša aplikacija ne omogoča brisanja podatkov je takšen pristop učinkovit.
-
 Primer še testiramo in dobimo spodnji izhod, kar potrdi, da so se podatki uspešno sinhronizirali.
 \begin{verbatim}
 curl -s -X POST klaster-1/users|jq --data '{"name": "John", "lastname": "Doe"}'
@@ -708,17 +684,24 @@ V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v klaster, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
 A vseeno se moramo zaveati, da je ta korak smiselen šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerjizacija, izolacija na posamezno Kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in še mnoge druge.
 \subsection{Vdori}
-Podobno kot pri izpadih aplikacije pa je pri preprečevanjih posledic vdorov.
-Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, enkripcija komunikacije med mikrostoritvami, uporaba nepriviligiranih kontejnerjev.
-Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v klastru manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem je smiselno kritične aplikacije izolirati v svoj klaster.
+Podobno kot pri izpadih aplikacije je tudi pri preprečevanjih posledic vdorov.
+Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, enkripcija komunikacije med mikrostoritvami, uporaba nepriviligiranih in neadministratorskih kontejnerjev.
+  Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v klastru manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem pa je smiselno kritične aplikacije izolirati v svoj klaster.
 \section{Implementacija s Kubefed}
-Ključna lastnost federiranih objektov je možnost izbire klastov na katerih se bo določen objekt ustvaril. 
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[width=1.0\textwidth]{images/primer-izolirane-aplikacije.pdf}
+\end{center}
+\caption{Primer izoliranih aplikacij.}
+\label{problem-prevelike-latence}
+\end{figure}
+Ena izmed treh glavnih lastnost federiranih objektov je možnost izbire klastov na katerih se bo določen objekt ustvaril. 
 S tega stališča je naš primer zelo preprost.
 Samo določimo da se naša aplikacija izvaja na klastru 3 namesto na vseh.
 Tokrat za federacijo ne moremo uporabiti ukaza kubefedctl federate, ampak moramo kot za vse ostale Kubernetes objekte spisati konfiuracijo.
 Najprej bomo z ukazom kubectl tag označili naš izoliran klaster (ali več njih).
-Potem pa bomo lastnosti vsakega spec.placement.clusterSelector.matchLabels federiranega objekta, ki ga želimo izolirati dodali označbo vseh izoliranih klastrov.
-V takšnih primerih se nam ni potrebno posebej ukvarjati s sinhronizacijo podatkov, saj ali smo vse podatke obdržali v istem klastru ali pa sinhroniziramo na enak način kot če sinhroniziramo med različnimi podatkovnimi centri.
+Potem pa bomo lastnost spec.placement.clusterSelector.matchLabels vsakega federiranega objekta, ki ga želimo izolirati dodali označbo vseh izoliranih klastrov.
+V takšnih primerih se nam ni potrebno posebej ukvarjati s sinhronizacijo podatkov, saj smo ali vse podatke obdržali v istem klastru ali pa sinhroniziramo na enak način kot v poglavju \ref{povezovanje-med-centri}.
 \chapter{Upravljanje klastrov na robu oblaka}
 \section{Klaster na robu oblaka}
 Razlogov zakaj klastre postavljamo na rob oblaka oziroma fizično bližje končnemu uporabniku je več.
@@ -728,26 +711,35 @@ A možnih postavitev in razlogov zanje je res veliko.
 Naprimer lahko gre za zahteve strank, da se podatki obdelujejo lokalno, lahko gre za zakonske omejitve lahko želimo operacije izvajati na napravah, ki si jih ne lastimo direktno itd.
 
 V našem primeru se bomo osredotočali na upravljanje takšnih klastrov.
-
 \section{Implementacija s KubeFed}
 Ko enkrat povežemo vse klastre s kubefedctl join je njihovo upravljanje preprosto.
 Samo nastavimo v katerem klastru želimo katere objekte in naša naloga je končana.
 Zavedati se sicer moramo, da nekaj komunikacije porabi tudi KubeFed za sinhronizacijo.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{images/upravljanje-robnih-klastrov.pdf}
+\end{center}
+\caption{Primer izoliranih aplikacij.}
+\label{problem-prevelike-latence}
+\end{figure}
 
-Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo, saj je vsak od federiranih objektov v svojem imenskem prostoru.
-Tako lahko s svojim kontrollerjem in KubeFed apijem implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s Kubernetes Jobi.
+Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo in lahko s svojim kontrollerjem in KubeFed vmesnikom implementiramo še dodatne funkcijonalnosti kot so razporejanje obramenjenosti med lokalnimi strežniki in po potrebi povečujemo število instanc ali pa kar razporejamo opravila s Kubernetes Jobi.
 
-Z zelo preprosto integracijo v Kubernetes nam KubeFed api tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+Z zelo preprosto integracijo v Kubernetes nam KubeFed vmesnih tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
-asdf V primeru klastrov na robu oblaka se sinhronizacijo praviloma vedno implementira na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
-
-
+V primeru klastrov na robu oblaka bomo sinhronizacijo verjetno implementirali na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali klastre na robu oblaka.
 \chapter{Sklepne ugotovitve}
-Uporaba \LaTeX{a} in \BibTeX{a} je v okviru Diplomskega seminarja \textbf{obvezna}!
-Izbira \LaTeX\ ali ne \LaTeX\ pri pisanju dejanske diplomske naloge pa je pre\-pu\-šče\-na dogovoru med vami in vašim mentorjem.
-Res je, da so prvi koraki v \LaTeX{}u težavni. 
-Ta dokument naj vam služi kot začetna opora pri hoji.
-Pri kakršnihkoli nadaljnih vprašanjih ali napakah pa svetujem uporabo Googla, saj je spletnih strani za pomoč pri odpravljanju težav pri uporabi \LaTeX{}a ogromno.
+V diplomskem delu smo si pogledali teoretično ozadje povezovanja večih klastrov in osnove kubernetesa.
+Predstavljenih je bilo tudi nekaj popularnih orodij za delo z večimi klastri Kubernetes.
+V praktičnem delu pa smo se posvetili predvsem reševanju pogostih problemov v industriji, ki zahtevajo povezovanje večih klastrov.
+Zato pa je bilo potrebo postaviti tudi ustrezno okolje za preizkušanje naših rešitev.
+
+Z razvojem Kubernetesa se je razvilo tudi zelo veliko odprtokodnih orodij, ki omogočajo lažje upravljanje in povezovanje večih klastrov.
+Tako so napredne tehnologije prišle v roke širšemu krogu ljudi in jim omogočajo preprostejše reševanje težav.
+Kubernetes pa je s standardizacijo orkestracije zelo olajšal tudi možnost gostovanja aplikacije pri več različnih oblačnih ponudnikih, kjer se zopet pojavi problem povezovanja večih klastrov.
+
+Področje orkestracije in povezovanja klastrov se bo še zelo razvijalo in tema bo zagtovo zahtevala še veliko diplomskih del.
+
 \newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
 \ \\
 \clearpage

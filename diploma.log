@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  12 JAN 2021 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -352,23 +352,29 @@ LaTeX Warning: Label `problem-povezanih-klastrov' multiply defined.
 
 LaTeX Warning: Label `primer-uporabe-helm-predloge-argo-cd' multiply defined.
 
+
+LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
+
+
+LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
+
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
  (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -394,7 +400,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 144.
+Package hyperref Info: Link coloring OFF on input line 121.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -407,9 +413,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 144.
-LaTeX Info: Redefining \pageref on input line 144.
-LaTeX Info: Redefining \nameref on input line 144.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
 
 (./diploma.out) (./diploma.out)
 \@outlinefile=\write5
@@ -420,12 +426,12 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 179
+LaTeX Font Info:    Trying to load font information for U+msa on input line 156
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 179
+LaTeX Font Info:    Trying to load font information for U+msb on input line 156
 .
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -433,43 +439,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.182 \clearemptydoublepage
+l.159 \clearemptydoublepage
                             [2]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.199 \clearemptydoublepage
+l.176 \clearemptydoublepage
                             [3
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.199 \clearemptydoublepage
+l.176 \clearemptydoublepage
                             [4
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 \clearemptydoublepage
+l.185 \clearemptydoublepage
                             [5]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 \clearemptydoublepage
+l.185 \clearemptydoublepage
                             [6
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 \clearemptydoublepage
+l.192 \clearemptydoublepage
                             [7]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 \clearemptydoublepage
+l.192 \clearemptydoublepage
                             [8
 
 ] (./diploma.tocpdfTeX warning (ext4): destination with the same identifier (na
@@ -485,9 +491,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 \clearemptydoublepage
+l.199 \clearemptydoublepage
                             [10]
-Overfull \hbox (1.76152pt too wide) in paragraph at lines 227--227
+Overfull \hbox (1.76152pt too wide) in paragraph at lines 204--204
 []\OT1/cmr/bx/n/12 kratica| 
  []
 
@@ -495,7 +501,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \clearemptydoublepage
+l.213 \clearemptydoublepage
                             [11
 
 
@@ -503,35 +509,35 @@ l.236 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \clearemptydoublepage
+l.213 \clearemptydoublepage
                             [12
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 \clearemptydoublepage
+l.240 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 \clearemptydoublepage
+l.240 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \clearemptydoublepage
+l.261 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \clearemptydoublepage
+l.261 \clearemptydoublepage
                             [16
 
 ]
@@ -547,7 +553,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 313.
+ne 290.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 
 [2 <./images/problem-prevelike-latence.pdf>] [3] [4]
@@ -562,7 +568,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 File: images/primer-povezanih-klastrov.pdf Graphic file (type pdf)
 <use images/primer-povezanih-klastrov.pdf>
 Package pdftex.def Info: images/primer-povezanih-klastrov.pdf  used on input li
-ne 363.
+ne 340.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 
@@ -576,7 +582,7 @@ Poglavje 3.
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
-e 386.
+e 363.
 (pdftex.def)             Requested size: 390.0pt x 292.28874pt.
 [9] [10 <./images/kubernetes-simple-schema.pdf>] [11] [12
 
@@ -592,7 +598,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 443.
+on input line 420.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16] [17] [18]
@@ -600,8 +606,8 @@ Poglavje 5.
 <images/postavitev-raspberry.jpg, id=412, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
-Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
-3.
+Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 50
+0.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -609,7 +615,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [19
 
 ] [20 <./images/postavitev-raspberry.jpg>] [21]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 569--569
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 546--546
 []\OT1/cmtt/m/n/12 curl -X POST localhost/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
@@ -619,7 +625,7 @@ Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 598.
+(hyperref)                removing `\textasciicaron' on input line 576.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -627,12 +633,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
 ]
-Overfull \hbox (3.19576pt too wide) in paragraph at lines 605--605
+Overfull \hbox (3.19576pt too wide) in paragraph at lines 583--583
 []\OT1/cmr/bx/n/17.28 Povezovanje kla-strov Ku-ber-ne-tes med po-
  []
 
 
-Overfull \hbox (2.39825pt too wide) in paragraph at lines 606--610
+Overfull \hbox (2.39825pt too wide) in paragraph at lines 584--588
 \OT1/cmr/m/n/12 Re^^Tsitev za oba pro-blema je identi^^Tcna. Po-sta-viti mo-ram
 o kla-stre v ve^^Tc razli^^Tcnih
  []
@@ -640,7 +646,7 @@ o kla-stre v ve^^Tc razli^^Tcnih
 <images/geolokacijski-dns.png, id=451, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 616.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 594.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -650,65 +656,78 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-630.
+608.
 (pdftex.def)             Requested size: 390.0pt x 294.86885pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./images/geolokacijski-dns.png (PNG copy)>]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 643--643
+Overfull \hbox (60.77522pt too wide) in paragraph at lines 621--621
 []\OT1/cmtt/m/n/12 curl -X POST klaster-1/users --data '{"name": "John", "lastn
 ame": "Doe"}'[] 
  []
 
 
-Overfull \hbox (0.6158pt too wide) in paragraph at lines 644--644
+Overfull \hbox (0.6158pt too wide) in paragraph at lines 622--622
 []\OT1/cmr/bx/n/17.28 Implementacija in-fra-struk-ture s Ku-be-Fed 
  []
 
 [26 <./images/infrastructure-example.pdf>] [27]
-Overfull \hbox (97.82524pt too wide) in paragraph at lines 696--696
+Overfull \hbox (97.82524pt too wide) in paragraph at lines 672--672
 []\OT1/cmtt/m/n/12 curl -s -X POST klaster-1/users|jq --data '{"name": "John", 
 "lastname": "Doe"}'[] 
  []
 
-[28] [29] [30
+[28]
+Poglavje 7.
+[29
 
 ]
-Poglavje 7.
-[31] [32]
+<images/primer-izolirane-aplikacije.pdf, id=508, 406.3983pt x 160.6803pt>
+File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
+<use images/primer-izolirane-aplikacije.pdf>
+Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
+line 693.
+(pdftex.def)             Requested size: 390.0pt x 154.20474pt.
+ [30 <./images/primer-izolirane-aplikacije.pdf>] [31] [32
+
+]
 Poglavje 8.
 
-Overfull \hbox (19.57909pt too wide) in paragraph at lines 724--729
+Overfull \hbox (19.57909pt too wide) in paragraph at lines 707--712
 \OT1/cmr/m/n/12 Razlogov za-kaj kla-stre po-sta-vljamo na rob oblaka ozi-roma f
 izi^^Tcno bli^^Tzje kon^^Tcnemu
  []
 
-[33
+<images/upravljanje-robnih-klastrov.pdf, id=534, 565.15138pt x 493.845pt>
+File: images/upravljanje-robnih-klastrov.pdf Graphic file (type pdf)
+<use images/upravljanje-robnih-klastrov.pdf>
+Package pdftex.def Info: images/upravljanje-robnih-klastrov.pdf  used on input 
+line 720.
+(pdftex.def)             Requested size: 390.0pt x 340.80615pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./images/upravljanje-robnih-klastrov.pdf>] [35] [36
 
 ]
-Overfull \hbox (3.64185pt too wide) in paragraph at lines 740--741
-[]\OT1/cmr/m/n/12 Z zelo pre-pro-sto in-te-gra-cijo v Ku-ber-ne-tes nam Ku-be-F
-ed api tu res omogo^^Tca
- []
-
-[34]
 Poglavje 9.
-[35
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 752--753
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 744--745
 
  []
 
-[36] (./diploma.bbl
+[38] (./diploma.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 31--36
 []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / blog / 2016 / 12 / cluster -[
 ] federation -[] in -[]
  []
 
-[37
+[39
 
 
 ]
@@ -729,7 +748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--85
 -[] cluster -[]
  []
 
-[38]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 145--150
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
@@ -747,13 +766,13 @@ Underfull \hbox (badness 2150) in paragraph at lines 166--171
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
-[39]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 180--185
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
 
-) [40] (./diploma.aux)
+) [42] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
 (rerunfilecheck)             Checksum: 279EA56C4A28296E314897E2F80976AC;2298.
 
@@ -762,10 +781,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8671 strings out of 479383
- 124698 string characters out of 5875829
- 455915 words of memory out of 5000000
- 25464 multiletter control sequences out of 15000+600000
+ 8688 strings out of 479383
+ 125284 string characters out of 5875829
+ 455977 words of memory out of 5000000
+ 25475 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,12n,72p,393b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -777,10 +796,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (56 pages, 2769880 bytes).
+Output written on diploma.pdf (58 pages, 2854784 bytes).
 PDF statistics:
- 669 PDF objects out of 1000 (max. 8388607)
- 576 compressed objects within 6 object streams
- 128 named destinations out of 1000 (max. 500000)
- 320 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 704 PDF objects out of 1000 (max. 8388607)
+ 602 compressed objects within 7 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
