@@ -8,34 +8,34 @@
 \contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a dosegljivost}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Izolacija aplikacije}{3}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{3}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{4}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{4}{subsection.1.2.5}%
-\contentsline {chapter}{\numberline {2}Problem povezovanje klastrov}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Problem povezovanja gru\IeC {\v c}}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Kubernetes}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Zgodovina}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Osnovni pojmi}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Osnovni pojmi}{10}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pod~\cite {pod}}{10}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Service~\cite {service}}{10}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Service~\cite {service}}{11}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Deployment~\cite {deployment}}{11}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}StatefulSet~\cite {statefulset}}{11}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Povezovanje klastrov Kubernetes }{13}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Povezovanje Kubernetes gru\IeC {\v c}}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}ArgoCD in drugi GitOps}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Sinhronizacija objektov z uporabo GitOps sistemov}{14}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Postavljanje sinhronizacija objektov z ArgoCD}{14}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}KubeFed}{15}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Cilium}{17}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Priprava sistema klastrov za testiranje}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Priprava sistema gru\IeC {\v c} za testiranje}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Raspberry PI 4}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}K3S in K3OS}{19}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Demonstracijska spletna aplikacija}{21}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Namestitev KubeFed}{22}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Problem velike latence}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje dosegljivosti aplikacije}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Povezovanje klastrov Kubernetes med podatkovnimi centri}{24}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po klastrih}{24}{section.6.4}%
+\contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje razpolo\IeC {\v z}ljivosti aplikacije}{24}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Povezovanje Kubernetes gru\IeC {\v c} med podatkovnimi centri}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po gru\IeC {\v c}ah}{24}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Infrastruktura primera}{25}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Implementacija infrastrukture s KubeFed}{26}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{27}{section.6.7}%
@@ -46,8 +46,8 @@
 \contentsline {subsection}{\numberline {7.1.1}Izpadi aplikacije}{29}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Vdori}{30}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2}Implementacija s Kubefed}{30}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Upravljanje klastrov na robu oblaka}{33}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Klaster na robu oblaka}{33}{section.8.1}%
+\contentsline {chapter}{\numberline {8}Upravljanje gru\IeC {\v c} na robu oblaka}{33}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Gru\IeC {\v c}e na robu oblaka}{33}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Implementacija s KubeFed}{33}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Sinhronizacija podatkov}{35}{section.8.3}%
 \contentsline {chapter}{\numberline {9}Sklepne ugotovitve}{37}{chapter.9}%

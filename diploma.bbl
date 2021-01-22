@@ -80,6 +80,12 @@ Rancher Labs.
 \newblock Dosegljivo: \url{https://k3s.io/}, 2020.
 \newblock [Dostopano: 16. 11. 2020].
 
+\bibitem{cncf}
+Cloud native~computing foundation.
+\newblock Cncf cloud native interactive landscape.
+\newblock Dosegljivo: \url{https://landscape.cncf.io/}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{difference-multi-cluster}
 Platform9.
 \newblock Difference between multi-cluster, multi-master, multi-tenant \&
