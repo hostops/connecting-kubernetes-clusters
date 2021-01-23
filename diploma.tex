@@ -177,7 +177,7 @@ Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega
 % zahvala
 \thispagestyle{empty}\mbox{}\vfill\null\it%
 \noindent
-Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojca Ciglarič za pripravljenost in mentorstvo.
+Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojci Ciglarič za pripravljenost in mentorstvo.
 Zahvalil bi se tudi somentorju asist. dr. Matjažu Pančurju za vse nasvete in pomoč pri pisanju diplomske naloge.
 Zahvala pa gre tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
 \rm\normalfont
@@ -227,7 +227,7 @@ Več računalnikov povezujemo v skupine predvsem zaradi zagotavljanja večje zmo
 V zadnjih letih je bil na tem področju narejen zelo velik napredek in razvoj.
 Tako je nastal tudi sistem Kubernetes, ki je zaradi svoje popularnosti postal de facto standard za upravljanje gruč in orkestracijo kontejnerjev.
 A zelo pogosto ena sama računalniška gruča ni dovolj.
-To se zgodi v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco, do naših uporabnikov ali pa  želimo še bolj povečati stabilnost ali varnost našega sistema.
+To se zgodi v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa  želimo še bolj povečati stabilnost ali varnost našega sistema.
 Primerov uporabe je veliko in v diplomski nalogi si bomo pogledali nekaj najpogostejših.
 Pogledali si bomo, ozadje povezovanja gruč in kakšne pristope lahko uporabimo za reševanje naših problemov.
 Lotili se bomo implementacije in reševanja problemov skozi nekaj primerov uporabe na konktretnih problemih.
@@ -279,7 +279,7 @@ Glede orkestracije kontejnerjev je bil v zadnjih nekaj letih narejen zelo velik 
 V postopku tega preboja se je razvil tudi Kubernetes API, ki je na tem področju rešil marsikatero težavo.
 Kubernetes  je univerzalni način, ki nam omogoča, da več računalnikov povežemo v gručo, ki deluje kot ena samostojna enota. 
 To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko razpoložljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje več računalnikov.
-A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota ampak bi želeli med seboj povezujemo tudi te skupine.
+A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota, ampak bi želeli med seboj povezujemo tudi te skupine.
 Ta problem se je do sedaj reševalo na več različnih načinov.
 So pa v zadnjem času tudi razvijalci Kubernetesa začeli bolj celostno reševati problem.
 Poizkusili so problem rešiti s projektom Federation 1, zdaj pa se zdi, da bo Federation 2 oziroma KubeFed uspešno prešel iz alfa verzije v beta.
@@ -292,7 +292,7 @@ Ko spletne aplikacije postanejo bolj globalne zelo hitro opazimo, da uporabniki,
 Ta problem je rešljiv na način, da postavimo še eno gručo bližje naših uporabnikov.
 Na primer eno gručo na celino.
 Tu pa zelo pogosto želimo, da se podatki sinhronizirajo.
-Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo zato je priporočljivo, da tudi fizično blizu skupaj, da se izognemo latenci. 
+Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem ponavadi izognemo latenci. 
 Prevelika latenca med vozlišči je tudi ena izmed glavnih omejitev, da ne moremo vseh vozlišč povezati v eno večjo gručo.
 \begin{figure}[h]
 \begin{center}
@@ -306,19 +306,19 @@ Vsakih nekaj let se zgodi da slišimo novico, da je iz interneta izpadel kakšen
 To se lahko zgodi iz več razlogov kot na primer večje napake na sistemu ali hujše vremenske razmere.
 Če gre v takšnem primeru za večjega oblačnega ponudnika se to pozna tako, da je nezanemarljiv del interneta nedosegljiv.
 Izpadi posameznih gruč pa se toliko pogosteje dogajajo, če gre za manjše ponudnike ali pa so naši strežniki v bolj nestabilnih okoljih. 
-V splošnem se problem reši tako, da se naše gruče namestimo v več podatkovnih centrov.
+V splošnem se problem reši tako, da naše gruče namestimo v več podatkovnih centrov.
 \subsection{Izolacija aplikacije}
 Ko govorimo o izolaciji aplikacije se po navadi nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
-Glede izolacije spletnih aplikacij smo z uporabo Kubernetesa naredili že kar nekaj korakov k rešitvi problema.
+Glede izolacije spletnih aplikacij smo z uporabo Kubernetesa naredili že kar nekaj korakov k dobri rešitvi problema.
 Na primer vsaka aplikacija lahko teče v svojem kontejnerju, lahko pa jo celo izoliramo samo na določena vozlišča.
 A vseeno se v Kubernetesu dogajajo problemi zaradi katerih postane cela gruča nedosegljiva.
 Kaj takšnega se pogosto zgodi med posodabljanjem cele gruče.
 Z varnostnega vidika pa po navadi mislimo na dejstvo, da če nekomu uspe serija napadov in se uspešno polasti enega samega vozlišča, si lahko začne lastiti celo gručo.
-Torej ima zaradi tega, ker ima administratorske pravice na vozlišču, posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču.
+Torej zaradi tega, ker ima administratorske pravice na vozlišču, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču.
 Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
 Če imamo vsako od naših aplikacij v svoji gruči pa se temu lahko izognemo.
 \subsection{Drag prenos podatkov}
-Če se spustimo iz jedra računalniškega oblaka na njegov rob pa tam srečamo cel kup zanimivih problemov. 
+Če se spustimo iz jedra računalniškega oblaka na njegov rob pa tam srečamo veliko zanimivih problemov. 
 Na robu oblaka smo takrat, ko govorimo o delu naše aplikacije, ki se izvaja stran od centralnih aplikacij, ki so vedno doseljive.
 Takšen primer so na primer mikro podatkovni centri in gruče na majhnih računalnikih kot na primer Raspberry PI.
 Če naša aplikacija uporablja takšne gruče je potrebno tudi njihovo sinhrono delovanje.
@@ -333,7 +333,7 @@ Zaradi praktičnosti pa so te storitve po navadi napisane tako, da vsako storite
 Problem povezovanja več računalniških gruč je v svetu prisoten že kar nekaj časa.
 Ko postavimo gručo, želimo da več računalnikov deluje kot celota, a z veliko večjo zanesljivostjo, stabilnostjo in zmogljivostjo.
 Obstajajo primeri, ko bi radi med seboj povezali računalnike, a jih zaradi razdalje ali druačnih ovir ne moremo povezati v eno tesno povezano gručo.
-V takšnih primerih po navadi lahko vsaj računalnike na isti lokaciji povežemo v gručo.
+V takšnih primerih pa po navadi lahko vsaj računalnike na isti lokaciji povežemo v gručo.
 Te gruče pa potem na različne načine povežemo šibkeje.
 
 Ko govorimo o tesni povezanosti znotraj gruće po navadi pričakujemo, da vsako vozlišče vidi vsako drugo, da vsak kontejner lahko komunicira z vsakim kontejnerjem, da so vozlišča v istem omrežju in da uporabljamo hitro interno omrežje podatkovnega centra. 
@@ -404,7 +404,7 @@ Ko govorimo o sistemu, ki ga uporabljamo za upravljanje več gruč, najpogosteje
 Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v izbranih gručah.
 Odvisno od naših potreb pa si lahko želimo tudi, da nam sistem omogoča dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med stritvami v različnih gručah, dinamično odkrivanje podov med gručami in komunikacijo med podi v različnih gručah.
 Te funkcionalnosti znotraj enege gruče nudi že Kubernetes sam.
-Je pa seveda odvisno od našega primera katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
+Je pa seveda odvisno od našega primera, katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo pogledali različne sisteme za povezovanje Kubernetes gruč, njihove glavne prednosti in značilnosti.
   \section{ArgoCD in drugi GitOps}
 \subsection{Sinhronizacija objektov z uporabo GitOps sistemov}
@@ -479,9 +479,9 @@ spec:
           value: 3
   ... 
 \end{verbatim}
-  Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkrivanje storitev v drugih gručah prek DNS zapisov.
+Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkrivanje storitev v drugih gručah prek DNS zapisov.
 Ampak se omenja možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery}, ki je že sedaj privzeto izklopljena.
-  Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko mine še nekaj časa preden doseže status GA, če slučajno ne bo šel po stopinjah svojega predhodnika.
+Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko mine še nekaj časa preden doseže status GA, če slučajno ne bo šel po stopinjah svojega predhodnika.
 \section{Cilium}
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v naši gruči~\cite{cilium-intro}.
 Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot na primer zapiranje portov in omejevanje komunikacije.
@@ -502,7 +502,7 @@ Torej lahko uporabimo napredno mreženje Ciliuma in objekte sinhroniziramo s Kub
 \chapter{Priprava sistema gruč za testiranje}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja Kubernetes gruč moramo najprej postaviti nekaj gruč.
-Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo bomo za naša Kubernetes vozlišča uporabili Raspberry PI 4.
+Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo, bomo za naša Kubernetes vozlišča uporabili Raspberry PI 4.
 Na višjem nivoju pa gre še vedn za Kubernetes gručo in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v gruči v oblaku ali pa lokalno gručo z enim vozliščem.
 Raspberry PI je zelo majhen in manj zmogljiv računalnik na eni sami plošči.
 Ključni prednosti takšnih računalnikov pa sta prav velikost in cena.
@@ -607,7 +607,7 @@ V primeru naravnih nesreč ali hujših vremenskih pogojev pomeni, da je nedosegl
 Tu Kubernetes pride zelo do izraza, saj kljub nekaj neenakostim skozi implementacije ohranja enak vmesnik in je zato takšna postavitev precej lažja, kot bi bila brez uporabe Kubernetesa.
 \section{Povezovanje Kubernetes gruč med podatkovnimi centri}
 Rešitev za oba problema je identična.
-Postaviti moramo gruče v več različnih podatkovnih centrov in jih nastaviti, da bodo delovali sinhrono.
+Postaviti moramo gruče v več različnih podatkovnih centrih in jih nastaviti, da bodo delovali usklajeno.
 Odvisno od problema bodo te podatkovni centri morda bližje uporabniku, morda v lasti različnih oblačnih ponudnikov ali pa oboje.
 Ampak princip ostaja enak.
 \section{Razporeditev uporabnikov po gručah}
@@ -699,11 +699,11 @@ curl -s gruca-2/users|jq
 \end{verbatim}
 \chapter{Upravljanje izoliranih aplikacij}
 \section{Zmanjševanje posledic vdorov in izpadov}
-  Računalniška stroka si je že nekaj časa nazaj priznala, da popolnega sistema ne more ustvariti: sistema, ki se ne more sesuti, sistema, ki bo ves čas dosegljiv in sistema, v katerega ne bo mogoče vdreti.
+  Računalniška stroka si je že nekaj časa nazaj priznala, da popolnega sistema ne more ustvariti: sistema, ki se ne more sesuti, sistema, ki bo ves čas razpoložljiv in sistema, v katerega ne bo mogoče vdreti.
 To vsake toliko časa potrdijo tudi najbolje upravljani veliki sistemi kot so AWS, Google, Facebook z izpadi ali vdori na njihovih storitvah. 
 Vseeno pa kljub vdorom in napakam, zaradi katerih postanejo naši sistemi nedosegljivi, vedno lahko poizkusimo zmanjšati posledice ob morebitnem vdoru ali napadu. 
 \subsection{Izpadi aplikacije}
-Kljub temu, da smo naše aplikacije namestili na različne gruče in je s tem aplikacija odporna na izpad ene gruče ga ob hujših nepravilnostih delovanja aplikacije in nastavitev gruče lahko zaradi napake na eni aplikaciji kaskadno izpadejo tudi vse gruče na katerih imamo aplikacijo nameščeno.
+Kljub temu, da smo naše aplikacije namestili na različne gruče in je s tem aplikacija odporna na izpad ene gruče, pa lahko ob hujših nepravilnostih delovanja ene aplikacije in napaki pri nastavitvi gruč kaskadno izpadejo tudi vse gruče na katerih imamo aplikacijo nameščeno.
 Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire v gruči hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
 V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v gručo, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
@@ -778,6 +778,9 @@ Kubernetes pa je s standardizacijo orkestracije zelo olajšal tudi možnost gost
 
 Področje orkestracije in povezovanja gruč se bo še zelo razvijalo in tema bo zagotovo zahtevala še veliko diplomskih del.
 
+\newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
+\newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
+\newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
 \newpage %dodaj po potrebi, da bo številka strani za Literaturo v Kazalu pravilna!
 \ \\
 \clearpage

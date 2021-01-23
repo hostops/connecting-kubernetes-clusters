@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  23 JAN 2021 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  23 JAN 2021 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,11 +561,8 @@ ne 299.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 3029) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[2]
+Underfull \vbox (badness 7081) has occurred while \output is active []
 
  [3 <./images/problem-prevelike-latence.pdf>] [4]
 Poglavje 2.
@@ -796,7 +793,7 @@ o-ve-zo-va-nja ve^^Tc ra^^Tcunalni^^Tskih
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 785--786
 
  []
 
@@ -874,7 +871,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (62 pages, 2855691 bytes).
+Output written on diploma.pdf (62 pages, 2855731 bytes).
 PDF statistics:
  725 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams
