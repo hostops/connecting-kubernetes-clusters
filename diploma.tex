@@ -750,9 +750,22 @@ Zavedati se sicer moramo, da nekaj komunikacije porabi tudi KubeFed za sinhroniz
 
 Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo in lahko s svojim kontrolerjem in KubeFed vmesnikom implementiramo še dodatne funkcionalnosti kot so razporejanje obremenjenosti med lokalnimi strežniki in po potrebi povečujemo število primerkov ali pa kar razporejamo opravila s Kubernetes Job objekti.
 
-Z zelo preprosto integracijo v Kubernetes nam KubeFed vmesnih tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+Z zelo preprosto integracijo v Kubernetes nam KubeFed vmesnik tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
-V primeru gruč na robu oblaka bomo sinhronizacijo verjetno implementirali na novo, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali gruče na robu oblaka.
+V primeru gruč na robu oblaka bomo sinhronizacijo verjetno implementirali sami, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali gruče na robu oblaka.
+
+Za primer vzemimo hipotetični varnostni sistem korporacije, ki centralno spremlja varnost v posameznih podružnicah.
+Sistem ima eno nadzorno kamero pri vhodu v vsako podružnico.
+Želimo, da naša kamera prepoznava obraze in na podlagi tega dovoljuje zaposlenim vstop.
+V našem centralnem sistemu pa želimo, hraniti seznam vstopov.
+En način reševanja tega problema je z gručami na robu oblaka.
+V vsako podružnico bi postavili gručo Raspberry PI računalnikov, ki so dovolj zmogljivi, da obdelujejo posnetke kamer in prepoznavajo obraze.
+Če posnetke obdelujemo lokalno se izognemo pošiljanju veliki količini podatkov na centralne strežnike, posledično pa bo hitrejše pa bo tudi preverjanje zaposlenih.
+Tako bi na centralni strežnik pošiljali samo številko zaposlenega in čas vstopa.
+Takšen pristop bi prišel še toliko bolj do izraza, če imajo podružnice dostop do interneta samo prek dragega mobilnega omrežja, kjer lahko z zmanjšanjem prometa zelo zmanjšamo tudi stroške podjetja.
+Vse te gruče na podružnicah bi imele zelo podobno strukturo in jih je smiselno centralo upravljati s kakšnim sistemom za povezovanje. 
+Tu bi lahko uporabili KubeFed ali GitOps pristop.
+Pošiljanje podatkov na centrali strežnik pa bi morali napisati sami in ga vgraditi v naš program za prepoznavo obrazov.
 \chapter{Sklepne ugotovitve}
   V diplomskem delu smo si pogledali teoretično ozadje povezovanja več računalniških gruč in osnove Kubernetesa.
 Predstavljenih je bilo tudi nekaj popularnih orodij za delo z več Kubernetes gručami.

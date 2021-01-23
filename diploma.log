@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  23 JAN 2021 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  23 JAN 2021 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,13 +790,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Poglavje 9.
 
-Overfull \hbox (30.96655pt too wide) in paragraph at lines 757--761
+Overfull \hbox (30.96655pt too wide) in paragraph at lines 770--774
 \OT1/cmr/m/n/12 V di-plom-skem delu smo si po-gle-dali te-o-reti^^Tcno ozadje p
 o-ve-zo-va-nja ve^^Tc ra^^Tcunalni^^Tskih
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 769--770
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
 
  []
 
@@ -862,7 +862,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8702 strings out of 479383
  125371 string characters out of 5875829
- 459141 words of memory out of 5000000
+ 460141 words of memory out of 5000000
  25483 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -874,7 +874,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (62 pages, 2854453 bytes).
+Output written on diploma.pdf (62 pages, 2855679 bytes).
 PDF statistics:
  725 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams
