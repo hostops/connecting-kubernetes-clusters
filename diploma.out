@@ -21,7 +21,7 @@
 \BOOKMARK [1][-]{section.6.2}{Povecanje razpolo\236ljivosti aplikacije}{chapter.6}% 21
 \BOOKMARK [1][-]{section.6.3}{Povezovanje Kubernetes gruc med podatkovnimi centri}{chapter.6}% 22
 \BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po grucah}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.5}{Infrastruktura primera}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.5}{Definicija infrastrukture za na\235 primer}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.6}{Implementacija infrastrukture s KubeFed}{chapter.6}% 25
 \BOOKMARK [1][-]{section.6.7}{Sinhronizacija podatkov}{chapter.6}% 26
 \BOOKMARK [0][-]{chapter.7}{Upravljanje izoliranih aplikacij}{}% 27

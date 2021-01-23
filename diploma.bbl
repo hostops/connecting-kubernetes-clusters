@@ -189,4 +189,10 @@ Kubernetes skupnost.
   \url{https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{jq}
+oprtokodna~skupost Stephen~Dolan.
+\newblock Github - stedolan/jq: Command-line json processor.
+\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
+\newblock [Dostopano: 20. 01. 2021].
+
 \end{thebibliography}
