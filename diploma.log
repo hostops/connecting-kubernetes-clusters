@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  23 JAN 2021 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  24 JAN 2021 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,6 +185,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \CommentStream=\write3
 
 Excluding comment 'comment')
+(/usr/share/texmf-dist/tex/latex/spverbatim/spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
 (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
@@ -331,7 +334,7 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 32.
+(hyperref)                removing `\textasciicaron' on input line 33.
 
 \c@izrek=\count277
 \c@trditev=\count278
@@ -363,22 +366,22 @@ LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
 LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
  (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -404,7 +407,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 121.
+Package hyperref Info: Link coloring OFF on input line 122.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -417,9 +420,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
 
 (./diploma.out) (./diploma.out)
 \@outlinefile=\write5
@@ -427,12 +430,12 @@ LaTeX Info: Redefining \nameref on input line 121.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 156
+LaTeX Font Info:    Trying to load font information for U+msa on input line 157
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 156
+LaTeX Font Info:    Trying to load font information for U+msb on input line 157
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -441,43 +444,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 \clearemptydoublepage
+l.160 \clearemptydoublepage
                             [2]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.176 \clearemptydoublepage
+l.177 \clearemptydoublepage
                             [3
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.176 \clearemptydoublepage
+l.177 \clearemptydoublepage
                             [4
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \clearemptydoublepage
+l.186 \clearemptydoublepage
                             [5]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \clearemptydoublepage
+l.186 \clearemptydoublepage
                             [6
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \clearemptydoublepage
+l.193 \clearemptydoublepage
                             [7]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \clearemptydoublepage
+l.193 \clearemptydoublepage
                             [8
 
 ] (./diploma.tocpdfTeX warning (ext4): destination with the same identifier (na
@@ -493,9 +496,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.199 \clearemptydoublepage
+l.200 \clearemptydoublepage
                             [10]
-Overfull \hbox (1.76152pt too wide) in paragraph at lines 204--204
+Overfull \hbox (1.76152pt too wide) in paragraph at lines 205--205
 []\OT1/cmr/bx/n/12 kratica| 
  []
 
@@ -503,7 +506,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 \clearemptydoublepage
+l.214 \clearemptydoublepage
                             [11
 
 
@@ -511,35 +514,35 @@ l.213 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 \clearemptydoublepage
+l.214 \clearemptydoublepage
                             [12
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.241 \clearemptydoublepage
+l.242 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.241 \clearemptydoublepage
+l.242 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.270 \clearemptydoublepage
+l.271 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.270 \clearemptydoublepage
+l.271 \clearemptydoublepage
                             [16
 
 ]
@@ -555,21 +558,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 299.
+ne 300.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
-Underfull \vbox (badness 7081) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <./images/problem-prevelike-latence.pdf>] [4]
 Poglavje 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 329.
+(hyperref)                removing `\textasciicaron' on input line 330.
 
 
 Underfull \vbox (badness 1558) has occurred while \output is active []
@@ -581,7 +584,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 File: images/primer-povezanih-gruc.pdf Graphic file (type pdf)
 <use images/primer-povezanih-gruc.pdf>
 Package pdftex.def Info: images/primer-povezanih-gruc.pdf  used on input line 3
-50.
+51.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 
@@ -591,30 +594,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Poglavje 3.
-<images/Kubernetes-simple-schema.pdf, id=305, 436.5108pt x 327.14218pt>
+<images/Kubernetes-simple-schema.pdf, id=305, 436.5108pt x 311.24278pt>
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
-e 375.
-(pdftex.def)             Requested size: 390.0pt x 292.28874pt.
+e 376.
+(pdftex.def)             Requested size: 390.0pt x 278.08327pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-[10 <./images/kubernetes-simple-schema.pdf>]
-Overfull \hbox (33.00192pt too wide) in paragraph at lines 386--390
-\OT1/cmr/m/n/12 ustvar-jeno do-men-sko ime sto-ri-tve na pri-mer [][]\OT1/cmtt/
-m/n/12 ime-storitve.imenski-prostor.svc[]\OT1/cmr/m/n/12 .
- []
-
-[11] [12
+[10 <./images/kubernetes-simple-schema.pdf>] [11] [12
 
 ]
 Poglavje 4.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 400.
+(hyperref)                removing `\textasciicaron' on input line 401.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -626,7 +623,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 432.
+on input line 433.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16] [17] [18]
@@ -634,100 +631,61 @@ Poglavje 5.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 502.
+(hyperref)                removing `\textasciicaron' on input line 503.
 
 <images/postavitev-raspberry.jpg, id=414, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 51
-4.
+5.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19
 
-] [20 <./images/postavitev-raspberry.jpg>] [21]
-Overfull \hbox (60.77522pt too wide) in paragraph at lines 560--560
-[]\OT1/cmtt/m/n/12 curl -X POST localhost/users --data '{"name": "John", "lastn
-ame": "Doe"}'[] 
- []
+]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (31.37105pt too wide) in paragraph at lines 578--581
-\OT1/cmr/m/n/12 vseh po-ve-za-nih gru^^Tc pa lahko pre-ve-rimo z uka-zom [][]\O
-T1/cmtt/m/n/12 kubectl get kubefedclusters[]\OT1/cmr/m/n/12 .
- []
+[20 <./images/postavitev-raspberry.jpg>]
+Underfull \vbox (badness 3039) has occurred while \output is active []
 
-[22]
-Overfull \hbox (26.82587pt too wide) in paragraph at lines 587--589
-\OT1/cmr/m/n/12 Od tu da-lje lahko z upo-rabo uka-zov [][]\OT1/cmtt/m/n/12 kube
-fedctl enable []\OT1/cmr/m/n/12 in [][]\OT1/cmtt/m/n/12 kubefedctl federate
- []
-
-[23] [24
+ [21]
+[22] [23] [24
 
 ]
 Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 601.
+(hyperref)                removing `\textasciicaron' on input line 607.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Overfull \hbox (0.92773pt too wide) in paragraph at lines 608--608
-[]\OT1/cmr/bx/n/17.28 Povezovanje Ku-ber-ne-tes gru^^Tc med po-dat-
- []
-
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 608.
-
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 613.
+(hyperref)                removing `\textasciicaron' on input line 619.
 
 <images/geolokacijski-dns.png, id=461, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 619.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 626.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 [26]
-<images/infrastructure-example.pdf, id=466, 547.08388pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=466, 543.95218pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-635.
-(pdftex.def)             Requested size: 390.0pt x 294.86885pt.
+641.
+(pdftex.def)             Requested size: 390.0pt x 296.56032pt.
  [27 <./images/geolokacijski-dns.png (PNG copy)>]
-Overfull \hbox (48.42522pt too wide) in paragraph at lines 648--648
-[]\OT1/cmtt/m/n/12 curl -X POST gruca-1/users --data '{"name": "John", "lastnam
-e": "Doe"}'[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (0.6158pt too wide) in paragraph at lines 649--649
-[]\OT1/cmr/bx/n/17.28 Implementacija in-fra-struk-ture s Ku-be-Fed 
- []
-
-[28 <./images/infrastructure-example.pdf>] [29]
-Overfull \hbox (7.89449pt too wide) in paragraph at lines 683--685
-[]\OT1/cmr/m/n/12 Potem pa mo-ramo na-sta-viti ^^Tse na-sta-vi-tve, ki jih baza
- pod-pira za zmanj^^Tsanje
- []
-
-[30]
-Overfull \hbox (85.47523pt too wide) in paragraph at lines 699--699
-[]\OT1/cmtt/m/n/12 curl -s -X POST gruca-1/users|jq --data '{"name": "John", "l
-astname": "Doe"}'[] 
- []
-
-[31] [32
+ [28 <./images/infrastructure-example.pdf>] [29] [30] [31] [32
 
 ]
 Poglavje 7.
@@ -736,45 +694,27 @@ Poglavje 7.
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 718.
+line 724.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
-
-Overfull \hbox (3.40367pt too wide) in paragraph at lines 723--730
-\OT1/cmr/m/n/12 vseh. To-krat za fe-de-ra-cijo ne mo-remo upo-ra-biti ukaza [][
-]\OT1/cmtt/m/n/12 kubefedctl federate[]\OT1/cmr/m/n/12 ,
- []
-
-
-Overfull \hbox (26.19804pt too wide) in paragraph at lines 723--730
-\OT1/cmr/m/n/12 njih). Po-tem pa bomo la-stnost [][]\OT1/cmtt/m/n/12 spec.place
-ment.clusterSelector.matchLabels
- []
-
-[34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
+ [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
 
 ]
 Poglavje 8.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 730.
+(hyperref)                removing `\textasciicaron' on input line 736.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 732.
-
-
-Overfull \hbox (12.65971pt too wide) in paragraph at lines 733--739
-\OT1/cmr/m/n/12 Razlogov za-kaj gru^^Tce po-sta-vljamo na rob oblaka ozi-roma f
-izi^^Tcno bli^^Tzje kon^^Tcnemu
- []
+(hyperref)                removing `\textasciicaron' on input line 738.
 
 <images/upravljanje-robnih-gruc.pdf, id=555, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 745.
+ 751.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -786,14 +726,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Poglavje 9.
-
-Overfull \hbox (30.96655pt too wide) in paragraph at lines 770--774
-\OT1/cmr/m/n/12 V di-plom-skem delu smo si po-gle-dali te-o-reti^^Tcno ozadje p
-o-ve-zo-va-nja ve^^Tc ra^^Tcunalni^^Tskih
- []
-
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
+Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
@@ -850,17 +784,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--191
 
 ) [46] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: DFB1EA2AD6CA9C3350E1006E7D695221;2298.
+(rerunfilecheck)             Checksum: F513C44E8A76036412DF37DC83A24CA1;2267.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8702 strings out of 479383
- 125371 string characters out of 5875829
- 460141 words of memory out of 5000000
- 25483 multiletter control sequences out of 15000+600000
+ 8715 strings out of 479383
+ 125683 string characters out of 5875829
+ 460379 words of memory out of 5000000
+ 25492 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -871,7 +805,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (62 pages, 2855731 bytes).
+Output written on diploma.pdf (62 pages, 2854681 bytes).
 PDF statistics:
  725 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams

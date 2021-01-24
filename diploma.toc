@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}a razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}ja razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Izolacija aplikacije}{3}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{4}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{4}{subsection.1.2.5}%
@@ -23,7 +23,7 @@
 \contentsline {chapter}{\numberline {4}Povezovanje Kubernetes gru\IeC {\v c}}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}ArgoCD in drugi GitOps}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Sinhronizacija objektov z uporabo GitOps sistemov}{14}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Postavljanje sinhronizacija objektov z ArgoCD}{14}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Sinhronizacija objektov z ArgoCD}{14}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}KubeFed}{15}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Cilium}{17}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Priprava sistema gru\IeC {\v c} za testiranje}{19}{chapter.5}%
@@ -34,10 +34,10 @@
 \contentsline {chapter}{\numberline {6}Povezovanje med podatkovnimi centri}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Problem velike latence}{25}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pove\IeC {\v c}anje razpolo\IeC {\v z}ljivosti aplikacije}{26}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Povezovanje Kubernetes gru\IeC {\v c} med podatkovnimi centri}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Povezovanje med podatkovnimi centri}{26}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Razporeditev uporabnikov po gru\IeC {\v c}ah}{26}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Definicija infrastrukture za na\IeC {\v s} primer}{27}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Implementacija infrastrukture s KubeFed}{29}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Implementacija s KubeFed}{29}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Sinhronizacija podatkov}{29}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Uporaba primerne podatkovne baze}{30}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Podatke sinhroniziramo sami}{30}{subsection.6.7.2}%
