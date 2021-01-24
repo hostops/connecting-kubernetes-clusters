@@ -411,13 +411,16 @@ V nadaljevanju si bomo ogledali različne sisteme za povezovanje Kubernetes gru�
 \subsection{Sinhronizacija objektov z uporabo GitOps sistemov}
 GitOps pristop pri postavljanju strukture aplikacij v Kubernetes gručah se je izkazal za dober pristop za upravljanje gruč.
 Osnovna ideja GitOpsa je to, da imamo našo strukturo aplikacij v Kubernetes gruči napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
+Takšen pristop se je v zadnjih letih zelo razširil in obstaja veliko podjetji, ki pri razvoju svojih spletnih aplikacij uporablja pristop GitOps.
+Pogosto za GitOps sistem uporabljajo kar ArgoCD.
+
 Če uporabljamo kakšnega od sistemov GitOps lahko potem iz enakega repozitorija postavimo več gruč.
 V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med podi v različnih gručah ali pa odkrivanje storitev ali podov.
 V nadaljevanju si bomo izbrali sistem ArgoCD in si pogledali kako bi si postavili zgoraj opisano infrastrukturo.
 \subsection{Sinhronizacija objektov z ArgoCD}
 ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
 Najpreprostejše je, če uporabimo YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
-Za deployanje te konfiguracije na več kot eno gručo imamo na voljo dva pristopa.
+Za nameščanje te konfiguracije na več kot eno gručo imamo na voljo dva pristopa.
 Prvi način je, da v vsako gručo namestimo ArgoCD in uporabimo enak repozitorij Git v vseh.
 Drugi način, ki pa ga ponuja ArgoCD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene gruče~\cite{declarative-setup}. To pomeni, da moramo imeti samo v eni gruči nameščen ArgoCD kontroler.
 
@@ -487,6 +490,7 @@ Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v naši gruči~\cite{cilium-intro}.
 Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot na primer zapiranje portov in omejevanje komunikacije.
 Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
+Zaradi naprednih možnosti, ki jih Cilium ponuja, se podjetja velikokrat odločijo za uporabo Ciliuma v svojih Kubernetes gručah, tudi ko ne povezujejo več gruč med seboj.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih Kubernetes gruč.
 Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki so sposobni delati razporejanje prometa med različnimi gručami.

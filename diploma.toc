@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.1}ArgoCD in drugi GitOps sistemi}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Sinhronizacija objektov z uporabo GitOps sistemov}{14}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Sinhronizacija objektov z ArgoCD}{14}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}KubeFed}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.2}KubeFed}{16}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Cilium}{17}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Priprava sistema gru\IeC {\v c} za testiranje}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Raspberry PI 4}{19}{section.5.1}%
