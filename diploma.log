@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  24 JAN 2021 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.28)  24 JAN 2021 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -784,7 +784,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--191
 
 ) [46] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: F513C44E8A76036412DF37DC83A24CA1;2267.
+(rerunfilecheck)             Checksum: 15D01A0B14F5673BEDCFC260BD0F8981;2275.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -805,7 +805,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (62 pages, 2854681 bytes).
+Output written on diploma.pdf (62 pages, 2854688 bytes).
 PDF statistics:
  725 PDF objects out of 1000 (max. 8388607)
  620 compressed objects within 7 object streams
