@@ -233,7 +233,7 @@ Sistem je zaradi svoje popularnosti postal de facto standard za upravljanje gru�
 A ena sama gruča ni vedno dovolj v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa želimo še bolj povečati stabilnost ali varnost našega sistema.
 Pogledali si bomo ozadje povezovanja gruč in kakšne pristope lahko uporabimo za reševanje naših problemov.
 Poseben poudarek pa bomo dali tudi sinhronizaciji podatkov, saj je to eden zahtevnejših delov pri upravljanju več računalniških gruč.
-Ugotovimo, da nam lahko sodobne metode povezovanja gruč zelo olajšajo njihovo upravljanje in preprosto rešijo tudi zahtevnejše probleme sinhronizacije podatkov.
+Ugotovimo, da nam lahko predstavljene sodobne metode povezovanja gruč zelo olajšajo njihovo upravljanje in preprosto rešijo tudi zahtevnejše probleme sinhronizacije podatkov.
 
 \bigskip
 \noindent\textbf{Ključne besede:} \tkeywords.
@@ -259,7 +259,7 @@ The system became de facto standard for cluster management and container orchest
 But when we have problems such as expensive data transfer, too much latency to our users, or we want to further increase the stability or security of our system one cluster is not always enough.
 We will look at the background of connecting clusters and what approaches we can use to solve our problems.
 Furthermore, we will also place special emphasis on data synchronization, as this is one of the more difficult parts of managing multiple computer clusters.
-We find that modern methods of connecting clusters can greatly facilitate their management and easily solve even more difficult data synchronization problems.
+We find that presented modern methods of connecting clusters can greatly facilitate their management and easily solve even more difficult data synchronization problems.
 
 \bigskip
 \noindent\textbf{Keywords:} \tkeywordsEn.
@@ -273,25 +273,19 @@ We find that modern methods of connecting clusters can greatly facilitate their 
 \chapter{Uvod}
 \label{uvod}
 \section{Motivacija}
-Glede orkestracije kontejnerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
-V postopku tega preboja se je razvil tudi REST vmesnik Kubenetes, ki je na tem področju rešil marsikatero težavo.
+Leta 2014 je Google objavil kodo sistema za orkestracijo kontejnerjev Kubernetes~\cite{what-is-Kubernetes}.
 Kubernetes  je univerzalni način, ki nam omogoča, da več računalnikov povežemo v gručo, ki deluje kot ena samostojna enota. 
-To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko razpoložljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje več računalnikov.
-A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota, ampak bi želeli med seboj povezati tudi te skupine.
-Ta problem se je do sedaj reševalo na več različnih načinov.
-So pa v zadnjem času tudi razvijalci Kubernetesa začeli bolj celostno reševati problem.
-Poizkusili so problem rešiti s projektom Federation 1, zdaj pa se zdi, da bo Federation 2 oziroma KubeFed uspešno prešel iz alfa verzije v beta.
-Skratka, v računalništvi je na tem področju zelo veliko zanimanja in razvoja.
+Povezovanje strežnikov v gruče nam vsaj teoretično omogoča visoko razpoložljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje več računalnikov.
+V primerih obravnavanih v tem delu pa ni dovolj uporaba ene same gruče, ampak moramo med seboj povezati in upravljati več gruč.
+V zadnjem času so razvijalci Kubernetesa začeli bolj celostno reševati ta problem.
+Poizkusili so ga rešiti s projektom Federation 1, po njegovi ukinitvi~\cite{kubernetes-federation-evolution}, pa razvijalci Federation 2 oziroma KubeFed trdijo, da bo projekt uspešno prešel iz alfa v beta verzijo~\cite{kubefed-repo}.
 \section{Cilj in vsebina naloge}
-V tem diplomskem delu si bomo pogledali nekaj o reševanju problema povezovanja računalniških gruč, Kubernetesu in primere uporabe, ki izvirajo iz potreb industrije. 
-Za vsakega od primerov si bomo pogledali kako se ta problem rešuje v Kubernetes okolju z uporabo orodja KubeFed in kako bi sinhronizirali tudi podatke.
+V tem diplomskem delu bomo obravnavali rešitve problema povezovanja računalniških gruč in primere uporabe, ki izvirajo iz potreb industrije.
+Vsakemu primeru bomo poiskali rešitev v Kubernetes okolju z uporabo orodja KubeFed, poudarek pa bomo dali na sinhronizacijo podatkov.
 \subsection{Prevelika latenca}
-Ko spletne aplikacije postanejo bolj globalne zelo hitro opazimo, da uporabniki, ki so na drugi celini kot naši strežniki, preživijo veliko več časa pred ikonami za nalaganje, saj podatki do njih potujejo dalj časa.
-Ta problem je rešljiv na način, da postavimo še eno gručo bližje naših uporabnikov.
-Na primer eno gručo na celino.
-Tu pa zelo pogosto želimo, da se podatki sinhronizirajo.
-Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem ponavadi izognemo latenci. 
-Prevelika latenca med vozlišči je tudi ena izmed glavnih omejitev, da ne moremo vseh vozlišč povezati v eno večjo gručo.
+Problem prevelike latence se pojavi v primeru počasnega prenosa podatkov iz naše gruče do uporabnikov.
+Ko problem povzroča velika fizična razdalja, ga rešimo s postavitvijo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
+Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem ponavadi izognemo latenci ~\cite{kube-and-edge}.
 \begin{figure}[h]
 \begin{center}
   \includegraphics[width=1.0\textwidth]{images/problem-prevelike-latence.pdf}
@@ -300,11 +294,11 @@ Prevelika latenca med vozlišči je tudi ena izmed glavnih omejitev, da ne morem
 \label{problem-prevelike-latence}
 \end{figure}
 \subsection{Višja razpoložljivost}
-Vsakih nekaj let se zgodi, da je z interneta izpade kakšen večji podatkovni center. 
-To se lahko zgodi iz več razlogov kot na primer večje napake na sistemu ali hujše vremenske razmere.
-Če gre v takšnem primeru za večjega oblačnega ponudnika se to pozna tako, da je nezanemarljiv del interneta nedosegljiv.
-Izpadi posameznih gruč pa se toliko pogosteje dogajajo, če gre za manjše ponudnike ali pa so naši strežniki v bolj nestabilnih okoljih. 
-V splošnem se problem reši tako, da naše gruče namestimo v več podatkovnih centrov.
+Večkrat letno pride do izpada kakšnega večjega podatkovnega centra. 
+To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski opremi ~\cite{common-outages}.
+Če gre v takšnem primeru za oblačnega ponudnika, kjer imamo nameščeno našo gručo, pomeni, da bo hkrati nedosegljiva tudi ta.
+V splošnem se problem reši tako, da uporabljamo več gruč in jih namestimo v več različnih podatkovnih centrov.
+V primeru izpada enega podatkovnega centra pa naše uporabnike preusmerimo v drug podatkovni center.
 \subsection{Izolacija aplikacije}
 Ko govorimo o izolaciji aplikacije se nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
 Glede izolacije spletnih aplikacij smo z uporabo Kubernetesa naredili že kar nekaj korakov k dobri rešitvi problema.
@@ -471,7 +465,7 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
 
 \section{KubeFed}
-9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{Kubernetes-federation-evolution}.
+9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{kubernetes-federation-evolution}.
 Oba projekta sta želela poenostaviti upravljanje več gruč in razporejanje Kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kar kot novo Kubernetes gručo~\cite{setup-cluster-federation-kubefed-v1}.
 Uporabljal je svoj API in API kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
@@ -481,7 +475,7 @@ Zanimiv pristop, ki pa zaradi mnogih pomanjkljivosti in pomankanja možnosti nap
 GA faza v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga uporabljajo in se bo vsaj do neke mere ohranjala združljivost za nazaj.
   Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
 
-Tako se je kasneje rodil projekt Federation V2~\cite{Kubernetes-federation-evolution}.
+Tako se je kasneje rodil projekt Federation V2~\cite{kubernetes-federation-evolution}.
 Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API-ja, ampak uporablja obstoječi Kubernetesov API. 
 Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer federateddeployment.
 Federated objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl| enable.
