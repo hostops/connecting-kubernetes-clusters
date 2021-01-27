@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	DIPLOMA INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\ttitle}{Povezovanje Kubernetes gruč}
+\newcommand{\ttitle}{Povezovanje gruč Kubernetes}
 \newcommand{\ttitleEn}{Connecting Kubernetes clusters}
 \newcommand{\tsubject}{\ttitle}
 \newcommand{\tsubjectEn}{\ttitleEn}
@@ -201,7 +201,7 @@ Mami Lučki.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seznam kratic
 \chapter*{Seznam uporabljenih kratic}  % spremenil Solina, da predolge vrstice ne gredo preko desnega roba
-\noindent\begin{tabular}{p{0.1\textwidth}|p{.4\textwidth}|p{.4\textwidth}}    % po potrebi razširi prvo kolono tabele na račun drugih dveh!
+\noindent\begin{tabular}{p{0.15\textwidth}|p{.375\textwidth}|p{.375\textwidth}}    % po potrebi razširi prvo kolono tabele na račun drugih dveh!
   {\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
   {\bf CRD} & custom resource definition & definicija tipov po meri \\
   {\bf DNS} & domain name system & sistem domenskih imen \\
@@ -225,19 +225,14 @@ Mami Lučki.
 \bigskip
 %\noindent\textbf{Povzetek:} 
 \noindent 
-
-Več računalnikov povezujemo v skupine predvsem zaradi zagotavljanja večje zmogljivosti in stabilnosti.
-V zadnjih letih je bil na tem področju narejen zelo velik napredek in razvoj.
-Tako je nastal tudi sistem Kubernetes, ki je zaradi svoje popularnosti postal de facto standard za upravljanje gruč in orkestracijo kontejnerjev.
-A zelo pogosto ena sama računalniška gruča ni dovolj.
-To se zgodi v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa  želimo še bolj povečati stabilnost ali varnost našega sistema.
-Primerov uporabe je veliko in v diplomski nalogi si bomo pogledali nekaj najpogostejših.
-Pogledali si bomo, ozadje povezovanja gruč in kakšne pristope lahko uporabimo za reševanje naših problemov.
-Lotili se bomo implementacije in reševanja problemov skozi nekaj primerov uporabe na konktretnih problemih.
+Ko na naših strežnikih začne zmanjkovati virov obstajata dva standardna načina za povečanje virov.
+Prva možnost je, da nadgradimo naše strežnike, druga pa, da jih kupimo več in jih povežemo v računalniško gručo.
+V zadnjih letih se je na slednjem področju zgodil preboj s sistemom Kubernetes.
+Sistem je zaradi svoje popularnosti postal de facto standard za upravljanje gruč in orkestracijo kontejnerjev.
+A ena sama gruča ni dovolj v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa želimo še bolj povečati stabilnost ali varnost našega sistema.
+Pogledali si bomo ozadje povezovanja gruč in kakšne pristope lahko uporabimo za reševanje naših problemov.
 Poseben poudarek pa bomo dali tudi sinhronizaciji podatkov, saj je to eden zahtevnejših delov pri upravljanju več računalniških gruč.
 Ugotovimo, da nam lahko sodobne metode povezovanja gruč zelo olajšajo njihovo upravljanje in preprosto rešijo tudi zahtevnejše probleme sinhronizacije podatkov.
-
-
 \bigskip
 \noindent\textbf{Ključne besede:} \tkeywords.
 % prazna stran

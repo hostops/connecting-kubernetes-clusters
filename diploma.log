@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  27 JAN 2021 20:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  27 JAN 2021 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -498,18 +498,8 @@ een already used, duplicate ignored
                    \relax 
 l.200 \clearemptydoublepage
                             [10]
-Overfull \hbox (1.76152pt too wide) in paragraph at lines 205--205
-[]\OT1/cmr/bx/n/12 kratica| 
- []
-
-
-Overfull \hbox (7.9698pt too wide) in paragraph at lines 212--212
-[]\OT1/cmr/bx/n/12 TOSCA| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\OT1/cmr/m/n/12 topology and or-che-stra-tion
+Underfull \hbox (badness 4899) in paragraph at lines 212--213
+\OT1/cmr/m/n/12 ke-stra-cije za apli-ka-cije v
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
@@ -531,28 +521,28 @@ l.216 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 \clearemptydoublepage
+l.239 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 \clearemptydoublepage
+l.239 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.273 \clearemptydoublepage
+l.268 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.273 \clearemptydoublepage
+l.268 \clearemptydoublepage
                             [16
 
 ]
@@ -568,7 +558,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 302.
+ne 297.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 
 
@@ -582,7 +572,7 @@ Poglavje 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 332.
+(hyperref)                removing `\textasciicaron' on input line 327.
 
 
 Underfull \vbox (badness 1558) has occurred while \output is active []
@@ -594,7 +584,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 File: images/primer-povezanih-gruc.pdf Graphic file (type pdf)
 <use images/primer-povezanih-gruc.pdf>
 Package pdftex.def Info: images/primer-povezanih-gruc.pdf  used on input line 3
-53.
+48.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 
@@ -608,7 +598,7 @@ Poglavje 3.
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
-e 378.
+e 373.
 (pdftex.def)             Requested size: 390.0pt x 278.08327pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -621,7 +611,7 @@ Poglavje 4.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 403.
+(hyperref)                removing `\textasciicaron' on input line 398.
 
 
 Underfull \vbox (badness 2689) has occurred while \output is active []
@@ -632,7 +622,7 @@ Poglavje 5.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 436.
+(hyperref)                removing `\textasciicaron' on input line 431.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -646,7 +636,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 471.
+on input line 466.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -657,13 +647,13 @@ Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 542.
+(hyperref)                removing `\textasciicaron' on input line 537.
 
 <images/postavitev-raspberry.jpg, id=436, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
-Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 55
-4.
+Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 54
+9.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -685,7 +675,7 @@ Poglavje 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 646.
+(hyperref)                removing `\textasciicaron' on input line 641.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -694,19 +684,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 658.
+(hyperref)                removing `\textasciicaron' on input line 653.
 
 <images/geolokacijski-dns.png, id=484, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 665.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 660.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 [28]
 <images/infrastructure-example.pdf, id=489, 543.95218pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-680.
+675.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
  [29 <./images/geolokacijski-dns.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -720,7 +710,7 @@ Poglavje 8.
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 763.
+line 758.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [36 <./images/primer-izolirane-aplikacije.pdf>] [37] [38
 
@@ -729,18 +719,18 @@ Poglavje 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 775.
+(hyperref)                removing `\textasciicaron' on input line 770.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 777.
+(hyperref)                removing `\textasciicaron' on input line 772.
 
 <images/upravljanje-robnih-gruc.pdf, id=578, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 790.
+ 785.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -753,7 +743,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Poglavje 10.
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 830--831
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
 
  []
 
@@ -831,7 +821,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2861201 bytes).
+Output written on diploma.pdf (64 pages, 2861038 bytes).
 PDF statistics:
  748 PDF objects out of 1000 (max. 8388607)
  641 compressed objects within 7 object streams
