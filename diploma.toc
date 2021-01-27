@@ -9,9 +9,7 @@
 \contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{1}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}ja razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Izolacija aplikacije}{3}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Drag prenos podatkov}{3}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Razdeljevanje dela po razli\IeC {\v c}nih lokacijah}{4}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.3}Potreba po izolaciji aplikacij}{3}{subsection.1.2.3}%
 \contentsline {chapter}{\numberline {2}Problem povezovanja gru\IeC {\v c}}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Kubernetes}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Zgodovina}{9}{section.3.1}%
@@ -52,3 +50,4 @@
 \contentsline {section}{\numberline {9.2}Implementacija s KubeFed}{39}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Sinhronizacija podatkov}{41}{section.9.3}%
 \contentsline {chapter}{\numberline {10}Sklepne ugotovitve}{43}{chapter.10}%
+\contentsline {chapter}{Literatura}{45}{chapter.10}%

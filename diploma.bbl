@@ -1,0 +1,244 @@
+\begin{thebibliography}{10}
+
+\bibitem{cassandra-zone}
+Apache Cassandra.
+\newblock Initializing a multiple node cluster (multiple datacenters).
+\newblock Dosegljivo:
+  \url{https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html},
+  2020.
+\newblock [Dostopano: 29. 12. 2020].
+
+\bibitem{cratedb}
+CrateDB.
+\newblock Cratedb: the distributed sql database for iot and time-series data.
+\newblock Dosegljivo: \url{https://crate.io/}, 2020.
+\newblock [Dostopano: 29. 12. 2020].
+
+\bibitem{cratedb-zone}
+CrateDB.
+\newblock Cratedb: the distributed sql database for iot and time-series data.
+\newblock Dosegljivo: \url{https://crate.io/}, 2020.
+\newblock [Dostopano: 29. 12. 2020].
+
+\bibitem{k3os-rpi-image-generator}
+odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
+\newblock Picl k3os image generator.
+\newblock Dosegljivo:
+  \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{mastering-Kubernetes}
+Sayfan Gigi.
+\newblock {\em Mastering Kubernetes}.
+\newblock Packt Publishing Ltd, 2017.
+
+\bibitem{cluster-federation-in-Kubernetes-1.5}
+Lukasz Guminski.
+\newblock Cluster federation in kubernetes 1.5.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
+\newblock [Dostopano: 23. 11. 2020].
+
+\bibitem{git-diploma}
+Jakob Hostnik.
+\newblock Connecting kubernetes clusters.
+\newblock Dosegljivo:
+  \url{https://github.com/hostops/connecting-kubernetes-clusters}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{git-stateful-rest-sample}
+Jakob Hostnik.
+\newblock Stateful rest sample.
+\newblock Dosegljivo: \url{https://github.com/hostops/stateful-rest-sample},
+  2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{docker-stateful-rest-sample}
+Jakob Hostnik.
+\newblock Stateful rest sample.
+\newblock Dosegljivo:
+  \url{https://hub.docker.com/r/hostops/stateful-rest-sample}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{kubernetes-federation-evolution}
+Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
+\newblock Kubernetes federation evolution.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/blog/2018/12/12/kubernetes-federation-evolution/},
+  2018.
+\newblock [Dostopano: 20. 12. 2020].
+
+\bibitem{tosca-fed}
+Dongmin Kim, Hanif Muhammad, Eunsam Kim, Sumi Helal, and Choonhwa Lee.
+\newblock Tosca-based and federation-aware cloud orchestration for kubernetes
+  container platform.
+\newblock {\em Applied Sciences}, 9(1), 2019.
+
+\bibitem{k3os-git}
+Rancher Labs.
+\newblock K3os.
+\newblock Dosegljivo: \url{https://github.com/rancher/k3os}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{k3s-info}
+Rancher Labs.
+\newblock K3s: Lightweight kubernetes.
+\newblock Dosegljivo: \url{https://k3s.io/}, 2020.
+\newblock [Dostopano: 16. 11. 2020].
+
+\bibitem{dyn-place}
+Marino Lorenzo.
+\newblock Dynamic application placement in a kubernetes multi-cluster
+  environment.
+\newblock Magisterska naloga, Politecnico di Torino, 2020.
+
+\bibitem{kube-and-edge}
+Karim Manaouil and Adrien Lebre.
+\newblock Kubernetes and the edge?
+\newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
+  2020.
+
+\bibitem{common-outages}
+David Mytton.
+\newblock What are the common causes of cloud outages?
+\newblock Dosegljivo:
+  \url{https://davidmytton.blog/what-are-the-common-causes-of-cloud-outages/},
+  2019.
+\newblock [Dostopano: 27. 01. 2021].
+
+\bibitem{cncf}
+Cloud native~computing foundation.
+\newblock Cncf cloud native interactive landscape.
+\newblock Dosegljivo: \url{https://landscape.cncf.io/}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{difference-multi-cluster}
+Platform9.
+\newblock Difference between multi-cluster, multi-master, multi-tenant \&
+  federated kubernetes.
+\newblock Dosegljivo:
+  \url{https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/}.
+\newblock [Dostopano: 20. 11. 2020].
+
+\bibitem{argocd-docs}
+ArgoCD skupnost.
+\newblock Argo cd - declarative gitops cd for kubernetes.
+\newblock Dosegljivo: \url{https://argoproj.github.io/argo-cd}.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{declarative-setup}
+ArgoCD skupnost.
+\newblock Declarative setup.
+\newblock Dosegljivo:
+  \url{https://argoproj.github.io/argo-cd/operator-manual/declarative-setup}.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cilium-intro}
+Cilium skupnost.
+\newblock Introduction to cilium \& hubble.
+\newblock Dosegljivo: \url{https://docs.cilium.io/en/latest/intro/}.
+\newblock [Dostopano: 3. 1. 2020].
+
+\bibitem{cilium-cluster-mesh}
+Cilium skupnost.
+\newblock Multi-cluster (cluster mesh).
+\newblock Dosegljivo:
+  \url{https://docs.cilium.io/en/latest/concepts/clustermesh/}.
+\newblock [Dostopano: 3. 1. 2020].
+
+\bibitem{setup-cilium-cluster-mesh}
+Cilium skupnost.
+\newblock Set up cluster mesh.
+\newblock Dosegljivo:
+  \url{https://docs.cilium.io/en/latest/gettingstarted/clustermesh/}.
+\newblock [Dostopano: 3. 1. 2020].
+
+\bibitem{docker-kubefed}
+Kubefed skupnost.
+\newblock Kubefed.
+\newblock Dosegljivo: \url{https://hub.docker.com/r/hostops/kubefed}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{remove-service-discovery}
+KubeFed skupnost.
+\newblock kubefed: remove crossclusterservicediscovery feature.
+\newblock Dosegljivo:
+  \url{https://github.com/kubernetes-sigs/kubefed/issues/1283}, 2020.
+\newblock [Dostopano: 16. 11. 2020].
+
+\bibitem{kube-pod-to-node}
+Kubernetes skupnost.
+\newblock Assigning pods to nodes.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/}.
+\newblock [Dostopano: 20. 1. 2021].
+
+\bibitem{deployment}
+Kubernetes skupnost.
+\newblock Deployments.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/workloads/controllers/deployment/}.
+\newblock [Dostopano: 3. 1. 2021].
+
+\bibitem{federated-cluster-kubefed-v1}
+Kubernetes skupnost.
+\newblock Federated cluster.
+\newblock Dosegljivo:
+  \url{https://v1-16.docs.kubernetes.io/docs/tasks/federation/administer-federation/cluster/}.
+\newblock [Dostopano: 23. 11. 2020].
+
+\bibitem{kubefed-repo}
+Kubernetes skupnost.
+\newblock Kubefed repozitorij.
+\newblock Dosegljivo: \url{https://github.com/kubernetes-sigs/kubefed}.
+\newblock [Dostopano: 23. 11. 2020].
+
+\bibitem{kube-network-policy}
+Kubernetes skupnost.
+\newblock Network policies.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/services-networking/network-policies/}.
+\newblock [Dostopano: 20. 1. 2021].
+
+\bibitem{pod}
+Kubernetes skupnost.
+\newblock Pods.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/workloads/pods/}.
+\newblock [Dostopano: 3. 1. 2021].
+
+\bibitem{service}
+Kubernetes skupnost.
+\newblock Service.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/services-networking/service/}.
+\newblock [Dostopano: 3. 1. 2021].
+
+\bibitem{setup-cluster-federation-kubefed-v1}
+Kubernetes skupnost.
+\newblock Set up cluster federation with kubefed.
+\newblock Dosegljivo:
+  \url{https://v1-16.docs.kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/}.
+\newblock [Dostopano: 23. 11. 2020].
+
+\bibitem{statefulset}
+Kubernetes skupnost.
+\newblock Statefulsets.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/}.
+\newblock [Dostopano: 3. 1. 2021].
+
+\bibitem{what-is-Kubernetes}
+Kubernetes skupnost.
+\newblock What is kubernetes?
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{jq}
+oprtokodna~skupost Stephen~Dolan.
+\newblock Github - stedolan/jq: Command-line json processor.
+\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
+\newblock [Dostopano: 20. 01. 2021].
+
+\end{thebibliography}

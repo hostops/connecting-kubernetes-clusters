@@ -285,7 +285,8 @@ Vsakemu primeru bomo poiskali rešitev v Kubernetes okolju z uporabo orodja Kube
 \subsection{Prevelika latenca}
 Problem prevelike latence se pojavi v primeru počasnega prenosa podatkov iz naše gruče do uporabnikov.
 Ko problem povzroča velika fizična razdalja, ga rešimo s postavitvijo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
-Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem ponavadi izognemo latenci ~\cite{kube-and-edge}.
+Če pa postavimo gruče še bližje našim končnim uporabnikom, na primer v njihovo podjetje ali dom, pa govorimo o gručah na robu oblaka.
+Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem ponavadi izognemo veliki latenci ~\cite{kube-and-edge}.
 \begin{figure}[h]
 \begin{center}
   \includegraphics[width=1.0\textwidth]{images/problem-prevelike-latence.pdf}
@@ -299,25 +300,16 @@ To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski o
 Če gre v takšnem primeru za oblačnega ponudnika, kjer imamo nameščeno našo gručo, pomeni, da bo hkrati nedosegljiva tudi ta.
 V splošnem se problem reši tako, da uporabljamo več gruč in jih namestimo v več različnih podatkovnih centrov.
 V primeru izpada enega podatkovnega centra pa naše uporabnike preusmerimo v drug podatkovni center.
-\subsection{Izolacija aplikacije}
+\subsection{Potreba po izolaciji aplikacij}
 Ko govorimo o izolaciji aplikacije se nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
-Glede izolacije spletnih aplikacij smo z uporabo Kubernetesa naredili že kar nekaj korakov k dobri rešitvi problema.
-Na primer vsaka aplikacija lahko teče v svojem kontejnerju, lahko pa jo celo izoliramo samo na določena vozlišča.
-A vseeno se v Kubernetesu dogajajo problemi zaradi katerih postane cela gruča nedosegljiva.
-Kaj takšnega se pogosto zgodi med posodabljanjem cele gruče.
-Z varnostnega vidika pa mislimo na dejstvo, da če nekomu uspe serija napadov in se uspešno polasti enega samega vozlišča, si lahko začne lastiti celo gručo.
-Ker ima administratorske pravice na vozlišču, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču.
+Uporaba Kubernetesa od nas zahteva izolacijo v kontejnerje.
+Prav tako pa nam že kubernetes sam omogoča izolacijo na posamezna vozlišča oziroma strežnike~\cite{kube-network-policy} ali nastavitev pravil komunikacije v gruči~\cite{kube-pod-to-node}.
+Kljub tem postopkom se v Kubernetesu pojavljajo problemi, zaradi katerih postane celotna gruča nedosegljiva, s tem pa vse aplikacije v tej gruči.
+Če postavimo del neodvisnih aplikacij v drugo gručo, smo s tem preprečili njihov izpad ob napaki v prvi gruči.
+Izolacija pa je pomembna tudi z varnostnega vidika.
+Če se napadalec polasti enega samega vozlišča, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču.
 Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
 Če imamo vsako od naših aplikacij v svoji gruči pa se temu lahko izognemo.
-\subsection{Drag prenos podatkov}
-Če se spustimo iz jedra računalniškega oblaka na njegov rob pa tam srečamo veliko zanimivih problemov. 
-Na robu oblaka smo takrat, ko govorimo o delu naše aplikacije, ki se izvaja stran od centralnih aplikacij, ki so vedno doseljive.
-Takšen primer so na primer mikro podatkovni centri in gruče na majhnih računalnikih kot na primer Raspberry PI.
-Če naša aplikacija uporablja takšne gruče je potrebno tudi njihovo sinhrono delovanje.
-Takšne majhne gruče so poleg že znanega problema prevelike razdalje pogosto obsojene, da s centralnimi strežniki komunicirajo minimalno, saj zelo pogosto za prenos podatkov uporabljajo draga mobilna omrežja.
-\subsection{Razdeljevanje dela po različnih lokacijah}
-Na robu oblaka pa se pogosto srečamo ne samo z omejenim komuniciranjem s centralnim strežnikom ampak tudi zmanjšano razpoložljivostjo in zmogljivostjo naprav.
-Torej če ima ena gruča manj dela kot drugi lahko delež tega prenese na druge gruče.
 \chapter{Problem povezovanja gruč}
 Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
 Zaradi praktičnosti pa te storitve pogosto napišemo tako, da vsako storitev sestavlja več programov, ki tečejo v kontejnerjih.

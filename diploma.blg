@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: diploma.aux
+The style file: plain.bst
+Database file #1: literatura.bib
+Repeated entry---line 291 of file literatura.bib
+ : @misc{kube-network-policy
+ :                          ,
+I'm skipping whatever remains of this entry
+You've used 36 entries,
+            2118 wiz_defined-function locations,
+            645 strings with 8943 characters,
+and the built_in function-call counts, 7893 in all, are:
+= -- 782
+> -- 279
+< -- 1
++ -- 118
+- -- 82
+* -- 235
+:= -- 1367
+add.period$ -- 140
+call.type$ -- 36
+change.case$ -- 149
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 263
+empty$ -- 775
+format.name$ -- 82
+if$ -- 1718
+int.to.chr$ -- 0
+int.to.str$ -- 36
+missing$ -- 3
+newline$ -- 215
+num.names$ -- 72
+pop$ -- 309
+preamble$ -- 1
+purify$ -- 113
+quote$ -- 0
+skip$ -- 200
+stack$ -- 0
+substring$ -- 180
+swap$ -- 35
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 142
+warning$ -- 0
+while$ -- 72
+width$ -- 38
+write$ -- 413
+(There was 1 error message)
