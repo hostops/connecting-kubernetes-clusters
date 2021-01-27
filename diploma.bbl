@@ -30,7 +30,7 @@ odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
 \bibitem{mastering-Kubernetes}
 Sayfan Gigi.
 \newblock {\em Mastering Kubernetes}.
-\newblock Packt Publishing Ltd,, 2017.
+\newblock Packt Publishing Ltd, 2017.
 
 \bibitem{cluster-federation-in-Kubernetes-1.5}
 Lukasz Guminski.
@@ -68,6 +68,12 @@ Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
   2018.
 \newblock [Dostopano: 20. 12. 2020].
 
+\bibitem{tosca-fed}
+Dongmin Kim, Hanif Muhammad, Eunsam Kim, Sumi Helal, and Choonhwa Lee.
+\newblock Tosca-based and federation-aware cloud orchestration for kubernetes
+  container platform.
+\newblock {\em Applied Sciences}, 9(1), 2019.
+
 \bibitem{k3os-git}
 Rancher Labs.
 \newblock K3os.
@@ -79,6 +85,18 @@ Rancher Labs.
 \newblock K3s: Lightweight kubernetes.
 \newblock Dosegljivo: \url{https://k3s.io/}, 2020.
 \newblock [Dostopano: 16. 11. 2020].
+
+\bibitem{dyn-place}
+Marino Lorenzo.
+\newblock Dynamic application placement in a kubernetes multi-cluster
+  environment.
+\newblock Magisterska naloga, Politecnico di Torino, 2020.
+
+\bibitem{kube-and-edge}
+Karim Manaouil and Adrien Lebre.
+\newblock Kubernetes and the edge?
+\newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
+  2020.
 
 \bibitem{cncf}
 Cloud native~computing foundation.

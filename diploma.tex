@@ -209,6 +209,8 @@ Mami Lučki.
   {\bf HA} & high availability & visoka razpoložljivost \\
   {\bf GA} & general availability & splošna dostopnost \\
   {\bf VPN} & virtual private network & navidezno zasebno omrežje \\
+  {\bf TOSCA} & topology and orchestration specification for cloud applications & specifikacija topologije in orkestracije za aplikacije v oblaku \\
+  {\bf WAN} & wide area network & prostrano omrežje \\
 \end{tabular}
 % prazna stran
 \clearemptydoublepage
@@ -277,7 +279,7 @@ We find that modern methods of connecting clusters can greatly facilitate their 
 \label{uvod}
 \section{Motivacija}
 Glede orkestracije kontejnerjev je bil v zadnjih nekaj letih narejen zelo velik preboj. 
-V postopku tega preboja se je razvil tudi Kubernetes API, ki je na tem področju rešil marsikatero težavo.
+V postopku tega preboja se je razvil tudi REST vmesnik Kubenetes, ki je na tem področju rešil marsikatero težavo.
 Kubernetes  je univerzalni način, ki nam omogoča, da več računalnikov povežemo v gručo, ki deluje kot ena samostojna enota. 
 To reši marsikatero težavo v računalništvu in vsaj teoretično je to dovolj, da imamo visoko razpoložljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje več računalnikov.
 A industrija je zelo hitro ugotovila, da obstaja kar nekaj primerov, ko ni dovolj, da ena skupina računalnikov deluje kot celota, ampak bi želeli med seboj povezati tudi te skupine.
@@ -398,6 +400,39 @@ Pod, ki se ustvari s to številko ohranja diske, mrežni vmesnik, IP naslov in d
 Pomembna razlika med objektoma deployment in statefulset pa je tudi v polju \spverb|volumeClaimTemplate|.
 Statefulset omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
 Statefulset se najpogosteje uporablja za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
+\chapter{Pregled področja in literature}
+V tem poglavju si bomo pogledali nekaj ključnih del in literature na področju povezovanja gruč Kubernetes.
+V delih je pogosto za federacijo izbran sistem Federation 1 ali Federation 2, pogosto prav zaradi tesne povezanosti s sistemom Kubernetes ~\cite{tosca-fed} ~\cite{dyn-place} ~\cite{kube-and-edge}.
+
+
+V članku \cite{tosca-fed} se avtorji posvetijo federaciji z namenom povezovanja gruč pri različnih oblačnih ponudnikih.
+Pri tem posebno pozornost posvečajo avotmatskemu horizontalnemu skaliranju aplikacij.
+Za uporabo in postavitev pri več oblačnih ponudnikih so uporabili standard TOSCA, ki jim omogoča enoten deklarativni zapis strukture njihove strukture v različnih oblakih.
+V svoji študiji so uporabili sistem Cloudify, ki pa jim z dodatkom za Kubernetes omogoča tudi enoten način namestitve kubernetesa pri različnih oblačnih ponudnikih.
+Svoje gruče so še povezali v federacijo s sistemom Kuberenetes federation. 
+Iz članka pa ni povsem razvidno ali so uporablili prvo ali drugo iteracijo sistema Kubernetes federation.
+V testne namene pa so v federacijo namestili še strežnik spletne igre in pokazali uspešnost avtomatskega horizontalnega skaliranja.
+
+Lorenzo Martino je v svoji magisterski nalogi ~\cite{dyn-place} v uvodu pojasnil pomembnost pristopa mikrostoritev pri razvoju aplikacij in pokazal prednosti uporabe Kubernetesa v oblaku.
+Kot glavno prednost je izpostavil neodvisnost od platforme in možnost uporabe v oblaku ali pa v svojem podatkovnem centru.
+Omenil je tudi hibridne rešitve, ki pa zahtevajo povezovanje in upravljanje večih gruč.
+
+V nadaljevanju je podanih nekaj predlogov za uporabo več gruč Kubernetes, kot so: izolacija med produkcijskim in testnim okoljem, težave z latenco zaradi prevelikih fizičnih razdalj, povečevanje razpoložljivosti aplikacije, uporaba dodatne gruče v oblaku zaradi lažjega avtomaskega skaliranja vozlišč, omejitve lokacije obdelovanja podatkov.
+V delu je predlaganih tudi nekaj programov za upravljanje gruč.
+V rešitvi svojega problema pa je uporabil sistem KubeFed.
+Avtor omeni, da je pri svojem delu reševal problem v podjetju, ki se ukvarja s civilnimi in vojaškimi aeronavtičnimi sistemi.
+Ključna zahteva v podjetju pa je bila obdelava podatkov v lokalnih gručah.
+Nadadljevanje dela je vezano na reševanje konkretnega problema.
+Sinhronizaciji podatkov je v delu posvečena posebna pozornost, saj imajo v podjetju posebej označene podatke, ki se ne smejo obdelovati v oblaku in podatke, ki se lahko.
+Ker je KubeFed še v razvojni fazi alfa, kar pa predstavlja oviro za podjetje.
+Tako avtor poleg rešitve s KubeFed pripravi še svojo rešitev, kjer implementira samo potrebne funkcionalnosti.
+
+Vir ~\cite{kube-and-edge} pa se posveti področju upravljanja aplikacij na robu oblaka, kjer zaradi večjega števila gruč centralno upravljanje pride še bolj do izraza.
+V poročilu je postavljena Kubernetes gruča v prostrano omrežje (WAN).
+Avtorji so primerjali delovanje ene gruče preko prostranega omrežje z delovanjem iste gruče preko lokalnega omrežja, izpostavijo pa pomembnost previdnosti pri takšnem pristopu v gručah na robu oblaka, saj lahko pride do nepredvidljivih rezultatov.
+V poročilu je predstavljen tudi sistem KubeEdge, kjer pa imajo vozlišča tako kot v prvem primeru še vedno premalo avtonomnosti v primeru izpada iz omrežja.
+Izpostavljeno je, da ima te slabosti rešimo s federacijo in sistemom KubeFed, ki je v naaljevanju porobneje opisan.
+
 \chapter{Povezovanje Kubernetes gruč}
 Ko postavimo več različnih gruč imamo vedno možnost, da upravljamo vsakega posebej~\cite{difference-multi-cluster}.
 A takšen pristop zelo kmalu odpove, če imamo takšnih gruč res veliko.
@@ -449,7 +484,7 @@ Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kube
 Takšne objekte je potem Federation V1 ustvaril tudi v ostalih gručah.
 Zanimiv pristop, ki pa zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
 GA faza v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga uporabljajo in se bo vsaj do neke mere ohranjala združljivost za nazaj.
-Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
+  Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
 
 Tako se je kasneje rodil projekt Federation V2~\cite{Kubernetes-federation-evolution}.
 Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API-ja, ampak uporablja obstoječi Kubernetesov API. 

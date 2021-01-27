@@ -7,29 +7,30 @@
 \BOOKMARK [0][-]{chapter.3}{Kubernetes}{}% 7
 \BOOKMARK [1][-]{section.3.1}{Zgodovina}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.2}{Osnovni pojmi}{chapter.3}% 9
-\BOOKMARK [0][-]{chapter.4}{Povezovanje Kubernetes gruc}{}% 10
-\BOOKMARK [1][-]{section.4.1}{ArgoCD in drugi GitOps sistemi}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{KubeFed}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.3}{Cilium}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter.5}{Priprava sistema gruc za testiranje}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Raspberry PI 4}{chapter.5}% 15
-\BOOKMARK [1][-]{section.5.2}{K3S in K3OS}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.3}{Demonstracijska spletna aplikacija}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.4}{Namestitev KubeFed}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{Povezovanje med podatkovnimi centri}{}% 19
-\BOOKMARK [1][-]{section.6.1}{Problem velike latence}{chapter.6}% 20
-\BOOKMARK [1][-]{section.6.2}{Povecanje razpolo\236ljivosti aplikacije}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.3}{Povezovanje med podatkovnimi centri}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.4}{Razporeditev uporabnikov po grucah}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.5}{Definicija infrastrukture za na\235 primer}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.6}{Implementacija s KubeFed}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.7}{Sinhronizacija podatkov}{chapter.6}% 26
-\BOOKMARK [0][-]{chapter.7}{Upravljanje izoliranih aplikacij}{}% 27
-\BOOKMARK [1][-]{section.7.1}{Zmanj\235evanje posledic vdorov in izpadov}{chapter.7}% 28
-\BOOKMARK [1][-]{section.7.2}{Implementacija s Kubefed}{chapter.7}% 29
-\BOOKMARK [0][-]{chapter.8}{Upravljanje gruc na robu oblaka}{}% 30
-\BOOKMARK [1][-]{section.8.1}{Gruce na robu oblaka}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.2}{Implementacija s KubeFed}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.3}{Sinhronizacija podatkov}{chapter.8}% 33
-\BOOKMARK [0][-]{chapter.9}{Sklepne ugotovitve}{}% 34
-\BOOKMARK [0][-]{chapter.9}{Literatura}{}% 35
+\BOOKMARK [0][-]{chapter.4}{Pregled podrocja in literature}{}% 10
+\BOOKMARK [0][-]{chapter.5}{Povezovanje Kubernetes gruc}{}% 11
+\BOOKMARK [1][-]{section.5.1}{ArgoCD in drugi GitOps sistemi}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.2}{KubeFed}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.3}{Cilium}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Priprava sistema gruc za testiranje}{}% 15
+\BOOKMARK [1][-]{section.6.1}{Raspberry PI 4}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.2}{K3S in K3OS}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.3}{Demonstracijska spletna aplikacija}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.4}{Namestitev KubeFed}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Povezovanje med podatkovnimi centri}{}% 20
+\BOOKMARK [1][-]{section.7.1}{Problem velike latence}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.2}{Povecanje razpolo\236ljivosti aplikacije}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.3}{Povezovanje med podatkovnimi centri}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.4}{Razporeditev uporabnikov po grucah}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.5}{Definicija infrastrukture za na\235 primer}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.6}{Implementacija s KubeFed}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.7}{Sinhronizacija podatkov}{chapter.7}% 27
+\BOOKMARK [0][-]{chapter.8}{Upravljanje izoliranih aplikacij}{}% 28
+\BOOKMARK [1][-]{section.8.1}{Zmanj\235evanje posledic vdorov in izpadov}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.2}{Implementacija s Kubefed}{chapter.8}% 30
+\BOOKMARK [0][-]{chapter.9}{Upravljanje gruc na robu oblaka}{}% 31
+\BOOKMARK [1][-]{section.9.1}{Gruce na robu oblaka}{chapter.9}% 32
+\BOOKMARK [1][-]{section.9.2}{Implementacija s KubeFed}{chapter.9}% 33
+\BOOKMARK [1][-]{section.9.3}{Sinhronizacija podatkov}{chapter.9}% 34
+\BOOKMARK [0][-]{chapter.10}{Sklepne ugotovitve}{}% 35
+\BOOKMARK [0][-]{chapter.10}{Literatura}{}% 36
