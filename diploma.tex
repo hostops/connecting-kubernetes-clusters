@@ -303,7 +303,7 @@ V primeru izpada enega podatkovnega centra pa naše uporabnike preusmerimo v dru
 \subsection{Potreba po izolaciji aplikacij}
 Ko govorimo o izolaciji aplikacije se nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
 Uporaba Kubernetesa od nas zahteva izolacijo v kontejnerje.
-Prav tako pa nam že kubernetes sam omogoča izolacijo na posamezna vozlišča oziroma strežnike~\cite{kube-network-policy} ali nastavitev pravil komunikacije v gruči~\cite{kube-pod-to-node}.
+Prav tako pa nam že kubernetes sam omogoča izolacijo na posamezne strežnike~\cite{kube-network-policy} ali nastavitev pravil komunikacije v gruči~\cite{kube-pod-to-node}.
 Kljub tem postopkom se v Kubernetesu pojavljajo problemi, zaradi katerih postane celotna gruča nedosegljiva, s tem pa vse aplikacije v tej gruči.
 Če postavimo del neodvisnih aplikacij v drugo gručo, smo s tem preprečili njihov izpad ob napaki v prvi gruči.
 Izolacija pa je pomembna tudi z varnostnega vidika.
@@ -312,20 +312,17 @@ Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
 Če imamo vsako od naših aplikacij v svoji gruči pa se temu lahko izognemo.
 \chapter{Problem povezovanja gruč}
 Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
-Zaradi praktičnosti pa te storitve pogosto napišemo tako, da vsako storitev sestavlja več programov, ki tečejo v kontejnerjih.
 
-Problem povezovanja več računalniških gruč je v svetu prisoten že kar nekaj časa.
-Ko postavimo gručo, želimo da več računalnikov deluje kot celota, a z veliko večjo zanesljivostjo, stabilnostjo in zmogljivostjo.
-Obstajajo primeri, ko bi radi med seboj povezali računalnike, a jih zaradi razdalje ali druačnih ovir ne moremo povezati v eno tesno povezano gručo.
-V takšnih primerih pa pogosto lahko vsaj računalnike na isti lokaciji povežemo v gručo.
-Te gruče pa potem na različne načine povežemo šibkeje.
+Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno tesno gručo.
+Te računalnike lahko vedno povežemo vsaj v več različnih gruč, četudi to pomeni, da je v nekaterih gručah samo po en strežnik oziroma vozlišče.
+Ob prisotnosti povezave pa lahko te gruče med seboj povežeme šibkeje.
 
-Ko govorimo o tesni povezanosti znotraj gruče večinoma pričakujemo, da vsako vozlišče vidi vsako drugo, da vsak kontejner lahko komunicira z vsakim kontejnerjem, da so vozlišča v istem omrežju in da uporabljamo hitro interno omrežje podatkovnega centra. 
-Pričakujemo, da sistem, ki ga uporabljamo za gručenje omogoča razporejanje zaželenih storitev in kontejnerjev med vozlišči in v primeru izpada vozlišča to vozlišče odstrani iz sistema in storitve s tega vozlišča prerazporedi na preostala vozlišča.
+Ko govorimo o tesni povezanosti znotraj gruče velja, da ima vsako vozlišče dostop do vsakega, da vsak kontejner lahko komunicira z vsakim kontejnerjem, da so vozlišča v istem hitrem internem omrežju podatkovnega centra. 
+Pričakujemo, da sistem, ki ga uporabljamo za gručenje omogoča razporejanje zaželenih storitev in kontejnerjev med strežniki in v primeru izpada vozlišča to odstrani iz sistema in kontejnerje s tega vozlišča prerazporedi na preostala vozlišča.
 
-Ko pa govorimo o šibki povezanosti med različnimi gručami pa zaradi omejitev redko pričakujemo komunikacijo vsakega vozlišča z vsakim.
-Zelo pogosto je povezava med vozlišči počasna, nezanesljiva in draga.
-Po navadi je vsaka gruča v svojem omrežju in je to omrežje direktno nedosegljivo ostalim gručam.
+Šibka povezanost med gručami pomeni, da je povezava med različnimi gručami počasna, nezanesljiva ali draga.
+Zaradi omejitev moramo sprejemati kompromise na podlagi zmožnosti povezave in naših potreb.
+Skladno z našimi potrebami se lahko odrečemo komunikaciji med vozlišči v različnih gručah.
 Pričakujemo, da vsaka gruča skrbi za svoja vozlišča, ohranja svoje storitve in kontejnerje v delovanju.
 Od sistema za povezovanje gruč pa si želimo, da nam omogoča centralni nadzor nad storitvami v gručah, prerazporejanje teh storitev med gručami, dinamično odkrivanje drugih gruč in njihovih storitev, izločanje nedosegljivih gruč, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
 
