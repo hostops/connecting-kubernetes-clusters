@@ -1,4 +1,4 @@
-  \documentclass[a4paper, 12pt]{book}
+\documentclass[a4paper, 12pt, draft]{book}
 %\documentclass[a4paper, 12pt, draft]{book}  Nalogo preverite tudi z opcijo draft, ki vam bo pokazala, katere vrstice so predolge!
 \usepackage[utf8x]{inputenc}   % omogoča uporabo slovenskih črk kodiranih v formatu UTF-8
 \usepackage[slovene,english]{babel}    % naloži, med drugim, slovenske delilne vzorce
@@ -506,9 +506,9 @@ Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plas
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih gruč Kubernetes.
 Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki razporejajo promet med različnimi gručami.
-Takšne objekte definiramo z anotacijo \spverb|io.cilium/global-service|~\cite{setup-cilium-cluster-mesh}.
-Omogoča nam tudi omejevanje povezovanja med gručami z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
-Ko postavljamo mrežo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasbenih omrežjih.
+Takšne objekte definiramo z anotacijo \spverb|io.cilium/ global-service|~\cite{setup-cilium-cluster-mesh}.
+Omogoča nam tudi omejevanje povezovanja med gru\-ča\-mi z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
+Ko postavljamo mre\-žo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasbenih omrežjih.
 Ključno pri uporabi Ciliuma za povezovanje gruč je, da so vsa naša vozlišča dosegljiva med seboj.
 A četudi so naše gruče v med seboj nedosegljivih zasebnih omrežjih, pa je problem rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno navidezno omrežje~\cite{setup-cilium-cluster-mesh}.
 
@@ -537,7 +537,7 @@ Takšna postavitev pa je lahko tudi primer gruče na robu oblaka, kar je bolj po
 Obstaja več implementacij Kubernetesa in mi bomo uporabili z viri varčno odprtokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}.
 Hkrati so v podjetju Rancher pripravili distribucijo operacijskega sistema Linux K3OS~\cite{k3os-git}.
 Gre za minimalen operacijski sistem s prednameščenim sistemom K3S.
-Majhna težava se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
+Te\-ža\-va se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
 A k sreči se je v ta namen začel odprtokodni projekt \sn{PiCl k3os image generator}, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datotek zgradi novo sliko operacijskega sistema za naš Raspberry PI ~\cite{k3os-rpi-image-generator}.
 Konfiguracijske datoteke, ki jih moramo priložiti so standardne YAML datoteke, ki jih podpira sistem K3OS.
 Vanje zapišemo nastavitve kot so SSH javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo s gručo Kubernetes in način v katerem želimo zagnati K3S na sistemu~\cite{k3os-git}.
