@@ -413,30 +413,28 @@ Izpostavljeno je, da te slabosti rešimo s federacijo in sistemom KubeFed, ki je
 Če je vsako vozlišče v svoji gruči potem je vozlišče v primeru izpada omrežja še vedno avtonomno in omogoča lokalno upravljanje.
 
 \chapter{Povezovanje gruč Kubernetes}
-Ko postavimo več različnih gruč imamo vedno možnost, da upravljamo vsakega posebej~\cite{difference-multi-cluster}.
-A takšen pristop zelo kmalu odpove, če imamo takšnih gruč res veliko.
-Ko govorimo o sistemu, ki ga uporabljamo za upravljanje več gruč, najpogosteje pričakujemo možnost prenašanja objektov med gručami.
+Ko postavimo več različnih gruč imamo vedno možnost, da upravljamo vsako posebej.
+A takšen pristop je neučinkovit, če imamo takšnih gruč res veliko~\cite{difference-multi-cluster}.
+Osnovna lastnost sistema za upravljanje več gruč Kubernetes, je možnost prenašanja Kubernetesovih objektov med gručami.
 Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v izbranih gručah.
-Odvisno od naših potreb pa nam lahko prav pride tudi  dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje podov med gručami in komunikacijo med podi v različnih gručah.
+Odvisno od naših potreb pa lahko uporabimo sistem, ki omogoča tudi dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje podov med gručami in komunikacijo med podi v različnih gručah.
 Te funkcionalnosti znotraj ene gruče nudi že Kubernetes sam.
 Je pa seveda odvisno od našega primera, katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo ogledali različne sisteme za povezovanje gruč Kubernetes, njihove glavne prednosti in značilnosti.
 \section{ArgoCD in drugi sistemi GitOps}
 \subsection{Sinhronizacija objektov z uporabo sistemov GitOps}
-GitOps pristop pri postavljanju strukture aplikacij v gručah Kubernetes se je izkazal za dober pristop za upravljanje gruč.
-Osnovna ideja GitOpsa je to, da imamo našo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
-Takšen pristop se je v zadnjih letih zelo razširil in obstaja veliko podjetji, ki pri razvoju svojih spletnih aplikacij uporablja pristop GitOps.
-Pogosto za sistem GitOps uporabljajo kar ArgoCD.
+Osnovna ideja pristopa GitOps je, da imamo našo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
+Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot 100 podjetji, ki pri razvoju svojih spletnih aplikacij uporablja pristop GitOps~\cite{argocd-user-list}.
 
-Če uporabljamo kakšnega od sistemov GitOps lahko potem iz enakega repozitorija postavimo več gruč.
-V osnovi takšen pristop avtomatsko pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med podi v različnih gručah ali pa odkrivanje storitev ali podov.
-V nadaljevanju si bomo izbrali sistem ArgoCD in si pogledali kako bi si postavili zgoraj opisano infrastrukturo.
+Če uporabljamo kakšnega od sistemov GitOps, lahko potem iz enakega repozitorija postavimo več gruč.
+V osnovi takšen pristop pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med podi v različnih gručah ali pa odkrivanje storitev ali podov.
+V nadaljevanju si bomo izbrali sistem ArgoCD in si pogledali, kako bi si postavili zgoraj opisano infrastrukturo.
 \subsection{Sinhronizacija objektov z ArgoCD}
 ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
-Najpreprostejše je, če uporabimo YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
-Za nameščanje te konfiguracije na več kot eno gručo imamo na voljo dva pristopa.
+Uporabimo lahko YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
+Za nameščanje te konfiguracije v več kot eno gručo imamo na voljo dva pristopa.
 Prvi način je, da v vsako gručo namestimo ArgoCD in uporabimo enak repozitorij Git v vseh.
-Drugi način, ki pa ga ponuja ArgoCD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene gruče~\cite{declarative-setup}. To pomeni, da moramo imeti samo v eni gruči nameščen ArgoCD kontroler.
+Drugi način, ki pa ga ponuja ArgoCD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene gruče~\cite{declarative-setup}. To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
 
 Pogosto pa ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in želimo vsaj malo prilagoditi konfiguracijo posameznege gruče.
 V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
@@ -458,7 +456,7 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{kubernetes-federation-evolution}.
 Oba projekta sta želela poenostaviti upravljanje več gruč in razporejanje Kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kar kot novo gručo Kubernetes~\cite{setup-cluster-federation-kubefed-v1}.
-Uporabljal je svoj API in API kontroler, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
+Uporabljal je svoj API in kontroler API, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
 Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
 Takšne objekte je potem Federation V1 ustvaril tudi v ostalih gručah.
 Zanimiv pristop, ki pa zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
@@ -517,7 +515,7 @@ A četudi so naše gruče v med seboj nedosegljivih zasebnih omrežjih, pa je pr
 Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da se Cilim ukvarja samo s povezovanjem gruč na omrežnem nivoju.
 Ne omogoča enotnega upravljanja in sinhroniziranja objektov med gručami zato moramo objekte sinhronizirati sami.
 Ampak zaradi dovolj široke zasnove Kubernetesovega vmesnika so rešitve med seboj kompatibilne.
-Torej lahko uporabimo napredno mreženje Ciliuma in objekte sinhroniziramo s KubeFed in GitOps pristopom.
+Torej lahko uporabimo napredno mreženje Ciliuma in objekte sinhroniziramo s pristopom KubeFed ali GitOps.
 \chapter{Priprava sistema gruč za testiranje}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja gruč Kubernetes moramo najprej postaviti nekaj gruč.
@@ -583,7 +581,7 @@ curl localhost/users
 
 Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
 Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omogoča napredne sinhronizacije tudi med različnimi strežniki in gručami.
-K sreči pa CrateDB implementira PostgreSQL vmesnik in nam kode za prehod med bazami ni potrebno spreminjati.
+K sreči pa CrateDB implementira vmesnik PostgreSQL in nam kode za prehod med bazami ni potrebno spreminjati.
 \section{Namestitev KubeFed}
 Kot ena izmed ključnih komponent složnega delovanja več gruč je njihovo upravljanje.
 V te namene bomo uporabili program KubeFed, ki ga moramo namestiti na eno izmed gruč, ki jih želimo povezati skupaj.
@@ -621,7 +619,7 @@ Rešitev se sliši preprosta, a vseeno se tu srečamo z zelo zahtevnimi problemi
 Najbolj očiten primer je sinhronizacija podatkov.
 V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim SQL podatkovnim bazam.
 CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči.
-Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik od podatkovne baze PostgreSQL.
+Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
 \section{Povečanje razpoložljivosti aplikacije}
 Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
 Spomnimo se, da Kubernetes najbolj učinkovito deluje, če naša vozlišča uporabljajo hitro interno omrežje podatkovnega centra.
@@ -711,7 +709,7 @@ Sinhronizacija podatkovne baze je težak problem.
 To pomeni, da bomo ustvarili novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
 Ker samo mi poznamo naš konkreten primer uporabe, je takšen pristop lahko najbolj učinkovit.
 
-V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo našega REST vmesnika.
+V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo našega vmesnika REST.
 To bomo storili v drugem Ubuntu kontejnerju z uporabo ukazov \spverb|curl| za izvajanje REST klicev in ukazom \spverb|jq|~\cite{jq} za razčlenjevanje podatkov.
 Podatki se sinhronizirajo vsakih 10 sekund.
 Primer še testiramo in dobimo spodnji izhod, kar potrdi, da so se podatki uspešno sinhronizirali.
@@ -772,7 +770,7 @@ Zavedati se sicer moramo, da nekaj komunikacije porabi tudi KubeFed za sinhroniz
 \label{problem-prevelike-latence}
 \end{figure}
 
-Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo in lahko s svojim kontrolerjem in KubeFed vmesnikom implementiramo še dodatne funkcionalnosti kot so razporejanje obremenjenosti med lokalnimi strežniki in po potrebi povečujemo število primerkov ali pa kar razporejamo opravila s Kubernetes Job objekti.
+Nam pa KubeFed omogoča še eno lepo možnost s svojo strukturo in lahko s svojim kontrolerjem in vmesnikom KubeFed implementiramo še dodatne funkcionalnosti kot so razporejanje obremenjenosti med lokalnimi strežniki in po potrebi povečujemo število primerkov ali pa kar razporejamo opravila s Kubernetes Job objekti.
 
 Z zelo preprosto integracijo v Kubernetes nam KubeFed vmesnik tu res omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
@@ -788,7 +786,7 @@ V vsako podružnico bi postavili gručo rač\-un\-al\-ni\-kov Raspberry PI, ki s
 Tako bi na centralni strežnik pošiljali samo številko zaposlenega in čas vstopa.
 Takšen pristop bi prišel še toliko bolj do izraza, če imajo podružnice dostop do interneta samo prek dragega mobilnega omrežja, kjer lahko z zmanjšanjem prometa zelo zmanjšamo tudi stroške podjetja.
 Vse te gruče na podružnicah bi imele zelo podobno strukturo in jih je smiselno centralo upravljati s kakšnim sistemom za povezovanje. 
-Tu bi lahko uporabili KubeFed ali GitOps pristop.
+Tu bi lahko uporabili pristop KubeFed ali pristop GitOps.
 Pošiljanje podatkov na centrali strežnik pa bi morali napisati sami in ga vgraditi v naš program za prepoznavo obrazov.
 \chapter{Sklepne ugotovitve}
 V diplomskem delu smo si pogledali teoretično ozadje povezovanja več rač\-un\-al\-ni\-ških gruč in osnove Kubernetesa.

@@ -133,6 +133,13 @@ ArgoCD skupnost.
   \url{https://argoproj.github.io/argo-cd/operator-manual/declarative-setup}.
 \newblock [Dostopano: 16. 12. 2020].
 
+\bibitem{argocd-user-list}
+ArgoCD skupnost.
+\newblock Who uses argo cd?
+\newblock Dosegljivo:
+  \url{https://github.com/argoproj/argo-cd/blob/master/USERS.md}.
+\newblock [Dostopano: 20. 1. 2021].
+
 \bibitem{cilium-intro}
 Cilium skupnost.
 \newblock Introduction to cilium \& hubble.

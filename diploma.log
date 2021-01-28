@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  28 JAN 2021 02:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  28 JAN 2021 02:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,29 +624,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [14]
-<images/primer-uporabe-helm-predloge-argo-cd.png, id=400, 791.95876pt x 668.497
+<images/primer-uporabe-helm-predloge-argo-cd.png, id=402, 791.95876pt x 668.497
 5pt>
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 450.
+on input line 448.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>] [16] [17] 
-[18]
+ [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
+[16] [17] [18]
 Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 521.
+(hyperref)                removing `\textasciicaron' on input line 519.
 
-<images/postavitev-raspberry.jpg, id=440, 4223.78pt x 3131.7pt>
+<images/postavitev-raspberry.jpg, id=442, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 53
-3.
+1.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -668,7 +665,7 @@ Poglavje 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 625.
+(hyperref)                removing `\textasciicaron' on input line 623.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -677,19 +674,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 637.
+(hyperref)                removing `\textasciicaron' on input line 635.
 
-<images/geolokacijski-dns.png, id=487, 819.06pt x 437.38406pt>
+<images/geolokacijski-dns.png, id=489, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 644.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 642.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 [26]
-<images/infrastructure-example.pdf, id=492, 543.95218pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=494, 543.95218pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-659.
+657.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
  [27 <./images/geolokacijski-dns.png (PNG copy)>]
 Underfull \vbox (badness 4673) has occurred while \output is active []
@@ -699,11 +696,11 @@ Underfull \vbox (badness 4673) has occurred while \output is active []
 ]
 Poglavje 8.
 [33]
-<images/primer-izolirane-aplikacije.pdf, id=555, 406.3983pt x 160.6803pt>
+<images/primer-izolirane-aplikacije.pdf, id=557, 406.3983pt x 160.6803pt>
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 742.
+line 740.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
 
@@ -712,18 +709,18 @@ Poglavje 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 754.
+(hyperref)                removing `\textasciicaron' on input line 752.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 756.
+(hyperref)                removing `\textasciicaron' on input line 754.
 
-<images/upravljanje-robnih-gruc.pdf, id=582, 565.15138pt x 493.845pt>
+<images/upravljanje-robnih-gruc.pdf, id=584, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 769.
+ 767.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -736,7 +733,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Poglavje 10.
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 809--810
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
@@ -768,48 +765,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--122
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 176--181
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  As-si-gning pods to no-des.  Do-se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--181
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
 \OT1/cmr/m/n/12 gljivo: []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / docs 
 / concepts / scheduling -[]
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
+Underfull \hbox (badness 10000) in paragraph at lines 197--202
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 203--208
+Underfull \hbox (badness 2680) in paragraph at lines 210--215
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Ne-twork po-li-cies.  Do-se-gljivo: []
 $\OT1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--208
+Underfull \hbox (badness 10000) in paragraph at lines 210--215
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / services -[] networkin
 g / network -[]
  []
 
 
-Underfull \hbox (badness 4739) in paragraph at lines 224--229
+Underfull \hbox (badness 4739) in paragraph at lines 231--236
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
 be-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 224--229
+Underfull \hbox (badness 2150) in paragraph at lines 231--236
 \OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--243
+Underfull \hbox (badness 10000) in paragraph at lines 245--250
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
@@ -826,10 +823,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8733 strings out of 479383
- 125951 string characters out of 5875830
- 460663 words of memory out of 5000000
- 25502 multiletter control sequences out of 15000+600000
+ 8735 strings out of 479383
+ 125990 string characters out of 5875830
+ 461702 words of memory out of 5000000
+ 25503 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -840,10 +837,10 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (63 pages, 2860582 bytes).
+Output written on diploma.pdf (63 pages, 2860849 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 664 compressed objects within 7 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 774 PDF objects out of 1000 (max. 8388607)
+ 668 compressed objects within 7 object streams
+ 147 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 
