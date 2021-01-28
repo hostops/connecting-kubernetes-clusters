@@ -206,6 +206,13 @@ Kubernetes skupnost.
 \newblock Dosegljivo: \url{https://github.com/kubernetes-sigs/kubefed}.
 \newblock [Dostopano: 23. 11. 2020].
 
+\bibitem{kubefed-userguide}
+Kubernetes skupnost.
+\newblock Kubefed user guide.
+\newblock Dosegljivo:
+  \url{https://github.com/kubernetes-sigs/kubefed/blob/master/docs/userguide.md}.
+\newblock [Dostopano: 23. 11. 2020].
+
 \bibitem{kube-network-policy}
 Kubernetes skupnost.
 \newblock Network policies.

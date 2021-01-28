@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  28 JAN 2021 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  28 JAN 2021 03:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,8 +483,13 @@ l.193 \clearemptydoublepage
 l.193 \clearemptydoublepage
                             [8
 
-] (./diploma.tocpdfTeX warning (ext4): destination with the same identifier (na
-me{page.}) has been already used, duplicate ignored
+] (./diploma.toc
+
+LaTeX Warning: Citation `mastering-kubernetes' on page  undefined on input line
+ 15.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.33 ...je med podatkovnimi centri}{25}{chapter.7}
@@ -548,10 +553,24 @@ l.268 \clearemptydoublepage
 ]
 Poglavje 1.
 
+LaTeX Warning: Citation `what-is-Kubernetes' on page 1 undefined on input line 
+276.
+
+
 LaTeX Warning: Citation `mastering-Kubernetes' on page 1 undefined on input lin
 e 278.
 
-<images/problem-prevelike-latence.pdf, id=251, 471.68219pt x 275.10779pt>
+
+LaTeX Warning: Citation `kubernetes-federation-evolution' on page 1 undefined o
+n input line 281.
+
+
+LaTeX Warning: Citation `kubefed-repo' on page 1 undefined on input line 281.
+
+
+LaTeX Warning: Citation `kube-and-edge' on page 1 undefined on input line 289.
+
+<images/problem-prevelike-latence.pdf, id=241, 471.68219pt x 275.10779pt>
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
@@ -560,7 +579,21 @@ ne 292.
 [1
 
 
-] [2 <./images/problem-prevelike-latence.pdf>] [3] [4
+]
+
+LaTeX Warning: Citation `common-outages' on page 2 undefined on input line 299.
+
+
+[2 <./images/problem-prevelike-latence.pdf>]
+
+LaTeX Warning: Citation `kube-network-policy' on page 3 undefined on input line
+ 306.
+
+
+LaTeX Warning: Citation `kube-pod-to-node' on page 3 undefined on input line 30
+6.
+
+[3] [4
 
 ]
 Poglavje 2.
@@ -573,7 +606,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 Underfull \vbox (badness 1558) has occurred while \output is active []
 
  [5]
-<images/primer-povezanih-gruc.pdf, id=295, 478.66827pt x 485.89528pt>
+<images/primer-povezanih-gruc.pdf, id=275, 478.66827pt x 485.89528pt>
 File: images/primer-povezanih-gruc.pdf Graphic file (type pdf)
 <use images/primer-povezanih-gruc.pdf>
 Package pdftex.def Info: images/primer-povezanih-gruc.pdf  used on input line 3
@@ -583,10 +616,21 @@ Package pdftex.def Info: images/primer-povezanih-gruc.pdf  used on input line 3
 [6 <./images/primer-povezanih-gruc.pdf>]
 Poglavje 3.
 
+LaTeX Warning: Citation `cncf' on page 7 undefined on input line 340.
+
+
+LaTeX Warning: Citation `mastering-kubernetes' on page 7 undefined on input lin
+e 341.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 341.
 
-<images/Kubernetes-simple-schema.pdf, id=315, 436.5108pt x 311.24278pt>
+
+LaTeX Warning: Citation `what-is-Kubernetes' on page 7 undefined on input line 
+342.
+
+<images/Kubernetes-simple-schema.pdf, id=292, 436.5108pt x 311.24278pt>
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
@@ -595,9 +639,23 @@ e 356.
 [7
 
 ]
+
+LaTeX Warning: Citation `pod' on page 8 undefined on input line 361.
+
+
+LaTeX Warning: Citation `service' on page 8 undefined on input line 365.
+
+
 Underfull \vbox (badness 7613) has occurred while \output is active []
 
- [8 <./images/kubernetes-simple-schema.pdf>] [9] [10
+ [8 <./images/kubernetes-simple-schema.pdf>]
+
+LaTeX Warning: Citation `deployment' on page 9 undefined on input line 370.
+
+
+LaTeX Warning: Citation `statefulset' on page 9 undefined on input line 374.
+
+[9] [10
 
 ]
 Poglavje 4.
@@ -607,9 +665,32 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 380.
 
 
+LaTeX Warning: Citation `tosca-fed' on page 11 undefined on input line 382.
+
+
+LaTeX Warning: Citation `dyn-place' on page 11 undefined on input line 382.
+
+
+LaTeX Warning: Citation `kube-and-edge' on page 11 undefined on input line 382.
+
+
+
+LaTeX Warning: Citation `tosca-fed' on page 11 undefined on input line 384.
+
+
+LaTeX Warning: Citation `dyn-place' on page 11 undefined on input line 392.
+
+
 Underfull \vbox (badness 2689) has occurred while \output is active []
 
  [11]
+
+LaTeX Warning: Citation `kube-and-edge' on page 12 undefined on input line 405.
+
+
+
+LaTeX Warning: Citation `kubeedge' on page 12 undefined on input line 410.
+
 [12]
 Poglavje 5.
 
@@ -618,28 +699,106 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 415.
 
 
+LaTeX Warning: Citation `difference-multi-cluster' on page 13 undefined on inpu
+t line 417.
+
+
+LaTeX Warning: Citation `argocd-user-list' on page 13 undefined on input line 4
+27.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13
 
 ]
+
+LaTeX Warning: Citation `argocd-docs' on page 14 undefined on input line 433.
+
+
+LaTeX Warning: Citation `declarative-setup' on page 14 undefined on input line 
+437.
+
 [14]
-<images/primer-uporabe-helm-predloge-argo-cd.png, id=402, 791.95876pt x 668.497
+<images/primer-uporabe-helm-predloge-argo-cd.png, id=352, 791.95876pt x 668.497
 5pt>
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 448.
+on input line 449.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
- [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
-[16] [17] [18]
+
+
+LaTeX Warning: Citation `kubernetes-federation-evolution' on page 15 undefined 
+on input line 457.
+
+
+LaTeX Warning: Citation `setup-cluster-federation-kubefed-v1' on page 15 undefi
+ned on input line 459.
+
+
+LaTeX Warning: Citation `cluster-federation-in-Kubernetes-1.5' on page 15 undef
+ined on input line 460.
+
+
+LaTeX Warning: Citation `federated-cluster-kubefed-v1' on page 15 undefined on 
+input line 461.
+
+[15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
+
+LaTeX Warning: Citation `kubernetes-federation-evolution' on page 16 undefined 
+on input line 467.
+
+
+LaTeX Warning: Citation `kubefed-userguide' on page 16 undefined on input line 
+469.
+
+[16]
+
+LaTeX Warning: Citation `kubefed-userguide' on page 17 undefined on input line 
+499.
+
+
+LaTeX Warning: Citation `remove-service-discovery' on page 17 undefined on inpu
+t line 500.
+
+
+LaTeX Warning: Citation `cilium-intro' on page 17 undefined on input line 503.
+
+
+LaTeX Warning: Citation `cilium-intro' on page 17 undefined on input line 505.
+
+[17]
+
+LaTeX Warning: Citation `cilium-cluster-mesh' on page 18 undefined on input lin
+e 508.
+
+
+LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 18 undefined on inp
+ut line 509.
+
+
+LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 18 undefined on inp
+ut line 510.
+
+
+LaTeX Warning: Citation `setup-cilium-cluster-mesh' on page 18 undefined on inp
+ut line 513.
+
+
+Overfull \hbox (19.11224pt too wide) in paragraph at lines 507--514
+\OT1/cmr/m/n/12 gru^^Tcami. Tak^^Tsne objekte de-fi-ni-ramo z ano-ta-cijo [][]\
+OT1/cmtt/m/n/12 io.cilium/global-service []\OT1/cmr/m/n/12 [[]].
+ []
+
+[18]
 Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 519.
 
-<images/postavitev-raspberry.jpg, id=442, 4223.78pt x 3131.7pt>
+<images/postavitev-raspberry.jpg, id=373, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 53
@@ -648,6 +807,19 @@ Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 53
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Citation `k3s-info' on page 19 undefined on input line 537.
+
+
+LaTeX Warning: Citation `k3os-git' on page 19 undefined on input line 538.
+
+
+LaTeX Warning: Citation `k3os-rpi-image-generator' on page 19 undefined on inpu
+t line 540.
+
+
+LaTeX Warning: Citation `k3os-git' on page 19 undefined on input line 542.
+
 [19
 
 ]
@@ -655,13 +827,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <./images/postavitev-raspberry.jpg>]
+
+LaTeX Warning: Citation `git-stateful-rest-sample' on page 21 undefined on inpu
+t line 567.
+
+
+LaTeX Warning: Citation `docker-stateful-rest-sample' on page 21 undefined on i
+nput line 568.
+
+
 Underfull \vbox (badness 3039) has occurred while \output is active []
 
  [21]
+
+LaTeX Warning: Citation `docker-kubefed' on page 22 undefined on input line 589
+.
+
 [22] [23] [24
 
 ]
 Poglavje 7.
+
+LaTeX Warning: Citation `cratedb' on page 25 undefined on input line 620.
+
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
@@ -676,171 +864,28 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 635.
 
-<images/geolokacijski-dns.png, id=489, 819.06pt x 437.38406pt>
+<images/geolokacijski-dns.png, id=404, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
 Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 642.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 [26]
-<images/infrastructure-example.pdf, id=494, 543.95218pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=409, 543.95218pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
 657.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
- [27 <./images/geolokacijski-dns.png (PNG copy)>]
+
+
+LaTeX Warning: Citation `git-diploma' on page 27 undefined on input line 662.
+
+[27 <./images/geolokacijski-dns.png (PNG copy)>]
 Underfull \vbox (badness 4673) has occurred while \output is active []
 
- [28 <./images/infrastructure-example.pdf>] [29] [30] [31] [32
+ [28 <./images/infrastructure-example.pdf>] [29]
 
-]
-Poglavje 8.
-[33]
-<images/primer-izolirane-aplikacije.pdf, id=557, 406.3983pt x 160.6803pt>
-File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
-<use images/primer-izolirane-aplikacije.pdf>
-Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 740.
-(pdftex.def)             Requested size: 390.0pt x 154.20474pt.
- [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
-
-]
-Poglavje 9.
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 752.
+LaTeX Warning: Citation `cratedb-zone' on page 30 undefined on input line 704.
 
 
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 754.
-
-<images/upravljanje-robnih-gruc.pdf, id=584, 565.15138pt x 493.845pt>
-File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
-<use images/upravljanje-robnih-gruc.pdf>
-Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 767.
-(pdftex.def)             Requested size: 390.0pt x 340.80615pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38 <./images/upravljanje-robnih-gruc.pdf>] [39] [40
-
-]
-Poglavje 10.
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
-
- []
-
-[42] (./diploma.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 36--41
-[]$\OT1/cmtt/m/n/12 https : / / kubernetes . io / blog / 2016 / 12 / cluster -[
-] federation -[] in -[]
- []
-
-[43
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
-[]\OT1/cmr/m/n/12 Platform9.  Di-ffe-rence be-tween multi-cluster, multi-master
-,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
-\OT1/cmr/m/n/12 multi-tenant & fe-de-ra-ted ku-ber-ne-tes.  Do-se-gljivo: []$\O
-T1/cmtt/m/n/12 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
-\OT1/cmtt/m/n/12 / / platform9 . com / blog / difference -[] between -[] multi 
--[] cluster -[]
- []
-
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-[]\OT1/cmr/m/n/12 Kubernetes sku-pnost.  As-si-gning pods to no-des.  Do-se-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-\OT1/cmr/m/n/12 gljivo: []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / docs 
-/ concepts / scheduling -[]
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
-\OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
-nister -[]
- []
-
-
-Underfull \hbox (badness 2680) in paragraph at lines 210--215
-[]\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Ne-twork po-li-cies.  Do-se-gljivo: []
-$\OT1/cmtt/m/n/12 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-\OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / services -[] networkin
-g / network -[]
- []
-
-
-Underfull \hbox (badness 4739) in paragraph at lines 231--236
-[]\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
-be-
- []
-
-
-Underfull \hbox (badness 2150) in paragraph at lines 231--236
-\OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
-/$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--250
-\OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
- -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
- []
-
-[46]) [47] (./diploma.aux)
-Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: 5055B3AD7DA4E00BAF0C8A3F881BF64D;2364.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 8735 strings out of 479383
- 125990 string characters out of 5875830
- 461702 words of memory out of 5000000
- 25503 multiletter control sequences out of 15000+600000
- 412940 words of font info for 61 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 66i,11n,72p,393b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (63 pages, 2860849 bytes).
-PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 668 compressed objects within 7 object streams
- 147 named destinations out of 1000 (max. 500000)
- 338 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+LaTeX Warning: Citation `cassandra-zone

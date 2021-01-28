@@ -12,45 +12,45 @@ Repeated entry---line 291 of file literatura.bib
  : @misc{kube-network-policy
  :                          ,
 I'm skipping whatever remains of this entry
-You've used 38 entries,
+You've used 39 entries,
             2118 wiz_defined-function locations,
-            651 strings with 9100 characters,
-and the built_in function-call counts, 8319 in all, are:
-= -- 824
-> -- 293
+            654 strings with 9225 characters,
+and the built_in function-call counts, 8532 in all, are:
+= -- 845
+> -- 300
 < -- 1
-+ -- 124
-- -- 86
-* -- 245
-:= -- 1439
-add.period$ -- 148
-call.type$ -- 38
-change.case$ -- 157
++ -- 127
+- -- 88
+* -- 250
+:= -- 1475
+add.period$ -- 152
+call.type$ -- 39
+change.case$ -- 161
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 277
-empty$ -- 819
-format.name$ -- 86
-if$ -- 1812
+cite$ -- 39
+duplicate$ -- 284
+empty$ -- 841
+format.name$ -- 88
+if$ -- 1859
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 39
 missing$ -- 3
-newline$ -- 227
-num.names$ -- 76
-pop$ -- 329
+newline$ -- 233
+num.names$ -- 78
+pop$ -- 339
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 122
 quote$ -- 0
-skip$ -- 210
+skip$ -- 215
 stack$ -- 0
-substring$ -- 190
-swap$ -- 37
+substring$ -- 195
+swap$ -- 38
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
+type$ -- 154
 warning$ -- 0
-while$ -- 76
-width$ -- 40
-write$ -- 435
+while$ -- 78
+width$ -- 41
+write$ -- 446
 (There were 2 error messages)

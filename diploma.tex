@@ -424,7 +424,7 @@ V nadaljevanju si bomo ogledali različne sisteme za povezovanje gruč Kubernete
 \section{ArgoCD in drugi sistemi GitOps}
 \subsection{Sinhronizacija objektov z uporabo sistemov GitOps}
 Osnovna ideja pristopa GitOps je, da imamo našo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
-Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot 100 podjetji, ki pri razvoju svojih spletnih aplikacij uporablja pristop GitOps~\cite{argocd-user-list}.
+Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot 100 podjetji, ki pri razvoju svojih spletnih aplikacij uporabljajo pristop GitOps~\cite{argocd-user-list}.
 
 Če uporabljamo kakšnega od sistemov GitOps, lahko potem iz enakega repozitorija postavimo več gruč.
 V osnovi takšen pristop pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med podi v različnih gručah ali pa odkrivanje storitev ali podov.
@@ -434,9 +434,10 @@ ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
 Uporabimo lahko YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
 Za nameščanje te konfiguracije v več kot eno gručo imamo na voljo dva pristopa.
 Prvi način je, da v vsako gručo namestimo ArgoCD in uporabimo enak repozitorij Git v vseh.
-Drugi način, ki pa ga ponuja ArgoCD pa je, da lahko konfiguracijo pošljemo tudi v oddaljene gruče~\cite{declarative-setup}. To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
+ArgoCD pa nam omogoča tudi pošiljanje konfiguracije v oddaljene gruče~\cite{declarative-setup}.
+To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
 
-Pogosto pa ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in želimo vsaj malo prilagoditi konfiguracijo posameznege gruče.
+Če ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in nameravamo prilagoditi konfiguracijo posameznege gruče.
 V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
 ArgoCD nam ponuja možnost, da ročno določimo spremenljivke predlogam.
 Tako lahko uporabimo na primer predloge HELM in ArgoCD nam bo omogočil, da vsaki gruči izberemo svojo datoteko s spremenljivkami.
@@ -447,32 +448,32 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/primer-uporabe-helm-predloge-argo-cd.png}
 \end{center}
-\caption{Primer uporabe helm predloge v ArgoCD.}
+\caption{Primer uporabe predloge HELM v ArgoCD.}
 \label{primer-uporabe-helm-predloge-argo-cd}
 \end{figure}
 
 
 \section{KubeFed}
-9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 ali KubeFed~\cite{kubernetes-federation-evolution}.
-Oba projekta sta želela poenostaviti upravljanje več gruč in razporejanje Kubernetes objektov.
+9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 imenovan tudi KubeFed~\cite{kubernetes-federation-evolution}.
+Cilj obeh projektov je bil poenostavljeno upravljanje več gruč in razporejanje Kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kar kot novo gručo Kubernetes~\cite{setup-cluster-federation-kubefed-v1}.
 Uporabljal je svoj API in kontroler API, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
 Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
-Takšne objekte je potem Federation V1 ustvaril tudi v ostalih gručah.
-Zanimiv pristop, ki pa zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
+Objekte, ki so bili poslani kontrolerju federacije, je potem Federation V1 ustvaril tudi v pripadajočih gručah.
+Pristop zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
 GA faza v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga uporabljajo in se bo vsaj do neke mere ohranjala združljivost za nazaj.
   Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
 
-Tako se je kasneje rodil projekt Federation V2~\cite{kubernetes-federation-evolution}.
+Tako se je kasneje razvil projekt Federation V2~\cite{kubernetes-federation-evolution}.
 Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API-ja, ampak uporablja obstoječi Kubernetesov API. 
-Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer federateddeployment.
-Federated objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl| enable.
+Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer federateddeployment~\cite{kubefed-userguide}.
+Federated objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl enable|.
 \begin{verbatim}
 kubefedctl enable deployment
 \end{verbatim}
 Orodje kubefedctl si moramo namestiti na naš računalnik.
 Takšen Federated objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v gruče in prepis lastnosti originalnega objekta za posamezne gruče.
-  Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo CRD objektov.
+Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo CRD objektov.
 \begin{verbatim}
 apiVersion: types.kubefed.io/v1beta1
 kind: FederatedDeployment
@@ -495,22 +496,21 @@ spec:
           value: 3
   ... 
 \end{verbatim}
-Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkrivanje storitev v drugih gručah prek DNS zapisov.
+Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkrivanje storitev v drugih gručah prek DNS zapisov~\cite{kubefed-userguide}.
 Omenja pa se možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery}, ki je že sedaj privzeto izklopljena.
 Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko mine še nekaj časa preden doseže status GA, če slučajno ne bo šel po stopinjah svojega predhodnika.
 \section{Cilium}
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v naši gruči~\cite{cilium-intro}.
 Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot na primer zapiranje portov in omejevanje komunikacije.
 Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
-Zaradi naprednih možnosti, ki jih Cilium ponuja, se podjetja velikokrat odločijo za uporabo Ciliuma v svojih gručah Kubernetes, tudi ko ne povezujejo več gruč med seboj.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih gruč Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki so sposobni delati razporejanje prometa med različnimi gručami.
-Takšne objekte definiramo z anotacijo io.cilium/global-service~\cite{setup-cilium-cluster-mesh}.
-Omogoča nam tudi omejevanje povezovanja med gručami z njihovim objektom CiliumNetworkPolicy~\cite{setup-cilium-cluster-mesh}.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki razporejajo promet med različnimi gručami.
+Takšne objekte definiramo z anotacijo \spverb|io.cilium/global-service|~\cite{setup-cilium-cluster-mesh}.
+Omogoča nam tudi omejevanje povezovanja med gručami z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
 Ko postavljamo mrežo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasbenih omrežjih.
 Ključno pri uporabi Ciliuma za povezovanje gruč je, da so vsa naša vozlišča dosegljiva med seboj.
-A četudi so naše gruče v med seboj nedosegljivih zasebnih omrežjih, pa je problem z lahkoto rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno virtualno omrežje~\cite{setup-cilium-cluster-mesh}.
+A četudi so naše gruče v med seboj nedosegljivih zasebnih omrežjih, pa je problem rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno navidezno omrežje~\cite{setup-cilium-cluster-mesh}.
 
 Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da se Cilim ukvarja samo s povezovanjem gruč na omrežnem nivoju.
 Ne omogoča enotnega upravljanja in sinhroniziranja objektov med gručami zato moramo objekte sinhronizirati sami.
