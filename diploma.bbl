@@ -92,6 +92,13 @@ Marino Lorenzo.
   environment.
 \newblock Magisterska naloga, Politecnico di Torino, 2020.
 
+\bibitem{rpi-tech-spec}
+Raspberry Pi~Trading Ltd.
+\newblock Raspberry pi 4 computer model b.
+\newblock Dosegljivo:
+  \url{https://static.raspberrypi.org/files/product-briefs/200521+Raspberry+Pi+4+Product+Brief.pdf}.
+\newblock [Dostopano: 20. 1. 2021].
+
 \bibitem{kube-and-edge}
 Karim Manaouil and Adrien Lebre.
 \newblock Kubernetes and the edge?

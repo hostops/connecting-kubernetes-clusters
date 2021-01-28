@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {5.3}Cilium}{17}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Priprava sistema gru\IeC {\v c} za testiranje}{19}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Raspberry PI 4}{19}{section.6.1}%
-\contentsline {section}{\numberline {6.2}K3S in K3OS}{19}{section.6.2}%
+\contentsline {section}{\numberline {6.2}K3S in K3OS}{20}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Demonstracijska spletna aplikacija}{21}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Namestitev KubeFed}{22}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Povezovanje med podatkovnimi centri}{25}{chapter.7}%
@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {7.3}Povezovanje med podatkovnimi centri}{26}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Razporeditev uporabnikov po gru\IeC {\v c}ah}{26}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Definicija infrastrukture za na\IeC {\v s} primer}{27}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Implementacija s KubeFed}{29}{section.7.6}%
+\contentsline {section}{\numberline {7.6}Implementacija s KubeFed}{28}{section.7.6}%
 \contentsline {section}{\numberline {7.7}Sinhronizacija podatkov}{29}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Uporaba primerne podatkovne baze}{30}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Podatke sinhroniziramo sami}{30}{subsection.7.7.2}%
@@ -48,6 +48,6 @@
 \contentsline {chapter}{\numberline {9}Upravljanje gru\IeC {\v c} na robu oblaka}{37}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Gru\IeC {\v c}e na robu oblaka}{37}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Implementacija s KubeFed}{37}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Sinhronizacija podatkov}{39}{section.9.3}%
+\contentsline {section}{\numberline {9.3}Sinhronizacija podatkov}{38}{section.9.3}%
 \contentsline {chapter}{\numberline {10}Sklepne ugotovitve}{41}{chapter.10}%
 \contentsline {chapter}{Literatura}{43}{chapter.10}%
