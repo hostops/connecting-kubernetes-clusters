@@ -317,14 +317,14 @@ Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno 
 Te računalnike lahko vedno povežemo vsaj v več različnih gruč, četudi to pomeni, da je v nekaterih gručah samo po en strežnik oziroma vozlišče.
 Ob prisotnosti povezave pa lahko te gruče med seboj povežeme šibkeje.
 
-Ko govorimo o tesni povezanosti znotraj gruče velja, da ima vsako vozlišče dostop do vsakega, da vsak kontejner lahko komunicira z vsakim kontejnerjem, da so vozlišča v istem hitrem internem omrežju podatkovnega centra. 
+Ko govorimo o tesni povezanosti znotraj gruče velja, da ima vsako vozlišče dostop do vsakega, da vsak kontejner lahko komunicira z vsakim, da so vozlišča v istem hitrem internem omrežju podatkovnega centra. 
 Pričakujemo, da sistem, ki ga uporabljamo za gručenje omogoča razporejanje zaželenih storitev in kontejnerjev med strežniki in v primeru izpada vozlišča to odstrani iz sistema in kontejnerje s tega vozlišča prerazporedi na preostala vozlišča.
 
 Šibka povezanost med gručami pomeni, da je povezava med različnimi gručami počasna, nezanesljiva ali draga.
-Zaradi omejitev moramo sprejemati kompromise na podlagi zmožnosti povezave in naših potreb.
+Zaradi omejitev moramo sprejemati kompromise na podlagi zmožnosti povezave.
 Skladno z našimi potrebami se lahko odrečemo komunikaciji med vozlišči v različnih gručah.
 Pričakujemo, da vsaka gruča skrbi za svoja vozlišča, ohranja svoje storitve in kontejnerje v delovanju.
-Od sistema za povezovanje gruč pa si želimo, da nam omogoča centralni nadzor nad storitvami v gručah, prerazporejanje teh storitev med gručami, dinamično odkrivanje drugih gruč in njihovih storitev, izločanje nedosegljivih gruč, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
+Naloge sistemov za povezovanje gruč pa so: omogočanje centralnega nadzora nad storitvami v gručah, prerazporejanje teh storitev med gručami, dinamično odkrivanje drugih gruč in njihovih storitev, izločanje nedosegljivih gruč, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
 
 \begin{figure}[h]
 \begin{center}
@@ -336,9 +336,9 @@ Od sistema za povezovanje gruč pa si želimo, da nam omogoča centralni nadzor 
 
 \chapter{Kubernetes}
 \label{Kubernetes}
-Kubernetes definira javno dostopen REST API in trenutno obstaja že več kot 70 distribucij~\cite{cncf}.
-Ko se bomo v tem dokumentu sklicevali na Kubernetes bomo imeli v mislih njegovo distribucijo.
-\section{Zgodovina}
+Kubernetes definira javno dostopen REST API.
+Trenutno obstaja že več kot 70 distribucij~\cite{cncf} Kubernetesa.
+\section{Zgodovina~\cite{mastering-kubernetes}}
 Leta 2014 je Google objavil in odprl kodo projekta Kubernetes~\cite{what-is-Kubernetes}.
 Gre za program, ki je bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških gruč v produkcijskih okoljih.
 A to vseeno niso pravi začetki Kubernetesa.
@@ -359,12 +359,11 @@ Najpogostejši tipi objektov, ki se pojavijo v Kubernetesu so pod, service, depl
 \label{problem-povezanih-clustrov}
 \end{figure}
 \subsection{Pod~\cite{pod}}
-Objekt pod običajno predstavlja nek primerek mikrostoritve.
-Gre za najmanjšo enoto v Kubernetesu, ki lahko teče v gruči.
+Objekt pod je najmanjša enota v Kubernetesu, ki lahko teče v gruči.
 Sestavljen je iz enega ali več kontejnerjev, ki si delijo diske in omrežni vmesnik.
 To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
 \subsection{Service~\cite{service}}
-Objekt service večinoma označuje vse pode ene mikrostoritve.
+Objekt service označuje vse pode ene mikrostoritve.
 Kubernetes iz objekta v internem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi podi.
 Service objekte uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov Poda, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
 Takšen zahtevek potem dobi en izmed označenih podov v objektu service.
@@ -373,11 +372,11 @@ Deployment je objekt, ki mu podamo število željenih objektov pod in predlogo z
 Potem pa interne storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa pod kot smo navedli v deploymentu.
 Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
 \subsection{StatefulSet~\cite{statefulset}}
-Objekt zelo podoben deploymentu, le da statefulset vsaki replikaciji poda dodeli unikatno številko. 
+Objekt zelo podoben deploymentu, le da statefulset vsakemu podu dodeli unikatno številko. 
 Pod, ki se ustvari s to številko ohranja diske, mrežni vmesnik, IP naslov in domensko ime.
 Pomembna razlika med objektoma deployment in statefulset pa je tudi v polju \spverb|volumeClaimTemplate|.
 Statefulset omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
-Statefulset se najpogosteje uporablja za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
+Uporablja pa se za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
 \chapter{Pregled področja in literature}
 V tem poglavju si bomo pogledali nekaj ključnih del in literature na področju povezovanja gruč Kubernetes.
 V delih je pogosto za federacijo izbran sistem Federation 1 ali Federation 2, pogosto prav zaradi tesne povezanosti s sistemom Kubernetes ~\cite{tosca-fed} ~\cite{dyn-place} ~\cite{kube-and-edge}.
