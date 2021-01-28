@@ -8,8 +8,8 @@
 \BOOKMARK [1][-]{section.3.1}{Zgodovina mastering-kubernetes}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.2}{Osnovni pojmi}{chapter.3}% 9
 \BOOKMARK [0][-]{chapter.4}{Pregled podrocja in literature}{}% 10
-\BOOKMARK [0][-]{chapter.5}{Povezovanje Kubernetes gruc}{}% 11
-\BOOKMARK [1][-]{section.5.1}{ArgoCD in drugi GitOps sistemi}{chapter.5}% 12
+\BOOKMARK [0][-]{chapter.5}{Povezovanje gruc Kubernetes}{}% 11
+\BOOKMARK [1][-]{section.5.1}{ArgoCD in drugi sistemi GitOps}{chapter.5}% 12
 \BOOKMARK [1][-]{section.5.2}{KubeFed}{chapter.5}% 13
 \BOOKMARK [1][-]{section.5.3}{Cilium}{chapter.5}% 14
 \BOOKMARK [0][-]{chapter.6}{Priprava sistema gruc za testiranje}{}% 15
