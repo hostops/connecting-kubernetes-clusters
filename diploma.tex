@@ -178,8 +178,7 @@ Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega
 % zahvala
 \thispagestyle{empty}\mbox{}\vfill\null\it%
 \noindent
-Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojci Ciglarič za pripravljenost in mentorstvo.
-Zahvalil bi se tudi somentorju asist. dr. Matjažu Pančurju za vse nasvete in pomoč pri pisanju diplomske naloge.
+Na tem mestu bi se zahvalil mentorici izr. prof. dr. Mojci Ciglarič in somentorju asist. dr. Matjažu Pančurju za pripravljenost, mentorstvo, vse nasvete in pomoč pri pisanju diplomske naloge.
 Zahvala pa gre tudi moji ženi, staršem, bratom, sestram in prijateljem za podporo in spodbudo pri študiju.
 \rm\normalfont
 % prazna stran
@@ -273,16 +272,16 @@ We find that presented modern methods of connecting clusters can greatly facilit
 \chapter{Uvod}
 \label{uvod}
 \section{Motivacija}
-Leta 2014 je Google objavil kodo sistema za orkestracijo kontejnerjev Kubernetes~\cite{what-is-Kubernetes}.
+Leta 2014 je Google objavil kodo sistema za orkestracijo kontejnerjev Kubernetes~\cite{what-is-Kubernetes}~\cite{borg-omega-kubernetes}.
 Kubernetes  je univerzalni način, ki nam omogoča, da več računalnikov povežemo v gručo, ki deluje kot ena samostojna enota. 
-Povezovanje strežnikov v gruče nam vsaj teoretično omogoča visoko razpoložljivost (HA) naših storitev ~\cite{mastering-Kubernetes} in sinhrono delovanje več računalnikov.
+Povezovanje strežnikov v gruče nam vsaj teoretično omogoča visoko razpoložljivost (HA) naših storitev~\cite{mastering-kubernetes} in sinhrono delovanje več računalnikov.
 V primerih obravnavanih v tem delu pa ni dovolj uporaba ene same gruče, ampak moramo med seboj povezati in upravljati več gruč.
 V zadnjem času so razvijalci Kubernetesa začeli bolj celostno reševati ta problem.
 Poizkusili so ga rešiti s projektom Federation 1, po njegovi ukinitvi~\cite{kubernetes-federation-evolution}, pa razvijalci Federation 2 oziroma KubeFed trdijo, da bo projekt uspešno prešel iz alfa v beta verzijo~\cite{kubefed-repo}.
 \section{Cilj in vsebina naloge}
 V tem diplomskem delu bomo obravnavali rešitve problema povezovanja računalniških gruč in primere uporabe, ki izvirajo iz potreb industrije.
 Vsakemu primeru bomo poiskali rešitev v Kubernetes okolju z uporabo orodja KubeFed, poudarek pa bomo dali na sinhronizacijo podatkov.
-\subsection{Prevelika latenca}
+\subsection{Prevelika latenca~\cite{minimizing-latency}}
 Problem prevelike latence se pojavi v primeru počasnega prenosa podatkov iz naše gruče do uporabnikov.
 Ko problem povzroča velika fizična razdalja, ga rešimo s postavitvijo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
 Če pa postavimo gruče še bližje našim končnim uporabnikom, na primer v njihovo podjetje ali dom, pa govorimo o gručah na robu oblaka.
@@ -294,7 +293,7 @@ Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je pri
 \caption{Problem prevelike latence.}
 \label{problem-prevelike-latence}
 \end{figure}
-\subsection{Višja razpoložljivost}
+\subsection{Višja razpoložljivost~\cite{ha-systems}}
 Večkrat letno pride do izpada kakšnega večjega podatkovnega centra. 
 To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski opremi ~\cite{common-outages}.
 Če gre v takšnem primeru za oblačnega ponudnika, kjer imamo nameščeno našo gručo, pomeni, da bo hkrati nedosegljiva tudi ta.
@@ -307,13 +306,13 @@ Prav tako pa nam že Kubernetes sam omogoča izolacijo na posamezne strežnike~\
 Kljub tem postopkom se v Kubernetesu pojavljajo problemi, zaradi katerih postane celotna gruča nedosegljiva, s tem pa vse aplikacije v tej gruči.
 Če postavimo del neodvisnih aplikacij v drugo gručo, smo s tem preprečili njihov izpad ob napaki v prvi gruči.
 Izolacija pa je pomembna tudi z varnostnega vidika.
-Če se napadalec polasti enega samega vozlišča, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču.
+Če se napadalec polasti enega samega vozlišča, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču~\cite{securing-kube}.
 Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
 Če imamo vsako od naših aplikacij v svoji gruči pa se temu lahko izognemo.
 \chapter{Problem povezovanja gruč}
 Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
 
-Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno tesno gručo.
+Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno tesno gručo~\cite{kube-and-edge}.
 Te računalnike lahko vedno povežemo vsaj v več različnih gruč, četudi to pomeni, da je v nekaterih gručah samo po en strežnik oziroma vozlišče.
 Ob prisotnosti povezave pa lahko te gruče med seboj povežeme šibkeje.
 
@@ -338,7 +337,7 @@ Naloge sistemov za povezovanje gruč pa so: omogočanje centralnega nadzora nad 
 \label{Kubernetes}
 Kubernetes definira javno dostopen vmesnik REST.
 Trenutno obstaja že več kot 70 distribucij~\cite{cncf} Kubernetesa.
-\section{Zgodovina~\cite{mastering-kubernetes}}
+\section{Zgodovina~\cite{mastering-kubernetes}~\cite{borg-omega-kubernetes}}
 Leta 2014 je Google objavil in odprl kodo projekta Kubernetes~\cite{what-is-Kubernetes}.
 Gre za program, ki je bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških gruč v produkcijskih okoljih.
 A to vseeno niso pravi začetki Kubernetesa.
@@ -365,7 +364,7 @@ To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na i
 \subsection{Service~\cite{service}}
 Objekt service označuje vse pode ene mikrostoritve.
 Kubernetes iz objekta v notranjem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi podi.
-Service objekte uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov Poda, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
+Objekte service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov Poda, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
 Takšen zahtevek potem dobi en izmed označenih podov v objektu service.
 \subsection{Deployment~\cite{deployment}}
 Deployment je objekt, ki mu podamo število željenih objektov pod in predlogo za njihovo izdelavo.
@@ -534,7 +533,7 @@ Takšna postavitev pa je lahko tudi primer gruče na robu oblaka, kar je bolj po
 \label{rpi-gruce}
 \end{figure}
 \section{K3S in K3OS}
-Obstaja več implementacij Kubernetesa in mi bomo uporabili z viri varčno odprtokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}.
+Obstaja več implementacij Kubernetesa in mi bomo uporabili z viri varčno odprtokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}~\cite{k8s-performance-comparison}~\cite{low-resource-k8s}.
 Hkrati so v podjetju Rancher pripravili distribucijo operacijskega sistema Linux K3OS~\cite{k3os-git}.
 Gre za minimalen operacijski sistem s prednameščenim sistemom K3S.
 Te\-ža\-va se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
@@ -612,18 +611,18 @@ Več o tem je napisano v poglavjih, kjer ukaze tudi uporabljamo.
 
 \chapter{Povezovanje med podatkovnimi centri}
 \label{povezovanje-med-centri}
-\section{Problem velike latence}
+\section{Problem velike latence~\cite{minimizing-latency}}
 Za primer vzemimo preprosto spletno aplikacijo, ki mora hraniti stanje in jo namestimo v eno gručo Kubernetes.
 Če našo aplikacijo ponudimo vsem uporabnikom na globalnem trgu se nam bo pojavil problem velike latence.
 To pomeni, da bo naša aplikacija za uporabnike, ki so bolj oddaljeni od naše gruče delovala počasneje oziroma se bodo podatki do uporabnika prenašali dalj časa.
 
-Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo bližje uporabniku. 
+Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo bližje uporabniku~\cite{geo-instability}.
 Če pa moramo podatke med gručami še sinhronizirali pa to zahteva dodaten trud.
 V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim SQL podatkovnim bazam.
-CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči.
+CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči ~\cite{databases-comparison}.
 Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
 \section{Povečanje razpoložljivosti aplikacije}
-Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade cel podatkovni center.
+Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade cel podatkovni center~\cite{cloud-failures}.
 Spomnimo se, da Kubernetes najbolj učinkovito deluje, če naša vozlišča uporabljajo hitro notranje omrežje podatkovnega centra.
 V primeru napake v podatkovnem centru ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovni center in s tem gruča v njem.
 Če uporabljamo strežnike v oblaku, pa gremo lahko še korak dlje z zagotavljanjem razpoložljivosti.
@@ -635,7 +634,7 @@ Postaviti moramo gruče v več različnih podatkovnih centrih in jih nastaviti, 
 Odvisno od problema bodo te podatkovni centri bližje uporabniku ali pa v lasti različnih oblačnih ponudnikov.
 A princip ostaja enak.
 \section{Razporeditev uporabnikov po gručah}
-Ko imamo na vsaki gruči javno izpostavljen Kubernetesov service objekt in postavljene primerne ingress objekte, moramo še vedno uporabnike preusmeriti na njim najbližjo gručo.
+Ko imamo na vsaki gruči javno izpostavljen Kubernetesov service objekt in postavljene primerne objekte ingress, moramo še vedno uporabnike preusmeriti na njim najbližjo gručo.
 Uporabnike lahko mi usmerimo avtomatsko z DNS zapisi, ki omogočajo usmerjanje na podlagi geolokacije.
 Lahko uporabimo in namestimo zunanji DNS skozi Kubernetes ali pa to opravimo kar mimo Kubernetesa.
 V naših lokalnih testnih gručah bomo ta korak preskočili in jih ne bomo usmerjali preko javnih DNS strežnikov, saj v lokalnem okolju to ni smiselno.
@@ -735,7 +734,7 @@ Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire v g
 V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v gručo, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
 A vseeno se moramo zavedati, da je ta korak smiseln šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerijzacija, izolacija na posamezno Kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in druge.
-\subsection{Vdori}
+\subsection{Vdori~\cite{securing-kube}}
 Podobno kot pri izpadih aplikacije je tudi pri preprečevanjih posledic vdorov.
 Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, kriptiranje komunikacije med mikrostoritvami, uporabo nepriviligiranih in neadministratorskih kontejnerjev.
 Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v gručah manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem pa je smiselno kritične aplikacije izolirati v svoje gruče.

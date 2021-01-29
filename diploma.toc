@@ -7,12 +7,12 @@
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{1}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}ja razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.1}Prevelika latenca~\cite {minimizing-latency}}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}ja razpolo\IeC {\v z}ljivost~\cite {ha-systems}}{2}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Potreba po izolaciji aplikacij}{3}{subsection.1.2.3}%
 \contentsline {chapter}{\numberline {2}Problem povezovanja gru\IeC {\v c}}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Kubernetes}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Zgodovina~\cite {mastering-kubernetes}}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Zgodovina~\cite {mastering-kubernetes}~\cite {borg-omega-kubernetes}}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Osnovni pojmi}{7}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pod~\cite {pod}}{8}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Service~\cite {service}}{9}{subsection.3.2.2}%
@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {6.3}Demonstracijska spletna aplikacija}{21}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Namestitev KubeFed}{22}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Povezovanje med podatkovnimi centri}{25}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Problem velike latence}{25}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Problem velike latence~\cite {minimizing-latency}}{25}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Pove\IeC {\v c}anje razpolo\IeC {\v z}ljivosti aplikacije}{26}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Povezovanje med podatkovnimi centri}{26}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Razporeditev uporabnikov po gru\IeC {\v c}ah}{26}{section.7.4}%
@@ -43,7 +43,7 @@
 \contentsline {chapter}{\numberline {8}Upravljanje izoliranih aplikacij}{33}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Zmanj\IeC {\v s}evanje posledic vdorov in izpadov}{33}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Izpadi aplikacije}{33}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Vdori}{34}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.2}Vdori~\cite {securing-kube}}{34}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Implementacija s Kubefed}{34}{section.8.2}%
 \contentsline {chapter}{\numberline {9}Upravljanje gru\IeC {\v c} na robu oblaka}{37}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Gru\IeC {\v c}e na robu oblaka}{37}{section.9.1}%
