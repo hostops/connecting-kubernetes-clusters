@@ -5,7 +5,7 @@
 \BOOKMARK [1][-]{section.1.2}{Cilj in vsebina naloge}{chapter.1}% 5
 \BOOKMARK [0][-]{chapter.2}{Problem povezovanja gruc}{}% 6
 \BOOKMARK [0][-]{chapter.3}{Kubernetes}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Zgodovina mastering-kubernetes borg-omega-kubernetes}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.1}{Zgodovina}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.2}{Osnovni pojmi}{chapter.3}% 9
 \BOOKMARK [0][-]{chapter.4}{Pregled podrocja in literature}{}% 10
 \BOOKMARK [0][-]{chapter.5}{Povezovanje gruc Kubernetes}{}% 11
@@ -18,7 +18,7 @@
 \BOOKMARK [1][-]{section.6.3}{Demonstracijska spletna aplikacija}{chapter.6}% 18
 \BOOKMARK [1][-]{section.6.4}{Namestitev KubeFed}{chapter.6}% 19
 \BOOKMARK [0][-]{chapter.7}{Povezovanje med podatkovnimi centri}{}% 20
-\BOOKMARK [1][-]{section.7.1}{Problem velike latence minimizing-latency}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.1}{Problem velike latence}{chapter.7}% 21
 \BOOKMARK [1][-]{section.7.2}{Povecanje razpolo\236ljivosti aplikacije}{chapter.7}% 22
 \BOOKMARK [1][-]{section.7.3}{Povezovanje med podatkovnimi centri}{chapter.7}% 23
 \BOOKMARK [1][-]{section.7.4}{Razporeditev uporabnikov po grucah}{chapter.7}% 24
