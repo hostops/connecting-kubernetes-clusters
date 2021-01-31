@@ -419,12 +419,12 @@ Od našega primera pa je odvisno, katere funkcionalnosti želimo uporabiti in ka
 V nadaljevanju bomo predstavili različne sisteme za povezovanje gruč Kubernetes, njihove glavne prednosti in značilnosti.
 \section{ArgoCD in drugi sistemi GitOps}
 \subsection{Sinhronizacija objektov z uporabo sistemov GitOps}
-Osnovna ideja pristopa GitOps je, da imamo našo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
-Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot 100 podjetji, ki pri razvoju svojih spletnih aplikacij uporabljajo pristop GitOps~\cite{argocd-user-list}.
+Osnovna ideja pristopa GitOps je, da imamo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
+Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot sto podjetij, ki ga uporabljajo pri razvoju~\cite{argocd-user-list}.
 
-Če uporabljamo kakšnega od sistemov GitOps, lahko potem iz enakega repozitorija postavimo več gruč.
-V osnovi takšen pristop pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med objekti Pod v različnih gručah ali pa odkrivanje storitev ali kontejnerjev.
-V nadaljevanju si bomo izbrali sistem ArgoCD in si pogledali, kako bi si postavili zgoraj opisano infrastrukturo.
+Če uporabljamo kakšnega od sistemov GitOps, lahko iz enakega repozitorija postavimo več gruč.
+V osnovi takšen pristop omogoča, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam ne omogoča naprednih funkcionalnosti, kot so komunikacija med objekti Pod v različnih gručah ali pa odkrivanje storitev ali kontejnerjev.
+V nadaljevanju bomo izbrali sistem ArgoCD in pogledali, kako bi postavili zgoraj opisano infrastrukturo.
 \subsection{Sinhronizacija objektov z ArgoCD}
 ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
 Uporabimo lahko YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
