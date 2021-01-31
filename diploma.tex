@@ -616,11 +616,10 @@ V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo
 CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči ~\cite{databases-comparison}.
 Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni treba konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
 \section{Povečanje razpoložljivosti aplikacije}
-Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade cel podatkovni center~\cite{cloud-failures}.
+Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade ves podatkovni center~\cite{cloud-failures}.
 Spomnimo se, da Kubernetes najbolj učinkovito deluje, če naša vozlišča uporabljajo hitro notranje omrežje podatkovnega centra.
-V primeru napake v podatkovnem centru ali hujših vremenskih pogojev pomeni, da je nedosegljiv cel podatkovni center in s tem gruča v njem.
-Če uporabljamo strežnike v oblaku, pa gremo lahko še korak dlje z zagotavljanjem razpoložljivosti.
-Če nam ni dovolj niti to, da uporabimo različne razpoložljivostne cone in podatkovne centre oblačnih ponudnikov, lahko postavimo naše gruče pri več različnih ponudnikih.
+V primeru napake v podatkovnem centru ali hujših vremenskih pogojev, ki bi prekinili povezave do podatkovnega centra, to pomeni, da je nedosegljiv ves podatkovni center in s tem gruča v njem.
+Pri uporabi strežnikov v oblaku lahko še povečamo razpoložljivost tako, da gruče namestimo v različne razpoložljivostne cone (availability zones) in podatkovne centre pri enem ali celo več različnih oblačnih ponudnikih.
 Takšen pristop je opisan v članku~\cite{tosca-fed}, omogoča pa ga predvsem neodvisnost Kubernetesa od platform.
 \section{Povezovanje med podatkovnimi centri}
 Rešitev za oba omenjena problema je enaka.
