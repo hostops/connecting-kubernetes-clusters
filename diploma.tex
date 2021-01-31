@@ -281,10 +281,9 @@ Poskusili so ga rešiti s projektom Federation 1, po njegovi ukinitvi~\cite{kube
 V diplomskem delu bomo obravnavali rešitve problema povezovanja gruč Kubernetes in primere uporabe, ki izvirajo iz potreb industrije.
 Vsakemu primeru bomo poiskali rešitev v okolji Kubernetes z uporabo orodja KubeFed, poudarek pa bomo dali na sinhronizacijo podatkov.
 \subsection{Prevelika latenca}
-Problem prevelike latence se pojavi v primeru počasnega prenosa podatkov iz naše gruče do uporabnikov~\cite{minimizing-latency}.
-Ko problem povzroča velika fizična razdalja, ga rešimo s postavitvijo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
-Če pa postavimo gruče še bližje našim končnim uporabnikom, na primer v njihovo podjetje ali dom, pa govorimo o gručah na robu oblaka.
-Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da so tudi v istem omrežju znotraj istega podatkovnega centra, saj se s tem izognemo veliki latenci ~\cite{kube-and-edge}.
+Problem prevelike latence se pojavi, ko je čas od poslanega zahtevka uporabnika do prejema odgovora s strežnika prevelik~\cite{minimizing-latency}.
+Ko problem povzroča velika fizična razdalja, ga rešimo tako, da postavimo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
+Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da se nahajajo v istem omrežju znotraj istega podatkovnega centra, saj se s tem izognemo veliki latenci ~\cite{kube-and-edge}.
 \begin{figure}[h]
 \begin{center}
   \includegraphics[width=1.0\textwidth]{images/problem-prevelike-latence.pdf}
@@ -292,12 +291,12 @@ Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je pri
 \caption{Problem prevelike latence.}
 \label{problem-prevelike-latence}
 \end{figure}
-\subsection{Višja razpoložljivost}
+\subsection{Visoka razpoložljivost}
 Večkrat letno pride do izpada kakšnega večjega podatkovnega centra~\cite{ha-systems}. 
 To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski opremi ~\cite{common-outages}.
-Če gre v takšnem primeru za oblačnega ponudnika, kjer imamo nameščeno našo gručo, pomeni, da bo hkrati nedosegljiva tudi ta.
+Če gre v takšnem primeru za oblačnega ponudnika, pri katerem imamo nameščeno svojo gručo, to pomeni, da bo hkrati nedosegljiva tudi ta.
 V splošnem se problem reši tako, da uporabljamo več gruč in jih namestimo v več različnih podatkovnih centrov.
-V primeru izpada enega podatkovnega centra pa naše uporabnike preusmerimo v drug podatkovni center.
+V primeru izpada enega podatkovnega centra pa svoje uporabnike preusmerimo v drug podatkovni center.
 \subsection{Potreba po izolaciji aplikacij}
 Ko govorimo o izolaciji aplikacije se nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
 Uporaba Kubernetesa od nas zahteva izolacijo v kontejnerje.

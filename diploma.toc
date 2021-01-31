@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.1}Motivacija}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Cilj in vsebina naloge}{1}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Prevelika latenca}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Vi\IeC {\v s}ja razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Visoka razpolo\IeC {\v z}ljivost}{2}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Potreba po izolaciji aplikacij}{3}{subsection.1.2.3}%
 \contentsline {chapter}{\numberline {2}Problem povezovanja gru\IeC {\v c}}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Kubernetes}{7}{chapter.3}%

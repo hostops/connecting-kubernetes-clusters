@@ -121,6 +121,12 @@ Dongmin Kim, Hanif Muhammad, Eunsam Kim, Sumi Helal, and Choonhwa Lee.
   container platform.
 \newblock {\em Applied Sciences}, 9(1), 2019.
 
+\bibitem{common-outages}
+V.~B.~Mendiratta L.~Fiondella, S. S.~Gokhale.
+\newblock Cloud incident data: An empirical analysis.
+\newblock In {\em 2013 IEEE International Conference on Cloud Engineering
+  (IC2E)}, pages 241--249, 2013.
+
 \bibitem{k3os-git}
 Rancher Labs.
 \newblock K3os.
@@ -156,14 +162,6 @@ Karim Manaouil and Adrien Lebre.
 \newblock Kubernetes and the edge?
 \newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
   2020.
-
-\bibitem{common-outages}
-David Mytton.
-\newblock What are the common causes of cloud outages?
-\newblock Dosegljivo:
-  \url{https://davidmytton.blog/what-are-the-common-causes-of-cloud-outages/},
-  2019.
-\newblock [Dostopano: 27. 01. 2021].
 
 \bibitem{cncf}
 Cloud native~computing foundation.
