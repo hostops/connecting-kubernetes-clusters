@@ -1,7 +1,10 @@
 \begin{thebibliography}{10}
 
 \bibitem{borg-omega-kubernetes}
-D.~Oppenheimer E. Brewer-J.~Wilkes B.~Burns, B.~Grant.
+Brendan Burns, Brian Grant, David Oppenheimer, Eric Brewer, and John Wilkes.
+\newblock Borg, omega, and kubernetes: Lessons learned from three
+  container-management systems over a decade.
+\newblock {\em Queue}, 14(1):70–93, January 2016.
 
 \bibitem{cassandra-zone}
 Apache Cassandra.
@@ -26,11 +29,24 @@ CrateDB.
 \newblock [Dostopano: 29. 12. 2020].
 
 \bibitem{k3os-rpi-image-generator}
-odprtokodna~skupnost D.~Brentjes, S.~Gielen.
+odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
 \newblock Picl k3os image generator.
 \newblock Dosegljivo:
   \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cloud-failures}
+P.~T. {Endo}, G.~L. {Santos}, D.~{Rosendo}, D.~M. {Gomes}, A.~{Moreira},
+  J.~{Kelner}, D.~{Sadok}, G.~E. {Gonçalves}, and M.~{Mahloo}.
+\newblock Minimizing and managing cloud failures.
+\newblock {\em Computer}, 50(11):86--90, November 2017.
+
+\bibitem{k8s-performance-comparison}
+Halim Fathoni, Chao-Tung Yang, Chih-Hung Chang, and Chin-Yin Huang.
+\newblock Performance comparison of lightweight kubernetes in edge devices.
+\newblock In Christian Esposito, Jiman Hong, and Kim-Kwang~Raymond Choo,
+  editors, {\em Pervasive Systems, Algorithms and Networks}, pages 304--309,
+  Cham, 2019. Springer International Publishing.
 
 \bibitem{mastering-kubernetes}
 Sayfan Gigi.
@@ -56,13 +72,6 @@ Lukasz Guminski.
 \newblock Dosegljivo:
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 23. 11. 2020].
-
-\bibitem{k8s-performance-comparison}
-Chao-Tung C.-H. Chang C.-Y.~Huang H.~Fathoni, C.-T.~Yang.
-\newblock Performance comparison of lightweight kubernetes in edge devices.
-\newblock In K.-K. Raymond~Choo C.~Esposito, J.~Hong, editor, {\em Pervasive
-  Systems, Algorithms and Networks}, pages 304--309, Cham, 2019. Springer
-  International Publishing.
 
 \bibitem{git-diploma}
 Jakob Hostnik.
@@ -100,7 +109,7 @@ M.~S. {Islam Shamim}, F.~{Ahamed Bhuiyan}, and A.~{Rahman}.
 \newblock In {\em 2020 IEEE Secure Development (SecDev)}, pages 58--64, 2020.
 
 \bibitem{databases-comparison}
-Lauren Milechin Siddharth Samsi-William Arcand David Bestor WilBergero Chansup
+Lauren Milechin Siddharth Samsi William Arcand David Bestor WilBergero Chansup
   Byun Matthew Hubbell Michael Houle Michael Jones Anne Klein Peter Michaleas
   Julie Mullen AProut Antonio Rosa Charles Yee Albert~Reuther Jeremy~Kepner,
   Vijay~Gadepally.
@@ -148,7 +157,7 @@ Raspberry Pi~Trading Ltd.
 \bibitem{minimizing-latency}
 Marzieh Malekimajd, Ali Movaghar, and Seyedmahyar Hosseinimotlagh.
 \newblock Minimizing latency in geo-distributed clouds.
-\newblock {\em The Journal of Supercomputing}, 71(12):4423--4445, 2015.
+\newblock {\em The Journal of Supercomputing}, 71(12):4423--4445, Dec 2015.
 
 \bibitem{kube-and-edge}
 Karim Manaouil and Adrien Lebre.
@@ -161,12 +170,6 @@ Cloud native~computing foundation.
 \newblock Cncf cloud native interactive landscape.
 \newblock Dosegljivo: \url{https://landscape.cncf.io/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
-
-\bibitem{cloud-failures}
-D.~Rosendo-D. M. Gomes A. Moreira J. Kelner D. Sadok G. E. Gonçalves M.~Mahloo
-  P.~T.~Endo, G. L.~Santos.
-\newblock Minimizing and managing cloud failures.
-\newblock {\em Computer}, 50(11):86--90, 2017.
 
 \bibitem{difference-multi-cluster}
 Platform9.

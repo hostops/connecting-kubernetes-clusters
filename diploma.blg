@@ -3,19 +3,6 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: diploma.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-I was expecting a `,' or a `}'---line 105 of file literatura.bib
- :   
- :   title = {Borg, Omega, and Kubernetes: Lessons Learned from Three Container-Management Systems over a Decade},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Too many commas in name 1 of "B. Burns, B. Grant, D. Oppenheimer, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "B. Burns, B. Grant, D. Oppenheimer, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, Chao-Tung, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, Chao-Tung, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
@@ -46,29 +33,6 @@ Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, S
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
 while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "B. Burns, B. Grant, D. Oppenheimer, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "B. Burns, B. Grant, D. Oppenheimer, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1090 of file plain.bst
-Warning--empty title in borg-omega-kubernetes
-Warning--empty journal in borg-omega-kubernetes
-Warning--empty year in borg-omega-kubernetes
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, Chao-Tung, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, Chao-Tung, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
@@ -98,58 +62,46 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, Siddharth Samsi, William Arcand, David Bestor, WilBergero, Chansup Byun, Matthew Hubbell, Michael Houle, Michael Jones, Anne Klein, Peter Michaleas, Julie Mullen, AProut, Antonio Rosa, Charles Yee, Albert Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
 while executing---line 1090 of file plain.bst
 You've used 49 entries,
             2118 wiz_defined-function locations,
-            713 strings with 11498 characters,
-and the built_in function-call counts, 12219 in all, are:
-= -- 1217
-> -- 443
+            721 strings with 11783 characters,
+and the built_in function-call counts, 12766 in all, are:
+= -- 1246
+> -- 528
 < -- 6
-+ -- 183
-- -- 133
-* -- 491
-:= -- 2050
-add.period$ -- 182
++ -- 215
+- -- 165
+* -- 566
+:= -- 2154
+add.period$ -- 184
 call.type$ -- 49
-change.case$ -- 210
+change.case$ -- 226
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 446
-empty$ -- 1148
-format.name$ -- 133
-if$ -- 2662
+cite$ -- 49
+duplicate$ -- 447
+empty$ -- 1158
+format.name$ -- 165
+if$ -- 2772
 int.to.chr$ -- 0
 int.to.str$ -- 49
 missing$ -- 13
-newline$ -- 281
+newline$ -- 283
 num.names$ -- 102
-pop$ -- 402
+pop$ -- 409
 preamble$ -- 1
-purify$ -- 162
+purify$ -- 177
 quote$ -- 0
-skip$ -- 336
+skip$ -- 338
 stack$ -- 0
-substring$ -- 451
-swap$ -- 89
+substring$ -- 448
+swap$ -- 90
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 194
-warning$ -- 3
-while$ -- 121
+warning$ -- 0
+while$ -- 116
 width$ -- 51
-write$ -- 553
-(There were 51 error messages)
+write$ -- 559
+(There were 30 error messages)

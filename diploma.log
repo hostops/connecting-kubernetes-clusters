@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,101 +758,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 805--806
 
  []
 
-[42] (./diploma.bbl
-Underfull \hbox (badness 5446) in paragraph at lines 15--21
+[42] (./diploma.bbl (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 5446) in paragraph at lines 18--24
 []\OT1/cmr/m/n/12 CrateDB.  Cra-tedb multi-zone se-tup.  Do-se-gljivo: []$\OT1/
 cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 18--24
 \OT1/cmtt/m/n/12 / / crate . io / docs / crate / howtos / en / latest / cluster
 ing / multi -[]
  []
 
-[43
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+) [43
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / blog / 2016 / 12 / cluster -[
 ] federation -[] in -[]
  []
 
-[44] [45] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 172--178
+[44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 175--181
 []\OT1/cmr/m/n/12 Platform9.  Di-ffe-rence be-tween multi-cluster, multi-master
 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--178
+Underfull \hbox (badness 10000) in paragraph at lines 175--181
 \OT1/cmr/m/n/12 multi-tenant & fe-de-ra-ted ku-ber-ne-tes.  Do-se-gljivo: []$\O
 T1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--178
+Underfull \hbox (badness 10000) in paragraph at lines 175--181
 \OT1/cmtt/m/n/12 / / platform9 . com / blog / difference -[] between -[] multi 
 -[] cluster -[]
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 239--244
+Underfull \hbox (badness 10000) in paragraph at lines 242--247
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  As-si-gning pods to no-des.  Do-se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--244
+Underfull \hbox (badness 10000) in paragraph at lines 242--247
 \OT1/cmr/m/n/12 gljivo: []$\OT1/cmtt/m/n/12 https : / / kubernetes . io / docs 
 / concepts / scheduling -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--258
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
 \OT1/cmtt/m/n/12 16 . docs . kubernetes . io / docs / tasks / federation / admi
 nister -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Ku-be-fed user gu-ide.  Do-se-gljivo:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--271
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 []$\OT1/cmtt/m/n/12 https : / / github . com / kubernetes -[] sigs / kubefed / 
 blob / master /
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 273--278
+Underfull \hbox (badness 2680) in paragraph at lines 276--281
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Ne-twork po-li-cies.  Do-se-gljivo: []
 $\OT1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--278
+Underfull \hbox (badness 10000) in paragraph at lines 276--281
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / services -[] networkin
 g / network -[]
  []
 
 [47]
-Underfull \hbox (badness 4739) in paragraph at lines 294--299
+Underfull \hbox (badness 4739) in paragraph at lines 297--302
 []\OT1/cmr/m/n/12 Kubernetes sku-pnost.  Set up clu-ster fe-de-ra-tion with ku-
 be-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 294--299
+Underfull \hbox (badness 2150) in paragraph at lines 297--302
 \OT1/cmtt/m/n/12 federation / set -[] up -[] cluster -[] federation -[] kubefed
 /$[]\OT1/cmr/m/n/12 .  [Do-sto-pano:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--313
+Underfull \hbox (badness 10000) in paragraph at lines 311--316
 \OT1/cmtt/m/n/12 / / kubernetes . io / docs / concepts / overview / what -[] is
  -[] kubernetes/$[]\OT1/cmr/m/n/12 ,
  []
@@ -866,13 +868,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9244 strings out of 479383
- 131451 string characters out of 5875830
+ 9488 strings out of 479383
+ 134193 string characters out of 5875830
  461214 words of memory out of 5000000
- 25997 multiletter control sequences out of 15000+600000
+ 26238 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,393b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,11n,72p,393b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -880,7 +882,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2869362 bytes).
+Output written on diploma.pdf (64 pages, 2869788 bytes).
 PDF statistics:
  814 PDF objects out of 1000 (max. 8388607)
  706 compressed objects within 8 object streams
