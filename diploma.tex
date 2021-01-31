@@ -607,14 +607,14 @@ Sedaj lahko z uporabo ukazov \spverb|kubefedctl enable| in \spverb|kubefedctl fe
 \label{povezovanje-med-centri}
 \section{Problem velike latence}
 Za primer vzemimo preprosto spletno aplikacijo, ki mora hraniti stanje in jo namestimo v eno gručo Kubernetes.
-Če našo aplikacijo ponudimo vsem uporabnikom na globalnem trgu se nam bo pojavil problem velike latence~\cite{minimizing-latency}.
-To pomeni, da bo naša aplikacija za uporabnike, ki so bolj oddaljeni od naše gruče delovala počasneje oziroma se bodo podatki do uporabnika prenašali dalj časa.
+Če to aplikacijo ponudimo vsem uporabnikom na globalnem trgu, se nam bo pojavil problem velike latence~\cite{minimizing-latency}.
+To pomeni, da bo naša aplikacija za uporabnike, ki so bolj oddaljeni od naše gruče, delovala počasneje oziroma se bodo ob enaki pasovni širini podatki do uporabnika prenašali dalj časa.
 
-Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo bližje uporabniku~\cite{geo-instability}.
-Če pa moramo podatke med gručami še sinhronizirali pa to zahteva dodaten trud.
-V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim SQL podatkovnim bazam.
+Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo, bližje uporabniku~\cite{geo-instability}.
+Če moramo podatke med gručami še sinhronizirat,i pa to zahteva dodaten trud.
+V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim podatkovnim bazam SQL.
 CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči ~\cite{databases-comparison}.
-Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni potrebno konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
+Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni treba konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
 \section{Povečanje razpoložljivosti aplikacije}
 Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade cel podatkovni center~\cite{cloud-failures}.
 Spomnimo se, da Kubernetes najbolj učinkovito deluje, če naša vozlišča uporabljajo hitro notranje omrežje podatkovnega centra.
