@@ -742,20 +742,20 @@ Najprej moramo poskrbeti za primerno zaščito vozlišč Kubernetes, naše aplik
 Ena izmed treh glavnih lastnost federiranih objektov je možnost izbire gruč, na katerih se bo določen objekt ustvaril. 
 S tega stališča je naš primer zelo preprost.
 Samo določimo, da se naša aplikacija izvaja na gruči 3 namesto na vseh.
-Tokrat za federacijo ne moremo uporabiti ukaza \spverb|kubefedctl federate|, ampak moramo spisati konfiguracijo federiranih objektov sami.
+Tokrat za federacijo ne moremo uporabiti ukaza \spverb|kubefedctl federate|, ampak moramo konfiguracijo federiranih objektov spisati sami.
 Najprej bomo z ukazom \spverb|kubectl tag| označili našo izolirano gručo (ali več njih).
 Potem pa bomo lastnosti \spverb|.clusterSelector.matchLabels| vsakega federiranega objekta, ki ga želimo izolirati, dodali označbe vseh izoliranih gruč.
-V takšnih primerih se nam ni potrebno posebej ukvarjati s sinhronizacijo podatkov, saj smo ali vse podatke obdržali v isti gruči ali pa sinhroniziramo na enak način kot v poglavju \ref{povezovanje-med-centri}.
+V takšnih primerih se nam ni treba posebej ukvarjati s sinhronizacijo podatkov, saj smo vse podatke obdržali v isti gruči ali pa sinhronizirali na enak način kot v poglavju \ref{povezovanje-med-centri}.
 \chapter{Upravljanje gruč na robu oblaka}
 \label{edge-clusters}
 \section{Gruče na robu oblaka}
-Razlogov zakaj gruče postavljamo na rob oblaka oziroma fizično bližje konč\-ne\-mu uporabniku je več.
-Za primer vzemimo zahtevo podjetja, da se morajo njihovi podatki obdelovati lokalno v njihovem podjetju.
-V našem primeru se bomo osredotočali na upravljanje takšnih gruč.
+Razlogov, zakaj gruče postavljamo na rob oblaka oziroma fizično bližje konč\-ne\-mu uporabniku, je več.
+Za primer vzemimo zahtevo podjetja, da se morajo njihovi podatki obdelovati lokalno -- v njihovem podjetju.
+V našem primeru se bomo osredotočili na upravljanje takšnih gruč.
 \section{Implementacija s KubeFed}
-Ko enkrat povežemo vse gruče z ukazom \spverb|kubefedctl join| je njihovo upravljanje preprosto.
-Samo nastavimo v kateri gruči želimo katere objekte in naša naloga je končana.
-Zavedati se moramo, da nekaj prenosa podatkov porabi tudi KubeFed za sinhronizacijo, zato moramo biti pozorni, če se podatki prenašajo preko dragih mobilnih omrežji.
+Ko enkrat povežemo vse gruče z ukazom \spverb|kubefedctl join|, je njihovo upravljanje preprosto.
+Samo nastavimo v kateri gruči želimo katere objekte, in naša naloga je končana.
+Zavedati se moramo, da nekaj prenosa podatkov porabi tudi KubeFed za sinhronizacijo, zato moramo biti pozorni, če se podatki prenašajo prek dragih mobilnih omrežij.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/upravljanje-robnih-gruc.pdf}
@@ -765,24 +765,24 @@ Zavedati se moramo, da nekaj prenosa podatkov porabi tudi KubeFed za sinhronizac
 \end{figure}
 
 Nam pa KubeFed omogoča še eno možnost s svojo strukturo.
-Lahko s svojim kontrolerjem in vmesnikom KubeFed implementiramo še dodatne funkcionalnosti, kot so razporejanje obremenjenosti med lokalnimi strežniki in po potrebi povečujemo število primerkov ali pa kar razporejamo opravila s Kubernetes Job objekti.
+S svojim kontrolerjem in vmesnikom KubeFed lahko implementiramo še dodatne funkcionalnosti, kot so razporejanje obremenjenosti med lokalnimi strežniki, in po potrebi povečujemo število primerkov, ali pa kar razporejamo opravila z objekti Kubernetes Job.
 
-Z zelo preprosto integracijo v sistem Kubernetes nam KubeFed vmesnik tu omogoča zelo preprosto implementacijo katerekoli naše rešitve.
+Z zelo preprosto integracijo v sistem Kubernetes nam vmesnik KubeFed tu omogoča zelo preprosto implementacijo katerekoli naše rešitve.
 \section{Sinhronizacija podatkov}
-V primeru gruč na robu oblaka bomo sinhronizacijo verjetno implementirali sami, saj le mi vemo kakšen problem rešujemo in zakaj smo sploh postavljali gruče na robu oblaka.
+V primeru gruč na robu oblaka bomo sinhronizacijo verjetno implementirali sami, saj le mi vemo, kakšen problem rešujemo in zakaj smo sploh postavljali gruče na robu oblaka.
 
 Za primer vzemimo hipotetični varnostni sistem korporacije, ki centralno spremlja varnost v posameznih podružnicah.
 Sistem ima eno nadzorno kamero pri vhodu v vsako podružnico.
-Želimo, da naša kamera prepoznava obraze in na podlagi tega dovoljuje zaposlenim vstop.
-V našem centralnem sistemu pa želimo, hraniti seznam vstopov.
+Želimo, da naša kamera prepoznava obraze in na podlagi tega zaposlenim dovoljuje vstop.
+V našem centralnem sistemu pa želimo hraniti seznam vstopov.
 En način reševanja tega problema je z gručami na robu oblaka.
 V vsako podružnico bi postavili gručo rač\-un\-al\-ni\-kov Raspberry PI, ki so dovolj zmogljivi, da obdelujejo posnetke kamer in prepoznavajo obraze.
-Če posnetke obdelujemo lokalno, se izognemo pošiljanju veliki količini podatkov na centralne strežnike, posledično pa bo hitrejše tudi preverjanje zaposlenih.
+Če posnetke obdelujemo lokalno, se izognemo pošiljanju velike količine podatkov na centralne strežnike, posledično pa bo hitrejše tudi preverjanje zaposlenih.
 Tako bi na centralni strežnik pošiljali samo številko zaposlenega in čas vstopa.
-Takšen pristop bi prišel še toliko bolj do izraza, če imajo podružnice dostop do interneta samo prek dragega mobilnega omrežja, kjer lahko z zmanjšanjem prometa, zelo zmanjšamo tudi stroške podjetja.
-Vse te gruče na podružnicah bi imele zelo podobno strukturo in jih je smiselno centralo upravljati s kakšnim sistemom za povezovanje. 
-Tu bi lahko uporabili pristop KubeFed ali pristop GitOps.
-Pošiljanje podatkov na centrali strežnik pa bi morali napisati sami in ga vgraditi v naš program za prepoznavo obrazov.
+Takšen pristop bi prišel še toliko bolj do izraza, če imajo podružnice dostop do interneta samo prek dragega mobilnega omrežja, kjer lahko z zmanjšanjem prometa zelo zmanjšamo stroške podjetja.
+Vse te gruče na podružnicah bi imele zelo podobno strukturo in jih je smiselno centralo upravljati z nekakšnim sistemom za povezovanje. 
+Tu bi lahko uporabili pristopa KubeFed ali pristop GitOps.
+Pošiljanje podatkov v centralno gručo pa bi morali implementirati sami in ga vgraditi v naš program za prepoznavo obrazov.
 \chapter{Sklepne ugotovitve}
 V diplomskem delu smo si pogledali teoretično ozadje povezovanja več rač\-un\-al\-ni\-ških gruč in osnove Kubernetesa.
 Predstavljenih je bilo tudi nekaj popularnih orodij za delo z več gručami Kubernetes.
