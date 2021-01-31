@@ -591,7 +591,7 @@ kubefedctl join gruca-2
 kubefedctl join gruca-3
 \end{verbatim}
 S tem smo uspešno povezali več gruč Kubernetes v sistem KubeFed.
-Seznam vseh povezanih gruč pa lahko preverimo tako, da izpišemo seznam objektov tipa KubefedClusters. 
+Seznam vseh povezanih gruč pa lahko preverimo tako, da izpišemo seznam objektov tipa KubeFedClusters. 
 V našem primeru imamo povezane tri gruče, kar se vidi iz sledečega izpisa.
 \begin{verbatim}
 kubectl get kubefedclusters
@@ -726,12 +726,12 @@ Kljub temu, da smo naše aplikacije namestili na različne gruče, s čimer je a
 Takšen primer je, ko ena aplikacija ali storitev zavzame vse vire v gruči, hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
 V takšnih primerih bo namesto samo dela odpovedal celoten sistem.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali storitve postavili v ločeno gručo, kjer napake drugih aplikacij ne bodo vplivale na delovanje kritičnih.
-A vseeno se moramo zavedati, da je ta korak smiseln šele po tem, ko opravimo že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerizacija, izolacija na ločena vozlišča Kubernetes, pravilna nastavitev omejitev avtomatskega povečevanja in druge.
+A vseeno se moramo zavedati, da je ta korak smiseln šele po tem, ko opravimo že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerizacija, pravilna nastavitev omejitev skaliranja aplikacije in druge.
 \subsection{Vdori}
-Podobno kot pri izpadih aplikacije je tudi pri preprečevanjih posledic vdorov.
-Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, kriptiranje komunikacije med storitvami, uporabo nepriviligiranih in neadministratorskih kontejnerjev~\cite{securing-kube}.
-Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v gručah manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem pa je smiselno kritične aplikacije izolirati v svoje gruče.
-\section{Implementacija s Kubefed}
+Podobno kot pri izpadih aplikacije je tudi pri preprečevanju posledic vdorov.
+Najprej moramo poskrbeti za primerno zaščito vozlišč Kubernetes, naše aplikacije, zaščito komunikacije med storitvami, uporabo nepriviligiranih kontejnerjev~\cite{securing-kube}.
+Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj, ali pa se zavedamo, da imamo v gručah manj varne aplikacije in napadalec prek njih ne sme dostopati do podatkov kritičnih aplikacij, potem je smiselno kritične aplikacije izolirati v svoje gruče.
+\section{Implementacija s KubeFed}
 \begin{figure}[h]
 \begin{center}
   \includegraphics[width=1.0\textwidth]{images/primer-izolirane-aplikacije.pdf}

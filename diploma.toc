@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {8.1}Zmanj\IeC {\v s}evanje posledic vdorov in izpadov}{33}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Izpadi aplikacije}{33}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Vdori}{34}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Implementacija s Kubefed}{34}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Implementacija s KubeFed}{34}{section.8.2}%
 \contentsline {chapter}{\numberline {9}Upravljanje gru\IeC {\v c} na robu oblaka}{37}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Gru\IeC {\v c}e na robu oblaka}{37}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Implementacija s KubeFed}{37}{section.9.2}%
