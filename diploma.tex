@@ -365,13 +365,13 @@ Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na I
 Takšen zahtevek potem dobi en izmed označenih objektov Pod v objektu Service.
 \subsection{Deployment}
 Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo~\cite{deployment}.
-Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v deploymentu.
+Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v definiciji objekta Deployment.
 Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
 \subsection{StatefulSet}
-Objekt zelo podoben deploymentu, le da statefulset vsakemu objektu Pod dodeli unikatno številko~\cite{statefulset}. 
+Objekt zelo podoben objektu Deployment, le da StatefulSet vsakemu objektu Pod dodeli unikatno številko~\cite{statefulset}. 
 Pod, ki se ustvari s to številko ohranja diske, mrežni vmesnik, IP naslov in domensko ime.
-Pomembna razlika med objektoma deployment in statefulset pa je tudi v polju \spverb|volumeClaimTemplate|.
-Statefulset omogoča vsakemu objektu Pod, da si ustvari in uporablja svoj disk.
+Pomembna razlika med objektoma Deployment in StatefulSet pa je tudi v polju \spverb|volumeClaimTemplate|.
+StatefulSet omogoča vsakemu objektu Pod, da si ustvari in uporablja svoj disk.
 Uporablja pa se za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
 \chapter{Pregled področja in literature}
 V tem poglavju si bomo pogledali nekaj ključnih del in literature na področju povezovanja gruč Kubernetes.
@@ -645,9 +645,9 @@ V naših lokalnih testnih gručah bomo ta korak preskočili in jih ne bomo usmer
 Naslednja možnost pa je rešitev, ki se jo poslužujejo nekatere internetne računalniške igre (npr. Among US), da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na kateri gruči ali strežniku želi igrati.
 V takšnih primerih se lahko tudi izognemo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje naših gruč.
 \section{Definicija infrastrukture za naš primer}
-V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \sn{Stateful rest sample} z objektom deployment. 
+V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \sn{Stateful rest sample} z objektom Deployment. 
 Da aplikacijo izpostavimo izven gruče, pa bomo uporabili objekt Service.
-Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulset, diskom na lokalni SD kartici, in dvema objektoma Service.
+Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulSet, diskom na lokalni SD kartici, in dvema objektoma Service.
 Prvi objekt Service je zunanji in se bo uporabljal za dostop do baze, drugi pa je notranji in ga bomo uporabljali za prepoznavo ostalih primerkov CrateDB v gruči.
 \begin{figure}[h]
 \begin{center}
