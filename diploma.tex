@@ -448,26 +448,26 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 \end{figure}
 
 \section{KubeFed}
-9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 imenovan tudi KubeFed~\cite{kubernetes-federation-evolution}.
+9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2, imenovan tudi KubeFed~\cite{kubernetes-federation-evolution}.
 Cilj obeh projektov je bil poenostavljeno upravljanje več gruč in razporejanje Kubernetes objektov.
-V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kar kot novo gručo Kubernetes~\cite{setup-cluster-federation-kubefed-v1}.
+V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kot novo gručo Kubernetes~\cite{setup-cluster-federation-kubefed-v1}.
 Uporabljal je svoj vmesnik, ki pa je bil združljiv s Kubernetesovim, kar je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
-Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
-Objekte, ki so bili poslani kontrolerju federacije, je potem Federation V1 ustvaril tudi v pripadajočih gručah.
+Objekti, ki jih je federacija podpirala, so bili kompatibilni s standardnimi objekti Kubernetes~\cite{federated-cluster-kubefed-v1}.
+Objekte, ki so bili poslani kontrolerju federacije, je Federation V1 nato ustvaril tudi v pripadajočih gručah.
 Pristop zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
-GA faza v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga uporabljajo in se bo vsaj do neke mere ohranjala združljivost za nazaj.
-  Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
+Faza GA v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga uporabljajo in se bo vsaj do neke mere ohranjala združljivost za nazaj.
+Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
 
-Tako se je kasneje razvil projekt Federation V2~\cite{kubernetes-federation-evolution}.
-Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega vmesnika, ampak uporablja obstoječega. 
-Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer federateddeployment~\cite{kubefed-userguide}.
-Federated objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl enable|.
+Tako se je pozneje razvil projekt Federation V2~\cite{kubernetes-federation-evolution}.
+Glavna razlika s prvo različico je z uporabniškega stališča v tem, da za federacijo ne poizkuša imitirati Kubernetesovega vmesnika, ampak uporablja obstoječega. 
+Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer FederatedDeployment~\cite{kubefed-userguide}.
+Federirane objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl enable|.
 \begin{verbatim}
 kubefedctl enable deployment
 \end{verbatim}
-Orodje kubefedctl si moramo namestiti na naš računalnik.
-Takšen Federated objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v gruče in prepis lastnosti originalnega objekta za posamezne gruče.
-Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo CRD objektov.
+Orodje kubefedctl moramo namestiti na svoj računalnik.
+Takšen federiran objekt vsebuje tri glavne lastnosti: definicija predloge primarnega objekta, postavitev v gruče in prepis lastnosti originalnega objekta za posamezne gruče.
+Takšen pristop je zelo široko zastavljen in omogoča tudi federacijo objektov CRD.
 \begin{verbatim}
 apiVersion: types.kubefed.io/v1beta1
 kind: FederatedDeployment
@@ -490,9 +490,9 @@ spec:
           value: 3
   ... 
 \end{verbatim}
-Federation V2 podpira poleg sinhronizacije infrastrukture tudi odkrivanje storitev v drugih gručah prek zapisov DNS~\cite{kubefed-userguide}.
+Federation V2 poleg sinhronizacije infrastrukture podpira tudi odkrivanje storitev v drugih gručah prek zapisov DNS~\cite{kubefed-userguide}.
 Omenja pa se možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery}, ki je že sedaj privzeto izklopljena.
-Preden pa uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko mine še nekaj časa preden doseže status GA, če slučajno ne bo šel po stopinjah svojega predhodnika.
+Preden uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko preteče še nekaj časa preden doseže status GA.
 \section{Cilium}
 Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v naši gruči~\cite{cilium-intro}.
 Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot na primer zapiranje portov in omejevanje komunikacije.
