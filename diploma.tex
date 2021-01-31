@@ -327,7 +327,7 @@ V tem delu bomo kot naloge sistemov za povezovanje gruč obravnavali: omogočanj
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/primer-povezanih-gruc.pdf}
 \end{center}
-\caption{Primer povezanih več gruč.}
+\caption{Primer več povezanih gruč.}
 \label{problem-povezanih-gruc}
 \end{figure}
 
@@ -338,16 +338,15 @@ Trenutno obstaja že več kot 70 distribucij~\cite{cncf} Kubernetesa.
 \section{Zgodovina}
 Leta 2014 je Google objavil in odprl kodo projekta Kubernetes~\cite{mastering-kubernetes}~\cite{borg-omega-kubernetes}.
 Gre za program, ki je bil ustvarjen z namenom, da poenostavi upravljanje kontejnerjev in večjih računalniških gruč v produkcijskih okoljih~\cite{what-is-Kubernetes}.
-A to vseeno niso pravi začetki Kubernetesa.
-Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje njihovih notranjih gruč Borg.
-Kasneje leta 2013 je Google predstavil sistem Omega.
-Leta 2014 pa je Google objavil odprtokodni projekt Kubernetes. 
-Projekt je bil zasnovan na podlagi dobrih praks upravljanja s kontejnerji, ki so se jih pri Googlu naučili skozi leta.
-Kasneje je upravljanje nad projektom prevzela organizacija Cloud Native Computing Fundation.
+A to niso pravi začetki Kubernetesa.
+Začelo se je leta 2003, ko je Google začel z razvojem sistema za upravljanje svojih notranjih gruč Borg.
+Pozneje, leta 2013, je Google predstavil sistem Omega, leta 2014 pa je objavil odprtokodni projekt Kubernetes. 
+Projekt je bil zasnovan na podlagi dobrih praks upravljanja s kontejnerji, ki so se jih pri Googlu naučili skozi dolga leta upravljanja velikega števila kontejnerjev v produkcijskem okolju.
+Pozneje je upravljanje nad projektom prevzela organizacija Cloud Native Computing Fundation.
 \section{Osnovni pojmi}
-Kubernetesov vmesnik REST nam omogoča, da v Kubernetes shranjujemo najrazličnejše tipe objektov.
-Takšne, ki so del standardnega Kubernetesovega API-ja ali pa smo jih definirali sami (CRD).
-Najpogostejši tipi objektov, ki se pojavijo v Kubernetesu so pod, service, deployment, statefulset in objekti za delo z diski.
+Kubernetesov vmesnik REST nam omogoča, da v sistem shranjujemo najrazličnejše tipe objektov.
+Takšne, ki so del standardnega Kubernetesovega vmesnika, ali pa smo jih definirali sami (CRD).
+Najpogostejši tipi objektov, ki se pojavijo v Kubernetesu so Pod, Service, Deployment, StatefulSet in objekti za delo z diski.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/Kubernetes-simple-schema.pdf}
@@ -356,23 +355,23 @@ Najpogostejši tipi objektov, ki se pojavijo v Kubernetesu so pod, service, depl
 \label{problem-povezanih-clustrov}
 \end{figure}
 \subsection{Pod}
-Objekt pod je najmanjša enota v Kubernetesu, ki lahko teče v gruči~\cite{pod}.
+Objekt Pod je najmanjša enota v Kubernetesu, ki lahko teče v gruči~\cite{pod}.
 Sestavljen je iz enega ali več kontejnerjev, ki si delijo diske in omrežni vmesnik.
 To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
 \subsection{Service}
-Objekt service označuje vse pode ene mikrostoritve~\cite{service}.
-Kubernetes iz objekta v notranjem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi podi.
-Objekte service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov Poda, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
-Takšen zahtevek potem dobi en izmed označenih podov v objektu service.
+Objekt service označuje vse objekte Pod ene mikrostoritve~\cite{service}.
+Kubernetes iz objekta v notranjem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi objekti Pod.
+Objekte service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov objekta Pod, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
+Takšen zahtevek potem dobi en izmed označenih objektov Pod v objektu service.
 \subsection{Deployment}
-Deployment je objekt, ki mu podamo število željenih objektov pod in predlogo za njihovo izdelavo~\cite{deployment}.
-Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa pod kot smo navedli v deploymentu.
+Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo~\cite{deployment}.
+Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v deploymentu.
 Takšno stanje se poizkuša ohranjati tudi ob raznih težavah in izpadih vozlišč.
 \subsection{StatefulSet}
-Objekt zelo podoben deploymentu, le da statefulset vsakemu podu dodeli unikatno številko~\cite{statefulset}. 
+Objekt zelo podoben deploymentu, le da statefulset vsakemu objektu Pod dodeli unikatno številko~\cite{statefulset}. 
 Pod, ki se ustvari s to številko ohranja diske, mrežni vmesnik, IP naslov in domensko ime.
 Pomembna razlika med objektoma deployment in statefulset pa je tudi v polju \spverb|volumeClaimTemplate|.
-Statefulset omogoča vsakemu podu, da si ustvari in uporablja svoj disk.
+Statefulset omogoča vsakemu objektu Pod, da si ustvari in uporablja svoj disk.
 Uporablja pa se za podatkovne baze in podobne storitve, ki morajo ohranjati stanja.
 \chapter{Pregled področja in literature}
 V tem poglavju si bomo pogledali nekaj ključnih del in literature na področju povezovanja gruč Kubernetes.
@@ -414,7 +413,7 @@ Ko postavimo več različnih gruč imamo vedno možnost, da upravljamo vsako pos
 A takšen pristop je neučinkovit, če imamo takšnih gruč res veliko~\cite{difference-multi-cluster}.
 Osnovna lastnost sistema za upravljanje več gruč Kubernetes, je možnost prenašanja Kubernetesovih objektov med gručami.
 Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v izbranih gručah.
-Odvisno od naših potreb pa lahko uporabimo sistem, ki omogoča tudi dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje podov med gručami in komunikacijo med podi v različnih gručah.
+Odvisno od naših potreb pa lahko uporabimo sistem, ki omogoča tudi dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje objektov Pod med gručami in komunikacijo med njimi v različnih gručah.
 Te funkcionalnosti znotraj ene gruče nudi že Kubernetes sam.
 Je pa seveda odvisno od našega primera, katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
 V nadaljevanju si bomo ogledali različne sisteme za povezovanje gruč Kubernetes, njihove glavne prednosti in značilnosti.
@@ -424,7 +423,7 @@ Osnovna ideja pristopa GitOps je, da imamo našo strukturo aplikacij v gruči Ku
 Takšen pristop se je v zadnjih letih zelo razširil in ArgoCD navaja več kot 100 podjetji, ki pri razvoju svojih spletnih aplikacij uporabljajo pristop GitOps~\cite{argocd-user-list}.
 
 Če uporabljamo kakšnega od sistemov GitOps, lahko potem iz enakega repozitorija postavimo več gruč.
-V osnovi takšen pristop pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med podi v različnih gručah ali pa odkrivanje storitev ali podov.
+V osnovi takšen pristop pomeni, da bomo imeli na voljo samo sinhronizacijo infrastrukture in nam takšen pristop ne omogoča naprednih funkcionalnosti kot so komunikacija med objekti Pod v različnih gručah ali pa odkrivanje storitev ali kontejnerjev.
 V nadaljevanju si bomo izbrali sistem ArgoCD in si pogledali, kako bi si postavili zgoraj opisano infrastrukturo.
 \subsection{Sinhronizacija objektov z ArgoCD}
 ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
@@ -438,7 +437,7 @@ To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
 V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
 ArgoCD nam ponuja možnost, da ročno določimo spremenljivke predlogam.
 Tako lahko uporabimo na primer predloge HELM in ArgoCD nam bo omogočil, da vsaki gruči izberemo svojo datoteko s spremenljivkami.
-Glede na preprostost delovanja takšnega sistema se moramo zavedati, da od njega ne moremo pričakovati nikakršnih naprednih funkcionalnosti kot sta dinamično odkrivanje storitev ali komunikacija podov med gručami.
+Glede na preprostost delovanja takšnega sistema se moramo zavedati, da od njega ne moremo pričakovati nikakršnih naprednih funkcionalnosti kot sta dinamično odkrivanje storitev ali komunikacija kontejnerjev med gručami.
 Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
 \begin{figure}[h]
@@ -501,7 +500,7 @@ Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnost
 Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih gruč Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med podi v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki razporejajo promet med različnimi gručami.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med kontejnerji v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki razporejajo promet med različnimi gručami.
 Takšne objekte definiramo z anotacijo \spverb|io.cilium/ global-service|~\cite{setup-cilium-cluster-mesh}.
 Omogoča nam tudi omejevanje povezovanja med gru\-ča\-mi z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
 Ko postavljamo mre\-žo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasebnih omrežjih.
@@ -699,8 +698,8 @@ Za sinhronizacijo podatkov lahko uporabimo podatkovno bazo, ki ima sinhronizacij
 CrateDB podpira sinhronizacijo tudi preko razpoložljivostnih con.
 Vseeno pa moramo vsa vozlišča povezati v enako podatkovno gručo~\cite{cratedb-zone}.
 To pomeni, da morajo biti primerki CrateDB dostopni med seboj.
-Problem lahko rešimo z uporabo sistema Cilium in uporaba globalnih storitev, saj nam Cilium že omogoča komunikacijo vsakega poda z vsakim, tudi če so ti v različnih gručah.
-Druga možnost pa je, da izpostavimo vsak pod s svojim javnim IP naslovom in jih ročno povežemo v gručo.
+Problem lahko rešimo z uporabo sistema Cilium in uporaba globalnih storitev, saj nam Cilium že omogoča komunikacijo vsakega kontejnerja z vsakim, tudi če so ti v različnih gručah.
+Druga možnost pa je, da izpostavimo vsak objekt Pod s svojim javnim IP naslovom in jih ročno povežemo v gručo.
 
 Potem pa moramo nastaviti še nastavitve, ki jih baza podpira za zmanj\-šan\-je prometa in zagotavljanje željene razpoložljivosti med gručami~\cite{cratedb-zone}.
 Podobne načine sinhronizacije podpira tudi na primer podatkovna baza Cassandra~\cite{cassandra-zone}.
