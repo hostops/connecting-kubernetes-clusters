@@ -644,7 +644,7 @@ V takšnih primerih se lahko izognemo problemu sinhronizacije podatkov med stre�
 \section{Definicija infrastrukture za naš primer}
 V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \emph{Stateful rest sample} z objektom Deployment. 
 Da aplikacijo izpostavimo izven gruče, pa bomo uporabili objekt Service.
-Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulSet, diskom na lokalni SD kartici, in dvema objektoma Service.
+Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulSet, diskom na lokalni kartici SD, in dvema objektoma Service.
 Prvi objekt Service je zunanji in se bo uporabljal za dostop do baze, drugi pa je notranji in ga bomo uporabljali za prepoznavo ostalih primerkov CrateDB v gruči.
 \begin{figure}[h]
 \begin{center}
@@ -654,10 +654,10 @@ Prvi objekt Service je zunanji in se bo uporabljal za dostop do baze, drugi pa j
 \label{infrastructure-example}
 \end{figure}
 Vsa konfiguracija je javno objavljena na repozitoriju Git\cite{git-diploma}.
-Postavimo jo z ukazom \spverb|kubectl apply -f diploma-demo-1|
+Postavimo jo z ukazom \spverb|kubectl apply -f diploma-demo-1|.
 Takoj preverimo, če aplikacija deluje in če lahko podatke zapisujemo v bazo.
-To storimo tako, da prek demonstracijske aplikacije poizkusimo dodati uporabnika in izpisati vse uporabnike.
-To naredimo z naslednjima \spverb|curl| ukazoma.
+To storimo tako, da prek demonstracijske aplikacije poskusimo dodati uporabnika in izpisati vse uporabnike.
+To naredimo z naslednjima ukazoma \spverb|curl|.
 \begin{verbatim}
 curl -X POST gruca-1/users \
     --data '{"name": "John", "lastname": "Doe"}'
