@@ -361,7 +361,7 @@ To pomeni, da imajo skupen naslov IP in se obnašajo podobno kot izolirani proce
 \subsection{Service}
 Objekt Service označuje vse objekte Pod ene storitve~\cite{service}.
 Kubernetes iz objekta v notranjem DNS ustvari domeno za storitev in dinamično porazdeljuje promet med našimi objekti Pod.
-Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov neposredno na naslov IP objekta Pod, zahtevke pošiljamo na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
+Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov neposredno na naslov IP objekta Pod, zahtevke pošiljamo na ustvarjeno domensko ime storitve na primer z ukazom \spverb|curl ime-storitve|.
 Takšen zahtevek nato dobi eden izmed označenih objektov Pod v objektu Service.
 \subsection{Deployment}
 Deployment je objekt, ki mu podamo število želenih objektov Pod in predlogo za njihovo izdelavo~\cite{deployment}.
