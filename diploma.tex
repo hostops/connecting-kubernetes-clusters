@@ -611,7 +611,7 @@ Za primer vzemimo preprosto spletno aplikacijo, ki mora hraniti stanje in jo nam
 To pomeni, da bo naša aplikacija za uporabnike, ki so bolj oddaljeni od naše gruče, delovala počasneje oziroma se bodo ob enaki pasovni širini podatki do uporabnika prenašali dalj časa.
 
 Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo, bližje uporabniku~\cite{geo-instability}.
-Če moramo podatke med gručami še sinhronizirat,i pa to zahteva dodaten trud.
+Če moramo podatke med gručami še sinhronizirati, pa to zahteva dodaten trud.
 V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim podatkovnim bazam SQL.
 CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči ~\cite{databases-comparison}.
 Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni treba konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
