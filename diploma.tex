@@ -703,7 +703,7 @@ Podobne načine sinhronizacije podpira tudi na primer podatkovna baza Cassandra~
 \subsection{Ročno usklajevanje podatkov}
 Sinhronizacija podatkovne baze ni trivialen problem.
 Če ne uporabimo primerne podatkovne baze ali pa preko gruč želimo sinhronizirati samo del podatkov, bomo sinhronizacijo podatkov verjetno morali implementirati sami.
-To pomeni, da bomo ustvarili novo storitev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
+To pomeni, da bomo ustvarili novo storitev, ki bo v ozadju kopirala ključne podatke med podatkovnimi centri.
 Ker samo mi poznamo naš konkreten primer uporabe, je takšen pristop lahko najbolj učinkovit, a tudi najbolj kompleksen in časovno potraten.
 
 V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo vmesnika REST.
