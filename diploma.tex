@@ -452,7 +452,7 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 9. 1. 2018 je bil po ukinjenem projektu Kubernetes Federation V1 ustvarjen Kubernetes Federation V2 imenovan tudi KubeFed~\cite{kubernetes-federation-evolution}.
 Cilj obeh projektov je bil poenostavljeno upravljanje več gruč in razporejanje Kubernetes objektov.
 V projektu Federation V1 je bil ubran pristop, ki je skupino gruč ali federacijo uporabniku predstavil kar kot novo gručo Kubernetes~\cite{setup-cluster-federation-kubefed-v1}.
-Uporabljal je svoj API in kontroler API, ki pa je bil združljiv s Kubernetesovim, kar pa je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
+Uporabljal je svoj vmesnik, ki pa je bil združljiv s Kubernetesovim, kar je omogočalo tudi uporabo orodja kubectl~\cite{cluster-federation-in-Kubernetes-1.5}.
 Objekti, ki jih je federacija podpirala so bili kompatibilni s standardnimi Kubernetes objekti~\cite{federated-cluster-kubefed-v1}.
 Objekte, ki so bili poslani kontrolerju federacije, je potem Federation V1 ustvaril tudi v pripadajočih gručah.
 Pristop zaradi mnogih pomanjkljivosti in pomankanja možnosti naprednejših konfiguracij ni uspel pridobiti statusa GA.
@@ -460,7 +460,7 @@ GA faza v Kubernetesu pomeni, da se uporabniki lahko zanašajo na projekt, ga up
   Pred dosegom te stopnje naj bi se projekt uporabljalo samo v testne namene.
 
 Tako se je kasneje razvil projekt Federation V2~\cite{kubernetes-federation-evolution}.
-Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega API-ja, ampak uporablja obstoječi Kubernetesov API. 
+Glavna razlika s prvo verzijo z uporabniškega stališča je v tem, da za federacijo ne poizkuša imitirati Kubernetesovega vmesnika, ampak uporablja obstoječega. 
 Federation V2 samo predstavi nove objekte, ki pa so razširitev standardnih, kot na primer federateddeployment~\cite{kubefed-userguide}.
 Federated objekte je treba najprej vklopiti z ukazom \spverb|kubefedctl enable|.
 \begin{verbatim}
