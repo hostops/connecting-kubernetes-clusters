@@ -14,13 +14,15 @@ Apache Cassandra.
   2020.
 \newblock [Dostopano: 29. 12. 2020].
 
-\bibitem{cratedb}
+\bibitem{cratedb-zone}
 CrateDB.
-\newblock Cratedb: the distributed sql database for iot and time-series data.
-\newblock Dosegljivo: \url{https://crate.io/}, 2020.
+\newblock Cratedb multi-zone setup.
+\newblock Dosegljivo:
+  \url{https://crate.io/docs/crate/howtos/en/latest/clustering/multi-zone-setup.html},
+  2020.
 \newblock [Dostopano: 29. 12. 2020].
 
-\bibitem{cratedb-zone}
+\bibitem{cratedb}
 CrateDB.
 \newblock Cratedb: the distributed sql database for iot and time-series data.
 \newblock Dosegljivo: \url{https://crate.io/}, 2020.

@@ -664,13 +664,13 @@ curl -X POST gruca-1/users \
 curl gruca-1/users
 \end{verbatim}
 \section{Implementacija s KubeFed}
-Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
+Najprej se moramo odločiti, za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
 V našem primeru gre za Service, Deployment in StatefulSet.
 Vklopimo jih z naslednjim ukazom, ki za nas ustvari nove federirane tipe objektov na izbranih tipih.
 \begin{verbatim}
 kubefedctl enable <ime tipa>
 \end{verbatim}
-Ko smo si vklopili federacijo na vseh potrebnih tipih pa moramo še vklopiti avtomatsko upravljanje na specifičnih objektih.
+Ko vklopimo federacijo na vseh potrebnih tipih, pa moramo vklopiti še avtomatsko upravljanje na specifičnih objektih.
 V našem primeru želimo za to uporabiti ukaz \spverb|kubefedctl federate|.
 \begin{verbatim}
 kubefedctl federate deployment stateful-rest-sample
@@ -682,23 +682,23 @@ kubefedctl federate service crate-external
 Izvršeni ukazi ustvarijo federirane objekte, ki uporabijo postavitev v vse gruče in za predlogo kar podane objekte.
 Tako je za nas rezultat izvršenih ukazov kreiranje federiranih objektov in posledično kopiranje objektov v vse naše povezane gruče.
 
-Po preizkusu delovanje s \spverb|curl| ukazom opazimo, da podatki med gručami še vedno niso sinhronizirani.
-Uporabniki, ki jih vnesemo v eno gručo se še ne sinhronizirajo v ozadju.
+Po preizkusu delovanja z ukazom \spverb|curl| opazimo, da podatki med gručami še vedno niso sinhronizirani.
+Uporabniki, ki jih vnesemo v eno gručo, se še ne sinhronizirajo v ozadju.
 Na tej točki se ustavijo nekatere spletne aplikacije in prepustijo izbiro strežnika oziroma gruče kar uporabniku.
 \section{Sinhronizacija podatkov}
-Če želimo pred uporabnikom skriti, da uporabljamo več gruč, moramo poleg geolokacijskih zapisov DNS, urediti tudi avtomatsko sinhronizacijo podatkov.
-Sicer v našem primeru res uporabljamo samo en primerek CrateDB baze na gručo, a vseeno smo na nivoju sinhronizacije znotraj gruče to stvar že uredili. 
-Moramo se zavedati, da tudi podatkovna gruča CrateDB, najbolje deluje, če so vozlišča v hitrem lokalnem omrežju.
+Če želimo pred uporabnikom skriti, da uporabljamo več gruč, moramo poleg geolokacijskih zapisov DNS urediti tudi avtomatsko sinhronizacijo podatkov.
+V našem primeru res uporabljamo samo en primerek baze CrateDB na gručo, a vseeno smo na nivoju sinhronizacije znotraj gruče to že uredili. 
+Moramo se zavedati, da tudi podatkovna gruča CrateDB najbolje deluje, če so vozlišča v hitrem lokalnem omrežju z visoko pasovno širino in nizko latenco.
 CrateDB podpira tudi sinhronizacijo med različnimi razpoložljivostnimi conami in podatkovnimi centri~\cite{cratedb-zone}.
 \subsection{Uporaba primerne podatkovne baze}
 Za sinhronizacijo podatkov lahko uporabimo podatkovno bazo, ki ima sinhronizacijo med različnimi gručami že podprto.
 CrateDB podpira sinhronizacijo tudi preko razpoložljivostnih con.
 Vseeno pa moramo vsa vozlišča povezati v enako podatkovno gručo~\cite{cratedb-zone}.
 To pomeni, da morajo biti primerki CrateDB dostopni med seboj.
-Problem lahko rešimo z uporabo sistema Cilium in uporaba globalnih storitev, saj nam Cilium že omogoča komunikacijo vsakega kontejnerja z vsakim, tudi če so ti v različnih gručah.
-Druga možnost pa je, da izpostavimo vsak objekt Pod s svojim javnim naslovom IP in jih ročno povežemo v gručo.
+Problem lahko rešimo z uporabo sistema Cilium in uporabo globalnih storitev, saj nam Cilium že omogoča komunikacijo vsakega kontejnerja z vsakim, tudi če so ti v različnih gručah.
+Druga možnost pa je, da izpostavimo vsak objekt Pod s svojim javnim naslovom IP in jih v gručo povežemo ročno.
 
-Potem pa moramo nastaviti še nastavitve, ki jih baza podpira za zmanj\-šan\-je prometa in zagotavljanje željene razpoložljivosti med gručami~\cite{cratedb-zone}.
+Določiti moramo še nastavitve za zmanjšanje prometa med podatkovnimi centri in nastavitve za zagotavljanje prisotnosti podatkov v vsakem podatkovnem centru~\cite{cratedb-zone}.
 Podobne načine sinhronizacije podpira tudi na primer podatkovna baza Cassandra~\cite{cassandra-zone}.
 \subsection{Podatke sinhroniziramo sami}
 Sinhronizacija podatkovne baze ni trivialen problem.

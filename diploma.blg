@@ -65,7 +65,7 @@ Too many commas in name 1 of "Jeremy Kepner, Vijay Gadepally, Lauren Milechin, S
 while executing---line 1090 of file plain.bst
 You've used 49 entries,
             2118 wiz_defined-function locations,
-            719 strings with 11664 characters,
+            721 strings with 11783 characters,
 and the built_in function-call counts, 12766 in all, are:
 = -- 1246
 > -- 528
