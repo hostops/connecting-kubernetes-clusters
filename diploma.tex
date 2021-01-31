@@ -409,14 +409,14 @@ Izpostavljeno je, da te slabosti rešimo s federacijo in sistemom KubeFed, ki je
 Če je vsako vozlišče v svoji gruči, potem je vozlišče v primeru izpada omrežja še vedno avtonomno in omogoča lokalno upravljanje.
 
 \chapter{Povezovanje gruč Kubernetes}
-Ko postavimo več različnih gruč imamo vedno možnost, da upravljamo vsako posebej.
-A takšen pristop je neučinkovit, če imamo takšnih gruč res veliko~\cite{difference-multi-cluster}.
-Osnovna lastnost sistema za upravljanje več gruč Kubernetes, je možnost prenašanja Kubernetesovih objektov med gručami.
-Tako lahko objekt definiramo samo enkrat in bo naš sistem ta objekt ustvaril v izbranih gručah.
-Odvisno od naših potreb pa lahko uporabimo sistem, ki omogoča tudi dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje objektov Pod med gručami in komunikacijo med njimi v različnih gručah.
-Te funkcionalnosti znotraj ene gruče nudi že Kubernetes sam.
-Je pa seveda odvisno od našega primera, katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
-V nadaljevanju si bomo ogledali različne sisteme za povezovanje gruč Kubernetes, njihove glavne prednosti in značilnosti.
+Ko postavimo več različnih gruč, imamo vedno možnost, da upravljamo vsako posebej.
+Toda takšen pristop ni učinkovit, če imamo takšnih gruč res veliko~\cite{difference-multi-cluster}.
+Osnovna lastnost sistema za upravljanje več gruč Kubernetes je možnost prenašanja Kubernetesovih objektov med gručami.
+Tako lahko objekt definiramo samo enkrat in naš sistem da bo ustvaril v izbranih gručah.
+Glede na potrebe pa lahko uporabimo sistem, ki omogoča tudi dinamično odkrivanje storitev z enako definicijo v različnih gručah, komunikacijo med storitvami v različnih gručah, dinamično odkrivanje objektov Pod med gručami in komunikacijo med njimi v različnih gručah.
+Te funkcionalnosti znotraj ene gruče nudi že Kubernetes.
+Od našega primera pa je odvisno, katere funkcionalnosti želimo uporabiti in kako kompleksno postavitev potrebujemo.
+V nadaljevanju bomo predstavili različne sisteme za povezovanje gruč Kubernetes, njihove glavne prednosti in značilnosti.
 \section{ArgoCD in drugi sistemi GitOps}
 \subsection{Sinhronizacija objektov z uporabo sistemov GitOps}
 Osnovna ideja pristopa GitOps je, da imamo našo strukturo aplikacij v gruči Kubernetes napisano v repozitoriju Git in potem je kontroler GitOps tisti, ki iz teh definicij postavi strukturo gruče.
