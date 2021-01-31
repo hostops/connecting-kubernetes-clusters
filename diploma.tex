@@ -436,7 +436,7 @@ To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
 Če ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in nameravamo prilagoditi konfiguracijo posamezne gruče.
 V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
 ArgoCD nam ponuja možnost, da ročno določimo spremenljivke predlogam.
-Tako lahko uporabimo na primer predloge HELM in ArgoCD nam bo omogočil, da vsaki gruči izberemo svojo datoteko s spremenljivkami.
+Tako lahko uporabimo na primer predloge Helm in ArgoCD nam bo omogočil, da vsaki gruči izberemo svojo datoteko s spremenljivkami.
 Glede na preprostost delovanja takšnega sistema se moramo zavedati, da od njega ne moremo pričakovati nikakršnih naprednih funkcionalnosti kot sta dinamično odkrivanje storitev ali komunikacija kontejnerjev med gručami.
 Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
@@ -444,7 +444,7 @@ Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/primer-uporabe-helm-predloge-argo-cd.png}
 \end{center}
-\caption{Primer uporabe predloge HELM v ArgoCD.}
+\caption{Primer uporabe predloge Helm v ArgoCD.}
 \label{primer-uporabe-helm-predloge-argo-cd}
 \end{figure}
 
@@ -583,7 +583,7 @@ Kot ena izmed ključnih komponent složnega delovanja več gruč je njihovo upra
 V te namene bomo uporabili program KubeFed, ki ga moramo namestiti na eno izmed gruč, ki jih želimo povezati skupaj.
 Ker je izdelek še v razvoju in še ni prišel iz alfa faze, še ni objavljene verzije programa za procesorje ARM.
 Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{docker-kubefed}.
-Potem pa smo uporabili originalno HELM predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
+Potem pa smo uporabili originalno Helm predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
 Za delo s KubeKed pa moramo na svoj računalnik namestiti še orodje kubefedcli.
 Z uporabo ukaza \spverb|kubefedctl join| povežemo vse tri gruče v kubefed sistem.
 \begin{verbatim}
