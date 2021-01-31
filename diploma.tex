@@ -351,18 +351,18 @@ Najpogostejši tipi objektov, ki se pojavijo v Kubernetesu so Pod, Service, Depl
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/Kubernetes-simple-schema.pdf}
 \end{center}
-\caption{Primer delovanja Kubernetes objektov.}
+\caption{Primer delovanja objektov Kubernetes.}
 \label{problem-povezanih-clustrov}
 \end{figure}
 \subsection{Pod}
 Objekt Pod je najmanjša enota v Kubernetesu, ki lahko teče v gruči~\cite{pod}.
 Sestavljen je iz enega ali več kontejnerjev, ki si delijo diske in omrežni vmesnik.
-To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
+To pomeni, da imajo skupen naslov IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
 \subsection{Service}
-Objekt Service označuje vse objekte Pod ene mikrostoritve~\cite{service}.
-Kubernetes iz objekta v notranjem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi objekti Pod.
-Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov objekta Pod, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
-Takšen zahtevek potem dobi en izmed označenih objektov Pod v objektu Service.
+Objekt Service označuje vse objekte Pod ene storitve~\cite{service}.
+Kubernetes iz objekta v notranjem DNS ustvari domeno za storitev in dinamično porazdeljuje promet med našimi objekti Pod.
+Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov neposredno na naslov IP objekta Pod, zahtevke pošiljamo na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
+Takšen zahtevek nato dobi eden izmed označenih objektov Pod v objektu Service.
 \subsection{Deployment}
 Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo~\cite{deployment}.
 Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v definiciji objekta Deployment.
@@ -557,7 +557,7 @@ k3os:
 \end{figure}
 V našem primeru smo vse K3S programe zagnali v strežniškem načinu (server) in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svojo gručo.
 \section{Demonstracijska spletna aplikacija}
-Za potrebe testiranja je bilo potrebno naredili novo testno mikrostoritev.
+Za potrebe testiranja je bilo potrebno naredili novo testno storitev.
 Ker se v tem diplomskem delu želimo osredotočiti na industrijske probleme, mora ta aplikacija omogočati tudi shranjevanje podatkov v podatkovno bazo.
 
 Koda, ki je javno objavljena v repozitoriju Git~\cite{git-stateful-rest-sample}, je napisana v programskem jeziku Go.
@@ -706,7 +706,7 @@ Podobne načine sinhronizacije podpira tudi na primer podatkovna baza Cassandra~
 \subsection{Podatke sinhroniziramo sami}
 Sinhronizacija podatkovne baze ni trivialen problem.
 Če ne uporabimo primerne podatkovne baze ali pa želimo sinhronizirati samo določene stvari preko gruč, bomo sinhronizacijo podatkov verjetno morali implementirati sami.
-To pomeni, da bomo ustvarili novo mikrostoritev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
+To pomeni, da bomo ustvarili novo storitev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
 Ker samo mi poznamo naš konkreten primer uporabe, je takšen pristop lahko najbolj učinkovit.
 
 V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo našega vmesnika REST.
@@ -726,13 +726,13 @@ To vsake toliko časa potrdijo tudi najbolje upravljani veliki sistemi kot so AW
 Vseeno pa kljub vdorom in napakam, zaradi katerih postanejo naši sistemi nedosegljivi, vedno lahko poizkusimo zmanjšati posledice ob morebitnem vdoru ali izpadu. 
 \subsection{Izpadi aplikacije}
 Kljub temu, da smo naše aplikacije namestili na različne gruče in je s tem aplikacija odporna na izpad ene gruče, pa lahko ob hujših nepravilnostih delovanja ene aplikacije in napaki pri nastavitvi gruč kaskadno izpadejo tudi vse gruče na katerih imamo aplikacijo nameščeno.
-Takšen primer bi bil, če ena aplikacija ali mikrostoritev zavzame vse vire v gruči, hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
+Takšen primer bi bil, če ena aplikacija ali storitev zavzame vse vire v gruči, hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
 V takšnih primerih bo odpovedal cel naš sistem namesto samo del sistema.
-Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali mikrostoritve postavili v gručo, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
+Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali storitve postavili v gručo, kjer napake drugih aplikacij ne bodo vplivale na naše delovanje.
 A vseeno se moramo zavedati, da je ta korak smiseln šele ko smo opravili že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerijzacija, izolacija na posamezno Kubernetes vozlišče, pravilna nastavitev omejitev avtomatskega povečevanja in druge.
 \subsection{Vdori}
 Podobno kot pri izpadih aplikacije je tudi pri preprečevanjih posledic vdorov.
-Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, kriptiranje komunikacije med mikrostoritvami, uporabo nepriviligiranih in neadministratorskih kontejnerjev~\cite{securing-kube}.
+Najprej moramo poskrbeti za primerno zaščito Kubernetes vozlišč, naše aplikacije, kriptiranje komunikacije med storitvami, uporabo nepriviligiranih in neadministratorskih kontejnerjev~\cite{securing-kube}.
 Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj ali pa se zavedamo, da imamo v gručah manj varne aplikacije in napadalec prek teh aplikacij ne sme dostopati do podatkov kritičnih aplikacij, potem pa je smiselno kritične aplikacije izolirati v svoje gruče.
 \section{Implementacija s Kubefed}
 \begin{figure}[h]
