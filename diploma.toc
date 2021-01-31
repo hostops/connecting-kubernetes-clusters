@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {5.3}Cilium}{17}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Priprava sistema gru\IeC {\v c} za testiranje}{19}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Raspberry PI 4}{19}{section.6.1}%
-\contentsline {section}{\numberline {6.2}K3S in K3OS}{20}{section.6.2}%
+\contentsline {section}{\numberline {6.2}K3S in K3OS}{19}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Demonstracijska spletna aplikacija}{21}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Namestitev KubeFed}{22}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Povezovanje med podatkovnimi centri}{25}{chapter.7}%

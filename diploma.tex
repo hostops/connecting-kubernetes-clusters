@@ -513,13 +513,13 @@ Torej lahko uporabimo napredno mreženje Ciliuma in objekte sinhroniziramo s pri
 \chapter{Priprava sistema gruč za testiranje}
 \section{Raspberry PI 4}
 Za namene testiranja različnih načinov povezovanja gruč Kubernetes moramo najprej postaviti nekaj gruč.
-Zaradi preprostosti in nizke cene, predvsem pa ker se koncepti zaradi tega ne spremenijo, bomo za naša Kubernetes vozlišča uporabili Raspberry PI 4.
-Na višjem nivoju pa gre še vedno za gručo Kubernetes in je delo zelo podobno, če uporabimo nekaj 1000 vozlišč v gruči v oblaku ali pa lokalno gručo z enim vozliščem.
+Zaradi preprostosti in nizke cene, predvsem pa, ker se koncepti zaradi tega ne spremenijo, bomo za naša Kubernetes vozlišča uporabili Raspberry PI 4.
+Na višjem nivoju gre še vedno za gručo Kubernetes in delo je zelo podobno, če uporabimo nekaj tisoč vozlišč v gruči v oblaku ali pa lokalno gručo z enim vozliščem.
 Raspberry PI 4 je majhen (85x56x20mm) in manj zmogljiv računalnik na eni sami plošči~\cite{rpi-tech-spec}.
-Ključni prednosti takšnih računalnikov pa sta velikost in cena.
+Ključni prednosti takšnih računalnikov sta velikost in cena.
 Na vsak Raspberry PI se bo namestila gruča Kubernetes z enim samim vozliščem.
 Fizična postavitev gruč je prikazana na sliki \ref{rpi-gruce}.
-Takšna postavitev pa je lahko tudi primer gruče na robu oblaka, kar je bolj podrobno opisano v poglavju \ref{edge-clusters}.
+Takšna postavitev pa je lahko tudi primer gruče na robu oblaka.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/postavitev-raspberry.jpg}
@@ -528,13 +528,14 @@ Takšna postavitev pa je lahko tudi primer gruče na robu oblaka, kar je bolj po
 \label{rpi-gruce}
 \end{figure}
 \section{K3S in K3OS}
-Obstaja več implementacij Kubernetesa in mi bomo uporabili z viri varčno odprtokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}~\cite{k8s-performance-comparison}~\cite{low-resource-k8s}.
+Obstaja več implementacij Kubernetesa.
+Mi bomo uporabili z viri varčno odprtokodno implementacijo K3S od podjetja Rancher~\cite{k3s-info}~\cite{k8s-performance-comparison}~\cite{low-resource-k8s}.
 Hkrati so v podjetju Rancher pripravili distribucijo operacijskega sistema Linux K3OS~\cite{k3os-git}.
 Gre za minimalen operacijski sistem s prednameščenim sistemom K3S.
-Te\-ža\-va se pojavi, ker še ni pripravljene uradne verzije operacijskega sistema za ploščice Raspberry PI.
-A k sreči se je v ta namen začel odprtokodni projekt \sn{PiCl k3os image generator}, ki nam iz slik operacijskih sistemov K3OS in Raspberry OS in konfiguracijskih datotek zgradi novo sliko operacijskega sistema za naš Raspberry PI ~\cite{k3os-rpi-image-generator}.
-Konfiguracijske datoteke, ki jih moramo priložiti so standardne YAML datoteke, ki jih podpira sistem K3OS.
-Vanje zapišemo nastavitve kot so SSH javni ključi za dostop, podatki od WiFi omrežja na katerega se povezujemo, geslo, žeton za povezavo s gručo Kubernetes in način v katerem želimo zagnati K3S na sistemu~\cite{k3os-git}.
+Te\-ža\-va se pojavi, ker uradnja verzija operacijskega sistema za ploščice Raspberry PI še ni pripravljena.
+K sreči pa se je v ta namen začel odprtokodni projekt \emph{PiCl k3os image generator}, ki iz slik operacijskih sistemov K3OS in Raspberry OS ter konfiguracijskih datotek zgradi novo sliko operacijskega sistema za naš Raspberry PI ~\cite{k3os-rpi-image-generator}.
+Konfiguracijske datoteke, ki jih moramo priložiti so standardne datoteke YAML, ki jih podpira sistem K3OS.
+Vanje zapišemo nastavitve kot so javni ključi za dostop SSH, podatki omrežja Wi-Fi na katerega se povezujemo, geslo, žeton za povezavo z gručo Kubernetes in način, v katerem želimo zagnati K3S na sistemu~\cite{k3os-git}.
 \begin{figure}[h]
   \begin{verbatim}
 ssh_authorized_keys:
@@ -554,17 +555,17 @@ k3os:
   - server
 \end{verbatim}
 \end{figure}
-V našem primeru smo vse K3S programe zagnali v strežniškem načinu (server) in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svojo gručo.
+
+V našem primeru smo vse programe K3S zagnali v strežniškem načinu (server) in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svojo gručo.
 \section{Demonstracijska spletna aplikacija}
-Za potrebe testiranja je bilo potrebno naredili novo testno storitev.
-Ker se v tem diplomskem delu želimo osredotočiti na industrijske probleme, mora ta aplikacija omogočati tudi shranjevanje podatkov v podatkovno bazo.
+Za potrebe testiranja je bilo treba narediti novo testno storitev.
+Ker se želimo v tem diplomskem delu osredotočiti na realne probleme, s katerimi se srečujejo podjetja, mora ta aplikacija omogočati tudi shranjevanje podatkov v podatkovno bazo.
 
 Koda, ki je javno objavljena v repozitoriju Git~\cite{git-stateful-rest-sample}, je napisana v programskem jeziku Go.
-Iz kode je bil generiran kontejner, ki je objavljen v javnem repozitoriju Docker ~\cite{docker-stateful-rest-sample}.
-Ob tem velja opozoriti, da Raspberry PI uporablja ARM arhitekturo procesorja, kar je zahtevalo dodatno pozornost.
+Iz kode je bil generiran kontejner, ki je objavljen v javnem registru Docker~\cite{docker-stateful-rest-sample}.
+Ob tem velja opozoriti, da Raspberry PI uporablja arhitekturo procesorja ARM, kar je zahtevalo dodatno pozornost pri nastavitvah gradnje ustrezne slike Docker.
 
-Aplikacija deluje preprosto.
-Na mrežnih vratih podanih s spremenljivko okolja izpostavi vmesnik REST z dvema preprostima HTTP klicema.
+Aplikacija na mrežnih vratih, podanih s spremenljivko okolja, izpostavi vmesnik REST, ki podpira dva preprosta HTTP klica.
 \spverb|GET| klic na pot \spverb|/users| nam bo vrnil seznam vseh uporabnikov, ki so zapisani v tabeli v podatkovni bazi, s klicem \spverb|POST| na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v podatkovni bazi.
 \begin{verbatim}
 # ukaz za dodajanje uporabnika
@@ -574,8 +575,8 @@ curl -X POST localhost/users \
 curl localhost/users
 \end{verbatim}
 
-Za shranjevanje podatkov bomo uporabili 2 različni SQL bazi podatkov.
-Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot SQL baza na več vozliščih in nam omogoča napredne sinhronizacije tudi med različnimi strežniki in gručami.
+Za shranjevanje podatkov bomo uporabili dve različni bazi podatkov SQL.
+Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot baza SQL na več vozliščih in nam omogoča napredne sinhronizacije tudi med različnimi strežniki in gručami.
 K sreči pa CrateDB implementira vmesnik PostgreSQL in nam kode za prehod med bazami ni potrebno spreminjati~\cite{cratedb}.
 \section{Namestitev KubeFed}
 Kot ena izmed ključnih komponent složnega delovanja več gruč je njihovo upravljanje.
@@ -644,7 +645,7 @@ V naših lokalnih testnih gručah bomo ta korak preskočili in jih ne bomo usmer
 Naslednja možnost pa je rešitev, ki se jo poslužujejo nekatere internetne računalniške igre (npr. Among US), da so naši strežniki popolnoma ločeni in se vsak uporabnik sam odloči na kateri gruči ali strežniku želi igrati.
 V takšnih primerih se lahko tudi izognemo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje naših gruč.
 \section{Definicija infrastrukture za naš primer}
-V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \sn{Stateful rest sample} z objektom Deployment. 
+V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \emph{Stateful rest sample} z objektom Deployment. 
 Da aplikacijo izpostavimo izven gruče, pa bomo uporabili objekt Service.
 Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulSet, diskom na lokalni SD kartici, in dvema objektoma Service.
 Prvi objekt Service je zunanji in se bo uporabljal za dostop do baze, drugi pa je notranji in ga bomo uporabljali za prepoznavo ostalih primerkov CrateDB v gruči.

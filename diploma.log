@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,7 +662,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 513.
 
-<images/postavitev-raspberry.jpg, id=456, 4223.78pt x 3131.7pt>
+<images/postavitev-raspberry.jpg, id=455, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
@@ -671,12 +671,12 @@ Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19
+[19
 
 ]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [20 <./images/postavitev-raspberry.jpg>] [21] [22] [23] [24
 
 ]
@@ -684,7 +684,7 @@ Poglavje 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 619.
+(hyperref)                removing `\textasciicaron' on input line 620.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -693,22 +693,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 631.
+(hyperref)                removing `\textasciicaron' on input line 632.
 
-<images/geolokacijski-dns.png, id=516, 819.06pt x 437.38406pt>
+<images/geolokacijski-dns.png, id=515, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 638.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 639.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26]
-<images/infrastructure-example.pdf, id=522, 543.95218pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=521, 543.95218pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-653.
+654.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
 
 
@@ -720,11 +720,11 @@ xample.pdf>] [29] [30] [31] [32
 ]
 Poglavje 8.
 [33]
-<images/primer-izolirane-aplikacije.pdf, id=590, 406.3983pt x 160.6803pt>
+<images/primer-izolirane-aplikacije.pdf, id=589, 406.3983pt x 160.6803pt>
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 739.
+line 740.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
 
@@ -733,18 +733,18 @@ Poglavje 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 751.
+(hyperref)                removing `\textasciicaron' on input line 752.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 753.
+(hyperref)                removing `\textasciicaron' on input line 754.
 
-<images/upravljanje-robnih-gruc.pdf, id=616, 565.15138pt x 493.845pt>
+<images/upravljanje-robnih-gruc.pdf, id=615, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 763.
+ 764.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -754,7 +754,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 Poglavje 10.
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 805--806
 
  []
 
@@ -857,10 +857,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9491 strings out of 479383
- 134229 string characters out of 5875830
+ 9488 strings out of 479383
+ 134193 string characters out of 5875830
  461214 words of memory out of 5000000
- 26241 multiletter control sequences out of 15000+600000
+ 26238 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -871,10 +871,10 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2869691 bytes).
+Output written on diploma.pdf (64 pages, 2869437 bytes).
 PDF statistics:
- 813 PDF objects out of 1000 (max. 8388607)
- 705 compressed objects within 8 object streams
+ 812 PDF objects out of 1000 (max. 8388607)
+ 704 compressed objects within 8 object streams
  159 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 
