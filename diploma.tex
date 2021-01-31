@@ -359,10 +359,10 @@ Objekt Pod je najmanjša enota v Kubernetesu, ki lahko teče v gruči~\cite{pod}
 Sestavljen je iz enega ali več kontejnerjev, ki si delijo diske in omrežni vmesnik.
 To pomeni, da imajo skupen IP in se obnašajo podobno kot izolirani procesi na istem računalniku.
 \subsection{Service}
-Objekt service označuje vse objekte Pod ene mikrostoritve~\cite{service}.
+Objekt Service označuje vse objekte Pod ene mikrostoritve~\cite{service}.
 Kubernetes iz objekta v notranjem DNS ustvari domeno za mikrostoritev in dinamično razvršča promet med našimi objekti Pod.
-Objekte service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov objekta Pod, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
-Takšen zahtevek potem dobi en izmed označenih objektov Pod v objektu service.
+Objekte Service uporabljamo tako, da namesto pošiljanja zahtevkov direktno na IP naslov objekta Pod, delamo klice na ustvarjeno domensko ime storitve na primer \spverb|curl ime-storitve|.
+Takšen zahtevek potem dobi en izmed označenih objektov Pod v objektu Service.
 \subsection{Deployment}
 Deployment je objekt, ki mu podamo število željenih objektov Pod in predlogo za njihovo izdelavo~\cite{deployment}.
 Potem pa notranje storitve Kubernetesa zagotavljajo, da bo obstajalo toliko takšnih objektov tipa Pod kot smo navedli v deploymentu.
@@ -500,7 +500,7 @@ Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnost
 Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
 
 Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih gruč Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med kontejnerji v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov service, ki razporejajo promet med različnimi gručami.
+Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med kontejnerji v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov Service, ki razporejajo promet med različnimi gručami.
 Takšne objekte definiramo z anotacijo \spverb|io.cilium/ global-service|~\cite{setup-cilium-cluster-mesh}.
 Omogoča nam tudi omejevanje povezovanja med gru\-ča\-mi z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
 Ko postavljamo mre\-žo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasebnih omrežjih.
@@ -630,7 +630,7 @@ Postaviti moramo gruče v več različnih podatkovnih centrih in jih nastaviti, 
 Odvisno od problema bodo te podatkovni centri bližje uporabniku ali pa v lasti različnih oblačnih ponudnikov.
 A princip ostaja enak.
 \section{Razporeditev uporabnikov po gručah}
-Ko imamo na vsaki gruči javno izpostavljen Kubernetesov objekt service in postavljene primerne objekte ingress, moramo še vedno uporabnike preusmeriti na njim najbližjo gručo.
+Ko imamo na vsaki gruči javno izpostavljen Kubernetesov objekt Service in postavljene primerne objekte Ingress, moramo še vedno uporabnike preusmeriti na njim najbližjo gručo.
 Uporabnike lahko mi usmerimo avtomatsko z zapisi DNS, ki omogočajo usmerjanje na podlagi geolokacije.
 Lahko uporabimo in namestimo zunanji DNS skozi Kubernetes ali pa to opravimo kar mimo Kubernetesa.
 V naših lokalnih testnih gručah bomo ta korak preskočili in jih ne bomo usmerjali preko javnih strežnikov DNS, saj v lokalnem okolju to ni smiselno.
@@ -646,9 +646,9 @@ Naslednja možnost pa je rešitev, ki se jo poslužujejo nekatere internetne ra�
 V takšnih primerih se lahko tudi izognemo problemu sinhronizacije podatkov med strežniki, kar zelo poenostavi upravljanje naših gruč.
 \section{Definicija infrastrukture za naš primer}
 V našem primeru spletne aplikacije bomo imeli v vsaki gruči eno postavitev aplikacije \sn{Stateful rest sample} z objektom deployment. 
-Da aplikacijo izpostavimo izven gruče, pa bomo uporabili objekt service.
-Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulset, diskom na lokalni SD kartici, in dvema objektoma service.
-Prvi objekt service je zunanji in se bo uporabljal za dostop do baze, drugi pa je notranji in ga bomo uporabljali za prepoznavo ostalih primerkov CrateDB v gruči.
+Da aplikacijo izpostavimo izven gruče, pa bomo uporabili objekt Service.
+Aplikacija bo za shranjevanje uporabljala podatkovno bazo CrateDB, ki bo postavljena z objektom statefulset, diskom na lokalni SD kartici, in dvema objektoma Service.
+Prvi objekt Service je zunanji in se bo uporabljal za dostop do baze, drugi pa je notranji in ga bomo uporabljali za prepoznavo ostalih primerkov CrateDB v gruči.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/infrastructure-example.pdf}
@@ -668,7 +668,7 @@ curl gruca-1/users
 \end{verbatim}
 \section{Implementacija s KubeFed}
 Najprej se moramo odločiti za katere tipe objektov bomo vklopili federacijo oziroma za katere bomo želeli univerzalno upravljanje.
-V našem primeru gre za service, deployment in statefulset.
+V našem primeru gre za Service, Deployment in StatefulSet.
 Vklopimo jih z naslednjim ukazom, ki za nas ustvari nove federirane tipe objektov na izbranih tipih.
 \begin{verbatim}
 kubefedctl enable <ime tipa>
