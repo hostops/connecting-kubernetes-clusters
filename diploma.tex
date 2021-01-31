@@ -272,11 +272,11 @@ We find that presented modern methods of connecting clusters can greatly facilit
 \label{uvod}
 \section{Motivacija}
 Leta 2014 je Google objavil kodo sistema za orkestracijo kontejnerjev Kubernetes~\cite{what-is-Kubernetes}~\cite{borg-omega-kubernetes}.
-Kubernetes  je univerzalni način, ki nam omogoča, da več računalnikov povežemo v gručo, ki deluje kot ena samostojna enota. 
-Povezovanje strežnikov v gruče nam vsaj teoretično omogoča visoko razpoložljivost (HA) naših storitev~\cite{mastering-kubernetes} in sinhrono delovanje več računalnikov.
-V primerih obravnavanih v tem delu pa ni dovolj uporaba ene same gruče, ampak moramo med seboj povezati in upravljati več gruč.
+Kubernetes  je univerzalni način, ki omogoča, da več računalnikov povežemo v gručo, ki deluje kot samostojna enota. 
+Povezovanje strežnikov v gruče omogoča visoko razpoložljivost (HA) naših storitev~\cite{mastering-kubernetes}, deljenje virov in preprostejšo sinhronizacijo podatkov.
+V primerih, obravnavanih v tem delu, pa ni dovolj uporaba ene same gruče, ampak moramo med seboj povezati in upravljati več gruč.
 V zadnjem času so razvijalci Kubernetesa začeli bolj celostno reševati ta problem.
-Poizkusili so ga rešiti s projektom Federation 1, po njegovi ukinitvi~\cite{kubernetes-federation-evolution}, pa razvijalci Federation 2 oziroma KubeFed trdijo, da bo projekt uspešno prešel iz alfa v beta verzijo~\cite{kubefed-repo}.
+Poskusili so ga rešiti s projektom Federation 1, po njegovi ukinitvi~\cite{kubernetes-federation-evolution} pa razvijalci Federation 2 oziroma KubeFed trdijo, da bo projekt uspešno prešel iz alfa v beta verzijo~\cite{kubefed-repo}.
 \section{Cilj in vsebina naloge}
 V tem diplomskem delu bomo obravnavali rešitve problema povezovanja računalniških gruč in primere uporabe, ki izvirajo iz potreb industrije.
 Vsakemu primeru bomo poiskali rešitev v Kubernetes okolju z uporabo orodja KubeFed, poudarek pa bomo dali na sinhronizacijo podatkov.
