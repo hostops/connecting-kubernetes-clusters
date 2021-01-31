@@ -169,8 +169,7 @@ Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
 \hspace{32mm}\= \hspace{6cm} \= \kill
 Tematika naloge:
 \end{tabbing}
-TODO
-Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega sistema, kamor ga je vnesel mentor. V nekaj stavkih bo opisal, kaj pričakuje od kandidatovega diplomskega dela. Kaj so cilji, kakšne metode uporabiti, morda bo zapisal tudi ključno literaturo.
+Preučite področje povezovanja gruč Kubernetes. Analizirajte problematiko povezovanja in preglejte nekaj primerov uporabe, ki izvirajo iz potreb podjetij. Pripravite tudi prototipno rešitev povezovanja, pri čemer se osredotočite na rešitve, nastale v odprtokodni skupnosti Kubernetes.
 \vspace{15mm}
 \vspace{2cm}
 % prazna stran
@@ -225,14 +224,14 @@ Mami Lučki.
 %\noindent\textbf{Povzetek:} 
 \noindent 
 
-Ko na naših strežnikih začne zmanjkovati virov obstajata dva standardna načina za povečanje virov v našem sistemu.
-Prva možnost je, da nadgradimo naše strežnike, druga pa, da jih kupimo več in jih povežemo v računalniško gručo.
-V zadnjih letih se je na slednjem področju zgodil preboj s pojavom sistema Kubernetes.
-Sistem je zaradi svoje popularnosti postal de facto standard za upravljanje gruč in orkestracijo kontejnerjev.
-A ena sama gruča ni vedno dovolj v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa želimo še bolj povečati stabilnost ali varnost našega sistema.
-Pogledali si bomo ozadje povezovanja gruč in kakšne pristope lahko uporabimo za reševanje naših problemov.
-Poseben poudarek pa bomo dali tudi sinhronizaciji podatkov, saj je to eden zahtevnejših delov pri upravljanju več računalniških gruč.
-Ugotovimo, da nam lahko predstavljene sodobne metode povezovanja gruč zelo olajšajo njihovo upravljanje in preprosto rešijo tudi zahtevnejše probleme sinhronizacije podatkov.
+Ko na strežnikih začne zmanjkovati virov, obstajata dva standardna načina za povečanje virov v našem sistemu.
+Prva možnost je, da strežnike nadgradimo, druga pa, da jih kupimo več in jih povežemo v računalniško gručo.
+V zadnjih letih se je na tem področju zgodil preboj s pojavom sistema Kubernetes.
+Sistem je zaradi svoje popularnosti postal \emph{de facto} standard za upravljanje gruč in orkestracijo kontejnerjev.
+A ena sama gruča ni vedno dovolj v primerih, ko imamo težave z dragim prenosom podatkov, preveliko latenco do naših uporabnikov ali pa, ko želimo še bolj povečati stabilnost ali varnost našega sistema.
+Predstavili bomo ozadje povezovanja gruč in pristope, ki jih lahko uporabimo za reševanje naših problemov.
+Poseben poudarek bomo dali tudi na sinhronizacijo podatkov, saj je to eden zahtevnejših delov pri upravljanju več računalniških gruč.
+Ugotavljamo, da nam lahko predstavljene sodobne metode povezovanja gruč zelo olajšajo njihovo upravljanje in preprosto rešijo tudi zahtevnejše probleme sinhronizacije podatkov.
 
 \bigskip
 \noindent\textbf{Ključne besede:} \tkeywords.
@@ -252,8 +251,8 @@ Ugotovimo, da nam lahko predstavljene sodobne metode povezovanja gruč zelo olaj
 \noindent 
 
 When we are running low on resources in our computer system, there are two standard solutions for increasing them.
-The first solution is to upgrade our servers and the second one is to buy more servers and connect them in a cluster.
-There has been a major breakthrough in this field with the release of Kubernetes system in the recent years.
+The first solution is to upgrade our servers and the second one is to buy more servers and connect them to a cluster.
+There has been a major breakthrough in this field with the release of the Kubernetes system in recent years.
 The system became de facto standard for cluster management and container orchestration.
 But when we have problems such as expensive data transfer, too much latency to our users, or we want to further increase the stability or security of our system one cluster is not always enough.
 We will look at the background of connecting clusters and what approaches we can use to solve our problems.

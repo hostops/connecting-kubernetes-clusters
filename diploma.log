@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  29 JAN 2021 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,38 +446,38 @@ l.160 \clearemptydoublepage
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 \clearemptydoublepage
+l.176 \clearemptydoublepage
                             [3
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 \clearemptydoublepage
+l.176 \clearemptydoublepage
                             [4
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \clearemptydoublepage
+l.184 \clearemptydoublepage
                             [5]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \clearemptydoublepage
+l.184 \clearemptydoublepage
                             [6
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \clearemptydoublepage
+l.191 \clearemptydoublepage
                             [7]pdfTeX warning (ext4): destination with the same
  identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \clearemptydoublepage
+l.191 \clearemptydoublepage
                             [8
 
 ] (./diploma.tocpdfTeX warning (ext4): destination with the same identifier (na
@@ -493,9 +493,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.199 \clearemptydoublepage
+l.198 \clearemptydoublepage
                             [10]
-Underfull \hbox (badness 4899) in paragraph at lines 211--212
+Underfull \hbox (badness 4899) in paragraph at lines 210--211
 \OT1/cmr/m/n/12 ke-stra-cije za apli-ka-cije v
  []
 
@@ -503,7 +503,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 \clearemptydoublepage
+l.214 \clearemptydoublepage
                             [11
 
 
@@ -511,35 +511,41 @@ l.215 \clearemptydoublepage
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 \clearemptydoublepage
+l.214 \clearemptydoublepage
                             [12
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
-been already used, duplicate ignored
+]
+Overfull \hbox (4.40007pt too wide) in paragraph at lines 227--235
+[]\OT1/cmr/m/n/12 Ko na stre^^Tznikih za^^Tcne zmanj-ko-vati vi-rov, ob-sta-jat
+a dva stan-dar-dna na^^Tcina
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \clearemptydoublepage
+l.239 \clearemptydoublepage
                             [13
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \clearemptydoublepage
+l.239 \clearemptydoublepage
                             [14
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \clearemptydoublepage
+l.266 \clearemptydoublepage
                             [15
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \clearemptydoublepage
+l.266 \clearemptydoublepage
                             [16
 
 ]
@@ -548,7 +554,7 @@ Poglavje 1.
 File: images/problem-prevelike-latence.pdf Graphic file (type pdf)
 <use images/problem-prevelike-latence.pdf>
 Package pdftex.def Info: images/problem-prevelike-latence.pdf  used on input li
-ne 291.
+ne 290.
 (pdftex.def)             Requested size: 390.0pt x 227.47464pt.
 [1
 
@@ -560,7 +566,7 @@ Poglavje 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 312.
+(hyperref)                removing `\textasciicaron' on input line 311.
 
 
 Underfull \vbox (badness 1558) has occurred while \output is active []
@@ -570,7 +576,7 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 File: images/primer-povezanih-gruc.pdf Graphic file (type pdf)
 <use images/primer-povezanih-gruc.pdf>
 Package pdftex.def Info: images/primer-povezanih-gruc.pdf  used on input line 3
-30.
+29.
 (pdftex.def)             Requested size: 390.0pt x 395.89365pt.
 
 [6 <./images/primer-povezanih-gruc.pdf>]
@@ -579,7 +585,7 @@ Poglavje 3.
 File: images/Kubernetes-simple-schema.pdf Graphic file (type pdf)
 <use images/Kubernetes-simple-schema.pdf>
 Package pdftex.def Info: images/Kubernetes-simple-schema.pdf  used on input lin
-e 355.
+e 354.
 (pdftex.def)             Requested size: 390.0pt x 278.08327pt.
 [7
 
@@ -593,7 +599,7 @@ Poglavje 4.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 379.
+(hyperref)                removing `\textasciicaron' on input line 378.
 
 
 Underfull \vbox (badness 2689) has occurred while \output is active []
@@ -604,7 +610,7 @@ Poglavje 5.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 414.
+(hyperref)                removing `\textasciicaron' on input line 413.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -618,7 +624,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 448.
+on input line 447.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16] [17] [18]
@@ -626,13 +632,13 @@ Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 517.
+(hyperref)                removing `\textasciicaron' on input line 516.
 
 <images/postavitev-raspberry.jpg, id=456, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
-9.
+8.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -650,7 +656,7 @@ Poglavje 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 623.
+(hyperref)                removing `\textasciicaron' on input line 622.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -659,12 +665,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 635.
+(hyperref)                removing `\textasciicaron' on input line 634.
 
 <images/geolokacijski-dns.png, id=516, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 642.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 641.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -674,7 +680,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-657.
+656.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
 
 
@@ -690,7 +696,7 @@ Poglavje 8.
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 743.
+line 742.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
 
@@ -699,18 +705,18 @@ Poglavje 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 755.
+(hyperref)                removing `\textasciicaron' on input line 754.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 757.
+(hyperref)                removing `\textasciicaron' on input line 756.
 
 <images/upravljanje-robnih-gruc.pdf, id=616, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 767.
+ 766.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -720,7 +726,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 Poglavje 10.
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
@@ -837,7 +843,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2868554 bytes).
+Output written on diploma.pdf (64 pages, 2868627 bytes).
 PDF statistics:
  815 PDF objects out of 1000 (max. 8388607)
  707 compressed objects within 8 object streams
