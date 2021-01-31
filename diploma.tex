@@ -308,20 +308,20 @@ Izolacija pa je pomembna tudi z varnostnega vidika.
 Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
 Če imamo vsako aplikacijo v svoji gruči, pa se temu lahko izognemo.
 \chapter{Problem povezovanja gruč}
-Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
+Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti opravlja določene storitve.
 
-Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno tesno gručo~\cite{kube-and-edge}.
-Te računalnike lahko vedno povežemo vsaj v več različnih gruč, četudi to pomeni, da je v nekaterih gručah samo po en strežnik oziroma vozlišče.
-Ob prisotnosti povezave pa lahko te gruče med seboj povežemo šibkeje.
+Zaradi prevelike latence ali drugih ovir računalnikov ne moremo povezati v eno tesno povezano gručo~\cite{kube-and-edge}.
+Računalnike lahko vedno povežemo v več različnih gruč, četudi to pomeni, da je v nekaterih gručah samo po en strežnik oziroma vozlišče.
+Ob prisotnosti povezave pa lahko te gruče med seboj povežemo, a šibkeje.
 
-Ko govorimo o tesni povezanosti znotraj gruče velja, da ima vsako vozlišče dostop do vsakega, da vsak kontejner lahko komunicira z vsakim, da so vozlišča v istem hitrem notranjem omrežju podatkovnega centra. 
-Pričakujemo, da sistem, ki ga uporabljamo za gručenje omogoča razporejanje zaželenih storitev in kontejnerjev med strežniki in v primeru izpada vozlišča to odstrani iz sistema in kontejnerje s tega vozlišča prerazporedi na preostala vozlišča.
+Ko govorimo o tesni povezanosti znotraj gruče, velja, da ima vsako vozlišče dostop do vsakega, da vsak kontejner lahko komunicira z vsakim in da so vozlišča v istem hitrem notranjem omrežju podatkovnega centra. 
+Pričakujemo, da sistem, ki ga uporabljamo za gručenje, omogoča razporejanje zaželenih storitev in kontejnerjev med strežniki in v primeru izpada vozlišča to odstrani iz sistema, kontejnerje s tega vozlišča pa prerazporedi na preostala vozlišča.
 
 Šibka povezanost med gručami pomeni, da je povezava med različnimi gručami počasna, nezanesljiva ali draga.
 Zaradi omejitev moramo sprejemati kompromise na podlagi zmožnosti povezave.
 Skladno z našimi potrebami se lahko odrečemo komunikaciji med vozlišči v različnih gručah.
-Pričakujemo, da vsaka gruča skrbi za svoja vozlišča, ohranja svoje storitve in kontejnerje v delovanju.
-Naloge sistemov za povezovanje gruč pa so: omogočanje centralnega nadzora nad storitvami v gručah, prerazporejanje teh storitev med gručami, dinamično odkrivanje drugih gruč in njihovih storitev, izločanje nedosegljivih gruč, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
+Pričakujemo, da vsaka gruča skrbi za svoja vozlišča ter svoje storitve in kontejnerje ohranja v delovanju.
+V tem delu bomo kot naloge sistemov za povezovanje gruč obravnavali: omogočanje centralnega nadzora nad storitvami v gručah, prerazporejanje teh storitev med gručami, dinamično odkrivanje drugih gruč in njihovih storitev, izločanje nedosegljivih gruč, povezljivost med vsemi vozlišči in kontejnerji, četudi so vozlišča v različnih omrežjih.
 
 \begin{figure}[h]
 \begin{center}

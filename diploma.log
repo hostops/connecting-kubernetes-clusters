@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,6 +579,12 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 310.
 
 
+Overfull \hbox (19.86195pt too wide) in paragraph at lines 317--319
+\OT1/cmr/m/n/12 so vo-zli^^Ts^^Tca v is-tem hi-trem no-tra-njem omre^^Tzju po-d
+at-kov-nega cen-tra. Pri^^Tcakujemo,
+ []
+
+
 Underfull \vbox (badness 1558) has occurred while \output is active []
 
  [5]
@@ -853,7 +859,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2868835 bytes).
+Output written on diploma.pdf (64 pages, 2869440 bytes).
 PDF statistics:
  813 PDF objects out of 1000 (max. 8388607)
  705 compressed objects within 8 object streams
