@@ -298,15 +298,15 @@ To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski o
 V splošnem se problem reši tako, da uporabljamo več gruč in jih namestimo v več različnih podatkovnih centrov.
 V primeru izpada enega podatkovnega centra pa svoje uporabnike preusmerimo v drug podatkovni center.
 \subsection{Potreba po izolaciji aplikacij}
-Ko govorimo o izolaciji aplikacije se nanašamo na varnost pri vdoru, ali pa na večjo razpoložljivost.
+Ko govorimo o izolaciji aplikacije, se navezujemo na varnost pri vdoru ali pa na večjo razpoložljivost.
 Uporaba Kubernetesa od nas zahteva izolacijo v kontejnerje.
-Prav tako pa nam že Kubernetes sam omogoča izolacijo na posamezne strežnike~\cite{kube-network-policy} ali nastavitev pravil komunikacije v gruči~\cite{kube-pod-to-node}.
-Kljub tem postopkom se v Kubernetesu pojavljajo problemi, zaradi katerih postane celotna gruča nedosegljiva, s tem pa vse aplikacije v tej gruči.
-Če postavimo del neodvisnih aplikacij v drugo gručo, smo s tem preprečili njihov izpad ob napaki v prvi gruči.
+Prav tako pa nam že sam Kubernetes omogoča izolacijo na posamezne strežnike~\cite{kube-network-policy} ali nastavitev pravil komunikacije v gruči~\cite{kube-pod-to-node}.
+Kljub tem postopkom se v Kubernetesu pojavljajo problemi, zaradi katerih postane nedosegljiva celotna gruča, s tem pa vse aplikacije v tej gruči.
+Če postavimo del neodvisnih aplikacij v drugo gručo, s tem preprečimo njihov izpad ob napaki v prvi gruči.
 Izolacija pa je pomembna tudi z varnostnega vidika.
 Če se napadalec polasti enega samega vozlišča, ima posledično tudi popolno kontrolo nad vsemi drugimi aplikacijami, ki tečejo na tem vozlišču~\cite{securing-kube}.
 Aplikacije lahko pripadajo istemu uporabniku ali pa celo drugim uporabnikom.
-Če imamo vsako od naših aplikacij v svoji gruči pa se temu lahko izognemo.
+Če imamo vsako aplikacijo v svoji gruči, pa se temu lahko izognemo.
 \chapter{Problem povezovanja gruč}
 Računalniška gruča je skupina računalnikov, ki zaradi večje zanesljivosti in zmogljivosti skupaj opravlja določene storitve.
 
