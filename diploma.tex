@@ -494,16 +494,16 @@ Federation V2 poleg sinhronizacije infrastrukture podpira tudi odkrivanje storit
 Omenja pa se možnost odstranitve te funkcionalnosti~\cite{remove-service-discovery}, ki je že sedaj privzeto izklopljena.
 Preden uporabimo KubeFed pa se moramo zavedati, da je projekt v času pisanja diplomske naloge še vedno v razvojni fazi alfa in lahko preteče še nekaj časa preden doseže status GA.
 \section{Cilium}
-Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v naši gruči~\cite{cilium-intro}.
-Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot na primer zapiranje portov in omejevanje komunikacije.
-Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj nam omogoča omejevanje in filtriranje HTTP zahtevkov in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
+Cilium je odprtokodni program, ki nam omogoča napredne varnostne in omrežne nastavitve v gruči~\cite{cilium-intro}.
+Program na tretji in četrti omrežni plasti zagotavlja osnovne principe varnosti in zaščite, kot sta, na primer, zapiranje portov in omejevanje komunikacije.
+Poleg tega pa Cilium zagotavlja tudi naprednejšo varnost na sedmi omrežni plasti, saj omogoča omejevanje in filtriranje zahtevkov HTTP in podobne varnostne funkcionalnosti na popularnih protokolih aplikacijskega nivoja~\cite{cilium-intro}.
 
-Ker Cilium implementira precejšni del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujem več različnih gruč Kubernetes.
-Tako nam kot ključno prednost Cilium omogoča tudi komunikacijo med kontejnerji v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov Service, ki razporejajo promet med različnimi gručami.
-Takšne objekte definiramo z anotacijo \spverb|io.cilium/ global-service|~\cite{setup-cilium-cluster-mesh}.
+Ker Cilium implementira precejšen del mreženja in povezovanja v Kubernetesu, pa nam s tem lahko ponudi tudi nekaj zelo naprednih možnosti, ko med seboj povezujemo več različnih gruč Kubernetes.
+Tako nam Cilium kot ključni prednosti omogoča tudi komunikacijo med kontejnerji v različnih gručah~\cite{cilium-cluster-mesh} in uporabo globalnih objektov Service, ki razporejajo promet med različnimi gručami.
+Takšne objekte definiramo z anotacijo \spverb|io.cilium/global-service|~\cite{setup-cilium-cluster-mesh}.
 Omogoča nam tudi omejevanje povezovanja med gru\-ča\-mi z njihovim objektom \spverb|CiliumNetworkPolicy|~\cite{setup-cilium-cluster-mesh}.
 Ko postavljamo mre\-žo gruč, pa se moramo še vedno zavedati, da Cilium ne rešuje problema, če so naše gruče skrite v različnih zasebnih omrežjih.
-Ključno pri uporabi Ciliuma za povezovanje gruč je, da so vsa naša vozlišča dosegljiva med seboj.
+Ključno pri uporabi Ciliuma za povezovanje gruč je, da so vsa naša vozlišča med seboj dosegljiva.
 A četudi so naše gruče v med seboj nedosegljivih zasebnih omrežjih, pa je problem rešljiv z uporabo sistema VPN, ki nam omogoča, da vsa vozlišča povežemo v eno navidezno omrežje~\cite{setup-cilium-cluster-mesh}.
 
 Kljub naprednim funkcijam, ki nam jih Cilium ponuja, pa se moramo zavedati, da se Cilim ukvarja samo s povezovanjem gruč na omrežnem nivoju.
