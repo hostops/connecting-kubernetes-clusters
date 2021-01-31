@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {7.6}Implementacija s KubeFed}{28}{section.7.6}%
 \contentsline {section}{\numberline {7.7}Sinhronizacija podatkov}{29}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Uporaba primerne podatkovne baze}{30}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Podatke sinhroniziramo sami}{30}{subsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.7.2}Ro\IeC {\v c}no usklajevanje podatkov}{30}{subsection.7.7.2}%
 \contentsline {chapter}{\numberline {8}Upravljanje izoliranih aplikacij}{33}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Zmanj\IeC {\v s}evanje posledic vdorov in izpadov}{33}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Izpadi aplikacije}{33}{subsection.8.1.1}%

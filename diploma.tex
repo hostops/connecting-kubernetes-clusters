@@ -700,15 +700,15 @@ Druga možnost pa je, da izpostavimo vsak objekt Pod s svojim javnim naslovom IP
 
 Določiti moramo še nastavitve za zmanjšanje prometa med podatkovnimi centri in nastavitve za zagotavljanje prisotnosti podatkov v vsakem podatkovnem centru~\cite{cratedb-zone}.
 Podobne načine sinhronizacije podpira tudi na primer podatkovna baza Cassandra~\cite{cassandra-zone}.
-\subsection{Podatke sinhroniziramo sami}
+\subsection{Ročno usklajevanje podatkov}
 Sinhronizacija podatkovne baze ni trivialen problem.
-Če ne uporabimo primerne podatkovne baze ali pa želimo sinhronizirati samo določene stvari preko gruč, bomo sinhronizacijo podatkov verjetno morali implementirati sami.
+Če ne uporabimo primerne podatkovne baze ali pa preko gruč želimo sinhronizirati samo del podatkov, bomo sinhronizacijo podatkov verjetno morali implementirati sami.
 To pomeni, da bomo ustvarili novo storitev, ki bi v ozadju kopirala ključne podatke med podatkovnimi centri.
-Ker samo mi poznamo naš konkreten primer uporabe, je takšen pristop lahko najbolj učinkovit.
+Ker samo mi poznamo naš konkreten primer uporabe, je takšen pristop lahko najbolj učinkovit, a tudi najbolj kompleksen in časovno potraten.
 
-V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo našega vmesnika REST.
-To bomo storili v drugem Ubuntu kontejnerju z uporabo ukazov \spverb|curl| za izvajanje REST klicev in ukazom \spverb|jq|~\cite{jq} za razčlenjevanje podatkov.
-Podatki se sinhronizirajo vsakih 10 sekund.
+V našem primeru bomo s preprosto skripto kopirali uporabnike iz ene aplikacije v drugo kar z uporabo vmesnika REST.
+To bomo storili v drugem kontejnerju Ubuntu z uporabo ukazov \spverb|curl| za izvajanje klicev REST in ukazom \spverb|jq|~\cite{jq} za razčlenjevanje podatkov.
+Podatki se sinhronizirajo vsakih deset sekund.
 Primer še testiramo in dobimo spodnji izhod, kar potrdi, da so se podatki uspešno sinhronizirali.
 \begin{verbatim}
 curl -s -X POST gruca-1/users|jq \
