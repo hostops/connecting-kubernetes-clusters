@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  31 JAN 2021 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,17 +652,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/primer-uporabe-helm-predloge-argo-cd.png Graphic file (type png)
 <use images/primer-uporabe-helm-predloge-argo-cd.png>
 Package pdftex.def Info: images/primer-uporabe-helm-predloge-argo-cd.png  used 
-on input line 445.
+on input line 444.
 (pdftex.def)             Requested size: 390.0pt x 329.20891pt.
  [15 <./images/primer-uporabe-helm-predloge-argo-cd.png (PNG copy)>]
 [16]
-Overfull \hbox (26.20679pt too wide) in paragraph at lines 502--509
+Overfull \hbox (26.20679pt too wide) in paragraph at lines 501--508
 \OT1/cmr/m/n/12 pred-nost Ci-lium omogo^^Tca tudi ko-mu-ni-ka-cijo med kon-tej-
 nerji v razli^^Tcnih gru^^Tcah [[]]
  []
 
 
-Overfull \hbox (30.66212pt too wide) in paragraph at lines 502--509
+Overfull \hbox (30.66212pt too wide) in paragraph at lines 501--508
 \OT1/cmr/m/n/12 gru^^Tcami. Tak^^Tsne objekte de-fi-ni-ramo z ano-ta-cijo [][]\
 OT1/cmtt/m/n/12 io.cilium/[] global-service []\OT1/cmr/m/n/12 [[]].
  []
@@ -672,13 +672,13 @@ Poglavje 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 514.
+(hyperref)                removing `\textasciicaron' on input line 513.
 
 <images/postavitev-raspberry.jpg, id=456, 4223.78pt x 3131.7pt>
 File: images/postavitev-raspberry.jpg Graphic file (type jpg)
 <use images/postavitev-raspberry.jpg>
 Package pdftex.def Info: images/postavitev-raspberry.jpg  used on input line 52
-6.
+5.
 (pdftex.def)             Requested size: 390.0pt x 289.15207pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -696,7 +696,7 @@ Poglavje 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 620.
+(hyperref)                removing `\textasciicaron' on input line 619.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -705,12 +705,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 632.
+(hyperref)                removing `\textasciicaron' on input line 631.
 
 <images/geolokacijski-dns.png, id=516, 819.06pt x 437.38406pt>
 File: images/geolokacijski-dns.png Graphic file (type png)
 <use images/geolokacijski-dns.png>
-Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 639.
+Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 638.
 (pdftex.def)             Requested size: 390.0pt x 208.2668pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -720,7 +720,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
-654.
+653.
 (pdftex.def)             Requested size: 390.0pt x 296.56032pt.
 
 
@@ -736,7 +736,7 @@ Poglavje 8.
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
-line 740.
+line 739.
 (pdftex.def)             Requested size: 390.0pt x 154.20474pt.
  [34 <./images/primer-izolirane-aplikacije.pdf>] [35] [36
 
@@ -745,18 +745,18 @@ Poglavje 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 752.
+(hyperref)                removing `\textasciicaron' on input line 751.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 754.
+(hyperref)                removing `\textasciicaron' on input line 753.
 
 <images/upravljanje-robnih-gruc.pdf, id=616, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
- 764.
+ 763.
 (pdftex.def)             Requested size: 390.0pt x 340.80615pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -766,7 +766,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 Poglavje 10.
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 
  []
 
@@ -871,7 +871,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  9491 strings out of 479383
  134229 string characters out of 5875830
- 461214 words of memory out of 5000000
+ 462214 words of memory out of 5000000
  26241 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -883,7 +883,7 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2869798 bytes).
+Output written on diploma.pdf (64 pages, 2869776 bytes).
 PDF statistics:
  813 PDF objects out of 1000 (max. 8388607)
  705 compressed objects within 8 object streams

@@ -427,17 +427,16 @@ V osnovi takšen pristop omogoča, da bomo imeli na voljo samo sinhronizacijo in
 V nadaljevanju bomo izbrali sistem ArgoCD in pogledali, kako bi postavili zgoraj opisano infrastrukturo.
 \subsection{Sinhronizacija objektov z ArgoCD}
 ArgoCD podpira več različnih formatov konfiguracije gruče~\cite{argocd-docs}.
-Uporabimo lahko YAML format datoteke z definicijami objektov, ki jih želimo namestiti v vsako gručo.
+Uporabimo lahko format datoteke YAML z definicijami objektov, ki jih želimo namestiti v vsako gručo.
 Za nameščanje te konfiguracije v več kot eno gručo imamo na voljo dva pristopa.
-Prvi način je, da v vsako gručo namestimo ArgoCD in uporabimo enak repozitorij Git v vseh.
+Prvi je, da v vsako gručo namestimo ArgoCD in uporabimo enak repozitorij Git v vsaki izmed njih.
 ArgoCD pa nam omogoča tudi pošiljanje konfiguracije v oddaljene gruče~\cite{declarative-setup}.
 To pomeni, da imamo lahko kontroler ArgoCD nameščen samo v eni gruči.
 
-Če ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in nameravamo prilagoditi konfiguracijo posamezne gruče.
-V tem primeru bi uporabili format zapisa konfiguracije, ki podpira predloge.
-ArgoCD nam ponuja možnost, da ročno določimo spremenljivke predlogam.
-Tako lahko uporabimo na primer predloge Helm in ArgoCD nam bo omogočil, da vsaki gruči izberemo svojo datoteko s spremenljivkami.
-Glede na preprostost delovanja takšnega sistema se moramo zavedati, da od njega ne moremo pričakovati nikakršnih naprednih funkcionalnosti kot sta dinamično odkrivanje storitev ali komunikacija kontejnerjev med gručami.
+Če ne želimo, da imajo vse gruče popolnoma enako infrastrukturo in nameravamo prilagoditi konfiguracijo posamezne gruče, lahko uporabimo format zapisa konfiguracije, ki podpira predloge.
+ArgoCD nam ponuja možnost, da v predlogah sami določimo vrednosti spremenljivk.
+Tako lahko uporabimo na primer predloge Helm in ArgoCD nam bo omogočil, da vsaki gruči izberemo lastno datoteko s spremenljivkami.
+Glede na preprostost delovanja takšnega sistema se moramo zavedati, da od njega ne moremo pričakovati nikakršnih naprednih funkcionalnosti kot sta dinamično odkrivanje storitev in komunikacija kontejnerjev med gručami.
 Takšen sistem nam omogoča samo sinhronizacijo infrastrukture.
 
 \begin{figure}[h]
@@ -722,7 +721,7 @@ curl -s gruca-2/users|jq
 \chapter{Upravljanje izoliranih aplikacij}
 \section{Zmanjševanje posledic vdorov in izpadov}
 Računalniška stroka si je že nekaj časa nazaj priznala, da popolnega sistema ne more ustvariti: sistema, ki se ne more sesuti, sistema, ki bo ves čas razpoložljiv in sistema, v katerega ne bo mogoče vdreti.
-To vsake toliko časa potrdijo tudi najbolje upravljani veliki sistemi kot so AWS, Google, Facebook z izpadi ali vdori na njihovih storitvah~\cite{common-outages}. 
+To vsake toliko časa potrdijo tudi najbolje upravljani veliki sistemi, kot so AWS, Google, Facebook z izpadi ali vdori na njihovih storitvah~\cite{common-outages}. 
 Vseeno pa kljub vdorom in napakam, zaradi katerih postanejo naši sistemi nedosegljivi, vedno lahko poizkusimo zmanjšati posledice ob morebitnem vdoru ali izpadu. 
 \subsection{Izpadi aplikacije}
 Kljub temu, da smo naše aplikacije namestili na različne gruče in je s tem aplikacija odporna na izpad ene gruče, pa lahko ob hujših nepravilnostih delovanja ene aplikacije in napaki pri nastavitvi gruč kaskadno izpadejo tudi vse gruče na katerih imamo aplikacijo nameščeno.
