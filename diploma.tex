@@ -575,24 +575,23 @@ curl -X POST localhost/users \
 curl localhost/users
 \end{verbatim}
 
-Za shranjevanje podatkov bomo uporabili dve različni bazi podatkov SQL.
-Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot baza SQL na več vozliščih in nam omogoča napredne sinhronizacije tudi med različnimi strežniki in gručami.
+Za shranjevanje podatkov bomo uporabili dve različni bazi podatkov SQL: Postgres, ki je preprosta za lokalni razvoj, a ne omogoča napredne sinhronizacije podatkov med strežniki in CrateDB, ki je bil zasnovan kot baza SQL na več vozliščih in nam omogoča napredne sinhronizacije tudi med različnimi strežniki in gručami.
 K sreči pa CrateDB implementira vmesnik PostgreSQL in nam kode za prehod med bazami ni potrebno spreminjati~\cite{cratedb}.
 \section{Namestitev KubeFed}
 Kot ena izmed ključnih komponent složnega delovanja več gruč je njihovo upravljanje.
 V te namene bomo uporabili program KubeFed, ki ga moramo namestiti na eno izmed gruč, ki jih želimo povezati skupaj.
-Ker je izdelek še v razvoju in še ni prišel iz alfa faze, še ni objavljene verzije programa za procesorje ARM.
-Zato je bilo iz kode KubeFed potrebno zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{docker-kubefed}.
-Potem pa smo uporabili originalno Helm predlogo, kjer smo samo zamenjali originalno sliko kontejnerja z našo.
-Za delo s KubeKed pa moramo na svoj računalnik namestiti še orodje kubefedcli.
-Z uporabo ukaza \spverb|kubefedctl join| povežemo vse tri gruče v kubefed sistem.
+Ker je izdelek še v razvoju in še ni prišel iz alfa faze, še ni objavljene uradnje verzije programa za arhitekturo ARM.
+Zato je bilo iz kode KubeFed treba zgraditi novo sliko kontejnerja, ki je javno objavljena~\cite{docker-kubefed}.
+Potem pa smo uporabili uradno predlogo Helm, pri čemer smo samo zamenjali originalno sliko kontejnerja z našo.
+Za delo s KubeFed pa moramo na svoj računalnik namestiti še orodje kubefedctl.
+Z uporabo ukaza \spverb|kubefedctl join| povežemo vse tri gruče v KubeFed sistem.
 \begin{verbatim}
 kubefedctl join gruca-1
 kubefedctl join gruca-2
 kubefedctl join gruca-3
 \end{verbatim}
 S tem smo uspešno povezali več gruč Kubernetes v sistem KubeFed.
-Seznam vseh povezanih gruč pa lahko preverimo tako, da izpišemo seznam objektov tipa kubefedclusters. 
+Seznam vseh povezanih gruč pa lahko preverimo tako, da izpišemo seznam objektov tipa KubefedClusters. 
 V našem primeru imamo povezane tri gruče, kar se vidi iz sledečega izpisa.
 \begin{verbatim}
 kubectl get kubefedclusters
