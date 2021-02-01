@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  1 FEB 2021 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  1 FEB 2021 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -670,12 +670,12 @@ Package pdftex.def Info: images/geolokacijski-dns.png  used on input line 636.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26]
-<images/infrastructure-example.pdf, id=521, 543.95218pt x 413.62529pt>
+<images/infrastructure-example.pdf, id=521, 542.98856pt x 413.62529pt>
 File: images/infrastructure-example.pdf Graphic file (type pdf)
 <use images/infrastructure-example.pdf>
 Package pdftex.def Info: images/infrastructure-example.pdf  used on input line 
 651.
-(pdftex.def)             Requested size: 390.0pt x 296.56032pt.
+(pdftex.def)             Requested size: 390.0pt x 297.09047pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -686,7 +686,7 @@ xample.pdf>] [29] [30] [31] [32
 ]
 Poglavje 8.
 [33]
-<images/primer-izolirane-aplikacije.pdf, id=589, 406.3983pt x 160.6803pt>
+<images/primer-izolirane-aplikacije.pdf, id=585, 406.3983pt x 160.6803pt>
 File: images/primer-izolirane-aplikacije.pdf Graphic file (type pdf)
 <use images/primer-izolirane-aplikacije.pdf>
 Package pdftex.def Info: images/primer-izolirane-aplikacije.pdf  used on input 
@@ -706,7 +706,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 751.
 
-<images/upravljanje-robnih-gruc.pdf, id=615, 565.15138pt x 493.845pt>
+<images/upravljanje-robnih-gruc.pdf, id=611, 565.15138pt x 493.845pt>
 File: images/upravljanje-robnih-gruc.pdf Graphic file (type pdf)
 <use images/upravljanje-robnih-gruc.pdf>
 Package pdftex.def Info: images/upravljanje-robnih-gruc.pdf  used on input line
@@ -848,10 +848,10 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msl12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diploma.pdf (64 pages, 2869652 bytes).
+Output written on diploma.pdf (64 pages, 2837684 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 706 compressed objects within 8 object streams
+ 810 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
  159 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 
