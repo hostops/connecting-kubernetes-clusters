@@ -1,7 +1,14 @@
 \begin{thebibliography}{10}
 
+\bibitem{k3os-rpi-image-generator}
+D.~Brentjes, S.~Gielen, and odprtokodna skupnost.
+\newblock Picl k3os image generator.
+\newblock Dosegljivo:
+  \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
+\newblock [Dostopano: 16. 12. 2020].
+
 \bibitem{borg-omega-kubernetes}
-Brendan Burns, Brian Grant, David Oppenheimer, Eric Brewer, and John Wilkes.
+B.~Burns, B.~Grant, D.~Oppenheimer, E.~Brewer, and J.~Wilkes.
 \newblock Borg, omega, and kubernetes: Lessons learned from three
   container-management systems over a decade.
 \newblock {\em Queue}, 14(1):70–93, January 2016.
@@ -28,12 +35,11 @@ CrateDB.
 \newblock Dosegljivo: \url{https://crate.io/}, 2020.
 \newblock [Dostopano: 29. 12. 2020].
 
-\bibitem{k3os-rpi-image-generator}
-odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
-\newblock Picl k3os image generator.
-\newblock Dosegljivo:
-  \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
-\newblock [Dostopano: 16. 12. 2020].
+\bibitem{jq}
+S.~Dolan and oprtokodna skupost.
+\newblock Github - stedolan/jq: Command-line json processor.
+\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
+\newblock [Dostopano: 20. 01. 2021].
 
 \bibitem{cloud-failures}
 P.~T. {Endo}, G.~L. {Santos}, D.~{Rosendo}, D.~M. {Gomes}, A.~{Moreira},
@@ -42,24 +48,30 @@ P.~T. {Endo}, G.~L. {Santos}, D.~{Rosendo}, D.~M. {Gomes}, A.~{Moreira},
 \newblock {\em Computer}, 50(11):86--90, November 2017.
 
 \bibitem{k8s-performance-comparison}
-Halim Fathoni, Chao-Tung Yang, Chih-Hung Chang, and Chin-Yin Huang.
+H.~Fathoni, C.-T. Yang, C.-H. Chang, and C.-Y. Huang.
 \newblock Performance comparison of lightweight kubernetes in edge devices.
-\newblock In Christian Esposito, Jiman Hong, and Kim-Kwang~Raymond Choo,
-  editors, {\em Pervasive Systems, Algorithms and Networks}, pages 304--309,
-  Cham, 2019. Springer International Publishing.
+\newblock In C.~Esposito, J.~Hong, and K.-K.~R. Choo, editors, {\em Pervasive
+  Systems, Algorithms and Networks}, pages 304--309, Cham, 2019. Springer
+  International Publishing.
+
+\bibitem{common-outages}
+L.~Fiondella, S.~S. Gokhale, and V.~B. Mendiratta.
+\newblock Cloud incident data: An empirical analysis.
+\newblock In {\em 2013 IEEE International Conference on Cloud Engineering
+  (IC2E)}, pages 241--249, 2013.
 
 \bibitem{mastering-kubernetes}
-Sayfan Gigi.
+G.~Gigi.
 \newblock {\em Mastering Kubernetes}.
 \newblock Packt Publishing Ltd, 2017.
 
 \bibitem{low-resource-k8s}
-Tom Goethals, Filip De~Turck, and Bruno Volckaert.
+T.~Goethals, F.~De~Turck, and B.~Volckaert.
 \newblock Fledge: Kubernetes compatible container orchestration on low-resource
   edge devices.
-\newblock In Ching-Hsien Hsu, Sond{\`e}s Kallel, Kun-Chan Lan, and Zibin Zheng,
-  editors, {\em Internet of Vehicles. Technologies and Services Toward Smart
-  Cities}, pages 174--189, Cham, 2020. Springer International Publishing.
+\newblock In C.-H. Hsu, S.~Kallel, K.-C. Lan, and Z.~Zeng, editors, {\em
+  Internet of Vehicles. Technologies and Services Toward Smart Cities}, pages
+  174--189, Cham, 2020. Springer International Publishing.
 
 \bibitem{ha-systems}
 J.~{Gray} and D.~P. {Siewiorek}.
@@ -67,40 +79,32 @@ J.~{Gray} and D.~P. {Siewiorek}.
 \newblock {\em Computer}, 24(9):39--48, 1991.
 
 \bibitem{cluster-federation-in-Kubernetes-1.5}
-Lukasz Guminski.
+L.~Guminski.
 \newblock Cluster federation in kubernetes 1.5.
 \newblock Dosegljivo:
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 23. 11. 2020].
 
 \bibitem{git-diploma}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Connecting kubernetes clusters.
 \newblock Dosegljivo:
   \url{https://github.com/hostops/connecting-kubernetes-clusters}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{git-stateful-rest-sample}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Stateful rest sample.
 \newblock Dosegljivo: \url{https://github.com/hostops/stateful-rest-sample},
   2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{docker-stateful-rest-sample}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Stateful rest sample.
 \newblock Dosegljivo:
   \url{https://hub.docker.com/r/hostops/stateful-rest-sample}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
-
-\bibitem{kubernetes-federation-evolution}
-Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
-\newblock Kubernetes federation evolution.
-\newblock Dosegljivo:
-  \url{https://kubernetes.io/blog/2018/12/12/kubernetes-federation-evolution/},
-  2018.
-\newblock [Dostopano: 20. 12. 2020].
 
 \bibitem{securing-kube}
 M.~S. {Islam Shamim}, F.~{Ahamed Bhuiyan}, and A.~{Rahman}.
@@ -117,16 +121,10 @@ J.~Kepner, V.~Gadepally, L.~Milechin, S.~Samsi, W.~Arcand, D.~Bestor,
 \newblock {\em CoRR}, abs/1902.00846, 2019.
 
 \bibitem{tosca-fed}
-Dongmin Kim, Hanif Muhammad, Eunsam Kim, Sumi Helal, and Choonhwa Lee.
+D.~Kim, H.~Muhammad, E.~Kim, S.~Helal, and C.~Lee.
 \newblock Tosca-based and federation-aware cloud orchestration for kubernetes
   container platform.
 \newblock {\em Applied Sciences}, 9(1), 2019.
-
-\bibitem{common-outages}
-V.~B.~Mendiratta L.~Fiondella, S. S.~Gokhale.
-\newblock Cloud incident data: An empirical analysis.
-\newblock In {\em 2013 IEEE International Conference on Cloud Engineering
-  (IC2E)}, pages 241--249, 2013.
 
 \bibitem{k3os-git}
 Rancher Labs.
@@ -141,7 +139,7 @@ Rancher Labs.
 \newblock [Dostopano: 16. 11. 2020].
 
 \bibitem{dyn-place}
-Marino Lorenzo.
+M.~Lorenzo.
 \newblock Dynamic application placement in a kubernetes multi-cluster
   environment.
 \newblock Magisterska naloga, Politecnico di Torino, 2020.
@@ -159,7 +157,7 @@ M.~Malekimajd, A.~Movaghar, and S.~Hosseinimotlagh.
 \newblock {\em The Journal of Supercomputing}, 71(12):4423--4445, Dec 2015.
 
 \bibitem{kube-and-edge}
-Karim Manaouil and Adrien Lebre.
+K.~Manaouil and A.~Lebre.
 \newblock Kubernetes and the edge?
 \newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
   2020.
@@ -313,12 +311,6 @@ Kubernetes skupnost.
   \url{https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{jq}
-oprtokodna~skupost Stephen~Dolan.
-\newblock Github - stedolan/jq: Command-line json processor.
-\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
-\newblock [Dostopano: 20. 01. 2021].
-
 \bibitem{geo-instability}
 M.~A. {Tamiru}, G.~{Pierre}, J.~{Tordsson}, and E.~{Elmroth}.
 \newblock Instability in geo-distributed kubernetes federation: Causes and
@@ -326,5 +318,13 @@ M.~A. {Tamiru}, G.~{Pierre}, J.~{Tordsson}, and E.~{Elmroth}.
 \newblock In {\em 2020 28th International Symposium on Modeling, Analysis, and
   Simulation of Computer and Telecommunication Systems (MASCOTS)}, pages 1--8,
   2020.
+
+\bibitem{kubernetes-federation-evolution}
+I.~Ur~Rehman, P.~Morie, and T.~D. Shashidhara.
+\newblock Kubernetes federation evolution.
+\newblock Dosegljivo:
+  \url{https://kubernetes.io/blog/2018/12/12/kubernetes-federation-evolution/},
+  2018.
+\newblock [Dostopano: 20. 12. 2020].
 
 \end{thebibliography}
