@@ -729,7 +729,7 @@ Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali storitve
 A vseeno se moramo zavedati, da je ta korak smiseln šele po tem, ko opravimo že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerizacija in pravilna nastavitev omejitev skaliranja aplikacije.
 \subsection{Vdori}
 Podobno kot pri izpadih aplikacije je tudi pri preprečevanju posledic vdorov.
-Najprej moramo poskrbeti za primerno zaščito vozlišč Kubernetes, naše aplikacije, zaščito komunikacije med storitvami, uporabo nepriviligiranih kontejnerjev~\cite{securing-kube}.
+Najprej moramo poskrbeti za primerno zaščito vozlišč Kubernetes, naše aplikacije, zaščito komunikacije med storitvami in uporabo nepriviligiranih kontejnerjev~\cite{securing-kube}.
 Če pa nam vsi zgoraj našteti in ostali priporočeni ukrepi niso dovolj, ali pa se zavedamo, da imamo v gručah manj varne aplikacije in napadalec prek njih ne sme dostopati do podatkov kritičnih aplikacij, potem je smiselno kritične aplikacije izolirati v svoje gruče.
 \section{Implementacija s KubeFed}
 \begin{figure}[h]
