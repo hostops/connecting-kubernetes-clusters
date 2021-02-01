@@ -1,18 +1,10 @@
 \begin{thebibliography}{10}
 
 \bibitem{borg-omega-kubernetes}
-Brendan Burns, Brian Grant, David Oppenheimer, Eric Brewer, and John Wilkes.
+E.~Brewer J.~Wilkes B.~Burns, B.~Grant.
 \newblock Borg, omega, and kubernetes: Lessons learned from three
   container-management systems over a decade.
 \newblock {\em Queue}, 14(1):70–93, January 2016.
-
-\bibitem{cassandra-zone}
-Apache Cassandra.
-\newblock Initializing a multiple node cluster (multiple datacenters).
-\newblock Dosegljivo:
-  \url{https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html},
-  2020.
-\newblock [Dostopano: 29. 12. 2020].
 
 \bibitem{cratedb-zone}
 CrateDB.
@@ -29,66 +21,48 @@ CrateDB.
 \newblock [Dostopano: 29. 12. 2020].
 
 \bibitem{k3os-rpi-image-generator}
-odprtokodna~skupnost Dennis~Brentjes, Sjors~Gielen.
+odprtokodna~skupnost D.~Brentjes, S.~Gielen.
 \newblock Picl k3os image generator.
 \newblock Dosegljivo:
   \url{https://github.com/sgielen/picl-k3os-image-generator}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{cloud-failures}
-P.~T. {Endo}, G.~L. {Santos}, D.~{Rosendo}, D.~M. {Gomes}, A.~{Moreira},
-  J.~{Kelner}, D.~{Sadok}, G.~E. {Gonçalves}, and M.~{Mahloo}.
-\newblock Minimizing and managing cloud failures.
-\newblock {\em Computer}, 50(11):86--90, November 2017.
-
-\bibitem{k8s-performance-comparison}
-Halim Fathoni, Chao-Tung Yang, Chih-Hung Chang, and Chin-Yin Huang.
-\newblock Performance comparison of lightweight kubernetes in edge devices.
-\newblock In Christian Esposito, Jiman Hong, and Kim-Kwang~Raymond Choo,
-  editors, {\em Pervasive Systems, Algorithms and Networks}, pages 304--309,
-  Cham, 2019. Springer International Publishing.
-
-\bibitem{mastering-kubernetes}
-Sayfan Gigi.
-\newblock {\em Mastering Kubernetes}.
-\newblock Packt Publishing Ltd, 2017.
-
-\bibitem{low-resource-k8s}
-Tom Goethals, Filip De~Turck, and Bruno Volckaert.
-\newblock Fledge: Kubernetes compatible container orchestration on low-resource
-  edge devices.
-\newblock In Ching-Hsien Hsu, Sond{\`e}s Kallel, Kun-Chan Lan, and Zibin Zheng,
-  editors, {\em Internet of Vehicles. Technologies and Services Toward Smart
-  Cities}, pages 174--189, Cham, 2020. Springer International Publishing.
-
-\bibitem{ha-systems}
-J.~{Gray} and D.~P. {Siewiorek}.
-\newblock High-availability computer systems.
-\newblock {\em Computer}, 24(9):39--48, 1991.
+\bibitem{tosca-fed}
+E.~Kim S. Helal C.~Lee D.~Kim, H.~Muhammad.
+\newblock Tosca-based and federation-aware cloud orchestration for kubernetes
+  container platform.
+\newblock {\em Applied Sciences}, 9(1), 2019.
 
 \bibitem{cluster-federation-in-Kubernetes-1.5}
-Lukasz Guminski.
+L.~Guminski.
 \newblock Cluster federation in kubernetes 1.5.
 \newblock Dosegljivo:
   \url{https://kubernetes.io/blog/2016/12/cluster-federation-in-kubernetes-1-5/}.
 \newblock [Dostopano: 23. 11. 2020].
 
+\bibitem{k8s-performance-comparison}
+C.-H. Chang C.-Y.~Huang H.~Fathoni, C.-T.~Yang.
+\newblock Performance comparison of lightweight kubernetes in edge devices.
+\newblock In K.-K. R.~Choo C.~Esposito, J.~Hong, editor, {\em Pervasive
+  Systems, Algorithms and Networks}, pages 304--309, Cham, 2019. Springer
+  International Publishing.
+
 \bibitem{git-diploma}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Connecting kubernetes clusters.
 \newblock Dosegljivo:
   \url{https://github.com/hostops/connecting-kubernetes-clusters}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{git-stateful-rest-sample}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Stateful rest sample.
 \newblock Dosegljivo: \url{https://github.com/hostops/stateful-rest-sample},
   2020.
 \newblock [Dostopano: 16. 12. 2020].
 
 \bibitem{docker-stateful-rest-sample}
-Jakob Hostnik.
+J.~Hostnik.
 \newblock Stateful rest sample.
 \newblock Dosegljivo:
   \url{https://hub.docker.com/r/hostops/stateful-rest-sample}, 2020.
@@ -102,26 +76,24 @@ Shashidhara T~D Irfan Ur~Rehman, Paul~Morie.
   2018.
 \newblock [Dostopano: 20. 12. 2020].
 
-\bibitem{securing-kube}
-M.~S. {Islam Shamim}, F.~{Ahamed Bhuiyan}, and A.~{Rahman}.
-\newblock Xi commandments of kubernetes security: A systematization of
-  knowledge related to kubernetes security practices.
-\newblock In {\em 2020 IEEE Secure Development (SecDev)}, pages 58--64, 2020.
+\bibitem{ha-systems}
+D.~P.~Siewiorek J.~Gray.
+\newblock High-availability computer systems.
+\newblock {\em Computer}, 24(9):39--48, 1991.
 
 \bibitem{databases-comparison}
-Lauren Milechin Siddharth Samsi William Arcand David Bestor WilBergero Chansup
-  Byun Matthew Hubbell Michael Houle Michael Jones Anne Klein Peter Michaleas
-  Julie Mullen AProut Antonio Rosa Charles Yee Albert~Reuther Jeremy~Kepner,
-  Vijay~Gadepally.
+L.~Milechin S. Samsi W. Arcand D. Bestor W. C. Byun M. Hubbell M. Houle M.
+  Jones A. Klein P. Michaleas J. Mullen A. A. Rosa C. Yee A.~Reuther J.~Kepner,
+  V.~Gadepally.
 \newblock A billion updates per second using 30, 000 hierarchical in-memory
   {D4M} databases.
 \newblock {\em CoRR}, abs/1902.00846, 2019.
 
-\bibitem{tosca-fed}
-Dongmin Kim, Hanif Muhammad, Eunsam Kim, Sumi Helal, and Choonhwa Lee.
-\newblock Tosca-based and federation-aware cloud orchestration for kubernetes
-  container platform.
-\newblock {\em Applied Sciences}, 9(1), 2019.
+\bibitem{kube-and-edge}
+A.~Lebre K.~Manaouil.
+\newblock Kubernetes and the edge?
+\newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
+  2020.
 
 \bibitem{common-outages}
 V.~B.~Mendiratta L.~Fiondella, S. S.~Gokhale.
@@ -142,7 +114,7 @@ Rancher Labs.
 \newblock [Dostopano: 16. 11. 2020].
 
 \bibitem{dyn-place}
-Marino Lorenzo.
+M.~Lorenzo.
 \newblock Dynamic application placement in a kubernetes multi-cluster
   environment.
 \newblock Magisterska naloga, Politecnico di Torino, 2020.
@@ -154,22 +126,36 @@ Raspberry Pi~Trading Ltd.
   \url{https://static.raspberrypi.org/files/product-briefs/200521+Raspberry+Pi+4+Product+Brief.pdf}.
 \newblock [Dostopano: 20. 1. 2021].
 
+\bibitem{geo-instability}
+J.~Tordsson E.~Elmroth M.~A.~Tamiru, G.~Pierre.
+\newblock Instability in geo-distributed kubernetes federation: Causes and
+  mitigation.
+\newblock In {\em 2020 28th International Symposium on Modeling, Analysis, and
+  Simulation of Computer and Telecommunication Systems (MASCOTS)}, pages 1--8,
+  2020.
+
 \bibitem{minimizing-latency}
-Marzieh Malekimajd, Ali Movaghar, and Seyedmahyar Hosseinimotlagh.
+S.~Hosseinimotlagh M.~Malekimajd, A.~Movaghar.
 \newblock Minimizing latency in geo-distributed clouds.
 \newblock {\em The Journal of Supercomputing}, 71(12):4423--4445, Dec 2015.
 
-\bibitem{kube-and-edge}
-Karim Manaouil and Adrien Lebre.
-\newblock Kubernetes and the edge?
-\newblock Raziskovalno poročilo RR-9370, Inria Rennes - Bretagne Atlantique,
-  2020.
+\bibitem{securing-kube}
+A.~Rahman M.~S. Islam~Shamim, F. Ahamed~Bhuiyan.
+\newblock Xi commandments of kubernetes security: A systematization of
+  knowledge related to kubernetes security practices.
+\newblock In {\em 2020 IEEE Secure Development (SecDev)}, pages 58--64, 2020.
 
 \bibitem{cncf}
 Cloud native~computing foundation.
 \newblock Cncf cloud native interactive landscape.
 \newblock Dosegljivo: \url{https://landscape.cncf.io/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
+
+\bibitem{cloud-failures}
+D.~Rosendo D. M. Gomes A. Moreira J. Kelner D. Sadok G. E. Gonçalves M.~Mahloo
+  P.~T.~Endo, G. L.~Santos.
+\newblock Minimizing and managing cloud failures.
+\newblock {\em Computer}, 50(11):86--90, November 2017.
 
 \bibitem{difference-multi-cluster}
 Platform9.
@@ -178,6 +164,25 @@ Platform9.
 \newblock Dosegljivo:
   \url{https://platform9.com/blog/difference-between-multi-cluster-multi-master-multi-tenant-federated-kubernetes/}.
 \newblock [Dostopano: 20. 11. 2020].
+
+\bibitem{jq}
+oprtokodna~skupost S.~Dolan.
+\newblock Github - stedolan/jq: Command-line json processor.
+\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
+\newblock [Dostopano: 20. 01. 2021].
+
+\bibitem{mastering-kubernetes}
+G.~Sayfan.
+\newblock {\em Mastering Kubernetes}.
+\newblock Packt Publishing Ltd, 2017.
+
+\bibitem{cassandra-zone}
+Apache~Cassandra skupnost.
+\newblock Initializing a multiple node cluster (multiple datacenters).
+\newblock Dosegljivo:
+  \url{https://docs.datastax.com/en/cassandra-oss/2.2/cassandra/initialize/initMultipleDS.html},
+  2020.
+\newblock [Dostopano: 29. 12. 2020].
 
 \bibitem{argocd-docs}
 ArgoCD skupnost.
@@ -314,18 +319,12 @@ Kubernetes skupnost.
   \url{https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/}, 2020.
 \newblock [Dostopano: 16. 12. 2020].
 
-\bibitem{jq}
-oprtokodna~skupost Stephen~Dolan.
-\newblock Github - stedolan/jq: Command-line json processor.
-\newblock Dosegljivo: \url{https://github.com/stedolan/jq}, 2020.
-\newblock [Dostopano: 20. 01. 2021].
-
-\bibitem{geo-instability}
-M.~A. {Tamiru}, G.~{Pierre}, J.~{Tordsson}, and E.~{Elmroth}.
-\newblock Instability in geo-distributed kubernetes federation: Causes and
-  mitigation.
-\newblock In {\em 2020 28th International Symposium on Modeling, Analysis, and
-  Simulation of Computer and Telecommunication Systems (MASCOTS)}, pages 1--8,
-  2020.
+\bibitem{low-resource-k8s}
+B.~Volckaert T.~Goethals, F. De~Turck.
+\newblock Fledge: Kubernetes compatible container orchestration on low-resource
+  edge devices.
+\newblock In K.-C. Lan Z.~Zheng C.-H.~Hsu, S.~Kallel, editor, {\em Internet of
+  Vehicles. Technologies and Services Toward Smart Cities}, pages 174--189,
+  Cham, 2020. Springer International Publishing.
 
 \end{thebibliography}
