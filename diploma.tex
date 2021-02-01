@@ -536,8 +536,9 @@ Te\-ža\-va se pojavi, ker uradna verzija operacijskega sistema za ploščice Ra
 K sreči pa se je v ta namen začel odprtokodni projekt \emph{PiCl k3os image generator}, ki iz slik operacijskih sistemov K3OS in Raspberry OS ter konfiguracijskih datotek zgradi novo sliko operacijskega sistema za naš Raspberry PI~\cite{k3os-rpi-image-generator}.
 Konfiguracijske datoteke, ki jih moramo priložiti so standardne datoteke YAML, ki jih podpira sistem K3OS.
 Vanje zapišemo nastavitve kot so javni ključi za dostop SSH, podatki omrežja Wi-Fi na katerega se povezujemo, geslo, žeton za povezavo z gručo Kubernetes in način, v katerem želimo zagnati K3S na sistemu~\cite{k3os-git}.
+V našem primeru smo vse programe K3S zagnali v strežniškem načinu (server) in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svojo gručo.
 \begin{figure}[h]
-  \begin{verbatim}
+\begin{verbatim}
 ssh_authorized_keys:
 - ssh-rsa ...
 hostname: gruca-1
@@ -556,7 +557,6 @@ k3os:
 \end{verbatim}
 \end{figure}
 
-V našem primeru smo vse programe K3S zagnali v strežniškem načinu (server) in nobenega v načinu delovnega vozlišča, saj želimo, da vsak Raspberry PI predstavlja svojo gručo.
 \section{Demonstracijska spletna aplikacija}
 Za potrebe testiranja je bilo treba narediti novo testno storitev.
 Ker se želimo v tem diplomskem delu osredotočiti na realne probleme, s katerimi se srečujejo podjetja, mora ta aplikacija omogočati tudi shranjevanje podatkov v podatkovno bazo.
