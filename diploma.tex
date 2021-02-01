@@ -565,8 +565,8 @@ Koda, ki je javno objavljena v repozitoriju Git~\cite{git-stateful-rest-sample},
 Iz kode je bil generiran kontejner, ki je objavljen v javnem registru Docker~\cite{docker-stateful-rest-sample}.
 Ob tem velja opozoriti, da Raspberry PI uporablja arhitekturo procesorja ARM, kar je zahtevalo dodatno pozornost pri nastavitvah gradnje ustrezne slike Docker.
 
-Aplikacija na mrežnih vratih, podanih s spremenljivko okolja, izpostavi vmesnik REST, ki podpira dva preprosta HTTP klica.
-\spverb|GET| klic na pot \spverb|/users| nam bo vrnil seznam vseh uporabnikov, ki so zapisani v tabeli v podatkovni bazi, s klicem \spverb|POST| na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v podatkovni bazi.
+Aplikacija na mrežnih vratih, podanih s spremenljivko okolja, izpostavi vmesnik REST, ki podpira dva preprosta klica HTTP.
+Klic \spverb|GET| na pot \spverb|/users| vrne seznam vseh uporabnikov, ki so zapisani v tabeli v podatkovni bazi, s klicem \spverb|POST| na isto pot pa poskrbimo, da se podatki uporabnika iz našega zahtevka shranijo v tabelo v podatkovni bazi.
 \begin{verbatim}
 # ukaz za dodajanje uporabnika
 curl -X POST localhost/users \
