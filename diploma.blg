@@ -3,142 +3,36 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: diploma.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-Too many commas in name 1 of "B. Burns, B. Grant, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "D. Kim, H. Muhammad, E. Kim, S. Helal, C. Lee" for entry tosca-fed
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "D. Kim, H. Muhammad, E. Kim, S. Helal, C. Lee" for entry tosca-fed
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "M. A. Tamiru, G. Pierre, J. Tordsson, E. Elmroth" for entry geo-instability
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "B. Burns, B. Grant, E. Brewer, J. Wilkes" for entry borg-omega-kubernetes
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "D. Kim, H. Muhammad, E. Kim, S. Helal, C. Lee" for entry tosca-fed
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "D. Kim, H. Muhammad, E. Kim, S. Helal, C. Lee" for entry tosca-fed
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "H. Fathoni, C.-T. Yang, C.-H. Chang, C.-Y. Huang" for entry k8s-performance-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "J. Kepner, V. Gadepally, L. Milechin, S. Samsi, W. Arcand, D. Bestor, W. , C. Byun, M. Hubbell, M. Houle, M. Jones, A. Klein, P. Michaleas, J. Mullen, A. , A. Rosa, C. Yee, A. Reuther" for entry databases-comparison
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "M. A. Tamiru, G. Pierre, J. Tordsson, E. Elmroth" for entry geo-instability
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "P. T. Endo, G. L. Santos, D. Rosendo, D. M. Gomes, A. Moreira, J. Kelner, D. Sadok, G. E. Gonçalves, M. Mahloo" for entry cloud-failures
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "C.-H. Hsu, S. Kallel, K.-C. Lan, Z. Zheng" for entry low-resource-k8s
-while executing---line 1090 of file plain.bst
 You've used 49 entries,
             2118 wiz_defined-function locations,
-            721 strings with 11386 characters,
-and the built_in function-call counts, 11711 in all, are:
-= -- 1174
-> -- 351
+            721 strings with 11767 characters,
+and the built_in function-call counts, 13298 in all, are:
+= -- 1281
+> -- 614
 < -- 6
-+ -- 150
-- -- 100
-* -- 426
-:= -- 1959
++ -- 249
+- -- 199
+* -- 635
+:= -- 2256
 add.period$ -- 184
 call.type$ -- 49
-change.case$ -- 196
+change.case$ -- 243
 chr.to.int$ -- 0
 cite$ -- 49
 duplicate$ -- 447
 empty$ -- 1158
-format.name$ -- 100
-if$ -- 2588
+format.name$ -- 199
+if$ -- 2859
 int.to.chr$ -- 0
 int.to.str$ -- 49
 missing$ -- 13
 newline$ -- 283
 num.names$ -- 102
-pop$ -- 379
+pop$ -- 426
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 194
 quote$ -- 0
-skip$ -- 336
+skip$ -- 338
 stack$ -- 0
 substring$ -- 448
 swap$ -- 90
@@ -150,4 +44,3 @@ warning$ -- 0
 while$ -- 116
 width$ -- 51
 write$ -- 559
-(There were 53 error messages)
