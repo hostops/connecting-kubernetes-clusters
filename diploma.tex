@@ -726,7 +726,7 @@ Kljub temu, da smo naše aplikacije namestili na različne gruče, s čimer je a
 Takšen primer je, ko ena aplikacija ali storitev zavzame vse vire v gruči, hkrati pa odpovejo ostale varovalke, ki jih ponuja že sam Kubernetes.
 V takšnih primerih bo namesto samo dela odpovedal celoten sistem.
 Zato se lahko odločimo, da bomo nekatere bolj kritične aplikacije ali storitve postavili v ločeno gručo, kjer napake drugih aplikacij ne bodo vplivale na delovanje kritičnih.
-A vseeno se moramo zavedati, da je ta korak smiseln šele po tem, ko opravimo že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerizacija, pravilna nastavitev omejitev skaliranja aplikacije in druge.
+A vseeno se moramo zavedati, da je ta korak smiseln šele po tem, ko opravimo že vse predhodne preventivne ukrepe, kot so razdelitev aplikacije na mikrostoritve, kontejnerizacija in pravilna nastavitev omejitev skaliranja aplikacije.
 \subsection{Vdori}
 Podobno kot pri izpadih aplikacije je tudi pri preprečevanju posledic vdorov.
 Najprej moramo poskrbeti za primerno zaščito vozlišč Kubernetes, naše aplikacije, zaščito komunikacije med storitvami, uporabo nepriviligiranih kontejnerjev~\cite{securing-kube}.
