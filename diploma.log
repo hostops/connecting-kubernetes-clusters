@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  1 FEB 2021 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.25)  1 FEB 2021 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,14 +355,7 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count280
 \l__pdf_internal_box=\box49
-) (./diploma.aux
-
-LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
-
-
-LaTeX Warning: Label `problem-prevelike-latence' multiply defined.
-
-)
+) (./diploma.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
@@ -828,16 +821,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--313
 ) [48] (./diploma.aux)
 Package rerunfilecheck Info: File `diploma.out' has not changed.
 (rerunfilecheck)             Checksum: FABF8C085ACA631E434F2E6BFCADFF32;2343.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 9487 strings out of 479383
- 134185 string characters out of 5875830
- 462214 words of memory out of 5000000
- 26237 multiletter control sequences out of 15000+600000
+ 9489 strings out of 479383
+ 134232 string characters out of 5875830
+ 462280 words of memory out of 5000000
+ 26239 multiletter control sequences out of 15000+600000
  412940 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,72p,393b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
