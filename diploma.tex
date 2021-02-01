@@ -694,7 +694,7 @@ Crate\-DB podpira tudi sinhronizacijo med različnimi razpoložljivostnimi conam
 Za sinhronizacijo podatkov lahko uporabimo podatkovno bazo, ki ima sinhronizacijo med različnimi gručami že podprto.
 CrateDB podpira sinhronizacijo tudi preko razpoložljivostnih con.
 Vseeno pa moramo vsa vozlišča povezati v enako podatkovno gručo~\cite{cratedb-zone}.
-To pomeni, da morajo biti primerki CrateDB dostopni med seboj.
+To pomeni, da morajo biti primerki Crate\-DB dostopni med seboj.
 Problem lahko rešimo z uporabo sistema Cilium in uporabo globalnih storitev, saj nam Cilium že omogoča komunikacijo vsakega kontejnerja z vsakim, tudi če so ti v različnih gručah.
 Druga možnost pa je, da izpostavimo vsak objekt Pod s svojim javnim naslovom IP in jih v gručo povežemo ročno.
 
