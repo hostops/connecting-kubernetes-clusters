@@ -283,7 +283,7 @@ Vsakemu primeru bomo poiskali rešitev v okolju Kubernetes z uporabo orodja Kube
 \subsection{Prevelika latenca}
 Problem prevelike latence se pojavi, ko je čas od poslanega zahtevka uporabnika do prejema odgovora s strežnika prevelik~\cite{minimizing-latency}.
 Ko problem povzroča velika fizična razdalja, ga rešimo tako, da postavimo dodatne gruče bližje naših uporabnikov, denimo na njihovo celino.
-Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da se nahajajo v istem omrežju znotraj istega podatkovnega centra, saj se s tem izognemo veliki latenci ~\cite{kube-and-edge}.
+Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je priporočljivo, da se nahajajo v istem omrežju znotraj istega podatkovnega centra, saj se s tem izognemo veliki latenci~\cite{kube-and-edge}.
 \begin{figure}[h]
 \begin{center}
   \includegraphics[width=1.0\textwidth]{images/problem-prevelike-latence.pdf}
@@ -293,7 +293,7 @@ Zavedati se moramo, da strežniki v gruči zelo veliko komunicirajo, zato je pri
 \end{figure}
 \subsection{Visoka razpoložljivost}
 Večkrat letno pride do izpada kakšnega večjega podatkovnega centra~\cite{ha-systems}. 
-To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski opremi ~\cite{common-outages}.
+To se lahko zgodi iz več razlogov najpogosteje pa gre za napake na programski opremi~\cite{common-outages}.
 Če gre v takšnem primeru za oblačnega ponudnika, pri katerem imamo nameščeno svojo gručo, to pomeni, da bo hkrati nedosegljiva tudi ta.
 V splošnem se problem reši tako, da uporabljamo več gruč in jih namestimo v več različnih podatkovnih centrov.
 V primeru izpada enega podatkovnega centra pa svoje uporabnike preusmerimo v drug podatkovni center.
@@ -385,7 +385,7 @@ Svoje gruče so povezali v federacijo s sistemom Federation.
 Iz članka pa ni povsem razvidno ali so uporabili prvo ali drugo iteracijo tega sistema.
 V testne namene so v federacijo namestili še strežnik spletne igre in pokazali uspešnost avtomatskega horizontalnega skaliranja.
 
-Lorenzo Martino je v magistrski nalogi ~\cite{dyn-place} v uvodu pojasnil pomembnost pristopa mikrostoritev pri razvoju aplikacij in pokazal prednosti uporabe Kubernetesa v oblaku.
+Lorenzo Martino je v magistrski nalogi~\cite{dyn-place} v uvodu pojasnil pomembnost pristopa mikrostoritev pri razvoju aplikacij in pokazal prednosti uporabe Kubernetesa v oblaku.
 Kot glavno prednost je izpostavil neodvisnost od platforme in možnost uporabe sistema Kubernetes v oblaku ali pa v lokalnem podatkovnem centru.
 Omenil je tudi hibridne rešitve, ki pa zahtevajo povezovanje in upravljanje več gruč.
 
@@ -398,7 +398,7 @@ V delu je posebna pozornost namenjena sinhronizaciji podatkov, saj imajo v podje
 KubeFed je še v razvojni fazi alfa, kar pa je za podjetje predstavljalo oviro.
 Tako je avtor poleg rešitve s KubeFed pripravil še svojo rešitev, v kateri implementira samo potrebne funkcionalnosti.
 
-Vir ~\cite{kube-and-edge} pa se posveti področju upravljanja aplikacij na robu oblaka, kjer pride centralno upravljanje zaradi večjega števila gruč še bolj do izraza.
+Vir~\cite{kube-and-edge} pa se posveti področju upravljanja aplikacij na robu oblaka, kjer pride centralno upravljanje zaradi večjega števila gruč še bolj do izraza.
 V poročilu je gruča Kubernetes postavljena v prostrano omrežje (WAN).
 Avtorji so primerjali delovanje ene gruče preko prostranega omrežja z delovanjem iste gruče preko lokalnega omrežja.
 Pri takšnem pristopu v gručah na robu oblaka izpostavijo pomembnost previdnosti, saj lahko pride do nepredvidljivih rezultatov.
@@ -613,7 +613,7 @@ To pomeni, da bo naša aplikacija za uporabnike, ki so bolj oddaljeni od naše g
 Takšen problem v splošnem rešimo tako, da našo aplikacijo postavimo še v dodatno gručo, bližje uporabniku~\cite{geo-instability}.
 Če moramo podatke med gručami še sinhronizirati, pa to zahteva dodaten trud.
 V našem primeru bomo uporabili podatkovno bazo CrateDB~\cite{cratedb}, novejšo alternativo standardnim podatkovnim bazam SQL.
-CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči ~\cite{databases-comparison}.
+CrateDB ima v primerjavi s tradicionalnimi podatkovnimi bazami boljšo podporo za sinhronizacijo podatkov med vozlišči~\cite{databases-comparison}.
 Poleg vsega pa nam za uporabo podatkovne baze CrateDB ni treba konceptualno spreminjati naše aplikacije, saj podpira vmesnik podatkovne baze PostgreSQL.
 \section{Povečanje razpoložljivosti aplikacije}
 Če je čim višja razpoložljivost za našo aplikacijo kritičnega pomena in smo že poskrbeli za visoko razpoložljivost (HA) aplikacije v naši gruči, še vedno lahko pride do situacije, ko iz omrežja izpade ves podatkovni center~\cite{cloud-failures}.
