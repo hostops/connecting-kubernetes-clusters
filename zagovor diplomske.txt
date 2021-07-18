@@ -1,0 +1,25 @@
+primer: spletna aplikacija na strezniku
+- poveca st. uporabnikov, lahko zmankuje virov
+- taksen pristop ni prakticen in cenovno ugoden
+- podjetja namestijo gruco 
+- v teoriji lahko dodajamo neskoncno uporabnikov
+- Kubernetes pa je najbolj razsirjen sistem za upravljanje gruc
+- taksen sistem nam omogoca tudi visoko razpolozljivost
+- ce ispade en streznik ga lahko nadomestijo ostali
+
+Poznamo probleme zaradi katerih ena gruca ni dovolj
+- prvi problem ki je opisan v diplomski nalogi je problem prevelike latence do uporabnikov
+- resimo ga tako, da v podatkovnih centrih blizje uporabnikom namestimo dodatne gruce
+
+Nekajkrat letno se v medijih pojavi novica ob izpadu kaksnega podatkovnega centra,
+ce imamo v taksnem podatkovnem centru namesceno gruco, bo tako nedosegljiva cela aplikacija
+- Ce pa aplikacijo namestimo v vec podatkovnih centrov pa lahko ob izpadu ene gruce uporabnike preusmerimo na drugo
+
+Ce imamo v gruci namescenih vec aplikacij pa lahko v primeru vdora v eno samo aplikacijo napadalec v dolocenih primerih dostopa tudi do ostalih. 
+Prav tako lahko v nekaterih primerih slabo delovanje ene aplikacije onemogoci delovanje vseh ostalih.
+Temu se izognemo tako, da kriticne aplikacije namestimo v izolirane gruce. 
+
+O robu oblaka govorimo takrat, ko se storitve izvajajo fizicno blizje koncnim uporabnikom.
+Tu se pogosto srecamo z nezanesljivim, pocasnim in dragim prenosom podatkov, na robu oblaka se resujejo specificni problemi, ki se jih resuje individualno, nekaj pristopov, ki zahtevajo povezovanje gruc pa je opisanih tudi v diplomski nalogi
+
+
